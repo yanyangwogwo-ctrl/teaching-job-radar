@@ -20513,7 +20513,9 @@
       "url": "https://cuhk.taleo.net/careersection/cu_career_teach/jobdetail.ftl?job=260001AA&lang=en"
     }
   },
-  "notifications": {},
+  "notifications": {
+    "status": "not-configured"
+  },
   "outbox": {
     "health:cityu:2026-09-05:2ad8bfed64": {
       "created_at": "2026-09-05T09:15:38+00:00",

@@ -15063,7 +15063,7 @@
     "automation_active": true,
     "data_kind": "official-live-crawl",
     "discord_configured": false,
-    "generated_at": "2026-09-05T10:20:55+00:00",
+    "generated_at": "2026-09-05T10:24:13+00:00",
     "heartbeat_configured": false,
     "last_run": {
       "finished_at": "2026-09-05T10:24:06+00:00",
@@ -15166,7 +15166,9 @@
         "instructor"
       ]
     },
-    "notifications": {},
+    "notifications": {
+      "status": "not-configured"
+    },
     "schedule": "每日約 08:17（香港時間；排程可能延遲）",
     "schema_version": 1,
     "stale_after_hours": 36,
