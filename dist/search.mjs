@@ -72,8 +72,9 @@ export function keywordTerms(value) {
 export function defaultCriteria(dataset) {
   return {
     query:'', exclude:'', mode:'AND',
-    presetEnabled:true, presetMode:'OR',
-    presetKeywords:[...new Set([...dataset.meta.subjects.flatMap(subject => subject.terms), 'lecturer', 'tutor', 'instructor', 'teacher', 'teaching fellow', '講師', '導師', '教師'])].join(', '),
+    presetEnabled:true,
+    subjectKeywords:dataset.meta.subjects.flatMap(subject => subject.terms).join(', '),
+    roleKeywords:'lecturer, tutor, instructor, teacher, teaching fellow, 講師, 導師, 教師',
     partTimeOnly:true, institutions:dataset.sources.map(source => source.id),
     status:'open', dateBasis:'effective', from:'', to:'', sort:'newest'
   };
@@ -82,19 +83,38 @@ export function defaultCriteria(dataset) {
 export function restoreCriteria(value, dataset) {
   const defaults = defaultCriteria(dataset);
   const result = {...defaults, ...value};
-  // Migrate the two old fields into one visible cross-field keyword list.
-  // The new OR list intentionally broadens matching; no hidden title gate remains.
-  if (!Object.hasOwn(value, 'presetKeywords') && (Object.hasOwn(value, 'subjectKeywords') || Object.hasOwn(value, 'roleKeywords'))) {
-    result.presetKeywords = [...new Set([...keywordTerms(value.subjectKeywords), ...keywordTerms(value.roleKeywords)])].join(', ');
-    result.presetMode = 'OR';
-  } else if (!Object.hasOwn(value, 'presetKeywords') && !Object.hasOwn(value, 'presetEnabled') && value.relevantOnly === false) {
+  const hasGroups = Object.hasOwn(value, 'subjectKeywords') || Object.hasOwn(value, 'roleKeywords');
+  // Existing separate fields, including deliberately empty ones, take priority.
+  // Merged custom searches have lost their original groups. Keep their exact
+  // input for review rather than silently discarding it or rewriting storage.
+  if (!hasGroups && Object.hasOwn(value, 'presetKeywords')) {
+    const terms = keywordTerms(value.presetKeywords);
+    const roleTerms = new Set(keywordTerms(defaults.roleKeywords).map(normalize));
+    const roles = terms.filter(term => roleTerms.has(normalize(term)));
+    const subjects = terms.filter(term => !roleTerms.has(normalize(term)));
+    result.subjectKeywords = terms.length ? subjects.join(', ') || defaults.subjectKeywords : '';
+    result.roleKeywords = terms.length ? roles.join(', ') || defaults.roleKeywords : '';
+    result.legacyMergedPreset = {keywords:String(value.presetKeywords ?? ''), mode:value.presetMode === 'AND' ? 'AND' : 'OR'};
+  } else if (!hasGroups && !Object.hasOwn(value, 'presetEnabled') && value.relevantOnly === false) {
     result.presetEnabled = false;
   }
-  delete result.subjectKeywords;
-  delete result.roleKeywords;
+  delete result.presetKeywords;
+  delete result.presetMode;
   delete result.relevantOnly;
   result.institutions = result.institutions.filter(id => dataset.sources.some(source => source.id === id));
   return result;
+}
+
+function subjectText(job) {
+  const lines = String(job.description ?? '').split('\n').flatMap(line => {
+    if (/equal opportunit|committed to equality|code of conduct|ethical conduct|professional integrity/i.test(line)) return [];
+    line = line.replace(/(?:doctor|master) of philosophy|teaching philosophy|personal philosophy/gi, '');
+    if (/(applicants?|candidates?).{0,90}(?:possess|have|demonstrate)|具備.{0,30}能力/i.test(line) && !/teach|course|curriculum|授課|教授/i.test(line)) {
+      line = line.replace(/critical thinking|批判思考|批判性思維/gi, '');
+    }
+    return [line];
+  });
+  return [job.title, job.department, ...lines].join('\n');
 }
 
 const employmentWords = { 'part-time': 'parttime 兼職', hourly: 'hourly 時薪 兼職 parttime', mixed: 'fulltime parttime 全職 兼職', 'full-time': 'fulltime 全職', unknown: '' };
@@ -107,16 +127,18 @@ export function filterJobs(jobs, criteria, today = dayKey(new Date().toISOString
   const extra = parseQuery(criteria.exclude ?? '');
   const negative = [...query.negative, ...extra.positive, ...extra.negative];
   const selected = new Set(criteria.institutions ?? []);
-  const preset = keywordTerms(criteria.presetKeywords);
+  const subjects = keywordTerms(criteria.subjectKeywords);
+  const roles = keywordTerms(criteria.roleKeywords);
   const result = jobs.filter(job => {
     if (!isRecent(job, today)) return false;
     if (!selected.has(job.source_id)) return false;
     if (criteria.presetEnabled) {
       if (criteria.partTimeOnly && !['part-time', 'hourly', 'mixed'].includes(job.employment_type)) return false;
-      const text = searchText(job);
-      if (preset.length && !(criteria.presetMode === 'AND'
-        ? preset.every(term => includesTerm(text, term))
-        : preset.some(term => includesTerm(text, term)))) return false;
+      if (roles.length && !roles.some(term => includesTerm(job.title, term))) return false;
+      if (subjects.length) {
+        const text = subjectText(job);
+        if (!subjects.some(term => includesTerm(text, term))) return false;
+      }
     }
     if (criteria.status !== 'all' && effectiveStatus(job, today) !== criteria.status) return false;
     const date = dateFor(job, criteria.dateBasis);

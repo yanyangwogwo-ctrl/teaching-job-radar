@@ -1,5 +1,5 @@
 import { mountScheduleEditor } from './schedule-ui.mjs?v=20260905-time';
-import { parseQuery, filterJobs, dayKey, effectiveStatus, csvCell, defaultCriteria, restoreCriteria, recentCutoff, isRecent } from './search.mjs?v=20260905-compact';
+import { parseQuery, filterJobs, dayKey, effectiveStatus, csvCell, defaultCriteria, restoreCriteria, recentCutoff, isRecent } from './search.mjs?v=20260905-grouped';
 import { loadDataset, lastCrawlAt } from './data-source.mjs?v=20260905-session';
 
 const app = document.querySelector('#app');
@@ -71,10 +71,14 @@ function renderShell() {
       <div class="section-title"><h2>預設搜尋條件</h2><p>開啟「預設條件」時，會連同搜尋頁嘅關鍵字、院校及日期一齊篩選。修改即時套用；可返回搜尋頁儲存常用搜尋。</p></div>
       <section class="preset-panel search-panel" aria-label="編輯預設條件">
         <div class="criteria-heading"><h3>科目及職位關鍵字</h3><button type="button" class="text-button" id="reset-preset">還原原始預設</button></div>
-        <div class="search-heading"><label for="preset-input">合併關鍵字</label><div class="mode-switch" role="group" aria-label="預設關鍵字匹配方式"><button type="button" data-preset-mode="AND" aria-pressed="false">全部 AND</button><button type="button" data-preset-mode="OR" aria-pressed="true" class="selected">任一 OR</button></div></div>
-        <textarea id="preset-input" rows="7" maxlength="5000" aria-describedby="preset-help">${escapeHTML(criteria.presetKeywords)}</textarea>
-        <p id="preset-help" class="field-help">逗號或換行分隔，詞組內嘅空格保留。所有關鍵字都搜尋職位名、部門、科目及內文。清空即可取消關鍵字限制。</p>
-        <p class="field-help">科目與職位名稱已合併。選「任一 OR」時，符合其中一個詞便可，例如只有 lecturer 亦會符合；選「全部 AND」則每個詞都要符合。</p>
+        <p class="criteria-help"><strong>科目符合其中一個 AND 職位名稱符合其中一個。</strong> 兩組都要符合，只有 lecturer 或只有哲學字眼並不足夠。</p>
+        <label class="field-label" for="subject-input">科目關鍵字 · 任一符合 OR</label>
+        <textarea id="subject-input" rows="5" maxlength="5000" aria-describedby="subject-help">${escapeHTML(criteria.subjectKeywords)}</textarea>
+        <p id="subject-help" class="field-help">逗號或換行分隔，詞組內嘅空格保留。搜尋職位名、部門及科目內文；略過一般哲學學位字眼等無關文字。</p>
+        <label class="field-label" for="role-input">職位名稱關鍵字 · 任一符合 OR</label>
+        <input type="text" id="role-input" value="${escapeHTML(criteria.roleKeywords)}" maxlength="1000" aria-describedby="role-help">
+        <p id="role-help" class="field-help">逗號分隔，只搜尋職位名稱。清空其中一欄即可取消該組限制。</p>
+        <details id="preset-migration-note" hidden><summary>已將舊合併搜尋轉回兩組條件，請核對</summary><p class="field-help">常見職位詞已分到職位名稱，其餘保留於科目；缺少嘅一組採原始預設。原本嘅匹配方式可能改變，以下保留合併版本供你核對。</p><p id="legacy-preset-mode" class="field-help"></p><label class="field-label" for="legacy-preset-input">原有合併關鍵字</label><textarea id="legacy-preset-input" rows="4" readonly></textarea></details>
         <label class="checkbox-label employment-filter"><input type="checkbox" id="part-time-only" ${criteria.partTimeOnly ? 'checked' : ''}>只看兼職／時薪（包括同時招聘全職及兼職）</label>
         <div class="preset-footer"><p class="field-help" id="preset-state"></p><button type="button" class="button" id="back-to-results">返回搜尋結果</button></div>
         <p class="field-help">呢度只修改網頁搜尋，唔會改變 Discord 正式通知條件。</p>
@@ -104,28 +108,29 @@ function bindControls() {
   document.querySelector('#select-all').addEventListener('click', () => { criteria.institutions = dataset.sources.map(s => s.id); syncControls(); renderResults(); });
   document.querySelector('#select-none').addEventListener('click', () => { criteria.institutions = []; syncControls(); renderResults(); });
   document.querySelector('#reset-filters').addEventListener('click', resetFilters);
-  document.querySelector('#reset-preset').addEventListener('click', () => { const defaults = initialCriteria(); for (const key of ['presetKeywords','presetMode','partTimeOnly']) criteria[key] = defaults[key]; syncControls(); renderResults(); });
+  document.querySelector('#reset-preset').addEventListener('click', () => { const defaults = initialCriteria(); for (const key of ['subjectKeywords','roleKeywords','partTimeOnly']) criteria[key] = defaults[key]; delete criteria.legacyMergedPreset; syncControls(); renderResults(); });
   document.querySelector('#preset-toggle').addEventListener('click', () => { criteria.presetEnabled = !criteria.presetEnabled; syncControls(); renderResults(); });
   document.querySelector('#back-to-results').addEventListener('click', () => { changeView('jobs'); document.querySelector('#query-input').focus(); });
-  for (const [id, key] of [['preset-input','presetKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) {
+  for (const [id, key] of [['subject-input','subjectKeywords'],['role-input','roleKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) {
     document.querySelector('#' + id).addEventListener(id.includes('input') ? 'input' : 'change', event => { criteria[key] = event.target.value; renderResults(); });
   }
   document.querySelector('#part-time-only').addEventListener('change', event => { criteria.partTimeOnly = event.target.checked; renderResults(); });
   document.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click', () => { criteria.mode = button.dataset.mode; syncControls(); renderResults(); }));
-  document.querySelectorAll('[data-preset-mode]').forEach(button => button.addEventListener('click', () => { criteria.presetMode = button.dataset.presetMode; syncControls(); renderResults(); }));
   document.querySelector('#save-search').addEventListener('click', openSaveDialog);
   document.querySelector('#job-list').addEventListener('click', event => { const button = event.target.closest('[data-job]'); if (button) openJob(button.dataset.job, button); if (event.target.closest('[data-reset]')) resetFilters(); });
 }
 
 function syncControls() {
-  for (const [id, key] of [['preset-input','presetKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) document.querySelector('#' + id).value = criteria[key];
+  for (const [id, key] of [['subject-input','subjectKeywords'],['role-input','roleKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) document.querySelector('#' + id).value = criteria[key];
   document.querySelector('#part-time-only').checked = criteria.partTimeOnly;
   document.querySelector('#preset-toggle').setAttribute('aria-checked', String(criteria.presetEnabled));
   document.querySelector('#preset-toggle-label').textContent = '預設條件：' + (criteria.presetEnabled ? '開啟' : '關閉');
   document.querySelector('#preset-state').textContent = criteria.presetEnabled ? '目前已開啟預設條件。' : '目前已關閉預設條件；返回搜尋頁開啟後才會套用。';
   document.querySelectorAll('[name="institution"]').forEach(input => { input.checked = criteria.institutions.includes(input.value); });
   document.querySelectorAll('[data-mode]').forEach(button => { const active = button.dataset.mode === criteria.mode; button.classList.toggle('selected', active); button.setAttribute('aria-pressed', String(active)); });
-  document.querySelectorAll('[data-preset-mode]').forEach(button => { const active = button.dataset.presetMode === criteria.presetMode; button.classList.toggle('selected', active); button.setAttribute('aria-pressed', String(active)); });
+  document.querySelector('#preset-migration-note').hidden = !criteria.legacyMergedPreset;
+  document.querySelector('#legacy-preset-input').value = criteria.legacyMergedPreset?.keywords ?? '';
+  document.querySelector('#legacy-preset-mode').textContent = '原有匹配方式：' + (criteria.legacyMergedPreset?.mode ?? 'OR');
 }
 function resetFilters() { criteria = initialCriteria(); syncControls(); renderResults(); }
 
@@ -207,7 +212,7 @@ function renderSaved() {
   const container = document.querySelector('#saved-searches');
   container.innerHTML = saved.length ? `<span class="saved-label">常用搜尋<span>只儲存在此瀏覽器</span></span>${saved.map((entry, index) => `<span class="saved-chip"><button type="button" data-load="${index}">${escapeHTML(entry.name)}</button><button type="button" data-delete="${index}" aria-label="移除搜尋：${escapeHTML(entry.name)}">×</button></span>`).join('')}` : '';
   container.hidden = !saved.length;
-  container.querySelectorAll('[data-load]').forEach(button => button.addEventListener('click', () => { const entry = saved[Number(button.dataset.load)]; criteria = restoreCriteria(entry.criteria, dataset); syncControls(); renderResults(); toast('已套用：' + entry.name); }));
+  container.querySelectorAll('[data-load]').forEach(button => button.addEventListener('click', () => { const entry = saved[Number(button.dataset.load)]; criteria = restoreCriteria(entry.criteria, dataset); syncControls(); renderResults(); toast(criteria.legacyMergedPreset ? '已套用並轉回兩組條件；請到「預設條件」核對。' : '已套用：' + entry.name); }));
   container.querySelectorAll('[data-delete]').forEach(button => button.addEventListener('click', () => { const next = saved.filter((_, i) => i !== Number(button.dataset.delete)); if (storeSaved(next)) { renderSaved(); toast('已移除常用搜尋。'); } }));
 }
 

@@ -38,18 +38,22 @@ test('review dates are not closing dates',()=>{
   assert.deepEqual(find({dateBasis:'deadline',from:'2026-01-01'}),['a']);
   assert.deepEqual(find({status:'open',institutions:['b']}),['b']);
 });
-test('unified preset keywords match across titles, body and subject metadata',()=>{
-  assert.deepEqual(find({presetEnabled:true,presetKeywords:'AI literacy',partTimeOnly:true}),['a']);
-  assert.deepEqual(find({presetEnabled:true,presetKeywords:'machine learning',partTimeOnly:false}),['b']);
-  assert.deepEqual(find({presetEnabled:true,presetKeywords:'machine learning',partTimeOnly:true}),[]);
-  const advert={...jobs[0],title:'Humanities teaching vacancy',description:'Support students as an instructor.',subjects:[{id:'ai',label:'AI literacy'}]};
-  assert.equal(filterJobs([advert],{...defaults,presetEnabled:true,presetKeywords:'instructor, AI literacy',presetMode:'AND'},'2026-09-05').length,1);
-  assert.deepEqual(find({presetEnabled:true,presetKeywords:'philosophy, tutor',presetMode:'OR'}),['b','a']);
-  assert.deepEqual(find({presetEnabled:true,presetKeywords:'philosophy, tutor',presetMode:'AND'}),[]);
+test('preset requires any subject AND any title role, plus employment type',()=>{
+  const preset={presetEnabled:true,subjectKeywords:'philosophy, AI literacy',roleKeywords:'lecturer, instructor',partTimeOnly:true};
+  assert.deepEqual(find(preset),['a']);
+  const accounting={...jobs[0],title:'Part-time Lecturer in Accounting',department:'Business',description:'Teach accounting.'};
+  const research={...jobs[0],title:'Research Assistant in Philosophy',description:'Assist the lecturer in teaching philosophy.'};
+  const filters={...defaults,...preset};
+  assert.equal(filterJobs([accounting,research],filters,'2026-09-05').length,0);
+  const science={...jobs[0],title:'Part-time Instructor',description:'Teach AI literacy.'};
+  assert.equal(filterJobs([science],filters,'2026-09-05').length,1);
+  assert.deepEqual(find({...preset,subjectKeywords:'machine learning',roleKeywords:'tutor'}),[]);
+  assert.deepEqual(find({...preset,subjectKeywords:'machine learning',roleKeywords:'tutor',partTimeOnly:false}),['b']);
+  assert.deepEqual(find({...preset,subjectKeywords:'',roleKeywords:'',partTimeOnly:false}),['b','a']);
   assert.deepEqual(keywordTerms('AI literacy, 哲學\ncritical thinking'),['AI literacy','哲學','critical thinking']);
 });
 test('preset toggle keeps independent filters and edited terms intact',()=>{
-  const preset={...defaults,presetEnabled:true,presetKeywords:'philosophy',partTimeOnly:true,query:'tutor',exclude:'',institutions:['b']};
+  const preset={...defaults,presetEnabled:true,subjectKeywords:'philosophy',roleKeywords:'lecturer',partTimeOnly:true,query:'tutor',exclude:'',institutions:['b']};
   assert.equal(filterJobs(jobs,preset,'2026-09-05').length,0);
   assert.deepEqual(filterJobs(jobs,{...preset,presetEnabled:false},'2026-09-05').map(j=>j.id),['b']);
   assert.equal(filterJobs(jobs,{...preset,presetEnabled:false,exclude:'machine'},'2026-09-05').length,0);
@@ -57,7 +61,8 @@ test('preset toggle keeps independent filters and edited terms intact',()=>{
   assert.equal(filterJobs(jobs,{...preset,presetEnabled:false,to:'2026-09-04'},'2026-09-05').length,0);
   assert.equal(filterJobs([{...jobs[1],posted_date:'2026-07-04'}],{...preset,presetEnabled:false},'2026-09-05').length,0);
   assert.equal(filterJobs(jobs,preset,'2026-09-05').length,0);
-  assert.equal(preset.presetKeywords,'philosophy');
+  assert.equal(preset.subjectKeywords,'philosophy');
+  assert.equal(preset.roleKeywords,'lecturer');
 });
 test('CSV formulas are escaped',()=>{
   assert.equal(csvCell('=1+1'),'"\'=1+1"');
@@ -68,31 +73,48 @@ test('default criteria expose terms and put newer adverts ahead of higher scores
   const data={meta:{subjects:[{terms:['philosophy','machine learning']}]},sources:[{id:'a'},{id:'b'}]};
   const criteria=defaultCriteria(data);
   assert.equal(criteria.sort,'newest');
-  assert.ok(criteria.presetKeywords.includes('philosophy, machine learning'));
-  assert.ok(criteria.presetKeywords.includes('lecturer'));
+  assert.equal(criteria.subjectKeywords,'philosophy, machine learning');
+  assert.ok(criteria.roleKeywords.includes('lecturer'));
   assert.equal(criteria.presetEnabled,true);
-  assert.equal(criteria.presetMode,'OR');
+  assert.equal(Object.hasOwn(criteria,'presetMode'),false);
   assert.equal(criteria.partTimeOnly,true);
   assert.equal(Object.hasOwn(criteria,'relevantOnly'),false);
   assert.deepEqual(filterJobs(jobs,{...criteria,partTimeOnly:false},'2026-09-05').map(j=>j.id),['b','a']);
   const restored=restoreCriteria({...defaults,relevantOnly:false},data);
   assert.equal(restored.presetEnabled,false);
 });
-test('saved searches migrate merged phrases and preserve modern empty or disabled presets',()=>{
+test('saved separate groups preserve empty values and disabled state',()=>{
   const data={meta:{subjects:[{terms:['philosophy']}]},sources:[{id:'a'},{id:'b'}]};
-  const old={...defaults,subjectKeywords:'AI literacy, philosophy',roleKeywords:'instructor, tutor',partTimeOnly:false,query:'ethics',institutions:['a','gone']};
+  const old={...defaults,subjectKeywords:'AI literacy',roleKeywords:'',partTimeOnly:false,query:'ethics',institutions:['a','gone']};
   const restored=restoreCriteria(old,data);
-  assert.equal(restored.presetKeywords,'AI literacy, philosophy, instructor, tutor');
+  assert.equal(restored.subjectKeywords,'AI literacy');
+  assert.equal(restored.roleKeywords,'');
   assert.equal(restored.presetEnabled,true);
   assert.equal(restored.partTimeOnly,false);
   assert.equal(restored.query,'ethics');
   assert.deepEqual(restored.institutions,['a']);
-  assert.equal(Object.hasOwn(restored,'subjectKeywords'),false);
-  assert.equal(Object.hasOwn(restored,'roleKeywords'),false);
-  const modern=restoreCriteria({...old,presetKeywords:'',presetEnabled:false,presetMode:'AND'},data);
-  assert.equal(modern.presetKeywords,'');
-  assert.equal(modern.presetEnabled,false);
-  assert.equal(modern.presetMode,'AND');
+  assert.equal(restoreCriteria({...old,presetEnabled:false},data).presetEnabled,false);
+});
+test('merged saved presets split into groups with original input retained for review',()=>{
+  const data={meta:{subjects:[{terms:['philosophy']}]},sources:[{id:'a'},{id:'b'}]};
+  const merged={...defaults,presetEnabled:false,presetKeywords:'AI literacy, instructor, custom topic',presetMode:'AND',partTimeOnly:false};
+  const restored=restoreCriteria(merged,data);
+  assert.equal(restored.subjectKeywords,'AI literacy, custom topic');
+  assert.equal(restored.roleKeywords,'instructor');
+  assert.equal(restored.presetEnabled,false);
+  assert.equal(restored.partTimeOnly,false);
+  assert.deepEqual(restored.legacyMergedPreset,{keywords:merged.presetKeywords,mode:'AND'});
+  assert.equal(Object.hasOwn(restored,'presetKeywords'),false);
+  assert.equal(Object.hasOwn(restored,'presetMode'),false);
+  assert.equal(merged.presetKeywords,'AI literacy, instructor, custom topic');
+  const roleOnly=restoreCriteria({...merged,presetKeywords:'lecturer'},data);
+  assert.equal(roleOnly.subjectKeywords,'philosophy');
+  const blank=restoreCriteria({...merged,presetKeywords:''},data);
+  assert.equal(blank.subjectKeywords,'');
+  assert.equal(blank.roleKeywords,'');
+  const splitWins=restoreCriteria({...merged,subjectKeywords:'ethics',roleKeywords:''},data);
+  assert.equal(splitWins.subjectKeywords,'ethics');
+  assert.equal(splitWins.roleKeywords,'');
 });
 test('two calendar months handles month ends and leap years',()=>{
   assert.equal(recentCutoff('2026-09-05'),'2026-07-05');
@@ -112,7 +134,11 @@ test('old posted dates stay hidden despite recent first-seen or future deadlines
   const result=filterJobs(adverts,{...defaults,dateBasis:'deadline',sort:'newest'},'2026-09-05');
   assert.deepEqual(result.map(j=>j.id).sort(),['boundary','first-seen','hk-boundary']);
 });
-test('explicit unified keywords search the complete available body',()=>{
+test('subject matching excludes irrelevant philosophy and generic skills boilerplate',()=>{
   const advert={...jobs[0],title:'Part-time Lecturer in Accounting',department:'Business',description:'Applicants should have a Doctor of Philosophy degree.'};
-  assert.equal(filterJobs([advert],{...defaults,presetEnabled:true,presetKeywords:'philosophy'},'2026-09-05').length,1);
+  const criteria={...defaults,presetEnabled:true,subjectKeywords:'philosophy, critical thinking',roleKeywords:'lecturer'};
+  assert.equal(filterJobs([advert],criteria,'2026-09-05').length,0);
+  assert.equal(filterJobs([{...advert,description:'Applicants should have critical thinking skills.'}],criteria,'2026-09-05').length,0);
+  assert.equal(filterJobs([{...advert,description:'Teach critical thinking and philosophy of science.'}],criteria,'2026-09-05').length,1);
+  assert.equal(filterJobs([advert],{...criteria,presetEnabled:false,query:'philosophy'},'2026-09-05').length,1);
 });
