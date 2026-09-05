@@ -1,5 +1,5 @@
 import { mountScheduleEditor } from './schedule-ui.mjs?v=20260905-time';
-import { parseQuery, filterJobs, dayKey, effectiveStatus, csvCell, defaultCriteria, restoreCriteria, recentCutoff, isRecent } from './search.mjs?v=20260905-filters';
+import { parseQuery, filterJobs, dayKey, effectiveStatus, csvCell, defaultCriteria, restoreCriteria, recentCutoff, isRecent } from './search.mjs?v=20260905-compact';
 import { loadDataset, lastCrawlAt } from './data-source.mjs?v=20260905-session';
 
 const app = document.querySelector('#app');
@@ -35,20 +35,16 @@ function storeSaved(next) {
 }
 
 function renderShell() {
-  const connected = dataset.sources.filter(s => s.status === 'ok').length;
+  const connected = dataset.sources.filter(s => sourceStatus(s) === 'ok').length;
   const matched = filterJobs(dataset.jobs, initialCriteria()).length;
   const active = dataset.jobs.filter(j => isRecent(j) && effectiveStatus(j) === 'open').length;
   document.querySelector('.schedule-label').textContent = feedMode === 'snapshot' ? '網站保存版本 · 請留意檢索日期' : dataset.meta.automation_active ? dataset.meta.schedule : '已連接雲端資料 · 等待首次自動檢索';
   app.innerHTML = `
-    <section class="page-heading"><div><p class="eyebrow">你的教學機會</p><h1>職位一覽</h1></div><p class="updated-at">最近一輪檢索 ${escapeHTML(dateTime(lastCrawlAt(dataset)))}<br><span>香港時間 · 只收集官方招聘頁</span></p></section>
-    <section class="overview" aria-label="資料摘要">
-      <div class="overview-item overview-primary"><span>目前搜尋結果</span><strong id="matched-total">${matched}<small>則</small></strong><p>按下方可修改嘅搜尋條件</p></div>
-      <div class="overview-item"><span>最近兩個月開放職位</span><strong>${active}<small>則</small></strong><p>刊登日期優先，缺少時用首見</p></div>
-      <div class="overview-item"><span>最近一次成功的來源</span><strong>${connected}<small>/ ${dataset.sources.length}</small></strong><p>${dataset.sources.filter(s => !s.enabled).length} 個待接通 · 詳見來源狀態</p></div>
-    </section>
-    ${feedWarning ? `<div class="notice" role="alert"><strong>${escapeHTML(feedWarning)}</strong></div>` : ''}
-    <div id="coverage-warning" class="notice" role="status"></div>
-    <nav class="view-nav" aria-label="檢索頁面"><button type="button" class="view-button active" data-view="jobs" aria-pressed="true">搜尋職位</button><button type="button" class="view-button" data-view="sources" aria-pressed="false">來源狀態 <span>${dataset.sources.length}</span></button><button type="button" class="view-button" data-view="notifications" aria-pressed="false">通知與排程</button></nav>
+    <section class="page-heading"><h1>職位一覽</h1><p class="updated-at">最近檢索 ${escapeHTML(dateTime(lastCrawlAt(dataset)))} <span>· 香港時間</span></p></section>
+    <div class="view-bar">
+      <nav class="view-nav" aria-label="檢索頁面"><button type="button" class="view-button active" data-view="jobs" aria-pressed="true">搜尋職位</button><button type="button" class="view-button" data-view="sources" aria-pressed="false">來源狀態 <span>${dataset.sources.length}</span></button><button type="button" class="view-button" data-view="notifications" aria-pressed="false">通知與排程</button><button type="button" class="view-button" data-view="presets" aria-pressed="false">預設條件</button></nav>
+      <div class="compact-stats" aria-label="資料摘要"><span>搜尋結果 <strong id="matched-total">${matched}</strong></span><span title="最近兩個月開放職位；刊登日期優先，缺少時用首見">兩個月內開放 <strong>${active}</strong></span><span title="最近檢索完整成功，且資料未逾時的來源">成功來源 <strong>${connected}<small>/${dataset.sources.length}</small></strong></span></div>
+    </div>
     <section id="jobs-view" class="workspace">
       <aside class="filter-panel" aria-label="職位篩選"><details class="filter-drawer" ${matchMedia('(min-width: 960px)').matches ? 'open' : ''}><summary>院校及日期篩選 <span>展開／收起</span></summary><div class="filter-content">
         <div class="filter-heading"><h2>篩選條件</h2><button type="button" class="text-button" id="reset-filters">重設</button></div>
@@ -58,18 +54,11 @@ function renderShell() {
       </div></details></aside>
       <div class="results-panel" id="results" tabindex="-1">
         <section class="search-panel" aria-label="搜尋條件">
-          <div class="criteria-heading"><h2>搜尋條件（可直接修改）</h2><button type="button" class="text-button" id="reset-search">還原預設</button></div>
-          <p class="criteria-help">科目符合任一關鍵字，並且職位名稱符合任一關鍵字。清空某欄即可取消該項限制。</p>
-          <label class="field-label" for="subject-input">科目關鍵字 · 任一符合 OR</label>
-          <textarea id="subject-input" rows="5" maxlength="5000" aria-describedby="subject-help">${escapeHTML(criteria.subjectKeywords)}</textarea>
-          <p id="subject-help" class="field-help">逗號或換行分隔；詞組內嘅空格保留，例如 AI literacy。搜尋職位名、部門及科目內文；一般學位名稱及招聘頁尾會略過。</p>
-          <label class="field-label" for="role-input">職位名稱關鍵字 · 任一符合 OR</label>
-          <input type="text" id="role-input" value="${escapeHTML(criteria.roleKeywords)}" maxlength="1000" aria-describedby="role-help">
-          <p id="role-help" class="field-help">逗號分隔，只搜尋職位名稱。已列出英文及中文常見名稱，可自行增減。</p>
-          <label class="checkbox-label employment-filter"><input type="checkbox" id="part-time-only" ${criteria.partTimeOnly ? 'checked' : ''}>只看兼職／時薪（包括同時招聘全職及兼職）</label>
-          <div class="additional-search"><div class="search-heading"><label for="query-input">額外關鍵字（可留空）</label><div class="mode-switch" role="group" aria-label="額外關鍵字匹配方式"><button type="button" data-mode="AND" aria-pressed="true" class="selected">全部 AND</button><button type="button" data-mode="OR" aria-pressed="false">任一 OR</button></div></div><input type="search" id="query-input" placeholder='例如 "AI literacy" -nursing' maxlength="500" autocomplete="off" aria-describedby="syntax-help"><p id="syntax-help" class="syntax-help">搜尋職位、部門、科目及全部內文。逗號／空格分隔；<code>"AI literacy"</code> 搜尋完整詞組；<code>-fulltime</code> 排除。<code>parttime</code> 同 <code>part-time</code> 都可以。</p><label class="exclude-label" for="exclude-input">排除關鍵字<input type="text" id="exclude-input" placeholder="例如 nursing, accounting" maxlength="500"></label></div>
-          <div class="search-bottom"><span class="field-help">修改後即時更新結果；可以儲存供下次使用。</span><button type="button" class="text-button" id="save-search">＋ 儲存搜尋</button></div><p class="query-feedback" id="query-feedback" role="status"></p><div id="saved-searches" class="saved-searches"></div>
+          <div class="search-heading"><label for="query-input">關鍵字</label><div class="mode-switch" role="group" aria-label="關鍵字匹配方式"><button type="button" data-mode="AND" aria-pressed="true" class="selected">全部 AND</button><button type="button" data-mode="OR" aria-pressed="false">任一 OR</button></div></div><input type="search" id="query-input" placeholder='例如 philosophy, lecturer 或 "AI literacy"' maxlength="500" autocomplete="off" aria-describedby="syntax-help"><p id="syntax-help" class="syntax-help">搜尋職位名、部門、科目及內文。逗號／空格分隔；<code>"AI literacy"</code> 完整詞組；<code>-nursing</code> 排除。</p><label class="exclude-label" for="exclude-input">排除關鍵字<input type="text" id="exclude-input" placeholder="例如 nursing, accounting" maxlength="500"></label>
+          <div class="search-bottom"><button type="button" class="preset-toggle" id="preset-toggle" role="switch" aria-checked="true" aria-label="套用預設條件"><span class="switch-track" aria-hidden="true"></span><span id="preset-toggle-label">預設條件：開啟</span></button><button type="button" class="text-button" id="save-search">＋ 儲存搜尋</button></div><p class="query-feedback" id="query-feedback" role="status"></p><div id="saved-searches" class="saved-searches"></div>
         </section>
+        ${feedWarning ? `<div class="notice results-notice" role="alert"><strong>${escapeHTML(feedWarning)}</strong></div>` : ''}
+        <div id="coverage-warning" class="notice results-notice" role="status"></div>
         <p class="recency-note" id="recency-note"></p>
         <div class="result-toolbar"><p id="result-count" aria-live="polite"></p><label for="sort-by">排序<select id="sort-by"><option value="newest">日期由新到舊</option><option value="oldest">日期由舊到新</option><option value="score">相關度優先</option><option value="deadline">即將截止優先</option><option value="institution">院校名稱</option></select></label></div>
         <div id="job-list" class="job-list"></div>
@@ -78,6 +67,19 @@ function renderShell() {
     </section>
     <section id="sources-view" class="secondary-view" hidden></section>
     <section id="notifications-view" class="secondary-view" hidden></section>
+    <section id="presets-view" class="secondary-view" hidden>
+      <div class="section-title"><h2>預設搜尋條件</h2><p>開啟「預設條件」時，會連同搜尋頁嘅關鍵字、院校及日期一齊篩選。修改即時套用；可返回搜尋頁儲存常用搜尋。</p></div>
+      <section class="preset-panel search-panel" aria-label="編輯預設條件">
+        <div class="criteria-heading"><h3>科目及職位關鍵字</h3><button type="button" class="text-button" id="reset-preset">還原原始預設</button></div>
+        <div class="search-heading"><label for="preset-input">合併關鍵字</label><div class="mode-switch" role="group" aria-label="預設關鍵字匹配方式"><button type="button" data-preset-mode="AND" aria-pressed="false">全部 AND</button><button type="button" data-preset-mode="OR" aria-pressed="true" class="selected">任一 OR</button></div></div>
+        <textarea id="preset-input" rows="7" maxlength="5000" aria-describedby="preset-help">${escapeHTML(criteria.presetKeywords)}</textarea>
+        <p id="preset-help" class="field-help">逗號或換行分隔，詞組內嘅空格保留。所有關鍵字都搜尋職位名、部門、科目及內文。清空即可取消關鍵字限制。</p>
+        <p class="field-help">科目與職位名稱已合併。選「任一 OR」時，符合其中一個詞便可，例如只有 lecturer 亦會符合；選「全部 AND」則每個詞都要符合。</p>
+        <label class="checkbox-label employment-filter"><input type="checkbox" id="part-time-only" ${criteria.partTimeOnly ? 'checked' : ''}>只看兼職／時薪（包括同時招聘全職及兼職）</label>
+        <div class="preset-footer"><p class="field-help" id="preset-state"></p><button type="button" class="button" id="back-to-results">返回搜尋結果</button></div>
+        <p class="field-help">呢度只修改網頁搜尋，唔會改變 Discord 正式通知條件。</p>
+      </section>
+    </section>
     <footer class="site-footer">保留歷史記錄 · 檢索失敗唔會清空舊職位 · 未提供嘅日期唔會估填</footer>`;
   app.setAttribute('aria-busy', 'false');
   const problems = dataset.sources.filter(s => s.enabled && sourceStatus(s) !== 'ok');
@@ -102,21 +104,28 @@ function bindControls() {
   document.querySelector('#select-all').addEventListener('click', () => { criteria.institutions = dataset.sources.map(s => s.id); syncControls(); renderResults(); });
   document.querySelector('#select-none').addEventListener('click', () => { criteria.institutions = []; syncControls(); renderResults(); });
   document.querySelector('#reset-filters').addEventListener('click', resetFilters);
-  document.querySelector('#reset-search').addEventListener('click', resetFilters);
-  for (const [id, key] of [['subject-input','subjectKeywords'],['role-input','roleKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) {
+  document.querySelector('#reset-preset').addEventListener('click', () => { const defaults = initialCriteria(); for (const key of ['presetKeywords','presetMode','partTimeOnly']) criteria[key] = defaults[key]; syncControls(); renderResults(); });
+  document.querySelector('#preset-toggle').addEventListener('click', () => { criteria.presetEnabled = !criteria.presetEnabled; syncControls(); renderResults(); });
+  document.querySelector('#back-to-results').addEventListener('click', () => { changeView('jobs'); document.querySelector('#query-input').focus(); });
+  for (const [id, key] of [['preset-input','presetKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) {
     document.querySelector('#' + id).addEventListener(id.includes('input') ? 'input' : 'change', event => { criteria[key] = event.target.value; renderResults(); });
   }
   document.querySelector('#part-time-only').addEventListener('change', event => { criteria.partTimeOnly = event.target.checked; renderResults(); });
   document.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click', () => { criteria.mode = button.dataset.mode; syncControls(); renderResults(); }));
+  document.querySelectorAll('[data-preset-mode]').forEach(button => button.addEventListener('click', () => { criteria.presetMode = button.dataset.presetMode; syncControls(); renderResults(); }));
   document.querySelector('#save-search').addEventListener('click', openSaveDialog);
   document.querySelector('#job-list').addEventListener('click', event => { const button = event.target.closest('[data-job]'); if (button) openJob(button.dataset.job, button); if (event.target.closest('[data-reset]')) resetFilters(); });
 }
 
 function syncControls() {
-  for (const [id, key] of [['subject-input','subjectKeywords'],['role-input','roleKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) document.querySelector('#' + id).value = criteria[key];
+  for (const [id, key] of [['preset-input','presetKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) document.querySelector('#' + id).value = criteria[key];
   document.querySelector('#part-time-only').checked = criteria.partTimeOnly;
+  document.querySelector('#preset-toggle').setAttribute('aria-checked', String(criteria.presetEnabled));
+  document.querySelector('#preset-toggle-label').textContent = '預設條件：' + (criteria.presetEnabled ? '開啟' : '關閉');
+  document.querySelector('#preset-state').textContent = criteria.presetEnabled ? '目前已開啟預設條件。' : '目前已關閉預設條件；返回搜尋頁開啟後才會套用。';
   document.querySelectorAll('[name="institution"]').forEach(input => { input.checked = criteria.institutions.includes(input.value); });
   document.querySelectorAll('[data-mode]').forEach(button => { const active = button.dataset.mode === criteria.mode; button.classList.toggle('selected', active); button.setAttribute('aria-pressed', String(active)); });
+  document.querySelectorAll('[data-preset-mode]').forEach(button => { const active = button.dataset.presetMode === criteria.presetMode; button.classList.toggle('selected', active); button.setAttribute('aria-pressed', String(active)); });
 }
 function resetFilters() { criteria = initialCriteria(); syncControls(); renderResults(); }
 
@@ -134,12 +143,12 @@ function renderResults() {
   feedback.textContent = invalidRange ? '開始日期不可遲過結束日期。' : parseQuery(criteria.query).unclosedQuote ? '提示：詞組嘅雙引號未關閉。' : '';
   feedback.hidden = !feedback.textContent;
   visibleJobs = invalidRange ? [] : filterJobs(dataset.jobs, criteria);
-  document.querySelector('#matched-total').innerHTML = `${visibleJobs.length}<small>則</small>`;
-  document.querySelector('#recency-note').textContent = `只顯示最近兩個月：${recentCutoff()} 至 ${dayKey(new Date().toISOString())}。有刊登日期就用刊登日期，缺少時用首見日期；更早記錄仍保留喺資料庫。`;
+  document.querySelector('#matched-total').textContent = visibleJobs.length;
+  document.querySelector('#recency-note').textContent = `最近兩個月：${recentCutoff()} 至 ${dayKey(new Date().toISOString())} · 刊登日期優先，缺少時用首見。`;
   document.querySelector('#result-count').innerHTML = `<strong>${visibleJobs.length}</strong> 則符合條件 <span>／ 共 ${dataset.jobs.length} 則記錄</span>`;
-  exportButton.disabled = visibleJobs.length === 0;
+  exportButton.disabled = view !== 'jobs' || visibleJobs.length === 0;
   if (!visibleJobs.length) {
-    const reason = !criteria.institutions.length ? '你未選擇任何院校。' : '最近兩個月未有符合以上條件嘅職位。可以修改科目、職位名稱，或取消兼職限制。';
+    const reason = !criteria.institutions.length ? '你未選擇任何院校。' : '最近兩個月未有符合以上條件嘅職位。可以修改關鍵字，或關閉預設條件。';
     document.querySelector('#job-list').innerHTML = `<div class="empty-state"><span class="empty-symbol" aria-hidden="true">⌕</span><h2>未有符合條件嘅職位</h2><p>${reason}</p><button type="button" class="button button-outline" data-reset>重設篩選</button><p class="field-help">結果只涵蓋已接通來源；其他來源或故障詳見「來源狀態」。</p></div>`;
     return;
   }
@@ -154,7 +163,7 @@ function renderResults() {
 
 function changeView(next) {
   view = next;
-  for (const name of ['jobs','sources','notifications']) document.querySelector('#' + name + '-view').hidden = name !== view;
+  for (const name of ['jobs','sources','notifications','presets']) document.querySelector('#' + name + '-view').hidden = name !== view;
   document.querySelectorAll('[data-view]').forEach(button => { const active = button.dataset.view === view; button.classList.toggle('active', active); button.setAttribute('aria-pressed', String(active)); });
   exportButton.disabled = view !== 'jobs' || visibleJobs.length === 0;
   if (view === 'sources') renderSources();
