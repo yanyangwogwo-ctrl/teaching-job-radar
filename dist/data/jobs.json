@@ -15063,7 +15063,7 @@
     "automation_active": true,
     "data_kind": "official-live-crawl",
     "discord_configured": false,
-    "generated_at": "2026-09-05T11:39:13+00:00",
+    "generated_at": "2026-09-05T11:42:30+00:00",
     "heartbeat_configured": false,
     "last_run": {
       "finished_at": "2026-09-05T11:42:25+00:00",
