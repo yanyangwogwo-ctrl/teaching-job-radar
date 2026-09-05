@@ -1,6 +1,5 @@
 version: 1
 timezone: Asia/Hong_Kong
-schedule_description: 每日約 08:17（香港時間；排程可能延遲）
 missing_after_successes: 3
 suspicious_drop_ratio: 0.6
 stale_after_hours: 36

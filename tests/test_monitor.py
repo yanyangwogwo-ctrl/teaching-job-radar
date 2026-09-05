@@ -10,6 +10,7 @@ from monitor.model import record, parse_date, deadline_from
 from monitor.notify import deliver, payload_for
 from monitor.official import local_date, parse_hkbu_page
 from monitor.rules import evaluate
+from monitor.schedule import schedule_description
 from monitor.run import read_config
 from monitor.store import fresh_store, reconcile, expire_jobs, export, load_store, atomic_json
 
@@ -164,6 +165,41 @@ class LifecycleTests(unittest.TestCase):
 
 
 class AccessTests(unittest.TestCase):
+    @patch('monitor.http.time.sleep')
+    def test_public_get_retries_timeout_once_with_request_accounting(self, sleep):
+        import requests
+        client = PublicClient(SOURCE)
+        reply = requests.Response()
+        reply.status_code = 200
+        reply.encoding = 'utf-8'
+        reply._content = b'ok'
+        reply._content_consumed = True
+        client.session.request = Mock(side_effect=[requests.ConnectTimeout(), reply])
+        self.assertEqual(client._request(SOURCE['url']).content, b'ok')
+        self.assertEqual(client.count, 2)
+        self.assertEqual(client.session.request.call_count, 2)
+        client.session.request = Mock(side_effect=requests.ConnectTimeout())
+        with self.assertRaises(CrawlError):
+            client._request(SOURCE['url'])
+        self.assertEqual(client.session.request.call_count, 2)
+
+    def test_robots_and_post_timeout_are_not_automatically_retried(self):
+        import requests
+        for options in ({'robots':True}, {'method':'POST','data':{}}):
+            client = PublicClient(SOURCE)
+            client.session.request = Mock(side_effect=requests.ConnectTimeout())
+            with self.assertRaises(CrawlError):
+                client._request(SOURCE['url'], **options)
+            self.assertEqual(client.session.request.call_count, 1)
+
+    def test_access_denial_is_not_retried(self):
+        client = PublicClient(SOURCE)
+        client.allowed = Mock(return_value=True)
+        client.session.request = Mock(return_value=Mock(status_code=403, headers={}, iter_content=lambda _: iter([b'blocked']), encoding='utf-8'))
+        with self.assertRaises(CrawlError):
+            client.response(SOURCE['url'])
+        self.assertEqual(client.session.request.call_count, 1)
+
     def test_robots_wildcards_longest_allow_and_bom(self):
         rules = RobotsPolicy('\ufeffUser-agent: *\nDisallow: /private\nAllow: /private/public\nDisallow: /*?secret=\nDisallow: /closed$')
         self.assertFalse(rules.can_fetch('https://example.edu/private/data'))
@@ -212,6 +248,17 @@ class AccessTests(unittest.TestCase):
 
 
 class SourceSemanticsTests(unittest.TestCase):
+    def test_schedule_label_tracks_workflow_instead_of_stale_preferences(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            path = root/'.github/workflows/daily.yml'
+            path.parent.mkdir(parents=True)
+            path.write_text("on:\n  schedule:\n    - cron: '5 16 * * *'\n")
+            self.assertIn('00:05', schedule_description(root))
+            path.write_text("on:\n  schedule:\n    - cron: '30 21 * * *'\n      timezone: Asia/Hong_Kong\n")
+            self.assertIn('21:30', schedule_description(root))
+            path.write_text("on:\n  schedule:\n    - cron: '*/5 * * * *'\n")
+            self.assertIn('未能確認', schedule_description(root))
     def test_explicit_dates_only_and_timezone(self):
         self.assertIsNone(parse_date('30+ days ago'))
         self.assertIsNone(parse_date('job reference 260905001'))

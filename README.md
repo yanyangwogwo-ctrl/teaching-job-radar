@@ -48,7 +48,27 @@ python -m monitor.run
 
 日常使用：[教席雷達](https://teaching-job-radar.fhk357753357.chatgpt.site)。網頁載入時向 GitHub 取得資料，GitHub 可能有數分鐘快取；任何暫時無法讀取最新資料的情況都會提示。資料更新不需要重新發布網站；改動 HTML／CSS／JavaScript 才需要更新 Sites 版本。
 
+### 在網頁調整每天時間
+
+開啟「通知與排程」，選擇香港時間，再按「複製新設定」。到其提供的 GitHub 編輯頁，於編輯框全選並貼上，再用有寫入權限的 GitHub 帳戶按 **Commit changes** 確認。返回網頁按「檢查是否已儲存」核對；快取可能需要數分鐘更新。
+
+網頁會先讀取最新工作流程，只替換每日時間，保留其餘內容。**選擇時間或複製設定不等於已儲存**；只有 GitHub 預設分支的 `.github/workflows/daily.yml` 是正式排程。公開訪客不會取得專案寫入密鑰，瀏覽職位也不需要登入。現有靜態版本未提供網頁內一鍵寫入 GitHub 的管理員登入；確認仍在 GitHub 完成。[GitHub 編輯及儲存說明](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files)
+
+資料匯出的時間說明也會從工作流程讀取，不再由另一個文字設定維護。系統支援每日一次 UTC 或 Asia/Hong_Kong 排程，其他格式會要求人工檢查，避免錯改。
+
 Actions 費用／免費額度見[官方帳單說明](https://docs.github.com/en/billing/concepts/product-billing/github-actions)。本專案沒有付費 AI API 依賴，也沒有建立任何訂閱。
+
+目前爬取和匹配均使用普通 HTTP、PDF／HTML 解析及關鍵字規則，沒有調用 ChatGPT、OpenAI 或其他模型 API。GitHub 公開專案的標準 runner 運算時間免費；未啟用大型付費 runner。Sites 託管受 ChatGPT 方案及測試版用量限制約束，不能承諾永久無上限免費。[Sites 官方說明](https://learn.chatgpt.com/docs/sites)
+
+網站公開免登入，但官方 Sites 文件沒有逐地區可達性保證；尚未以香港／內地等不同網絡實測。不能直接把 ChatGPT 帳戶的支援地區清單套用到公開網站。程式和資料均保存在 GitHub，可另行部署到其他相容靜態託管。
+
+### 未完整來源的處理方式
+
+- 暫時連線逾時：已允許確認可讀的公開 GET 在連線／等候回應標頭逾時後重試一次，仍遵守限速及請求上限。已收到回應後的內文讀取失敗、驗證頁、拒絕存取及 robots 錯誤不會重試。
+- 恒生：已有可讀的官方 HTML 清單及詳情結構；下一步是從雲端執行環境確認讀取規則可用，再加入並驗證專用解析器。目前仍停用，不能因搜尋工具看得到就假定爬蟲可用。
+- 嶺南：需要校方允許的公開入口／輸出；目前授權限制未解，不會以瀏覽器自動化繞過。
+- 港大／科大／城大：保留已取得清單，尋找可讀的官方詳情或院系公告作補充，補充來源不可冒充完整全校清單。
+- 樹仁失效 PDF：重新核對官方現行附件；已刪除原文不能憑空恢復。中大數目差異：用分組查詢及職位 ID 核對，未確認完整前繼續顯示部分完成。
 
 ## 通知及漏跑監察
 

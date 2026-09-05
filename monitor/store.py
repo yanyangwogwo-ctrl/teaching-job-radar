@@ -17,6 +17,7 @@ from zoneinfo import ZoneInfo
 from .adapters import Batch
 from .model import content_hash
 from .rules import evaluate
+from .schedule import schedule_description
 
 
 def fresh_store() -> dict:
@@ -162,7 +163,7 @@ def export(state: dict, sources: list[dict], prefs: dict, root: Path, now: str):
         health.append(entry)
     metadata = {
         'generated_at': now, 'schema_version': 1, 'data_kind': 'official-live-crawl',
-        'timezone': prefs['timezone'], 'schedule': prefs['schedule_description'],
+        'timezone': prefs['timezone'], 'schedule': schedule_description(root),
         'automation_active': os.environ.get('GITHUB_ACTIONS') == 'true',
         'discord_configured': bool(os.environ.get('DISCORD_WEBHOOK_URL')),
         'heartbeat_configured': bool(os.environ.get('HEARTBEAT_URL')),

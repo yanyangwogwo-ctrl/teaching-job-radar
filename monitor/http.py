@@ -84,6 +84,7 @@ class PublicClient:
 
     def _request(self, url: str, *, robots=False, method='GET', data=None, headers=None) -> requests.Response:
         initial_host = urlsplit(url).hostname
+        timeout_retries = 0
         for _ in range(5):
             self.validate(url)
             host = urlsplit(url).hostname
@@ -94,6 +95,7 @@ class PublicClient:
                 time.sleep(gap)
             self.count += 1
             self.last_request[host] = time.monotonic()
+            response = None
             try:
                 response = self.session.request(method, url, json=data, headers=headers, timeout=(15, 40), allow_redirects=False, stream=True)
                 if response.status_code in (301, 302, 303, 307, 308):
@@ -121,10 +123,22 @@ class PublicClient:
                 response.close()
                 response.encoding = response.encoding if response.encoding and response.encoding.lower() != 'iso-8859-1' else 'utf-8'
                 return response
+            except requests.Timeout as error:
+                if response is not None:
+                    response.close()
+                # Retry a public GET connection/header timeout once. Pacing, host validation
+                # and request caps still run again. Never retry a challenge,
+                # denied robots response or a search POST this way.
+                if method == 'GET' and not robots and response is None and timeout_retries == 0:
+                    timeout_retries += 1
+                    continue
+                raise CrawlError(f'{host} 連線未完成（{type(error).__name__}）。') from None
             except requests.RequestException as error:
+                if response is not None:
+                    response.close()
                 # Do not emit cookies, headers or request URLs in logs.
                 raise CrawlError(f'{host} 連線未完成（{type(error).__name__}）。') from None
-        raise CrawlError('來源重新導向次數過多。')
+        raise CrawlError('來源重新導向或重試次數過多。')
 
     def allowed(self, url: str) -> bool:
         self.validate(url)
