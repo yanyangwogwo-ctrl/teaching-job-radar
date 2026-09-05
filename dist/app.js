@@ -1,4 +1,4 @@
-import { parseQuery, filterJobs, dayKey, effectiveStatus, csvCell } from './search.mjs';
+import { parseQuery, filterJobs, dayKey, effectiveStatus, csvCell, defaultCriteria, restoreCriteria, recentCutoff, isRecent } from './search.mjs?v=20260905-filters';
 import { loadDataset, lastCrawlAt } from './data-source.mjs?v=20260905-session';
 
 const app = document.querySelector('#app');
@@ -15,7 +15,7 @@ let saved = [];
 let detailOpener = null;
 let feedWarning = '', feedMode = 'snapshot';
 
-function initialCriteria() { return { query:'', exclude:'', mode:'AND', relevantOnly:true, institutions:dataset.sources.map(s => s.id), status:'open', dateBasis:'effective', from:'', to:'', sort:'score' }; }
+function initialCriteria() { return defaultCriteria(dataset); }
 function toast(message) { const node = document.querySelector('#toast'); node.textContent = message; node.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { node.hidden = true; }, 3500); }
 function dateTime(value) { if (!value) return '尚未成功檢索'; const date = new Date(value); return Number.isNaN(+date) ? '日期不明' : new Intl.DateTimeFormat('zh-HK', { timeZone:'Asia/Hong_Kong', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit', hour12:false }).format(date); }
 function isStale(source) { return source.enabled && source.last_success && Date.now() - +new Date(source.last_success) > dataset.meta.stale_after_hours * 3600000; }
@@ -35,14 +35,14 @@ function storeSaved(next) {
 
 function renderShell() {
   const connected = dataset.sources.filter(s => s.status === 'ok').length;
-  const matched = dataset.jobs.filter(j => j.matches && effectiveStatus(j) === 'open').length;
-  const active = dataset.jobs.filter(j => effectiveStatus(j) === 'open').length;
+  const matched = filterJobs(dataset.jobs, initialCriteria()).length;
+  const active = dataset.jobs.filter(j => isRecent(j) && effectiveStatus(j) === 'open').length;
   document.querySelector('.schedule-label').textContent = feedMode === 'snapshot' ? '網站保存版本 · 請留意檢索日期' : dataset.meta.automation_active ? dataset.meta.schedule : '已連接雲端資料 · 等待首次自動檢索';
   app.innerHTML = `
     <section class="page-heading"><div><p class="eyebrow">你的教學機會</p><h1>職位一覽</h1></div><p class="updated-at">最近一輪檢索 ${escapeHTML(dateTime(lastCrawlAt(dataset)))}<br><span>香港時間 · 只收集官方招聘頁</span></p></section>
     <section class="overview" aria-label="資料摘要">
-      <div class="overview-item overview-primary"><span>相關兼職教學</span><strong>${matched}<small>則</small></strong><p>哲學、通識及 AI 素養／人文</p></div>
-      <div class="overview-item"><span>已收集的開放職位</span><strong>${active}<small>則</small></strong><p>可切換查看其他科目與類型</p></div>
+      <div class="overview-item overview-primary"><span>目前搜尋結果</span><strong id="matched-total">${matched}<small>則</small></strong><p>按下方可修改嘅搜尋條件</p></div>
+      <div class="overview-item"><span>最近兩個月開放職位</span><strong>${active}<small>則</small></strong><p>刊登日期優先，缺少時用首見</p></div>
       <div class="overview-item"><span>最近一次成功的來源</span><strong>${connected}<small>/ ${dataset.sources.length}</small></strong><p>${dataset.sources.filter(s => !s.enabled).length} 個待接通 · 詳見來源狀態</p></div>
     </section>
     ${feedWarning ? `<div class="notice" role="alert"><strong>${escapeHTML(feedWarning)}</strong></div>` : ''}
@@ -51,15 +51,28 @@ function renderShell() {
     <section id="jobs-view" class="workspace">
       <aside class="filter-panel" aria-label="職位篩選"><details class="filter-drawer" ${matchMedia('(min-width: 960px)').matches ? 'open' : ''}><summary>院校及日期篩選 <span>展開／收起</span></summary><div class="filter-content">
         <div class="filter-heading"><h2>篩選條件</h2><button type="button" class="text-button" id="reset-filters">重設</button></div>
-        <fieldset><legend>院校</legend><div class="selection-actions"><button type="button" class="text-button" id="select-all">全選</button><button type="button" class="text-button" id="select-none">全部取消</button></div><div class="institution-list">${dataset.sources.map(source => `<label class="institution-option"><input type="checkbox" name="institution" value="${escapeHTML(source.id)}" checked><span>${escapeHTML(source.institution)}${!source.enabled ? '<small>待接通</small>' : ''}</span><span class="count">${dataset.jobs.filter(j => j.source_id === source.id).length}</span></label>`).join('')}</div></fieldset>
-        <fieldset><legend>日期範圍</legend><label class="field-label" for="date-basis">日期依據</label><select id="date-basis"><option value="effective">刊登日期（缺少時用首見）</option><option value="first_seen">系統首見日期</option><option value="deadline">截止日期</option></select><div class="date-range"><label>由<input type="date" id="date-from"></label><label>至<input type="date" id="date-to"></label></div><p class="field-help">「首見」係系統第一次發現，唔等於廣告當日刊登。</p></fieldset>
-        <label class="field-label" for="job-status">職位狀態</label><select id="job-status"><option value="open">開放職位</option><option value="all">全部（包括歷史）</option><option value="closed">已截止</option><option value="missing">已消失</option></select>
+        <fieldset><legend>院校</legend><div class="selection-actions"><button type="button" class="text-button" id="select-all">全選</button><button type="button" class="text-button" id="select-none">全部取消</button></div><div class="institution-list">${dataset.sources.map(source => `<label class="institution-option"><input type="checkbox" name="institution" value="${escapeHTML(source.id)}" checked><span>${escapeHTML(source.institution)}${!source.enabled ? '<small>待接通</small>' : ''}</span><span class="count">${dataset.jobs.filter(j => j.source_id === source.id && isRecent(j)).length}</span></label>`).join('')}</div></fieldset>
+        <fieldset><legend>日期範圍</legend><label class="field-label" for="date-basis">日期依據</label><select id="date-basis"><option value="effective">刊登日期（缺少時用首見）</option><option value="first_seen">系統首見日期</option><option value="deadline">截止日期</option></select><div class="date-range"><label>由<input type="date" id="date-from"></label><label>至<input type="date" id="date-to"></label></div><p class="field-help">以上日期可進一步收窄結果。兩個月限制始終按刊登／首見日期計算，唔會用截止日期代替。</p></fieldset>
+        <label class="field-label" for="job-status">職位狀態</label><select id="job-status"><option value="open">開放職位</option><option value="all">全部狀態（最近兩個月）</option><option value="closed">已截止</option><option value="missing">已消失</option></select>
       </div></details></aside>
       <div class="results-panel" id="results" tabindex="-1">
-        <section class="search-panel" aria-label="關鍵字搜尋"><div class="search-heading"><label for="query-input">搜尋職位、部門、科目及內文</label><div class="mode-switch" role="group" aria-label="關鍵字匹配方式"><button type="button" data-mode="AND" aria-pressed="true" class="selected">全部 AND</button><button type="button" data-mode="OR" aria-pressed="false">任一 OR</button></div></div><input type="search" id="query-input" placeholder='例如 philosophy, parttime, lecturer' maxlength="500" autocomplete="off" aria-describedby="syntax-help"><p id="syntax-help" class="syntax-help">逗號／空格分隔關鍵字；<code>"AI literacy"</code> 搜尋完整詞組；<code>-fulltime</code> 排除。<code>parttime</code> 同 <code>part-time</code> 都可以。</p><label class="exclude-label" for="exclude-input">排除關鍵字<input type="text" id="exclude-input" placeholder="例如 nursing, accounting" maxlength="500"></label><div class="search-bottom"><label class="checkbox-label"><input type="checkbox" id="relevant-only" checked>只顯示符合預設科目嘅兼職教學</label><button type="button" class="text-button" id="save-search">＋ 儲存搜尋</button></div><p class="query-feedback" id="query-feedback" role="status"></p><div id="saved-searches" class="saved-searches"></div></section>
-        <div class="result-toolbar"><p id="result-count" aria-live="polite"></p><label for="sort-by">排序<select id="sort-by"><option value="score">相關度優先</option><option value="newest">日期由新到舊</option><option value="oldest">日期由舊到新</option><option value="deadline">即將截止優先</option><option value="institution">院校名稱</option></select></label></div>
+        <section class="search-panel" aria-label="搜尋條件">
+          <div class="criteria-heading"><h2>搜尋條件（可直接修改）</h2><button type="button" class="text-button" id="reset-search">還原預設</button></div>
+          <p class="criteria-help">科目符合任一關鍵字，並且職位名稱符合任一關鍵字。清空某欄即可取消該項限制。</p>
+          <label class="field-label" for="subject-input">科目關鍵字 · 任一符合 OR</label>
+          <textarea id="subject-input" rows="5" maxlength="5000" aria-describedby="subject-help">${escapeHTML(criteria.subjectKeywords)}</textarea>
+          <p id="subject-help" class="field-help">逗號或換行分隔；詞組內嘅空格保留，例如 AI literacy。搜尋職位名、部門及科目內文；一般學位名稱及招聘頁尾會略過。</p>
+          <label class="field-label" for="role-input">職位名稱關鍵字 · 任一符合 OR</label>
+          <input type="text" id="role-input" value="${escapeHTML(criteria.roleKeywords)}" maxlength="1000" aria-describedby="role-help">
+          <p id="role-help" class="field-help">逗號分隔，只搜尋職位名稱。已列出英文及中文常見名稱，可自行增減。</p>
+          <label class="checkbox-label employment-filter"><input type="checkbox" id="part-time-only" ${criteria.partTimeOnly ? 'checked' : ''}>只看兼職／時薪（包括同時招聘全職及兼職）</label>
+          <div class="additional-search"><div class="search-heading"><label for="query-input">額外關鍵字（可留空）</label><div class="mode-switch" role="group" aria-label="額外關鍵字匹配方式"><button type="button" data-mode="AND" aria-pressed="true" class="selected">全部 AND</button><button type="button" data-mode="OR" aria-pressed="false">任一 OR</button></div></div><input type="search" id="query-input" placeholder='例如 "AI literacy" -nursing' maxlength="500" autocomplete="off" aria-describedby="syntax-help"><p id="syntax-help" class="syntax-help">搜尋職位、部門、科目及全部內文。逗號／空格分隔；<code>"AI literacy"</code> 搜尋完整詞組；<code>-fulltime</code> 排除。<code>parttime</code> 同 <code>part-time</code> 都可以。</p><label class="exclude-label" for="exclude-input">排除關鍵字<input type="text" id="exclude-input" placeholder="例如 nursing, accounting" maxlength="500"></label></div>
+          <div class="search-bottom"><span class="field-help">修改後即時更新結果；可以儲存供下次使用。</span><button type="button" class="text-button" id="save-search">＋ 儲存搜尋</button></div><p class="query-feedback" id="query-feedback" role="status"></p><div id="saved-searches" class="saved-searches"></div>
+        </section>
+        <p class="recency-note" id="recency-note"></p>
+        <div class="result-toolbar"><p id="result-count" aria-live="polite"></p><label for="sort-by">排序<select id="sort-by"><option value="newest">日期由新到舊</option><option value="oldest">日期由舊到新</option><option value="score">相關度優先</option><option value="deadline">即將截止優先</option><option value="institution">院校名稱</option></select></label></div>
         <div id="job-list" class="job-list"></div>
-        <p class="results-footnote">相關度按科目、職位名稱及聘用類型計算；請到官方原文核對學歷、經驗及最新申請情況。</p>
+        <p class="results-footnote">相關度分數沿用預設科目，唔會限制自訂關鍵字搜尋。請到官方原文核對學歷、經驗及最新申請情況。</p>
       </div>
     </section>
     <section id="sources-view" class="secondary-view" hidden></section>
@@ -76,6 +89,7 @@ function renderShell() {
   else if (pending) warning.innerHTML = `<strong>目前已接通 ${connected} 個來源，另外 ${pending} 個待接通。</strong> 目前結果只涵蓋已接通來源。`;
   else { warning.classList.add('notice-success'); warning.textContent = '所有來源最近一次檢索均已完成。'; }
   bindControls();
+  syncControls();
   renderSaved();
   renderResults();
 }
@@ -87,18 +101,19 @@ function bindControls() {
   document.querySelector('#select-all').addEventListener('click', () => { criteria.institutions = dataset.sources.map(s => s.id); syncControls(); renderResults(); });
   document.querySelector('#select-none').addEventListener('click', () => { criteria.institutions = []; syncControls(); renderResults(); });
   document.querySelector('#reset-filters').addEventListener('click', resetFilters);
-  for (const [id, key] of [['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) {
+  document.querySelector('#reset-search').addEventListener('click', resetFilters);
+  for (const [id, key] of [['subject-input','subjectKeywords'],['role-input','roleKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) {
     document.querySelector('#' + id).addEventListener(id.includes('input') ? 'input' : 'change', event => { criteria[key] = event.target.value; renderResults(); });
   }
-  document.querySelector('#relevant-only').addEventListener('change', event => { criteria.relevantOnly = event.target.checked; renderResults(); });
+  document.querySelector('#part-time-only').addEventListener('change', event => { criteria.partTimeOnly = event.target.checked; renderResults(); });
   document.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click', () => { criteria.mode = button.dataset.mode; syncControls(); renderResults(); }));
   document.querySelector('#save-search').addEventListener('click', openSaveDialog);
   document.querySelector('#job-list').addEventListener('click', event => { const button = event.target.closest('[data-job]'); if (button) openJob(button.dataset.job, button); if (event.target.closest('[data-reset]')) resetFilters(); });
 }
 
 function syncControls() {
-  for (const [id, key] of [['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) document.querySelector('#' + id).value = criteria[key];
-  document.querySelector('#relevant-only').checked = criteria.relevantOnly;
+  for (const [id, key] of [['subject-input','subjectKeywords'],['role-input','roleKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) document.querySelector('#' + id).value = criteria[key];
+  document.querySelector('#part-time-only').checked = criteria.partTimeOnly;
   document.querySelectorAll('[name="institution"]').forEach(input => { input.checked = criteria.institutions.includes(input.value); });
   document.querySelectorAll('[data-mode]').forEach(button => { const active = button.dataset.mode === criteria.mode; button.classList.toggle('selected', active); button.setAttribute('aria-pressed', String(active)); });
 }
@@ -118,10 +133,12 @@ function renderResults() {
   feedback.textContent = invalidRange ? '開始日期不可遲過結束日期。' : parseQuery(criteria.query).unclosedQuote ? '提示：詞組嘅雙引號未關閉。' : '';
   feedback.hidden = !feedback.textContent;
   visibleJobs = invalidRange ? [] : filterJobs(dataset.jobs, criteria);
+  document.querySelector('#matched-total').innerHTML = `${visibleJobs.length}<small>則</small>`;
+  document.querySelector('#recency-note').textContent = `只顯示最近兩個月：${recentCutoff()} 至 ${dayKey(new Date().toISOString())}。有刊登日期就用刊登日期，缺少時用首見日期；更早記錄仍保留喺資料庫。`;
   document.querySelector('#result-count').innerHTML = `<strong>${visibleJobs.length}</strong> 則符合條件 <span>／ 共 ${dataset.jobs.length} 則記錄</span>`;
   exportButton.disabled = visibleJobs.length === 0;
   if (!visibleJobs.length) {
-    const reason = !criteria.institutions.length ? '你未選擇任何院校。' : '試試減少關鍵字，或取消「只顯示符合預設科目嘅兼職教學」。';
+    const reason = !criteria.institutions.length ? '你未選擇任何院校。' : '最近兩個月未有符合以上條件嘅職位。可以修改科目、職位名稱，或取消兼職限制。';
     document.querySelector('#job-list').innerHTML = `<div class="empty-state"><span class="empty-symbol" aria-hidden="true">⌕</span><h2>未有符合條件嘅職位</h2><p>${reason}</p><button type="button" class="button button-outline" data-reset>重設篩選</button><p class="field-help">結果只涵蓋已接通來源；其他來源或故障詳見「來源狀態」。</p></div>`;
     return;
   }
@@ -130,7 +147,7 @@ function renderResults() {
     const source = dataset.sources.find(s => s.id === job.source_id);
     const stale = source && sourceStatus(source) !== 'ok';
     const evidence = job.evidence?.[0];
-    return `<article class="job-card ${job.matches ? 'matched' : ''}"><div class="job-main"><div class="job-meta"><span class="institution-badge">${escapeHTML(job.institution)}</span><span>${escapeHTML(employmentLabels[job.employment_type] || job.employment_type)}</span>${status !== 'open' ? `<span class="status-badge status-${status}">${statusLabels[status]}</span>` : ''}${stale || !job.detail_complete ? '<span class="stale-label">資料待核實</span>' : ''}</div><h2><button type="button" class="job-title" data-job="${escapeHTML(job.id)}">${escapeHTML(job.title)}</button></h2><p class="job-department">${escapeHTML(job.department || '網站未列明部門')}</p><div class="subject-tags">${(job.subjects || []).map(s => `<span>${escapeHTML(s.label)}</span>`).join('')}${job.matches ? `<span class="match-score" title="規則匹配分數，並非獲聘機率">相關度 ${job.score}</span>` : ''}</div>${evidence ? `<p class="match-evidence">匹配內容：${escapeHTML(evidence.snippet)}</p>` : ''}</div><div class="job-dates"><div><span>${job.posted_date ? '刊登日期' : '首見日期'}</span><strong>${escapeHTML(job.posted_date || dayKey(job.first_seen))}</strong>${!job.posted_date ? '<small>網站未提供刊登日期</small>' : ''}</div><div><span>截止日期</span><strong>${deadlineLabel(job)}</strong></div><a class="source-link" href="${escapeHTML(safeURL(job.url))}" target="_blank" rel="noopener noreferrer">官方原文 ↗<span class="sr-only">：${escapeHTML(job.title)}</span></a></div></article>`;
+    return `<article class="job-card ${job.matches ? 'matched' : ''}"><div class="job-card-top"><div class="job-meta"><span class="institution-badge">${escapeHTML(job.institution)}</span><span>${escapeHTML(employmentLabels[job.employment_type] || job.employment_type)}</span>${status !== 'open' ? `<span class="status-badge status-${status}">${statusLabels[status]}</span>` : ''}${stale || !job.detail_complete ? '<span class="stale-label">資料待核實</span>' : ''}</div><a class="button button-outline source-link" href="${escapeHTML(safeURL(job.url))}" target="_blank" rel="noopener noreferrer">官方原文 ↗<span class="sr-only">：${escapeHTML(job.title)}</span></a></div><div class="job-main"><h2><button type="button" class="job-title" data-job="${escapeHTML(job.id)}">${escapeHTML(job.title)}</button></h2><p class="job-department">${escapeHTML(job.department || '網站未列明部門')}</p><div class="subject-tags">${(job.subjects || []).map(s => `<span>${escapeHTML(s.label)}</span>`).join('')}${job.matches ? `<span class="match-score" title="規則匹配分數，並非獲聘機率">相關度 ${job.score}</span>` : ''}</div>${evidence ? `<p class="match-evidence">匹配內容：${escapeHTML(evidence.snippet)}</p>` : ''}</div><div class="job-dates"><div><span>${job.posted_date ? '刊登日期' : '首見日期'}</span><strong>${escapeHTML(job.posted_date || dayKey(job.first_seen))}</strong>${!job.posted_date ? '<small>網站未提供刊登日期</small>' : ''}</div><div><span>截止日期</span><strong>${deadlineLabel(job)}</strong></div></div></article>`;
   }).join('');
 }
 
@@ -143,8 +160,20 @@ function changeView(next) {
   if (view === 'notifications') renderNotifications();
 }
 
+function sourceExplanation(source) {
+  if (!source.enabled) return '尚未接入每日檢索，目前需要手動查看。原因見下方備註；系統唔會每日重試已停用來源。';
+  if (sourceStatus(source) === 'ok') return '最近一次已讀完整個職位清單及可用詳情。';
+  const error = (source.errors ?? []).join(' ');
+  if (/ConnectTimeout|ReadTimeout|逾時|timeout/i.test(error)) return '上次連線逾時，唔代表網站永久封鎖。已保留舊記錄，下一輪每日檢索會再次嘗試。';
+  if (['hkust','cityu'].includes(source.id)) return '清單已接通。首次檢查發現詳情頁有存取限制，目前每日只更新清單；內文仍需到官方網站查看。';
+  if (/404/.test(error)) return '清單已讀取，但部分職位原文或附件連結失效，令詳情未能完整收集。';
+  if (source.id === 'cuhk' && source.status === 'partial') return '已取得職位及詳情，但網站回報嘅總數同實際分頁結果不一致，可能仍有遺漏，所以標示部分完成。';
+  if (/202|驗證|challenge/i.test(error)) return '清單或部分詳情可讀，但網站要求額外驗證。已停止受影響嘅讀取，並保留取得嘅資料。';
+  return '最近一次未能完整更新；已保留舊記錄，具體原因見下方。';
+}
+
 function renderSources() {
-  document.querySelector('#sources-view').innerHTML = `<div class="section-title"><h2>每個来源都睇得清楚</h2><p>成功讀完整個清單先算完成；連續三次成功檢索都搵唔返，先標示職位「消失」。</p></div><div class="source-grid">${dataset.sources.map(source => `<article class="source-card"><div class="source-card-top"><h3>${escapeHTML(source.institution)}</h3>${healthBadge(source)}</div><p>${escapeHTML(source.name)}</p><dl><div><dt>最近成功</dt><dd>${escapeHTML(dateTime(source.last_success))}</dd></div><div><dt>最近嘗試</dt><dd>${source.last_attempt ? escapeHTML(dateTime(source.last_attempt)) : '尚未執行'}</dd></div><div><dt>最近取得</dt><dd>${source.last_attempt ? source.count + ' 則' : '—'}</dd></div></dl>${source.errors?.length ? `<p class="source-error">${source.errors.map(escapeHTML).join('<br>')}</p>` : ''}<p class="source-note">${escapeHTML(source.notes)}</p><a href="${escapeHTML(safeURL(source.url))}" target="_blank" rel="noopener noreferrer">開啟官方招聘頁 ↗</a></article>`).join('')}</div>`;
+  document.querySelector('#sources-view').innerHTML = `<div class="section-title"><h2>來源狀態及未完成原因</h2><p>「部分未完成」仍然可能已讀到清單；「檢索失敗」係今輪未讀到；「待接通」則尚未啟用。人手開到網站，唔代表程式亦能讀到全部職位。</p></div><div class="source-grid">${dataset.sources.map(source => `<article class="source-card"><div class="source-card-top"><h3>${escapeHTML(source.institution)}</h3><a class="button button-outline" href="${escapeHTML(safeURL(source.url))}" target="_blank" rel="noopener noreferrer">官方招聘 ↗<span class="sr-only">：${escapeHTML(source.institution)}</span></a></div><div class="source-health">${healthBadge(source)}</div><p>${escapeHTML(sourceExplanation(source))}</p><dl><div><dt>最近成功</dt><dd>${escapeHTML(dateTime(source.last_success))}</dd></div><div><dt>最近嘗試</dt><dd>${source.last_attempt ? escapeHTML(dateTime(source.last_attempt)) : '尚未執行'}</dd></div><div><dt>最近取得</dt><dd>${source.last_attempt ? source.count + ' 則' : '—'}</dd></div></dl>${source.errors?.length ? `<p class="source-error">${source.errors.map(escapeHTML).join('<br>')}</p>` : ''}<p class="source-note">${escapeHTML(source.notes)}</p></article>`).join('')}</div>`;
 }
 
 function renderNotifications() {
@@ -157,7 +186,7 @@ function openJob(id, opener) {
   const job = dataset.jobs.find(j => j.id === id);
   if (!job) return;
   detailOpener = opener;
-  detailDialog.innerHTML = `<div class="dialog-heading"><span class="institution-badge">${escapeHTML(job.institution)}</span><button type="button" class="icon-button" data-close aria-label="關閉職位詳情">✕</button></div><h2 id="job-dialog-title">${escapeHTML(job.title)}</h2><div class="detail-meta"><span>${escapeHTML(employmentLabels[job.employment_type])}</span><span>${escapeHTML(job.reference || '未列明編號')}</span><span>${escapeHTML(statusLabels[effectiveStatus(job)])}</span></div><dl class="detail-dates"><div><dt>刊登日期</dt><dd>${escapeHTML(job.posted_date || '網站未提供')}</dd></div><div><dt>系統首見</dt><dd>${escapeHTML(dayKey(job.first_seen))}</dd></div><div><dt>截止／審閱</dt><dd>${deadlineLabel(job)}</dd></div><div><dt>最近見到</dt><dd>${escapeHTML(dateTime(job.last_seen))}</dd></div></dl>${!job.detail_complete ? '<p class="notice">最近一次未能讀完整份詳情。下方可能顯示上次保存嘅內容，請查看官方原文。</p>' : ''}${job.evidence?.length ? `<section class="detail-evidence"><h3>點解同你相關？</h3>${job.evidence.map(e => `<p><strong>${escapeHTML(e.subject)}</strong> · ${escapeHTML(e.snippet)}</p>`).join('')}</section>` : ''}<h3>職位內文</h3><div class="job-description">${escapeHTML(job.description || '尚未成功取得詳情，請到官方招聘頁查看。')}</div><div class="dialog-footer"><a class="button" href="${escapeHTML(safeURL(job.url))}" target="_blank" rel="noopener noreferrer">到官方原文查看 ↗</a><button type="button" class="button button-outline" data-close>關閉</button></div>`;
+  detailDialog.innerHTML = `<div class="dialog-heading"><span class="institution-badge">${escapeHTML(job.institution)}</span><div class="dialog-top-actions"><a class="button button-outline" href="${escapeHTML(safeURL(job.url))}" target="_blank" rel="noopener noreferrer">官方原文 ↗</a><button type="button" class="icon-button" data-close aria-label="關閉職位詳情">✕</button></div></div><h2 id="job-dialog-title">${escapeHTML(job.title)}</h2><div class="detail-meta"><span>${escapeHTML(employmentLabels[job.employment_type])}</span><span>${escapeHTML(job.reference || '未列明編號')}</span><span>${escapeHTML(statusLabels[effectiveStatus(job)])}</span></div><dl class="detail-dates"><div><dt>刊登日期</dt><dd>${escapeHTML(job.posted_date || '網站未提供')}</dd></div><div><dt>系統首見</dt><dd>${escapeHTML(dayKey(job.first_seen))}</dd></div><div><dt>截止／審閱</dt><dd>${deadlineLabel(job)}</dd></div><div><dt>最近見到</dt><dd>${escapeHTML(dateTime(job.last_seen))}</dd></div></dl>${!job.detail_complete ? '<p class="notice">最近一次未能讀完整份詳情。下方可能顯示上次保存嘅內容，請查看官方原文。</p>' : ''}${job.evidence?.length ? `<section class="detail-evidence"><h3>點解同你相關？</h3>${job.evidence.map(e => `<p><strong>${escapeHTML(e.subject)}</strong> · ${escapeHTML(e.snippet)}</p>`).join('')}</section>` : ''}<h3>職位內文</h3><div class="job-description">${escapeHTML(job.description || '尚未成功取得詳情，請到官方招聘頁查看。')}</div><div class="dialog-footer"><button type="button" class="button button-outline" data-close>關閉</button></div>`;
   detailDialog.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => detailDialog.close()));
   detailDialog.showModal();
 }
@@ -167,7 +196,7 @@ function renderSaved() {
   const container = document.querySelector('#saved-searches');
   container.innerHTML = saved.length ? `<span class="saved-label">常用搜尋<span>只儲存在此瀏覽器</span></span>${saved.map((entry, index) => `<span class="saved-chip"><button type="button" data-load="${index}">${escapeHTML(entry.name)}</button><button type="button" data-delete="${index}" aria-label="移除搜尋：${escapeHTML(entry.name)}">×</button></span>`).join('')}` : '';
   container.hidden = !saved.length;
-  container.querySelectorAll('[data-load]').forEach(button => button.addEventListener('click', () => { const entry = saved[Number(button.dataset.load)]; criteria = { ...initialCriteria(), ...entry.criteria, institutions:entry.criteria.institutions.filter(id => dataset.sources.some(s => s.id === id)) }; syncControls(); renderResults(); toast('已套用：' + entry.name); }));
+  container.querySelectorAll('[data-load]').forEach(button => button.addEventListener('click', () => { const entry = saved[Number(button.dataset.load)]; criteria = restoreCriteria(entry.criteria, dataset); syncControls(); renderResults(); toast('已套用：' + entry.name); }));
   container.querySelectorAll('[data-delete]').forEach(button => button.addEventListener('click', () => { const next = saved.filter((_, i) => i !== Number(button.dataset.delete)); if (storeSaved(next)) { renderSaved(); toast('已移除常用搜尋。'); } }));
 }
 
