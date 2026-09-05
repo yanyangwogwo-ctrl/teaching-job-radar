@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="香港大專兼職教學職位監察：按院校、科目及日期搜尋官方招聘資料，查看來源更新狀態。">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#173e77">
+  <title>大專職位監察 · 教席雷達</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#results">跳至職位結果</a>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">教</span><div><strong>教席雷達</strong><span>大專職位監察</span></div></div>
+    <div class="top-actions"><span class="schedule-label">每日檢索 · 香港時間</span><button type="button" class="button button-outline" id="export-button">匯出 CSV</button></div>
+  </header>
+  <main id="app" aria-busy="true"><p class="loading-message" role="status">正在讀取職位及來源狀態…</p></main>
+  <noscript><p class="loading-message">請啟用 JavaScript 使用關鍵字篩選。官方招聘網址仍可在原有書籤開啟。</p></noscript>
+  <dialog id="job-dialog" aria-labelledby="job-dialog-title"></dialog>
+  <dialog id="save-dialog" aria-labelledby="save-dialog-title"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

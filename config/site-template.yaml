@@ -1,0 +1,23 @@
+# 此檔是新增普通 HTML 來源的教學範例，未被程式自動載入。
+# 複製到 sites.yaml 的 sources 下，按該官方網頁實際 HTML 設定。
+id: new-official-source
+institution: 新院校
+name: 新院校官方招聘
+group: new-official-source
+url: https://example.edu/careers
+adapter: generic_html
+enabled: false
+allowed_hosts: [example.edu]
+notes: 未驗收；不要在驗證欄位和完整分頁前啟用。
+selectors:
+  row: '.vacancy-row'
+  title: '.vacancy-title'
+  link: 'a.vacancy-title'
+  reference: '.reference'
+  department: '.department'
+  posted_date: '.posted-date'
+  deadline: '.closing-date'
+  employment_type: '.employment-type'
+  detail_body: 'main .vacancy-description'
+  next: 'a.next-page'
+  empty: '.confirmed-no-vacancies'

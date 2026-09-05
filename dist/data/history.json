@@ -1,0 +1,3740 @@
+[
+  {
+    "at": "2026-09-05T00:28:10+00:00",
+    "job_id": "0dc8f8a56552a5629363d976",
+    "kind": "baseline",
+    "source_id": "uowchk",
+    "title": "Part-time Lecturer, DAE (Clerical Work in Practice in Government), Faculty of Arts and Humanities"
+  },
+  {
+    "at": "2026-09-05T00:28:10+00:00",
+    "job_id": "8c8f26d13abcaaffb64e69a9",
+    "kind": "baseline",
+    "source_id": "uowchk",
+    "title": "Clerical Officer"
+  },
+  {
+    "at": "2026-09-05T00:28:10+00:00",
+    "job_id": "8a9f69a0929f7a63cab59a37",
+    "kind": "baseline",
+    "source_id": "uowchk",
+    "title": "Lecturer/Senior Lecturer/Assistant Professor in Social Work, Faculty of Social Sciences"
+  },
+  {
+    "at": "2026-09-05T00:28:10+00:00",
+    "job_id": "5c23ccbca30c4e124242b5d5",
+    "kind": "baseline",
+    "source_id": "uowchk",
+    "title": "Part-time Lecturers in Logistics, Faculty of Science and Technology"
+  },
+  {
+    "at": "2026-09-05T00:28:10+00:00",
+    "job_id": "d6501116425823a0723a209c",
+    "kind": "baseline",
+    "source_id": "uowchk",
+    "title": "Part-time Lecturers in Information Technology and Mathematics, Faculty of Science and Technology"
+  },
+  {
+    "at": "2026-09-05T00:28:10+00:00",
+    "job_id": "82484c27c1df5edb9ff100ab",
+    "kind": "baseline",
+    "source_id": "uowchk",
+    "title": "ERB Instructors"
+  },
+  {
+    "at": "2026-09-05T00:28:10+00:00",
+    "job_id": "787a33ce11122617839602c2",
+    "kind": "baseline",
+    "source_id": "uowchk",
+    "title": "Part-time Lecturers in UAV and Low-Altitude Economy, Faculty of Science and Technology"
+  },
+  {
+    "at": "2026-09-05T00:28:10+00:00",
+    "job_id": "db4545ee051e9becabd0e8d9",
+    "kind": "baseline",
+    "source_id": "uowchk",
+    "title": "Part-time Lecturers in KOL Marketing and Generative AI, Faculty of Science and Technology"
+  },
+  {
+    "at": "2026-09-05T00:28:10+00:00",
+    "job_id": "33311e851cde49f27f8211b6",
+    "kind": "baseline",
+    "source_id": "uowchk",
+    "title": "Executive Officers"
+  },
+  {
+    "at": "2026-09-05T00:28:10+00:00",
+    "job_id": "b8729b312346dc049eec8794",
+    "kind": "baseline",
+    "source_id": "uowchk",
+    "title": "Clerical Officers"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "1840c7f1c19d1091a9e118e1",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "兼職教師招聘 - 零售市場營銷課程"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "38867a51b21cb4d2e4f64474",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time Teachers for AI in Marketing Courses"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "14db7281731e9481f02f3e5a",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time Teacher for LCCI Exam Preparatory Programme"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "4024667a273047fd8322431a",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "短期研討會兼職教師招聘 – 理財保險業"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "cda89dab63638f01ae398f13",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time Teachers for Accounting and related Courses"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "850ac6b388d6b50527eb3ecf",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time Teacher for Certificate for Module (Certified Insurance Professionals Certificate Course)"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "f608cf8585c523ee0890a43f",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-Time Teachers for Short Seminars – Insurance Industry"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "8ead2320e6ea7b7dd3814acf",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time Teacher for Courses in AI and GenAI Applications for Business"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "6ab313abbc9a3ba1fef72141",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time Teacher for Courses in AI and Data Analytics for Business Management"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "5a325bedd915c0a45548eeca",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time Teachers for IPO and Private Equity Related Courses"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "ac6b50e0725f53508aeec080",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time Teacher in English Language in the College of Humanities and Law"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "f064f460efeb89a3432335de",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time Teacher (Housing and Built Environment) in the College of Humanities and Law"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "e05fd40fe0cb6224e0c249f5",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time Teacher Social Science in the College of Humanities and Law"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "d18e62d2451b9bd587986955",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time Teacher (Adult Training and Vocational Education) in the College of Humanities and Law"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "ccaeceb77c4867e86f6d382b",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time Teachers in Robotics, Artificial Intelligence, Information Technology, Engineering, ESG, digital media production and marketing, and UX/UI programmes in the College of Life Sciences and Technology"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "a7f6a3d780e291d1f4ccd22a",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time Teachers in Information Technology Programmes in the College of Life Sciences and Technology"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "a80c975c9a92578511fbd538",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time (Day-time) - Teachers Division of English"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "31857fbf70d4ffec09ad6278",
+    "kind": "baseline",
+    "source_id": "hkuspace",
+    "title": "Part-time (Day-time) - Teachers Division of Engineering and Technology"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "822d0e344df360555265424b",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Part-time Instructors (Assistant Coach)"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "f4b13eab65db41a337c097b7",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Executive Officer"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "c755e93bcfcac723d502802d",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Student Development Assistant"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "174dbd431ce499820ad26d24",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Systems Analyst (Application Development & Support)"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "198cc08c019d842e65590db3",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Systems Analyst (Senior System Engineer)"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "9b8be84fd38f4be58c638fbb",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree And Undergraduate Degree Programmes"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "ab3137548c17af9411cf3894",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Part-time Instructors for Professional Diploma in Tree Management"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "73f29faba7f3f40a21c21bf5",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Part-time Instructors for Professional Diploma in Occupational Safety and Health"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "92f57ef1e058b5aaabbf2ca4",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Part-time Instructors for Applied Learning Courses"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "b3b9c8f6a4580f3e3d2afa0a",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Information Technology Manager (Application Delivery & Support)"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "7ee4277e5a59b0152bdde52f",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Systems Analyst (IT Business Analyst)"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "d5b7d20761dcca4a7854f1c4",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Human Resources Officer"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "b85e3e4105a4d602af70c569",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Human Resources Manager"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "4312bc35662b4d1b39844101",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Senior Student Development Officer / Student Development Officer"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "b287e41033e77dc1b6360aa8",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Senior Human Resources Officer"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "21e07d233f129a14c3aa8112",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Assistant Project Manager / Senior Executive Officer"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "f66c7415bdcd929f7064be29",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Senior Executive Officer / Executive Officer"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "70b512fdaf6f1709c73dd0f4",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Lecturer I / Lecturer II / Assistant Lecturer (Accounting)"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "5c2637c30f472bc5743da012",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Senior Accounting Officer"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "de096937425996efda9e11c5",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Assistant Programme Officer"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "57d4eca627c485953e6b9196",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree And Undergraduate Degree Programmes"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "a0baef6e31177729e5a79c6e",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Part-time Instructor for Short Course"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "9ed4623de2e895e511c6e17e",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Part-time Instructors for Diploma of College Foundation Studies (Full Time)"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "d3b0a47e6d1daccc02ffc61c",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "兼職導師 (應用教育文憑課程)"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "a8ae773b6520a44c428a2bb7",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Accounting Manager (Income and Project)"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "31a84045a11ff1844b6446fc",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree And Undergraduate Degree Programmes"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "fe8c6a9c76f56fa7deb7c453",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Senior Information Technology Manager (Applications & Integration)"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "a8d24c2e7480fa4974e470c7",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "兼職講師 - 幼兒及基礎教育證書 / 文憑課程"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "0bf0901cb90629ba014748bb",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Part-time Lecturers for Full-time Day / Part-time Evening Postgraduate, Undergraduate & Sub-degree Programmes (Various Disciplines)"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "406c2a639ead775af7194621",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree And Undergraduate Degree Programmes"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "f102d4418278fac36ae7c81b",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree Programmes"
+  },
+  {
+    "at": "2026-09-05T08:49:31+00:00",
+    "job_id": "7ec6c4ff6e5e37cbc081f067",
+    "kind": "baseline",
+    "source_id": "hkbu-sce",
+    "title": "Part-time Instructors for Higher Diploma Programmes (Full-time)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "6f9782a82c2885212d406fd0",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "Lecturer (Fashion Design), Irene Lam Department of Design"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "d7cae2681851be55106be5c2",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "Professor (Film and Creative Entertainment), Irene Lam Department of Design"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "92b2a3e5386df64b7b43d149",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "Professor (Design), Irene Lam Department of Design"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "5f6ac3df0848128cf783e67e",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "1266dc4a9b2269cde4c176e7",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "Senior Lecturers/ Lecturers, Faith Hope Love Department of General Education"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "f94c1a7e67765103904ae40f",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "Professor in Physiotherapy, S.K. Yee School of Health Sciences"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "fef74a205070d4777e90d3ed",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "Professor, Yam Pak Charitable Foundation School of Computing and Information Sciences"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "92fd45b78450027bc59c1867",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "Professor/ Professor of Practice/ Associate Professor/ Associate Professor of Practice, S.K. Yee School of Health Sciences"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "23d6c56fd8c5fd01c2233635",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "Full-time / Part-time Associate Professors / Assistant Professors / Senior Lecturers, Rita Tong Liu School of Business and Hospitality Management"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "b0e7b68b527a266fd28322d2",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "[Full-time/ Part-time] Associate Professor / Assistant Professor/ Senior Lecturer/ Lecturer, Yam Pak Charitable Foundation School of Computing and Information Sciences"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "8a4e1a5686229f232388612d",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "Assistant Professors/ Senior Lecturers/ Lecturers, S.K. Yee School of Health Sciences"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "73f1ebe71684643100e5e219",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "Full-time/ Part-time Assistant Professors / Senior Lecturers / Lecturers, Felizberta Lo Padilla Tong School of Social Sciences"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "9ca6a99c74b8bbab488b68de",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "Assistant Professors / Senior Lecturers / Lecturers, Ip Ying To Lee Yu Yee School of Humanities and Languages"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "6da60411e31d50b45b51fc5f",
+    "kind": "baseline",
+    "source_id": "sfu",
+    "title": "[Full-time/Part-time] Professors / Associate Professors, Felizberta Lo Padilla Tong School of Social Sciences"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "3721e145a7da0cfc0c5bc283",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Part-time Lecturer"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "bae393f9daae433918cf4b4e",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Part Time Student Research Assistant"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "ef6e011e8779aa557b6b399b",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Part-Time Lecturer in Population and Policy Analysis"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "9c64964d3e2c701545940132",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "全職/半職宿舍服務員"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "2bb3e1de5ac9b7d648161286",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Full-time / Part-time Senior Lecturer / Lecturer / Assistant Lecturer (holding the title of Associate Project Director / Senior Project Manager / Project Manager) in the Faculty of Social Sciences"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "92304f4292042aae2171a170",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Part-time Pharmacist"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "cf0721136af5f2228cfbdf00",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Part-time Research Nurse (at the rank of Nurse) in the Division of Gastroenterology and Hepatology"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "37970d2c63ea3bc13b8dd3bf",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Full-time/Part-time Research Assistant I/II (several posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "f32090de6822b7ee4d02db0c",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Adjunct Associate Professor, Adjunct Assistant Professor, and Part-time Hourly-paid Lecturer in the Division of Landscape Architecture"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "c44ee8a8591a2243d7fc9086",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Part-Time Student Research Assistant in the HKU-Pasteur Research Pole"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "b9131c56e17c7362fb646ce8",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Part-time Student Research Assistant (several posts) in the Division of Community Medicine and Public Health Practice"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "697f7a2a0aa566e74c8e5e50",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Full-time/Part-time Research Assistant I/II in the Division of Community Medicine and Public Health Practice"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "fa230114a57ff2f83d49026f",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Investigator / Research Officer (holding the title of Educational Psychologist) in the Department of Psychology"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "9d7d98d5e882f245e2de53cf",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Full-time/Part-time Certificated Dental Surgery Assistant I/II/Dental Clinic Assistant (at the rank of Facilities Assistant) (several posts) in the Institute for Advanced Dentistry Multi-Specialty Clinic (IAD-MSC)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "b0cf32827883a9c28e3df121",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Senior Research Assistant /Research Assistant I/II /Student Research Assistant in AI Agents for Architecture and Construction"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "06cf4cf181ef750aeb94c89b",
+    "kind": "baseline",
+    "source_id": "hku",
+    "title": "Technical Assistant (Field Data Collection) (several posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "1a29996c2a950b319d94e02c",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Teaching-Track Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "71b8416bccc58381b3786049",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Tenure-Track Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "91eb7d6c5f11135c9ea15b9c",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Professor / Associate Professor / Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "e2d6852047dcdfac296abc38",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Senior Lecturer / Lecturer I / Lecturer II (several posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "cc21e6e648c0a32c1026d794",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Research Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "721284db9946dd0d9f94c601",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Tenure-track Faculty Positions in Operations Management"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "48e4598cd898708b25909cd5",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "0a3560349ff4526d7c62d99a",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "2027 All Fields in Economics (Assistant/Associate/Full Professor)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "e843a0a71a88a4adc431e2ee",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Professor / Associate Professor / Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "e1fa0c2da00443376de26727",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Open-Rank Faculty Positions (Assistant/Associate/Full Professor)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "ee224669bdaecf482106625b",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Teaching Track Faculty Position"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "3e0cbc855b2ca0d04f87b99f",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "General Director, HKUST Shenzhen Research Platforms"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "ab466a3c941a0e93deaf092b",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Faculty Position(s) in Biodiversity, Ecosystem Services, and Nature-based Solutions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "f828846aa2810644f521e5f6",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Director of the Center for Language Education"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "f7ed94a8eb968296708555c0",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Assistant/Associate Professor in Information Systems (2 positions)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "88fcef7903407f08618f02dd",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Tenure-track Faculty"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "aba0aa812be69fbf20551ab8",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Tenure-Track Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "aae6b7c3e6de64a5a1e621c8",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Lecturer II"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "2376521e0da0266de6fc5ec0",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Teaching-Track Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "c56784770ca99d8bb768dde8",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Tenure-Track Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "5567e0b0985d13bd5d8f94c9",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Open Rank Tenured and Tenure-track Faculty Position - 2026"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "60419253030c126f56d55165",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "AI in Bioscience Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "abf85774a9bcfce14ee2321a",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Aging and Age‑Related Diseases Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "b59bb7ba93fad66e90ad58a7",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Drug Discovery and Translational Therapeutics Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "f4e182f22211bd3c4b9ef24c",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Neuroscience and Neurological Diseases Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "0f0519c4c08d3a76c93c4fcf",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Head of the Division of Humanities"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "d2d3d8b7cf2636c195a7a405",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Professor/Associate Professor/Assistant Professor (Robotic Hiring Task Force)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "1bb004d0e2b0b7647b460095",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Lecturer I/Lecturer II (Philosophy) (Job ID179929)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "8f0e8c1bec0750da3bb76909",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Tenure-track Faculty Positions in Quantum Science and Technology"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "2758ab279278a565dcccf9a0",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Tenure-track Faculty Positions in Theoretical and Computational Physics"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "7b567f23c2f68e4b16ff2183",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Tenure-track Faculty Positions in Experimental Condensed Matter Physics"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "b82e40790b61cc0c62ab681a",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Tenure-track Faculty Positions in Theoretical Particle Physics and Cosmology"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "ddacf3cd10a11c410bdfebda",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Tenure-track Faculty Positions in Observational Cosmology"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "de316bc94dbe282a9508edb8",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Tenure-track Faculty Positions in Experimental Particle Physics"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "52b02cbf8f180cc25f21cffb",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Faculty positions in Electronic and Computer Engineering"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "15a669e13217ac43999e133d",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Biomedical Sciences Faculty"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "23457735525cc8912a4b21db",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Clinical Faculty"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "b697bab05932d8e8f89e785c",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "826d10dc2c58a21cc13858d9",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "b9a31a6cd460eeb98f774811",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Faculty Position in Philosophy (Job ID: 11012)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "85c886f3647c6f7a3b13028f",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Faculty Position"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "f74684be91f06430ac52f400",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Founding Head of the Division of Arts and Machine Creativity (AMC)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "7b7291dfc8a8a69f8b1abbe8",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Head and Professor of Management"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "a08e71803adbd61cc5b9ccc8",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Faculty Positions in Sustainability"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "24c517c97311719f3f0583d6",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Teaching-track Faculty Position"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "e373e5be4e24a5a226009c1a",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "9bdd31301890d3a718496e5f",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "6f8c29d2b9aa454ebd26f451",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Faculty Positions in Sustainable Energy and Environment"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "e31202842f187f15d99883fe",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Faculty Positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "812ea0e9f2e7467c545d2f4d",
+    "kind": "baseline",
+    "source_id": "hkust",
+    "title": "Senior Lecturer / Lecturer I"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "8aed229b6f560e278ed701f4",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "3dfc08b3641d1163e3fd8c54",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Senior Teaching Fellow/Teaching Fellow/Instructor I/Instructor II (Economics)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "4452a922c3fb6bc795d262e2",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Senior Teaching Fellow/Teaching Fellow/Instructor I/Instructor II (Finance)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "9869fc0c17e2102788881e4b",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "638e5a9dbab716a126acc990",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Economics)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "39b0bcc913f4f01db6bc8dbc",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Finance)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "6e43abf20acc6c25b1af6ba6",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Financial Engineering and FinTech)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "8420bcbe94a731cdef27c30f",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "f04b1ede3f7bbc9d277757b8",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "fc2f71dc3c439a1c128d8517",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "560074b32cc6a93501197bcd",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor (Literary and Cultural Studies)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "3f0f257b9b7025cc32d88e0e",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (English Applied Linguistics)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "ec27a5f92dda4d5867689ca2",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Graduate Teaching Assistant"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "eb926ae4cc12650e0120a3f7",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Climate Science/Nature-based Solutions)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "21490587c2460ecc01749b34",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Animal Welfare/Ethics and Behaviour)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "13d61c4aab5c9ca15d70ae46",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Influencer Studies)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "19e184d8a2ecc02fdc2eb05a",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Part-time Lecturers (Psychology)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "0f0d6dccfa229daa698bc806",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "4196ca795a58ac6004a78eb1",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "161fd8d74dc401b20b91ff2b",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Teaching Consultant"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "2687094e5c4851edda28fe91",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor in Cattle Medicine/Associate Professor in Cattle Medicine/Assistant Professor in Cattle Medicine"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "edfca4327d2c4b95cc4c5bc2",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Poultry Health)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "1b5aa10247d7fdcd8059fb0c",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Social Work and Counselling)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "aae87d0fd3b8bde68201db49",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Visiting Professor/Visiting Associate Professor/Visiting Assistant Professor/Visiting Fellow (Finance)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "d764e7ff30f1a8015785b769",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Teaching Consultant (Social Work and Counselling)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "270ee2dc2df32b5030d28496",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor of Practice/Associate Professor of Practice"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "157154f85f19f380c3a30982",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Crime Science)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "2ff563890fd083c50e3d46f7",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Teaching Consultant (Crime Science/Criminology & Sociology)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "3fd6ccb4d38d816fc7bb96ca",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Teaching Consultant (Psychology)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "f561a4f33a4266b11ac33dd1",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Consultants"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "af46bf9f0ee8d9c75553d545",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Part-time Lecturers"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "29f1e5049f9e3938715fd511",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Part-time Lecturers (Social Work/Counselling)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "4fc1a560e0ac7a3206357b1d",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "b026acbecb476325dc0f102e",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Teaching Consultant"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "92280556aac42861f630c138",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "7c23a06c978d8967c3e191d1",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Graduate Teaching Assistant"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "8f56165f04956739879649f6",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Comparative Politics/International Organisations)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "e6fee6ae625b09f338c95744",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "5b29ef4273aefed33ffc11ba",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "211d1766ceea37f2d276b6f6",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "d222649841b2cf7ef7582d73",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Strategic Management/International Business/Organisational Behavior/Human Resources Management/Entrepreneurship)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "ca2f840c9aec2f3a3e8d0f7f",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Part-time Lecturers"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "28da6e6243d4b00ff8fd536b",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Senior Teaching Fellow/Teaching Fellow/Instructor I/Instructor II"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "84955bcdef6a2fa54c70b6eb",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Part-time Lecturers"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "25e44296fc8f214f02534036",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Part-time Lecturers"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "c721a408816e7e6aa821a609",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Part-time Lecturer"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "fa9f056acf90034aaf121d8b",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Teaching Consultant/Visiting Fellow"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "a84cdc27cdcf67bce5e9eb35",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "bf0334571b99efdb11161d0b",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "66019da97da1ed4a56dd992a",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor in Veterinary Pathology/Associate Professor in Veterinary Pathology/Assistant Professor in Veterinary Pathology (Anatomic or Clinical)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "b1f2b388f4398f5485afddab",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Teaching Consultant (Student Learning Advisor)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "8d2ef8f07b7db54252f60924",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Veterinary Clinical Pathology)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "d8c51f53d69e8086f43adaa0",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Equine Practice or Sports Medicine and Rehabilitation)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "8b744e24d0fb2fafe151bc5c",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Senior Teaching Fellow/Teaching Fellow (Social Work and Counselling)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "311159459f487ba361426b16",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Small Animal Internal Medicine)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "866403db9b86e494181d565e",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Urban Planning/Urban Governance/Smart Cities)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "40cb9c1955f1384f4748d0a7",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "84ceac664199a2a1f2a45ee7",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Computational Linguistics/Natural Language Processing/Experimental Linguistics)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "4c311e7f414fb1bb7ae8cb29",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Structural Materials)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "83a4867cefc38fd3354cdb3e",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Teaching Consultant"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "66147286482eb91a0266051c",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Senior Teaching Fellow/Teaching Fellow (Criminology/Crime Sciences Discipline)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "26df38abbc9b79f482714c4d",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Part-time Lecturers"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "dd718b59e94df13a9859e90c",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor of Practice (Social Work Discipline)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "6a8ba9419ad1b9214c2a1bd2",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Teaching Consultant (Fieldwork Co-ordinator)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "e9368cae9ff3e0406e5f865d",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Psychology)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "015ce9d46ea4455233fb25ac",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Veterinary Education)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "84bf00933105bc1a1d96da8c",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Diagnostic Imaging)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "76b8eb0201b9c1fcf5d5ad9d",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Political Economy/Governance)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "d38ca2a8f509f929d79ba7f7",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Political Philosophy/Ethics)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "fd657e4178ec38449533208b",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Operations and Business Statistics)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "9abbb1dc516717cb26bd36e9",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "f02359397fc3f6f8cf993ea5",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "fcf45a539d5a862b87926bfc",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "5a27d8e78dbd9271f3704f68",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "c63489f26ab24acf61f6ba4e",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Biostatistics)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "ba450dbaed14c4397ac07fb6",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "5e7b0ad88e73bcd84059067f",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Ophthalmology)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "c85fbb4e08d57389438a0063",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "bd99f82af8e8b1c20e766140",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "0273a390840d15060dcb879f",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Small Animal Surgery)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "9bf3323e5651c489b46ec199",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "5ab2eadd822f03551191dbed",
+    "kind": "baseline",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "88933dc4b56482afda26d9ff",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Associate Professor / Assistant Professor in Hospitality Management, Tourism Management, Event Management or Information Technology in Hospitality & Tourism"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "d7c8b0b33cf9a460232f5e38",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Instructor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "503d54270b3e920ee7868dbf",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Professor in Construction Automation"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "a7dee8de13d25c66c5143518",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Professor in Supply Chain and Operations Management"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "33ee3ebe886b7cc8646754e8",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Associate Professor in Supply Chain and Operations Management"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "e4edd8e86ad7fd2eb70f0b56",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Assistant Professor in Supply Chain and Operations Management"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "5989ce2f95ff112920a67c64",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Professor / Associate Professor / Assistant Professor in AI/Robotics for Aircraft Maintenance / Low-Altitude Economy / Satellite and Space Engineering under Strategic Hiring Scheme (two posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "487be551590d2f4b8e41ae43",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Instructor (Temporary Appointment) (two posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "3108ecf791e93987a843687c",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Assistant Professor in Language Neuroscience and Neurotechnology"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "d7e03a901fcac85c305e7009",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Clinical Associate in Radiography"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "253ef3b9d10bab5ae35218da",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Professor / Associate Professor / Assistant Professor in Occupational Therapy"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "a8cd900cfbd42d4d1e053dd6",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Teaching Fellow"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "48d42b8618474a254b23397c",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Assistant Professor in Marketing (Consumer Behavior)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "36ca025f2d21e023216834c4",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Assistant Professor in Social Policy and Administration / Sociology, Anthropology and Philosophy"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "4195b7aac5753a5c3a63b6e1",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Instructor (Temporary Appointment)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "8581ac8a734f6f82ee5316e9",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Professor / Associate Professor / Assistant Professor in Nursing"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "193a87a2e8aceb6f8aba19e2",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Part-time Visiting Lecturer (several posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "6c39315d6ca521175a544b59",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Assistant Professor in Sports Science"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "ba5dd26985d2d586971a94f1",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Assistant Professor in Brain Machine Interface"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "76d9cf12e4bccf7dbcdc5e32",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Assistant Professor in Satellite and Space Engineering"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "4cc2577ea64b8c9d85bf7cf0",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Assistant Professor in Low-Altitude Economy"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "76dbbca77bd4d021c1aa529c",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Clinical Instructor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "8c357da6e789c70d30e731a2",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Part-time Visiting Lecturer"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "a6958a7e49eb84c53b28038c",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Assistant Professor in Optimization and Operations Research / Statistics and Data Science/ Financial Mathematics / Engineering and Computational Mathematics / Mathematical Science / Actuarial Science"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "89ec7d3358311e2b69305cfe",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Visiting Lecturer (Part-time) in Building Environment"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "6b85ba36c0af304ba5fa1f43",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Teaching Fellow"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "48ead21731997a27baf3b567",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Teaching Fellow (Temporary Appointment)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "23a50f91e4dd8ee0190023da",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Associate Professor / Assistant Professor in Building Energy / Building Environment / Building Safety and Resilience under Strategic Hiring Scheme"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "88e5f901890c6d20952d9df3",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Part-time Visiting Lecturer (several posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "66b8fe75343db3a323f2238a",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Part-time Visiting Clinical Associate (several posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "0ee7be783b6fb5b20f52a49d",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Assistant Professor in Biomedical Engineering"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "75427c0e4789aaeebd8d87c0",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Associate Professor / Assistant Professor in Design"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "36b31722101861b2586d7110",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Professor / Associate Professor / Assistant Professor in Microelectronics and Quantum Technology under Strategic Hiring Scheme (several posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "8579c5c055825ecbea12261d",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Joseph Needham Professorship in Science and Civilisation"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "9862add6a7d56234c41261ee",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Instructor (English Language) (several posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "6baef51e83d3bdb7c0916660",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Teaching Fellow (English Language) (several posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "75f3da97e460e3bdde65e4ba",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Senior Teaching Fellow (English Language) (several posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "0cba3e0519b2260ec641d903",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Instructor (Chinese Language) (several posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "243da332076a0e36d346d6c2",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Teaching Fellow (Chinese Language) (several posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "aeeb6e102da65d7a6866fd79",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Senior Teaching Fellow (Chinese Language) (several posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "5a0e9417363d80b493be7189",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Clinical Associate (two posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "f776c6bd2de8d11f81702031",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Teaching Fellow in Shipping, Maritime and Transport Studies"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "5db3ea877b3a2f3c7a9b0c29",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Teaching Fellow (Temporary Appointment) (three posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "c5c8ee1874baf027fe27fe67",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Professor / Associate Professor / Assistant Professor in Management"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "b632831cb981aafab9749187",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Teaching Fellow"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "9bbe71bbb4b116eec21bec39",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Teaching Fellow in Supply Chain and Operations Management (two posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "9a9ea8dbf0a0a6f77f6eca2f",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Teaching Fellow in Construction and Real Estate Technology"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "dc8d206e18fa9a1eeab32243",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Assistant Professor in Artificial Intelligence and Humanities (two posts)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "f9b58402d6790a149fb36adf",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Teaching Fellow"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "facf54fb7921d5e982b4d0d9",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Chair Professor / Professor / Associate Professor / Assistant Professor in Food Safety / Future Food Technology / Food Materials / Microbiomes and Health / Functional Food under Strategic Hiring Scheme"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "c50bccf9fc5f80ecb723e742",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Clinical Associate / Teaching Fellow in Radiography"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "ff512b5f4e8ceb93048e0a6c",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Professor / Associate Professor / Assistant Professor in Nursing"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "e4c72177e87c344cef4aeaee",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Teaching Fellow (Temporary Appointment)"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "c5eba3263f46daae2e890beb",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Clinical Associate"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "e105a4017bb95aa667f326f3",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Chair Professor / Professor in Urban Safety and Health under Strategic Hiring Scheme"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "b041de8c371744cf1cbda8a1",
+    "kind": "baseline",
+    "source_id": "polyu",
+    "title": "Global Search for Chair Professor / Professor / Associate Professor / Assistant Professor in Architecture"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "cb0c949f873c175e62037459",
+    "kind": "baseline",
+    "source_id": "hksyu",
+    "title": "Part‑time Lecturer"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "21c6196fb628999e1937ce6d",
+    "kind": "baseline",
+    "source_id": "hksyu",
+    "title": "Assistant Professor / Associate Professor / Associate Professor of Practice / Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "1c30a3feb6e270ad775fbc05",
+    "kind": "baseline",
+    "source_id": "hksyu",
+    "title": "Lecturer / Senior Lecturer / Assistant Professor / Associate Professor / Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "591898695c30e1e30b7e8373",
+    "kind": "baseline",
+    "source_id": "hksyu",
+    "title": "Assistant Professor / Associate Professor in Smart Cultural Tourism"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "06af918a34b1a06be9c15d1c",
+    "kind": "baseline",
+    "source_id": "hksyu",
+    "title": "Academic Position"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "18f96805599b8339bf66e664",
+    "kind": "baseline",
+    "source_id": "hksyu",
+    "title": "Lecturer / Senior Lecturer"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "da336a924a19aaa7e37d00f9",
+    "kind": "baseline",
+    "source_id": "hksyu",
+    "title": "Professor / Associate Professor / Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "da0d0580e4b94c68b6b80270",
+    "kind": "baseline",
+    "source_id": "hksyu",
+    "title": "Part-time Lecturer positions"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "a054d7bf6695292c804cf4e7",
+    "kind": "baseline",
+    "source_id": "hksyu",
+    "title": "Part-Time Fieldwork Supervisor"
+  },
+  {
+    "at": "2026-09-05T09:15:38+00:00",
+    "job_id": "0c4960e9ad65c3ae97d05ed3",
+    "kind": "baseline",
+    "source_id": "hksyu",
+    "title": "Lecturer / Senior Lecturer / Assistant Professor / Associate Professor / Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "cad7aafc59ac66ba5b7df2a9",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor(s) "
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "111b9e0f8baae35e2f95b18b",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "4dd9ba7cf03c820a2e63a010",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s) / Associate Professor(s) / Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "8d00342fdef96831df7743c6",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "ade9e825cf237e339940f2c3",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "8112933522eaddd172b16e84",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "d9cc34ea036badd8e335f5a2",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Clinical Lecturer"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "b5ca4cca05156d52e9b9a7d7",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Teaching Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "ff8a59a90e50105fa1105f80",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor/ Associate Professor/ Assistant Professor (AI and Computational Communication)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "303c51922fd1fa46521af642",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Associate Professor(s)/ Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "5adcfe9f235314778d6ddf41",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor / Associate Professor / Assistant Professor (Business Economics)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "968365a7db43990bf7a602cd",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor / Associate Professor / Assistant Professor (Operations Management)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e2f3579f9af13e49e1970b8a",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "a3bea58f218c14ce4a1cf225",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Assistant Professor (Public History)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f0a853411379b9e9bdaf5321",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Assistant Professor (Ancient World History)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f4322263c9db41e7337ee2dc",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "8cc1c66d28908ae2d91ab3fb",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "0f743fb901fea9cca95fd17f",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Teaching Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "8b40132a2430612c9e6b9fa3",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f7113dfdfaf865bfc3fc79ff",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s)/ Associate Professor(s)/ Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "11ca63d6bdbb0cb3fda411c0",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Clinical Professional Consultant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "a390382e2efefb94b5beb3c1",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Assistant Professor "
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "3044ee0f4d08688ef3a67744",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor / Associate Professor / Assistant Professor "
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "882bf99530091a18b7923067",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Teaching Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "96f6b0d1069b151cfa2a85a2",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s) / Associate Professor(s) / Assistant Professor(s) (Management Information Systems)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "6fa09124bf6e95d33d968430",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor / Associate Professor / Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "d82e5a7d6e4546f2a699f8eb",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professors / Associate Professors / Assistant Professors"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "072c6c41011c0b0922412ff6",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s) / Associate Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "b907983dd4431bb470b48e0c",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "af3504f8c211484c186a0dd8",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s) "
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "9f80eec69e35e4596e4ba693",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Teaching Assistant(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "0130f3a397f68fc2151ee8f3",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professional Consultant(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "cd4f342e27c4e9e2412f6b78",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "7e05b6409f6dd339b3b34a44",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Lecturer"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "de5ead132f0d3ed6aa08ce66",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Teaching Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "832e02c0ea3250b4eabebd4c",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "2a6cbfe9ba9e319b5df3a556",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Part-time Instructor(s) (Cantonese)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "ac279dfd15503147e8e07396",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professional Consultant(s) (Full-time/ Fractional-time)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "48da460fc89a44237b8236b1",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor "
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "96ce61085016858bb47fb918",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor/ Associate Professor/ Assistant Professor (Sustainable and Environmental Design)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "c361876b7b875e13c10fcd3c",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor(s) / Assistant Professor(s) / Associate Professor(s) / Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "259fe909633a8cde66f44cd4",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor/ Associate Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "69bf3a023dfb3098c0fe017c",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Clinical Professional Consultant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f3b798ffe68d0bed5605c138",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s) / Associate Professor(s) / Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "6dfb56d82368eeb14b8cd3de",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Teaching Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "8f5e9a5f97d7ff72ce82dfce",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Assistant Professor "
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "af4f635253c0abc48204094c",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s) / Associate Professor(s) / Assistant Professor(s) (Clinical)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "7e95f9d7e4c327b6a6fb13f3",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Associate Professor/ Assistant Professor in Curriculum Studies"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "0fb4890e1f7a28d70799fff7",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Senior Lecturer/ Lecturer in Curriculum Studies"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "714e2f6e0d4acd613d7cdfb9",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s) / Associate Professor(s) / Assistant Professor(s) (Clinical) "
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "c66cb5bec6bafcf8c4098c3f",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s) / Associate Professor(s) / Assistant Professor(s) / Research Assistant Professor(s) (Non-clinical) "
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "a50ba2ee43ad597186c2714c",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Assistant Professor/ Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "36c6f62d5e0ac890daf72840",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "797e6a042ff645fb4b11f56a",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Senior Lecturer/ Lecturer in Science Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "ee71767cde327df577b2c86c",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Associate Professor/ Assistant Professor in Science Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "3ea28dbacb570e6d74251b22",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor/ Associate Professor and Chairperson,  Department of Educational Administration and Policy"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "9de5cdd54029cabd6c370052",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Associate Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e65271b74412b96c8952350d",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professors / Associate Professors / Assistant Professors"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "ee56718e48ca88b1d554464c",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor/ Associate Professor/ Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "6a04e865d32a99666dc45e7e",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "0963049ccc2e017beb6bd06d",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professors/ Associate Professors/ Assistant Professors"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "4dd350415dc67b5b39b3e1fc",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s)/ Associate Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "ff49a02b281bab3a1add9cf0",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professors"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "62419b426a5bc0d464926c89",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Lecturer"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "a23cfa0e5577776681fc22e5",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor / Associate Professor / Assistant Professor (Clinical)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "a161f7e2e38e267d50641cd3",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Associate Professors / Assistant Professors"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "4252912d8b18847699ab7539",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Clinical Professional Consultant(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "aa5489cba07409b281e8da45",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor / Associate Professor / Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "32c3352da2cbe5eebb60c263",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e9816677cfb37ccaf8c026b0",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professors/ Associate Professors/ Assistant Professors"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e88997a29f6ca6d311358a70",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s) / Associate Professor(s) / Assistant Professor(s) (Educational Leadership and Administration)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "2cabd4108275726baaad67aa",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s) / Associate Professor(s) / Assistant Professor(s) (Foundation in Education and Policy Studies in Education)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "425871bb0196af3a66c7edfb",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Clinical Professor (Teaching) / Associate Clinical Professor (Teaching)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "161437af2f01ac67ea300039",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professors/ Associate Professors/ Assistant Professors"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "345b35ed953de8a0233424de",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professors"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "83671afaa822feeab32f02f0",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Teaching Assistant(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "603d1e0f82991278852e009e",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s) / Associate Professor(s) / Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "176ef16ff8284039118849fe",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "7b850a3c2050fe3752e39a88",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor (Clinical)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "4999bfdcedc7cfd4e9948fb6",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Part-time Lecturer(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "78700266819a819cbec72dc3",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s)/ Associate Professor(s)/ Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "371d18b15658318dcf2bcfb1",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Senior Lecturer(s)/Lecturer(s)/Assistant Lecturer(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "53840bbaf63f59998549d100",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Lecturer(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "32e9665fcc960a74849b9045",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Associate Professor / Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "bd395d29e8945313b4526103",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Clinical Professional Consultant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "86b6e845a032633ce18c7b5f",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Clinical Professional Consultant(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "c09a15edec19a1acdb538f8c",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Teaching Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "a375d25ab9c84367888ba67d",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Clinical Professional Consultant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "8520c6e02166d0f7e90fa879",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f97e5d13dbeb841d6ed48533",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Clinical Professional Consultant "
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f0f6e9bafc841712312c1f19",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Assistant Lecturer(s) / Lecturer(s) (Full-time / Part-time)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "1133443e837f5284d1c0a56b",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor / Associate Professor (Landscape Architecture) "
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "c0732a16b82e76f5ebbd15b8",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professional Consultant(s) (Full-time / Fractional-time)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "a9d4eea64305f7fe1185e595",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Professor(s) / Associate Professor(s) / Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "98dc0d3e42ddd72f8b8967ce",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Assistant / Associate Professor in Digital Technology and Computational Design"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "d186dc28239fd6217181dc88",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Teaching Assistant(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "1ed2bf418887d642f362dc0e",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor(s) / Assistant Professor(s) (non-clinical) "
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "d080636daf83359e67e35e6b",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Director, School of Hotel %26 Tourism Management, CUHK Business School"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "16dc5c63c15f3ec13b74d56f",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Clinical Lecturer(s)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "59df05ddb3caa8e888b28665",
+    "kind": "baseline",
+    "source_id": "cuhk",
+    "title": "Assistant Professor"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "c4e6445185c7977c88920b16",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Finance Manager / Finance Manager (Special Projects)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "749e839afd432ba84a63fb92",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Finance Manager / Finance Manager (Accounting and Budgeting)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "fda89771d662a733da28a9cd",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Director of Finance (Special Projects and Business Partnering)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f90bfcae15bef15bbd5d928c",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Research Assistant / Research Assistant, TMRI"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "c9d99da2281c101d7b9ec26d",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Fellow / Research Associate, Academy of Music"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "bd098da291ebf9941e26af16",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Information Technology Manager (Workflow / Cloud / AI)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "76039599027e4574315d1bcb",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Information Technology Manager (Workflow and RPA)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f14a228de9c16ed40df632d3",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Officer [Role: Project Management / Building Surveyor]"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "7f0cb4c89c39f8b33c8bffe4",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Manager (Research Impact and Assessment), Research Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "8b44bc49e0377b7690d55ab8",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Manager (External Grants), Research Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "21186ca58021614428f98aa9",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Manager, Research Postgraduate Programme (PhD)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "ab2563d3de648797abe37b67",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Manager (Procurement & Contract Management)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "08741269a43c24f1aa00cf3e",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior IT Manager (Student Information System Modernization and Cloud Migration)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "ae3e9361dea000100ec05c1d",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Student Housing Officer, Office of Student Affairs"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "0e1e120691b0ea0df7bc142b",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Systems Analyst (Special Project), Office of Information Technology"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "df04470def6f8df047b0db6a",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Executive Officer, Department of Accountancy, Economics and Finance"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "b75e9af0ba4505eafd00934d",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Global Engagement Manager (Role: Global Engagement Manager)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f3bb7783081dc763bea905f2",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Executive Officer, School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "aed9fdd8589adb2ac2306b5e",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Analyst Programmer (Student Information Systems)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "255684720ed16d43db46f304",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Executive Officer (Creative Hub)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "628c6832db886f6310760446",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Programme Manager/ Senior Programme Officer"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "04278392d5e740686f141fb4",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Student Development Officer (Part-Time), Counselling & Development Centre"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "518bf9dba35d24a171bfe25a",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Multimedia Specialist, University Engagement Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e408a8f4e14f5ed30a138fdd",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "高級技術員 (維修及保養)，物業處"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "b0edc24cbb337f9b9c19fe56",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant Professor,Centre for Chinese Herbal Medicine Drug Development"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "72ccbf2123c42b950447d14e",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Technical Officer / Technical Officer, Academy of Music"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "6e5618d53b128153d0c67a5a",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Student Development Assistant, School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "20c61241534621677b8e4888",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant to Director / Senior Officer, Alumni Affairs Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "1c4ff0b5a25c3414fa56d40c",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Human Resources Manager, School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "fb218c66ae7d96fae2936147",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Executive Officer / Assistant Executive Officer"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "55c1c2680d8074e9f7b23aa7",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Analyst Programmer / Analyst Programmer (Financial Information System)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "b83989afe24a1b7d54c760de",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Finance Officer (Accounting and Budgeting Section)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "11c9b34381e330c1eec0c07d",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant, Academy of Geography, Sociology and International Studies"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "262918becfac24520ff6388a",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "運動設施助理 Sports Facilities Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "1a93bbdd693cdac87fc29a75",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Engineer, Estates Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "da000e0150b44a894a7d7b70",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Manager, Research Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "32a58369bfbd53b23b6de87d",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Director of Finance [Role: Head of Procurement]"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "b8c11fdab8c285479cd9a5e0",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Purchasing Manager / Purchasing Manager (Purchasing and Support Services)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "2e92a3aad4b4d7f369eb1ce1",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant, Department of Computer Science"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "45a888bc9c6470266489a35e",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Systems Analyst (Application Development & Support), School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "af3aa639cbef350a2660dfb5",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Programme Officer / Programme Officer, Academy of Visual Arts"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "5f365f60f11b655613cc9279",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Communication Manager (Creative Hub), Academy of Music"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "d9f76cc6c7802949034fa56f",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Finance Manager (Creative Hub), Academy of Music"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "38000e72efdd87f9cdfc06ac",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Library Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "31876cd429463a29d68a01ff",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Manager, University Engagement Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "433295665d89c22e5eb19b5f",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Information Technology Manager (Digital Services Support)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "8db13d0931a1c057a728159a",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Technical Manager (Creative Hub), Academy of Music"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "775fbb947d5992d0b7fec241",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Library Officer"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "3822e0956645bd5ae4488c65",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "228d160cdedb13e48749e440",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Research Assistant / Research Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "07de2b0f911c70ec77db9f01",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Accounting Manager (Income and Project), School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "9f466f0ccf7afe6dd0883859",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Systems Analyst (Artificial Intelligence)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "5c8d39dc185e45c288210091",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "運動設施助理 Sports Facilities Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "1eebcfb91f9fbfa1d039f68d",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Manager, School of Creative Arts"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "2d3a15c77ff008869c3cade9",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Administrative Executive, Office of Information Technology"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "9ea1b4ebabbee2fdd0052c37",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Officer (Role: Assistant Global Engagement Manager)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "bc2ee706c77b5c9214ab7bcf",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Digital Experience Specialist, Office of Information Technology"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e5f52c2efd40e095758472d0",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Officer/Administrative Assistant, Estates Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "bfe74c9b8eed01ae34fa3870",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Manager (Employee Experience and Engagement)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "4176901152f6ca52ab26573e",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Information Technology Officer (Network Unit)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f2558a1024deeb26a0412f63",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Orchestra Officer, Academy of Music"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "d52a77afe874066fbc7d70d1",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Manager, Language Centre"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "3a166ddf279a279af7c75569",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Officer, Human Resources Shared Services"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e6305c61f267065650739c5d",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Information Technology Manager (Application Delivery & Support), School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "58671f3a0e7797192a0cfe5c",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Systems Analyst (IT Business Analyst), School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "582738b134efbabb19d8b4a6",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Associate Professor / Assistant Professor, School of Chinese Medicine"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "97eebe8902a032f7643812b9",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Project Assistant (Part-time), Library"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "6f9d23d4221ea15da487b2fc",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Officer, Graduate School"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "3aae50b01b4c5932151b7bd5",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Manager, Office of Council and Court Secretariat and Legal"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "d0af2ec94ab25a65aa71bca1",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Executive Officer, Office of the Dean of Business"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "3c314af525df7f59db95b92f",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Technical Officer / Assistant Technical Officer"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "5e905bafc89b153e59736297",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Executive Officer, Office of the Dean of Business"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f5f5c3d752599e05245421ab",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Information Technology Manager (Applications & Integration)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f64e17c0ca2da6deba637797",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Accounting Officer, School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "4516d2ff33af2031bd6fc62a",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Executive Officer, Language Centre"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "88f7f4fcecd09aa10d87241e",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Manager (Strategic Analysis and Relations)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "77d9cfc42dc1b9d77a295834",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Executive Officer/Executive Officer, Office of the Dean of Creative Arts"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "3c2197391f2b6dcc6561a6d4",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Systems Analyst (Senior System Engineer), School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "483b1d441480b07754409db1",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Human Resources Officer, School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "923db1aac4fc4cac4749e558",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Manager/Assistant Manager, Communication and Public Relations Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "340bcaec079578321fc96100",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Officer/Officer, Communication and Public Relations Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "1997a2e24004466a0c6d8a3a",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Digital Experience Specialist"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e2de7ac5ef4ce2c5294b5ab4",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Manager, Learning and Development"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "a5399224575fb4ec2d12e008",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Library Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "0219f6ff0dc2232c6dd25ccc",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Information Technology Officer (End User Computing)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "adb15692ef6c3076cabb9a36",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Part-time Lecturer, School of Creative Arts"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "6d21ce09f0682cafcad738af",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "General Manager (Nursing and Training (Nursing))"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "746b26e0cd0c10f3b4eebfed",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Student Development Officer/Student Development Officer, School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "006c8182b2133e122802c72a",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Director, International Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e093eb8f4cd3c29e7fccf573",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Project Manager / Senior Executive Officer"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "32852f7db735cfc827d4ff8d",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Human Resources Officer, School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "8c7ea829d79610a044d2f931",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Programme Officer, School of Business"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "2793fcf2a275e517e381a93e",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Executive Officer, School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "d3545ca4f36a42883c67ee21",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Professor/Associate Professor/Assistant Professor in Government and International Studies"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "b3b8cac609b9ff38c34118ef",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Project Assistant (Talented Athletes Direct Admission Scheme)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e78e11bc6619d5cdc61b7667",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Learning Technology Developer, Language Centre"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e2f894847f2215db22c545e0",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "主管 (設施及校園管理)，物業處"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "3512ee3dbe52e7d2398156fc",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Lecturer I / Lecturer II / Assistant Lecturer (Accounting)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "ac4e96094ab0de0bb76ca65b",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant, Centre for Quantitative Systems Biology"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "9e7e36833dee45191d807dda",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Technical Instructor / Technical Instructor, School of Chinese Medicine"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "4433e1681943e76c8062d020",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Lecturer/ Lecturer I / Lecturer II, School of Chinese Medicine"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e70d40a91b62666428c6fe3e",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Lecturer, School of Chinese Medicine"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "1654817cb75c539711a37183",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant Professor, Department of Mathematics"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "a14f4c3c5bb182cf68029359",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Manager/Senior Programme Officer/Programme Officer, School of Business"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "86c9aa92b756f9d8fadbc615",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Manager (Entrepreneurship and Funding), Knowledge Transfer Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "26d5cab734126d516a2ef5b8",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Officer, Estates Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "009f5d73b3435733cf15d7b9",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Postdoctoral Research Fellow / Senior Research Assistant in clinical research"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "97b80e5592607923eb55a949",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Assistant Programme Officer, School of Continuing Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "d476ee156e9979cc504339fa",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant (TCM-driven mental wellness hub)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "a9da68aae3f16caa796701ed",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Associate Professor / Assistant Professor, School of Chinese Medicine"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "af7350c07565031ec1458ce4",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Information Technology Manager (System Modernisation and Cloud Migration)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "c7ef3333fee527aee2b14ded",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior / Research Assistant, School of Chinese Medicine"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "6103ab064a172cdc9f654cdf",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Post-Doctoral Research Fellow, School of Chinese Medicine"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "375988e1c3e059f99b93c4a0",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Associate Professor / Professor, Department of Journalism"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "38422e1f56d479f27901fe9c",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Professor of Practice/ Associate Professor of Practice, Department of Journalism"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "851ab636c92e93b427c265a5",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant Professor, Department of Computer Science"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f485a26827e21f138b358363",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Professor / Associate Professor / Assistant Professor in Sports Science"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "3c0d8f9d197b1f04bcdd7526",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Part-time Lecturer (ARTT), Academy of Visual Arts"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "353b6749ddb25a38dc372807",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant Professor, Department of Biology"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "d360d67512abda1bb01b2ccb",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Chair Professor/ Professor/ Associate Professor in OBHRM / Strategic Management"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "19c497591b5f49d284daf41a",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Research Assistant (Clinical Research)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "2c54734f533ac7fbb03aca76",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Project Assistant / Project Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "0c49b721117f04aad9d203fc",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Information Technology Manager (Data Analytics)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "9ed91de8f69d8baa00743590",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Research Assistant / Research Assistant, Faculty of Arts and Social Sciences"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e49e296b1255fa2ebf28387d",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Post-Doctoral Research Fellow, Department of Biology"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "db0e6508e5bc3a1d6d03eaa7",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Chair Professor/ Professor/ Professor of Practice and Director, Academy of Film"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "f020df7fefb1909a5d6f6fc4",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant Professor, Department of Computer Science"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "d53bd3831131f06c25f7210c",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Lecturer / Lecturer I / Lecturer II in Translation, Intercultural Studies, Digital Humanities and Transdisciplinary Teaching & General Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "cd140fcead88a995f42a98b7",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Professor / Associate Professor / Assistant Professor in Language and Culture"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "91e8761f0a25dc95772a6d1c",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Research Assistant / Research Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "b26e91a9d039ee0b0182f30f",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Professor / Associate Professor / Assistant Professor in Management Information Systems"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "963ff9713655e6b6dfde8ee2",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Lecturer in Psychology and/or Education"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "38434c44deccbe9b4ad76a6a",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Professor / Associate Professor / Assistant Professor, Department of Biology"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "9a9d6ca18ec06cdfdef9e342",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Post-Doctoral Research Fellow (Sleep and Mental Health Research)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "85fa908fef44219d92068854",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Associate Professor / Assistant Professor, Department of Chemistry"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "5bde67f58d39fe3bc385ea4e",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Professor / Associate Professor / Assistant Professor, Department of Computer Science"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "e11bf13986aa307a00b386d2",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Director of Internal Audit"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "7597f27f27656bd0afa51b33",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant/ Senior Research Assistant (Sleep and Mental Health Research)"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "aeb2a1899dbf814f4b4af96c",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Lecturer II / Assistant Lecturer in Communication"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "4de591e070068359f4b027eb",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant, Department of Biology"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "2bc797857a012d0fb50cd61b",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Chair Professor / Professor / Associate Professor / Assistant Professor / Research Assistant Professor in Accounting"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "0b0c15c072ef2574ebd09d30",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Senior Manager (Administration and Accounting), Estates Office"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "71825bd725908f3cbd105503",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant, Department of Accountancy, Economics and Finance"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "5fafe7d903464bfa8e1dcb38",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Research Assistant, Department of Management, Marketing and Information Systems"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "6f39d451bf22b67cc85100f3",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Post-doctoral Fellow / Senior Research Assistant / Research Assistant"
+  },
+  {
+    "at": "2026-09-05T09:20:45+00:00",
+    "job_id": "7a5491b5a51c9d85e5130480",
+    "kind": "baseline",
+    "source_id": "hkbu",
+    "title": "Lecturer I / Lecturer II in English, College of International Education"
+  }
+]

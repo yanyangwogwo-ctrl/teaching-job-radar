@@ -1,0 +1,121 @@
+# 新增相同格式來源：複製一節並選擇已支援 adapter；不要只貼 URL 而略過驗收。
+version: 1
+sources:
+  - id: hkuspace
+    institution: HKU SPACE
+    name: 香港大學專業進修學院
+    group: hku-space
+    url: https://jobs.hkuspace.hku.hk/jobs/list_pt.php?lang=eng
+    adapter: hkuspace
+    enabled: true
+    allowed_hosts: [jobs.hkuspace.hku.hk]
+    notes: 兼職教學職位清單；詳情另頁，持續招聘不等於已截止。
+  - id: uowchk
+    institution: UOW College HK
+    name: 香港伍倫貢學院
+    group: uowchk
+    url: https://www.uowchk.edu.hk/working-with-us/
+    adapter: uowchk
+    enabled: true
+    allowed_hosts: [www.uowchk.edu.hk]
+    notes: 職位內文同頁；刊登日期未必提供，不從職位編號推測。
+  - id: hkbu-sce
+    institution: HKBU-SCE
+    name: 香港浸會大學持續教育學院
+    group: hkbu
+    url: https://www.sce.hkbu.edu.hk/tc/job-vacancy/
+    adapter: hkbu_sce
+    enabled: true
+    allowed_hosts: [www.sce.hkbu.edu.hk]
+    notes: 須讀完所有分頁；一則廣告可以有多個職位編號。
+  - id: sfu
+    institution: Saint Francis University
+    name: 聖方濟各大學
+    group: sfu
+    url: https://www.sfu.edu.hk/en/career/academic-teaching-positions/index.html
+    adapter: sfu
+    enabled: true
+    allowed_hosts: [www.sfu.edu.hk]
+    notes: 學術職位內容在同頁摺疊區塊；原文未提供刊登日期則顯示首見。
+  - id: lingnan
+    institution: Lingnan
+    name: 嶺南大學
+    group: lingnan
+    url: https://lingnan.csod.com/ux/ats/careersite/4/home?c=lingnan&lang=en-US
+    adapter: pending
+    enabled: false
+    allowed_hosts: [lingnan.csod.com]
+    notes: 公開招聘首頁可開啟，但資料介面回覆 401 要求授權；暫需手動查看。
+  - id: hku
+    institution: HKU
+    name: 香港大學
+    group: hku
+    url: https://jobs.hku.hk/en/filter/?search-keyword=&work-type=fractional%20%2f%20part-time&work-type=hourly-paid
+    adapter: hku
+    enabled: true
+    allowed_hosts: [jobs.hku.hk]
+    notes: PageUp 兼職／時薪清單及完整分頁；遇到驗證要求即停止並保留舊資料。
+  - id: polyu
+    institution: PolyU
+    name: 香港理工大學
+    group: polyu
+    url: https://jobs.polyu.edu.hk/academic.php
+    adapter: polyu
+    enabled: true
+    allowed_hosts: [jobs.polyu.edu.hk]
+    notes: 學術職位清單及詳情；首輪審閱日期不當作截止日期。
+  - id: hkust
+    institution: HKUST
+    name: 香港科技大學
+    group: hkust
+    url: https://hkustcareers.hkust.edu.hk/join-us/current-opening/academic-careers
+    adapter: hkust
+    enabled: true
+    allowed_hosts: [hkustcareers.hkust.edu.hk, apply.interfolio.com, hrmsxprod.psft.ust.hk]
+    notes: 官方清單可讀；Interfolio 詳情存取受限，目前保留清單，需手動核對內文。
+  - id: cityu
+    institution: CityU
+    name: 香港城市大學
+    group: cityu
+    url: https://jobs1.cityu.edu.hk/apply/Default.aspx?jobtype=ACAD
+    adapter: cityu
+    enabled: true
+    allowed_hosts: [jobs1.cityu.edu.hk, www.cityu.edu.hk]
+    notes: 官方學術清單可讀；詳情主機出現驗證頁，目前內文搜尋不完整。
+  - id: hkbu
+    institution: HKBU
+    name: 香港浸會大學
+    group: hkbu-main
+    url: https://fa-ewqq-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/hkbu/jobs
+    adapter: hkbu_oracle
+    enabled: true
+    allowed_hosts: [fa-ewqq-saasfaprod1.fa.ocs.oraclecloud.com]
+    notes: Oracle 公開清單與詳情；依內層總數核对分頁。與 SCE 分開保存來源觀測。
+  - id: hsu
+    institution: 恒生大學
+    name: 香港恒生大學
+    group: hsu
+    url: https://www.hsu.edu.hk/hk/job-opportunities/
+    adapter: pending
+    enabled: false
+    allowed_hosts: [www.hsu.edu.hk, recruit.hsu.edu.hk]
+    notes: robots.txt 連續回覆 502，未能確認讀取規則；暫停自動讀取，需手動查看。
+  - id: hksyu
+    institution: 樹仁大學
+    name: 香港樹仁大學
+    group: hksyu
+    url: https://www.hksyu.edu/tc/snippets/external-vacancy
+    adapter: hksyu
+    enabled: true
+    allowed_hosts: [www.hksyu.edu]
+    notes: 學術職位清單及 PDF 內文；不將 PDF 檔名中的日期推斷為刊登日期。
+  - id: cuhk
+    institution: CUHK
+    name: 香港中文大學
+    group: cuhk
+    url: https://cuhk.taleo.net/careersection/cu_career_teach/jobsearch.ftl?lang=en&portal=10115020119
+    adapter: cuhk
+    enabled: true
+    allowed_hosts: [cuhk.taleo.net]
+    read_only_post_paths: [/careersection/rest/jobboard/searchjobs]
+    notes: Taleo 公開搜尋及詳情；總數與實際分頁數量不一致時顯示部分完成，保留所有舊記錄。

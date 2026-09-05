@@ -1,0 +1,42 @@
+version: 1
+timezone: Asia/Hong_Kong
+schedule_description: 每日約 08:17（香港時間；排程可能延遲）
+missing_after_successes: 3
+suspicious_drop_ratio: 0.6
+stale_after_hours: 36
+notifications:
+  enabled: true
+  channel: discord
+  event_types: [new]
+  baseline: silent
+  min_score: 60
+  require_part_time: true
+  roles: [lecturer, tutor, instructor]
+  # 空白即所有已接通院校；此為正式通知條件，與瀏覽器儲存的搜尋分開。
+  institutions: []
+  exclude: []
+subjects:
+  - id: philosophy
+    label: 哲學
+    weight: 65
+    terms: [philosophy, philosophical, 哲學, PPE]
+  - id: ethics
+    label: 倫理學
+    weight: 65
+    terms: [ethics, ethical decision making, moral philosophy, 倫理, 道德哲學]
+  - id: critical-thinking
+    label: 批判思考
+    weight: 65
+    terms: [critical thinking, critical reasoning, 批判思考, 批判性思維]
+  - id: general-education
+    label: 通識
+    weight: 60
+    terms: [general education, liberal studies, core curriculum, common core, 通識]
+  - id: ai-literacy
+    label: AI 素養
+    weight: 70
+    terms: [AI literacy, AI literacies, AI applications and literacy, artificial intelligence literacy, 人工智能素養, 人工智慧素養]
+  - id: ai-humanities
+    label: AI 倫理／人文
+    weight: 70
+    terms: [AI ethics, ethics of AI, ethical AI, responsible AI, AI and humanities, AI in humanities, AI literacies in humanities, philosophy of AI, artificial intelligence ethics, 人工智能倫理, AI倫理]

@@ -1,2 +1,101 @@
-# teaching-job-radar
-Hong Kong part-time teaching vacancy monitor
+# 教席雷達 · 大專職位監察
+
+每日查看香港大專官方招聘頁，集中搜尋兼職教學機會。這個版本已用真實公開資料測試；介面上的「來源狀態」是實際結果，不會把讀取失敗當成沒有新職位。
+
+## 現在可以做甚麼
+
+- 按院校、日期、職位狀態篩選；輸入多個關鍵字，選 AND／OR，或排除字詞。
+- 搜尋職位名、部門、科目和已取得的內文。`philosophy, parttime, lecturer`；`"AI literacy"`；`-nursing`。
+- 儲存常用搜尋；匯出目前結果為 Excel 可開啟的 UTF-8 CSV。
+- 查看刊登日期、首見日期、截止／開始審閱日期、相關科目和原文證據。
+- 保留歷史及更新紀錄。首次有資料的檢索建立安靜基準，其後才將新發現的相關職位列入 Discord 待送清單。
+
+網站會讀取 GitHub 上最近一次檢索的公開資料；若連線失敗，會清楚標示正在顯示網站保存的舊版本。**Discord 尚未設定**；每日排程的最近執行結果以 Actions 及網頁狀態為準。
+
+## 本機開啟
+
+需要 Python 3.12。於此專案資料夾開啟 Cursor Terminal：
+
+```bash
+python -m pip install -r requirements.txt
+python -m http.server 8000 --directory dist
+```
+
+在瀏覽器開啟 `http://localhost:8000`。不要直接雙擊 HTML，因為瀏覽器通常不允許本機檔案讀取旁邊的資料 JSON。
+
+另一個 Terminal 可以更新資料（預設完全不發送通知）：
+
+```bash
+python -m monitor.run
+```
+
+如只更新一間：`python -m monitor.run --sources hkuspace`。檢索有未完成來源時結束碼是 1；成功來源的新資料仍會保存。不要同時開兩個本機檢索程序。
+
+## 啟用每天自動更新
+
+使用你自己的公開 GitHub repository 和標準 GitHub Actions runner 保存、更新資料。現有 Sites 網頁直接讀取公開資料，繼續使用同一條網址。公開的內容是程式、公開職位、歷史和通知規則。不要把私人書籤、履歷或任何密鑰上傳。
+
+1. 將本專案放到 GitHub repository 的預設分支，保留 `data/store.json` 及 `.github/workflows/`。`data/store.json` 包含已建立的基準；刪掉會失去歷史及去重記錄。
+2. 檢查 `dist/feed-config.json` 指向這個 repository 的 `main/dist/data/jobs.json`；預設已指向 `yanyangwogwo-ctrl/teaching-job-radar`。
+3. 建立 Discord 頻道的 webhook，將完整網址存進 **Settings → Secrets and variables → Actions → New repository secret**，名稱用 `DISCORD_WEBHOOK_URL`。密鑰不要貼在公開頁面、程式或聊天中。
+4. 確認 repository 允許 Actions 的 `GITHUB_TOKEN` 寫入內容。工作流程只會推送資料記錄；若分支保護拒絕 bot，需由擁有者配置允許的寫入方式，不要強制推送。
+5. 初次上傳程式會觸發一次檢索。之後可用 **Actions → Daily vacancy monitor → Run workflow** 手動執行；每日排程會獨立運作。完成後重新開啟教席雷達，檢查來源狀態及最近執行時間。
+
+工作流程預設每天香港時間約 **08:17** 執行一次。GitHub 排程可能延遲；長期沒有 repository 活動也可能被停用。請保留必要的失敗通知，並定期確認頁面更新時間。[GitHub 排程說明](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
+
+日常使用：[教席雷達](https://teaching-job-radar.fhk357753357.chatgpt.site)。網頁載入時向 GitHub 取得資料，GitHub 可能有數分鐘快取；任何暫時無法讀取最新資料的情況都會提示。資料更新不需要重新發布網站；改動 HTML／CSS／JavaScript 才需要更新 Sites 版本。
+
+Actions 費用／免費額度見[官方帳單說明](https://docs.github.com/en/billing/concepts/product-billing/github-actions)。本專案沒有付費 AI API 依賴，也沒有建立任何訂閱。
+
+## 通知及漏跑監察
+
+- 正式通知條件在 `config/preferences.yaml`，與網頁上儲存的搜尋分開。預設為兼職／時薪 Lecturer、Tutor、Instructor（包括 Teacher 別名），科目限哲學、倫理、批判思考、通識及 AI 素養／倫理／人文。
+- 第一次取得資料只建立基準，不發送大量舊廣告；初次只讀到部分清單時，下一輪才發現的廣告仍可能是較早刊登的職位，通知會顯示真實刊登日期。
+- 同一來源的職位以編號或固定網址去重。不同官方來源的重刊廣告目前各自保留，可能重複出現，避免誤合併不同職位。
+- 先保存待送資料，再通知 Discord，收到確認後保存收據。一般重跑不會重複發送；如果 Discord 已接收但回覆丟失，或程序在保存收據前中斷，重試仍有重複可能。
+- 詳情暫時讀不到會延後職位通知，保留已保存內文、日期及待送記錄；不會靜靜地丟掉通知。
+- 每次來源失敗都有狀態及錯誤紀錄。Discord 啟用後也會通知；累積故障訊息按來源合併為最新一則。
+- **整個排程沒有啟動，無法靠同一個排程自己發警告。** 網頁開啟時會檢查資料是否超過 36 小時。若需要主動漏跑通知，可在獨立的 Healthchecks 服務建立每 24 小時、寬限 12 小時的檢查，將 ping URL 設為 secret `HEARTBEAT_URL`，並在該服務設定 Discord 通知。本專案只有回報程式，尚未建立外部檢查或帳戶。
+
+手动測試發送前，先確認環境變數中的 webhook 是你指定的頻道。只有以下明確指令會發送：
+
+```bash
+python -m monitor.run --notify-only
+```
+
+沒有待送職位時，可能只收到來源故障通知；不會為了測試而製造假職位。
+
+## 修改條件及新增來源
+
+常用設定只有兩個檔案：
+
+- `config/preferences.yaml`：科目關鍵字、相關度門檻、通知院校、排除字詞。
+- `config/sites.yaml`：13 個官方 URL、讀取模組、啟用狀態及備註。
+
+相同格式的來源可只改 YAML；普通靜態 HTML 來源可使用 `generic_html` 和 CSS selectors，見 `config/site-template.yaml`。**不能保證任何新 URL 都不用修改程式**：新招聘系統、登入限制、改版及不同 PDF 格式仍需調整讀取模組。只貼 URL 不足以可靠辨識職位。
+
+前端沒有登入或寫入資料庫功能；瀏覽者無法更改正式通知規則。儲存搜尋只存在目前瀏覽器，手機和電腦不會自動同步。
+
+## 資料及維護
+
+| 位置 | 用途 |
+|---|---|
+| `data/store.json` | 唯一正式記錄：職位、歷史、來源狀態、待送及收據 |
+| `dist/data/jobs.json` | 網頁讀取的公開資料 |
+| `dist/data/jobs.csv` | 完整歷史 CSV；網頁按鈕另外匯出當前篩選結果 |
+| `dist/data/history.json` | 公開的變更紀錄 |
+| `monitor/` | HTTP 讀取、來源模組、匹配、比對、通知 |
+| `tests/` | 不連外、不發送訊息的回歸測試 |
+
+每天的 GitHub 工作流程把正式記錄提交回 repository，下一輪再讀取。Actions cache、暫存 artifact、瀏覽器 localStorage 都不是職位資料庫。不要人手編輯 CSV 來改正式資料；CSV 是可再產生的匯出。
+
+測試：
+
+```bash
+python -m unittest discover -s tests -v
+node --test tests/*.test.mjs
+```
+
+網站結構改變時，先停用受影響來源並查看錯誤；不要刪掉歷史。讀取遵守各主機 robots、慢速連線及請求上限，遇到驗證、401／403／429 即停止，不會繞過或登入應徵者系統。
+
+首次驗證結果及仍受限來源見 `SOURCE_AUDIT.md`；詳細設計見 `SPEC.md`。
