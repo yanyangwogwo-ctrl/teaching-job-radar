@@ -7,6 +7,33 @@ const live = {...snapshot,meta:{...snapshot.meta,last_run:{finished_at:'2026-09-
 const feed = {enabled:true,url:'https://raw.githubusercontent.com/example/repo/main/dist/data/jobs.json'};
 const response = data => ({ok:true,json:async()=>data});
 
+// A private host serves local JSON only to its signed-in viewer. The public
+// GitHub feed remains cross-origin and must not receive credentials.
+function privateHostFetcher({cloudOffline=false}={}) {
+  return async (url, options) => {
+    if (url === './feed-config.json' || url === './data/jobs.json') {
+      if (options.credentials !== 'same-origin') return {ok:false,status:401};
+      return response(url === './feed-config.json' ? feed : snapshot);
+    }
+    assert.equal(url, feed.url);
+    assert.equal(options.credentials, 'omit');
+    if (cloudOffline) throw new Error('offline');
+    return response(live);
+  };
+}
+
+test('signed-in viewer can load protected configuration and public cloud data',async()=>{
+  const result=await loadDataset(privateHostFetcher());
+  assert.equal(result.mode,'cloud');
+  assert.equal(result.dataset,live);
+});
+test('signed-in viewer can use protected snapshot when cloud is unavailable',async()=>{
+  const result=await loadDataset(privateHostFetcher({cloudOffline:true}));
+  assert.equal(result.mode,'snapshot');
+  assert.equal(result.dataset,snapshot);
+  assert.match(result.warning,/舊版本/);
+});
+
 test('prefer public cloud data',async()=>{
   const calls=[];
   const fetcher=async url=>{calls.push(url);return response(url==='./feed-config.json'?feed:live);};

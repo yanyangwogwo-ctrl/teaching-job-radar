@@ -1,5 +1,5 @@
 import { parseQuery, filterJobs, dayKey, effectiveStatus, csvCell } from './search.mjs';
-import { loadDataset, lastCrawlAt } from './data-source.mjs';
+import { loadDataset, lastCrawlAt } from './data-source.mjs?v=20260905-session';
 
 const app = document.querySelector('#app');
 const exportButton = document.querySelector('#export-button');

@@ -3,11 +3,12 @@ export function validDataset(value) {
   return value;
 }
 
-async function readJSON(fetcher, url, timeoutMs) {
+async function readJSON(fetcher, url, timeoutMs, credentials = 'same-origin') {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
-    const response = await fetcher(url, { cache:'no-cache', credentials:'omit', referrerPolicy:'no-referrer', signal:controller.signal });
+    // Local assets need the viewer's Site session. External feeds opt out.
+    const response = await fetcher(url, { cache:'no-cache', credentials, referrerPolicy:'no-referrer', signal:controller.signal });
     if (!response.ok) throw new Error('資料未能載入');
     return await response.json();
   } finally {
@@ -22,7 +23,7 @@ export async function loadDataset(fetcher = fetch, timeoutMs = 12000) {
     if (feed.enabled) {
       const url = new URL(feed.url);
       if (url.protocol !== 'https:' || url.hostname !== 'raw.githubusercontent.com' || url.username || url.password) throw new Error('資料來源設定未能確認');
-      const dataset = validDataset(await readJSON(fetcher, url.href, timeoutMs));
+      const dataset = validDataset(await readJSON(fetcher, url.href, timeoutMs, 'omit'));
       return { dataset, mode:'cloud', warning:'' };
     }
   } catch {
