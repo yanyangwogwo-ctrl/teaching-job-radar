@@ -3736,5 +3736,117 @@
     "kind": "baseline",
     "source_id": "hkbu",
     "title": "Lecturer I / Lecturer II in English, College of International Education"
+  },
+  {
+    "at": "2026-09-05T10:20:55+00:00",
+    "changes": {},
+    "job_id": "92304f4292042aae2171a170",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Pharmacist"
+  },
+  {
+    "at": "2026-09-05T10:20:55+00:00",
+    "changes": {
+      "employment_type": {
+        "after": "part-time",
+        "before": "mixed"
+      }
+    },
+    "job_id": "9b8be84fd38f4be58c638fbb",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree And Undergraduate Degree Programmes"
+  },
+  {
+    "at": "2026-09-05T10:20:55+00:00",
+    "changes": {
+      "employment_type": {
+        "after": "part-time",
+        "before": "mixed"
+      }
+    },
+    "job_id": "57d4eca627c485953e6b9196",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree And Undergraduate Degree Programmes"
+  },
+  {
+    "at": "2026-09-05T10:20:55+00:00",
+    "changes": {
+      "employment_type": {
+        "after": "part-time",
+        "before": "mixed"
+      }
+    },
+    "job_id": "9ed4623de2e895e511c6e17e",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Part-time Instructors for Diploma of College Foundation Studies (Full Time)"
+  },
+  {
+    "at": "2026-09-05T10:20:55+00:00",
+    "changes": {
+      "employment_type": {
+        "after": "part-time",
+        "before": "mixed"
+      }
+    },
+    "job_id": "31a84045a11ff1844b6446fc",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree And Undergraduate Degree Programmes"
+  },
+  {
+    "at": "2026-09-05T10:20:55+00:00",
+    "changes": {
+      "employment_type": {
+        "after": "part-time",
+        "before": "mixed"
+      }
+    },
+    "job_id": "0bf0901cb90629ba014748bb",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Part-time Lecturers for Full-time Day / Part-time Evening Postgraduate, Undergraduate & Sub-degree Programmes (Various Disciplines)"
+  },
+  {
+    "at": "2026-09-05T10:20:55+00:00",
+    "changes": {
+      "employment_type": {
+        "after": "part-time",
+        "before": "mixed"
+      }
+    },
+    "job_id": "406c2a639ead775af7194621",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree And Undergraduate Degree Programmes"
+  },
+  {
+    "at": "2026-09-05T10:20:55+00:00",
+    "changes": {
+      "employment_type": {
+        "after": "part-time",
+        "before": "mixed"
+      }
+    },
+    "job_id": "f102d4418278fac36ae7c81b",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree Programmes"
+  },
+  {
+    "at": "2026-09-05T10:20:55+00:00",
+    "changes": {
+      "employment_type": {
+        "after": "part-time",
+        "before": "mixed"
+      }
+    },
+    "job_id": "7ec6c4ff6e5e37cbc081f067",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Part-time Instructors for Higher Diploma Programmes (Full-time)"
   }
 ]
