@@ -165,7 +165,7 @@ def parse_sce_detail(job: dict, html: str) -> dict:
 
 def collect(source: dict, client) -> Batch:
     adapter = source['adapter']
-    if adapter in ('sfu', 'hku', 'polyu', 'hkbu_oracle', 'hksyu', 'hkust', 'cityu', 'cuhk'):
+    if adapter in ('sfu', 'hku', 'polyu', 'hkbu_oracle', 'hksyu', 'hkust', 'cityu', 'cuhk', 'lingnan', 'hsu'):
         from .official import collect_official
         return collect_official(source, client)
     if adapter == 'uowchk':

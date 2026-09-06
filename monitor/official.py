@@ -129,7 +129,7 @@ def parse_polyu_detail(job, html):
 def parse_hksyu_list(source, html):
     soup, jobs = soup_of(html), []
     for card in soup.select('.accordion > .card'):
-        if text_at(card, '.card-header') != '學術職位':
+        if text_at(card, '.card-header') not in ('學術職位', 'Academic Posts'):
             continue
         for row in card.select('table.table-striped tbody tr'):
             cells = row.find_all('td', recursive=False)
@@ -324,6 +324,9 @@ def collect_cuhk(source, client):
 
 def collect_official(source, client):
     adapter = source['adapter']
+    if adapter == 'lingnan':
+        from .cornerstone import collect_lingnan
+        return collect_lingnan(source, client)
     if adapter == 'cuhk':
         return collect_cuhk(source, client)
     if adapter == 'sfu':
@@ -380,7 +383,8 @@ def collect_official(source, client):
         result.jobs = list(indexed.values())
         detail = lambda job: parse_hku_detail(job, client.get(job['url']))
     else:
-        parsers = {'polyu': parse_polyu_list, 'hksyu': parse_hksyu_list, 'hkust': parse_hkust_list, 'cityu': parse_cityu_list}
+        from .hsu import parse_hsu_list, parse_hsu_detail
+        parsers = {'polyu': parse_polyu_list, 'hksyu': parse_hksyu_list, 'hkust': parse_hkust_list, 'cityu': parse_cityu_list, 'hsu': parse_hsu_list}
         result.jobs = parsers[adapter](source, client.get(source['url']))
         result.pages = 1
         if adapter in ('hkust', 'cityu'):
@@ -389,7 +393,12 @@ def collect_official(source, client):
             result.complete = False
             result.errors = ['已讀取官方清單；詳情平台要求存取驗證，內文及相關度未能完整核對。']
             return result
-        detail = (lambda job: parse_pdf_detail(job, client.get_bytes(job['url']))) if adapter == 'hksyu' else (lambda job: parse_polyu_detail(job, client.get(job['url'])))
+        if adapter == 'hksyu':
+            detail = lambda job: parse_pdf_detail(job, client.get_bytes(job['url']))
+        elif adapter == 'hsu':
+            detail = lambda job: parse_hsu_detail(job, client.get(job['url']))
+        else:
+            detail = lambda job: parse_polyu_detail(job, client.get(job['url']))
     consecutive_errors = 0
     for job in result.jobs:
         try:

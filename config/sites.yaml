@@ -42,10 +42,11 @@ sources:
     name: 嶺南大學
     group: lingnan
     url: https://lingnan.csod.com/ux/ats/careersite/4/home?c=lingnan&lang=en-US
-    adapter: pending
-    enabled: false
-    allowed_hosts: [lingnan.csod.com]
-    notes: 公開招聘首頁可開啟，但資料介面回覆 401 要求授權；暫需手動查看。
+    adapter: lingnan
+    enabled: true
+    allowed_hosts: [lingnan.csod.com, uk.api.csod.com]
+    read_only_post_paths: [/rec-job-search/external/jobs]
+    notes: 使用官方招聘頁的匿名工作階段讀取公開清單及廣告；遵守每次請求至少 10 秒的要求，完整檢索需較長時間。
   - id: hku
     institution: HKU
     name: 香港大學
@@ -95,20 +96,20 @@ sources:
     institution: 恒生大學
     name: 香港恒生大學
     group: hsu
-    url: https://www.hsu.edu.hk/hk/job-opportunities/
-    adapter: pending
-    enabled: false
+    url: https://www.hsu.edu.hk/en/job-opportunities/
+    adapter: hsu
+    enabled: true
     allowed_hosts: [www.hsu.edu.hk, recruit.hsu.edu.hk]
-    notes: robots.txt 連續回覆 502，未能確認讀取規則；暫停自動讀取，需手動查看。
+    notes: 已接入官方英文清單及公開職位詳情；曾遇連線及 robots.txt 502，按每日實際連線結果顯示狀態，無法確認規則時停止。
   - id: hksyu
     institution: 樹仁大學
     name: 香港樹仁大學
     group: hksyu
-    url: https://www.hksyu.edu/tc/snippets/external-vacancy
+    url: https://www.hksyu.edu/en/snippets/external-vacancy
     adapter: hksyu
     enabled: true
     allowed_hosts: [www.hksyu.edu]
-    notes: 學術職位清單及 PDF 內文；不將 PDF 檔名中的日期推斷為刊登日期。
+    notes: 英文官方招聘清單及 PDF 內文；中文清單有過期附件，改用已核對的英文入口。不從 PDF 檔名推斷刊登日期。
   - id: cuhk
     institution: CUHK
     name: 香港中文大學
