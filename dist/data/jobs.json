@@ -18488,7 +18488,7 @@
     "automation_active": true,
     "data_kind": "official-live-crawl",
     "discord_configured": false,
-    "generated_at": "2026-09-06T11:27:55+00:00",
+    "generated_at": "2026-09-06T11:29:07+00:00",
     "heartbeat_configured": false,
     "last_run": {
       "finished_at": "2026-09-06T11:28:58+00:00",
