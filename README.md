@@ -46,6 +46,12 @@ python -m monitor.run
 4. 確認 repository 允許 Actions 的 `GITHUB_TOKEN` 寫入內容。工作流程只會推送資料記錄；若分支保護拒絕 bot，需由擁有者配置允許的寫入方式，不要強制推送。
 5. 初次上傳程式會觸發一次檢索。之後可用 **Actions → Daily vacancy monitor → Run workflow** 手動執行；每日排程會獨立運作。完成後重新開啟教席雷達，檢查來源狀態及最近執行時間。
 
+手動執行時，`sources` 留空會檢查全部；亦可輸入 `hsu` 或 `hsu,hkust`，只重試指定院校。其他院校的資料及來源狀態會保留；每日定時執行仍然檢查全部來源。
+
+維護程式時，可在提交訊息另起一行 `Recheck-Sources: hsu`，讓這次程式更新只重試相關來源。沒有這行就照常全校檢索；排程不採用提交訊息。所有來源 ID 仍須通過設定檔核對，測試步驟不會跳過。
+
+檢索期間若只有程式被更新，系統會保留兩邊修改再儲存職位；若兩邊都修改職位資料，則停止合併，避免覆寫。每輪另保留 7 日資料備份，在 Actions 執行頁的 Artifacts 下載；未成功保存待送資料前，不會發出 Discord 通知。[備份功能說明](https://github.com/actions/upload-artifact)
+
 工作流程預設每天香港時間約 **08:17** 執行一次。GitHub 排程可能延遲；長期沒有 repository 活動也可能被停用。請保留必要的失敗通知，並定期確認頁面更新時間。[GitHub 排程說明](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
 
 日常使用：[教席雷達](https://teaching-job-radar.fhk357753357.chatgpt.site)。網頁載入時向 GitHub 取得資料，GitHub 可能有數分鐘快取；任何暫時無法讀取最新資料的情況都會提示。資料更新不需要重新發布網站；改動 HTML／CSS／JavaScript 才需要更新 Sites 版本。

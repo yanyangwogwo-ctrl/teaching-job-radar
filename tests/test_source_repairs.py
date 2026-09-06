@@ -148,6 +148,21 @@ class OfficialHTMLTests(unittest.TestCase):
         with self.assertRaises(CrawlError):
             parse_hsu_list(source, '<h1>System maintenance</h1>')
 
+    def test_hsu_ad_without_invitation_and_research_department(self):
+        title = 'Department of Marketing - Executive Officer / Assistant Officer'
+        source = dict(SOURCE, url='https://www.hsu.edu.hk/en/job-opportunities/')
+        job = record(source, title, 'https://recruit.hsu.edu.hk/opening/content.php?id=3853', '3853', detail_complete=False)
+        body = '<p>HSU is a liberal arts university with a critical thinking mission.</p><h2>' + title + '</h2><p>(Ref: EO/AO (MKT) 2026-08-21)</p><h3>Responsibilities</h3><p>Provide administrative services to the department, assist with daily operations, and support events and student enquiries.</p><p>Please apply on or before 6 September 2026.</p>'
+        parse_hsu_detail(job, body)
+        self.assertTrue(job['detail_complete']); self.assertNotIn('critical thinking', job['match_text'])
+        self.assertEqual(job['deadline'], '2026-09-06')
+        with self.assertRaises(CrawlError):
+            parse_hsu_detail(job, body.replace(title, 'Another vacancy'))
+        title = 'Research Fellow - Department of Computer Science'
+        job = record(source, title, source['url'], '3861')
+        parse_hsu_detail(job, body.replace('Department of Marketing - Executive Officer / Assistant Officer', title))
+        self.assertEqual(job['department'], 'Department of Computer Science')
+
 
 if __name__ == '__main__':
     unittest.main()

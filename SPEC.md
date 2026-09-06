@@ -66,6 +66,10 @@ HKUST 舊 PeopleSoft 平台經一般匿名 cookies、官方重新導向及公開
 
 先提交待送資料，再送訊息，最後提交逐則本機保存的確認記錄。Discord 與 Git repository 之間沒有跨服務交易；回覆丟失／收據提交前程序中斷可造成重送，不能宣稱 exactly-once。
 
+推送遇到同期程式更新時，先核對遠端沒有修改 `data/store.json` 或 `dist/data`，才把本輪資料提交移到最新程式之後重試，最多三次；同期資料更新或分支改寫則停止，從不強制推送。工作流程結尾保存七日 checkpoint，涵蓋職位、歷史及已有發送確認，避免推送失敗後只剩日誌。
+
+每日 schedule 一律檢查全部啟用來源。手動 workflow_dispatch 可指定 sources；程式 push 可用唯一 `Recheck-Sources:` 提交訊息行選擇重試來源。字串只接受來源 ID、空格及逗號，使用 subprocess 參數陣列，不作 shell 展開；monitor.run 再核對所有 ID。指定來源檢索不改動其他來源狀態。
+
 來源故障按來源／日／錯誤指紋記錄；發送前合併舊故障，只送最新仍未恢復的一則。排程完全停止需要獨立 heartbeat 服務，介面明示尚未啟用與是否過時。
 
 ## 7. 輸入與網路

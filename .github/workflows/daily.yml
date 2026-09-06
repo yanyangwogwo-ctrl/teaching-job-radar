@@ -7,6 +7,12 @@ on:
   schedule:
     - cron: '17 0 * * *' # 08:17 Hong Kong; GitHub may start later.
   workflow_dispatch:
+    inputs:
+      sources:
+        description: '可留空檢查全部，或填院校 ID，例如 hsu,hkust'
+        required: false
+        default: ''
+        type: string
 
 concurrency:
   group: vacancy-state
@@ -38,7 +44,8 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           HEARTBEAT_URL: ${{ secrets.HEARTBEAT_URL }}
-        run: python -m monitor.run
+          RADAR_SOURCE_IDS: ${{ inputs.sources }}
+        run: python scripts/run_scheduled.py
       - name: Persist jobs and pending alerts before sending
         id: persist_before
         run: python scripts/commit_data.py
@@ -54,6 +61,16 @@ jobs:
         if: always() && steps.persist_before.outcome == 'success'
         id: persist_after
         run: python scripts/commit_data.py
+      - name: Save crawl checkpoint
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: vacancy-checkpoint-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            data/store.json
+            dist/data
+          if-no-files-found: warn
+          retention-days: 7
       - name: Report that the schedule ran
         if: always() && steps.persist_after.outcome == 'success'
         env:

@@ -34,8 +34,15 @@ def parse_hsu_detail(job, html):
     # Remove university-wide liberal-arts/critical-thinking copy before matching.
     marker = re.search(r'The\s+University\s+now\s+invites\s+applications?\b[^:]{0,1500}:', text, re.I)
     if not marker:
-        raise CrawlError('恒生大學未提供預期公開職位內文。')
-    text = text[marker.end():].strip()
+        # Some official ads omit the invitation sentence. Accept only the exact
+        # listing title immediately before Ref, followed by a duties section.
+        title_pattern = r'\s+'.join(re.escape(word) for word in job['title'].split())
+        heading = re.search(title_pattern + r'\s*(?=\(Ref\s*:)', text, re.I)
+        if not heading or not re.search(r'\bResponsibilities\b|\bDuties\b', text[heading.end():], re.I):
+            raise CrawlError('恒生大學未提供預期公開職位內文。')
+        text = text[heading.start():].strip()
+    else:
+        text = text[marker.end():].strip()
     reference = re.search(r'\(Ref\s*:\s*[^)]+\)', text, re.I)
     if not reference or reference.start() > 1200 or len(text) < 150:
         raise CrawlError('恒生大學廣告標題或職位編號格式有變。')
@@ -44,7 +51,7 @@ def parse_hsu_detail(job, html):
     job['employment_type'] = employment_of(title, body=text)
     department = re.split(r'\s+[–—-]\s+', title, maxsplit=1)
     if len(department) == 2:
-        job['department'] = department[0]
+        job['department'] = next((part for part in department if re.search(r'\bDepartment\b|\bSchool\b|\bOffice\b|\bRegistry\b', part, re.I)), '')
     explicit = re.search(r'apply\s+on\s+or\s+before\s+(\d{1,2}\s+[A-Za-z]+\s+20\d\s?\d)', text, re.I)
     if explicit:
         deadline = re.sub(r'\b(20\d)\s+(\d)\b', r'\1\2', explicit.group(1))
