@@ -200,6 +200,25 @@ class AccessTests(unittest.TestCase):
             client.response(SOURCE['url'])
         self.assertEqual(client.session.request.call_count, 1)
 
+    @patch('monitor.http.time.sleep')
+    def test_connection_reset_has_one_bounded_get_retry(self, sleep):
+        import requests
+        client = PublicClient(SOURCE)
+        good = Mock(status_code=200, headers={}, iter_content=lambda _: iter([b'OK']), encoding='utf-8')
+        client.session.request = Mock(side_effect=[requests.ConnectionError(), good])
+        self.assertEqual(client._request(SOURCE['url']).status_code, 200)
+        self.assertEqual(client.session.request.call_count, 2)
+        client.session.request = Mock(side_effect=requests.ConnectionError())
+        with self.assertRaises(CrawlError):
+            client._request(SOURCE['url'])
+        self.assertEqual(client.session.request.call_count, 2)
+        for error, options in [(requests.exceptions.SSLError(), {}), (requests.exceptions.ProxyError(), {}),
+                               (requests.ConnectionError(), {'robots': True}), (requests.ConnectionError(), {'method': 'POST', 'data': {}})]:
+            client.session.request = Mock(side_effect=error)
+            with self.assertRaises(CrawlError):
+                client._request(SOURCE['url'], **options)
+            self.assertEqual(client.session.request.call_count, 1)
+
     def test_robots_wildcards_longest_allow_and_bom(self):
         rules = RobotsPolicy('\ufeffUser-agent: *\nDisallow: /private\nAllow: /private/public\nDisallow: /*?secret=\nDisallow: /closed$')
         self.assertFalse(rules.can_fetch('https://example.edu/private/data'))

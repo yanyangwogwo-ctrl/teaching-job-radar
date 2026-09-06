@@ -137,6 +137,13 @@ class PublicClient:
             except requests.RequestException as error:
                 if response is not None:
                     response.close()
+                # One bounded retry for a dropped GET connection before headers.
+                # Certificate/proxy errors, robots and POST requests stay failures.
+                if (isinstance(error, requests.ConnectionError)
+                        and not isinstance(error, (requests.exceptions.SSLError, requests.exceptions.ProxyError))
+                        and method == 'GET' and not robots and response is None and timeout_retries == 0):
+                    timeout_retries += 1
+                    continue
                 # Do not emit cookies, headers or request URLs in logs.
                 raise CrawlError(f'{host} 連線未完成（{type(error).__name__}）。') from None
         raise CrawlError('來源重新導向或重試次數過多。')
