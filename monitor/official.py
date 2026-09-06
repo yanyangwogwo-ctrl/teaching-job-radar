@@ -387,11 +387,31 @@ def collect_official(source, client):
         parsers = {'polyu': parse_polyu_list, 'hksyu': parse_hksyu_list, 'hkust': parse_hkust_list, 'cityu': parse_cityu_list, 'hsu': parse_hsu_list}
         result.jobs = parsers[adapter](source, client.get(source['url']))
         result.pages = 1
-        if adapter in ('hkust', 'cityu'):
+        if adapter == 'cityu':
             # Listing is useful, but challenged details are not a full-text feed.
             # No access retry against those detail hosts after the audit denial.
             result.complete = False
             result.errors = ['已讀取官方清單；詳情平台要求存取驗證，內文及相關度未能完整核對。']
+            return result
+        if adapter == 'hkust':
+            from .peoplesoft import fetch_hkust_detail, HOST
+            restricted = [job for job in result.jobs if urlsplit(job['url']).hostname != HOST]
+            if restricted:
+                result.complete = False
+                result.errors.append(f'{len(restricted)} 則職位的詳情平台仍有存取限制；其餘舊招聘平台廣告另行讀取。')
+            failures = 0
+            for job in result.jobs:
+                if urlsplit(job['url']).hostname != HOST:
+                    continue
+                try:
+                    fetch_hkust_detail(job, client)
+                    failures = 0
+                except (CrawlError, KeyError, ValueError) as error:
+                    result.complete = False
+                    result.errors.append(str(error) if isinstance(error, CrawlError) else 'HKUST 舊招聘平台格式有變。')
+                    failures += 1
+                    if getattr(error, 'stop_source', False) or failures >= 3:
+                        break
             return result
         if adapter == 'hksyu':
             detail = lambda job: parse_pdf_detail(job, client.get_bytes(job['url']))

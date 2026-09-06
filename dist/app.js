@@ -180,7 +180,8 @@ function sourceExplanation(source) {
   if (sourceStatus(source) === 'ok') return '最近一次已讀完整個職位清單及可用詳情。';
   const error = (source.errors ?? []).join(' ');
   if (/ConnectTimeout|ReadTimeout|逾時|timeout/i.test(error)) return '上次連線逾時，唔代表網站永久封鎖。已保留舊記錄，下一輪每日檢索會再次嘗試。';
-  if (['hkust','cityu'].includes(source.id)) return '清單已接通。首次檢查發現詳情頁有存取限制，目前每日只更新清單；內文仍需到官方網站查看。';
+  if (source.id === 'hkust') return '清單已接通，亦會讀取舊招聘平台嘅公開詳情。Interfolio 部分仍有存取限制，未取得嘅內文須到官方網站查看。';
+  if (source.id === 'cityu') return '清單已接通。詳情頁有存取限制，目前每日只更新清單；內文仍需到官方網站查看。';
   if (/robots\.txt/.test(error)) return '今輪未能確認網站嘅自動讀取規則，所以暫停此來源並保留舊資料。下一輪每日檢索會再次檢查。';
   if (/404/.test(error)) return '清單已讀取，但部分職位原文或附件連結失效，令詳情未能完整收集。';
   if (source.id === 'cuhk' && source.status === 'partial') return '已取得職位及詳情，但網站回報嘅總數同實際分頁結果不一致，可能仍有遺漏，所以標示部分完成。';

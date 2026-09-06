@@ -16,6 +16,8 @@ Python 3.12 每日讀取公開來源 → `data/store.json` 原子寫入 → 產�
 
 樹仁採已更新附件的英文官方清單；PDF 檔名日期仍不當作刊登日。恒生使用官方英文清單連到公開廣告，排除院校介紹及申請登入頁；遇 robots／連線失敗仍停止。中大官方總數與回傳數量的差異亦出現在單頁部門搜尋，不能單靠改分頁迴圈消除，繼續明示部分完成。
 
+HKUST 舊 PeopleSoft 平台經一般匿名 cookies、官方重新導向及公開 TargetContent frame 提供內文；只為官方主機明確允許 HTTPS 8044 port，並核對 frame 主機、頁面及職位編號。Interfolio 部分仍保留清單及未完成提示。
+
 來源格式包括同頁摺疊區塊、HTML 清單＋詳情、PDF、PageUp、Oracle Recruiting 公開 JSON、Taleo 唯讀搜尋 POST＋資料字串。從不提交申請表。
 
 通用 HTML 模組支援 YAML selectors；不同平台不會只靠 URL 猜測。空白、驗證頁、找不到 selectors、無法確認的零結果均不是成功。

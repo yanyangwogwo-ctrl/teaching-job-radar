@@ -6,6 +6,8 @@ from monitor.cornerstone import anonymous_headers, listing_date, parse_lingnan_p
 from monitor.hsu import parse_hsu_list, parse_hsu_detail
 from monitor.http import CrawlError, PublicClient
 from monitor.official import parse_hksyu_list
+from monitor.peoplesoft import fetch_hkust_detail, parse_hkust_detail
+from monitor.model import record
 
 SOURCE = {'id': 'lingnan', 'group': 'lingnan', 'institution': 'Lingnan',
           'url': 'https://lingnan.csod.com/ux/ats/careersite/4/home?c=lingnan&lang=en-US',
@@ -94,6 +96,30 @@ class LingnanTests(unittest.TestCase):
 
 
 class OfficialHTMLTests(unittest.TestCase):
+    def test_hkust_public_frame_identity_and_scoped_port(self):
+        host = 'hrmsxprod.psft.ust.hk'
+        source = dict(SOURCE, allowed_hosts=[host, 'example.edu'], allowed_ports={host: [8044]})
+        url = f'https://{host}:8044/psp/hrmsxprod/jobs?JobOpeningId=9419'
+        client = PublicClient(source); client.validate(url)
+        for invalid in [url.replace(':8044', ':8443'), url.replace(host, 'example.edu')]:
+            with self.assertRaises(CrawlError):
+                client.validate(invalid)
+        job = record(source, 'Teaching-track Faculty Position', url, '9419', detail_complete=False)
+        detail = '''<span id="HRS_JO_WRK_POSTING_TITLE$0">Teaching-track Faculty Position</span>
+        <span id="HRS_JO_WRK_HRS_JOB_OPENING_ID$0">9419</span><span id="Z_HRS_APPL_DW_DESCR100$0">Department of ISOM</span>
+        <div id="HRS_JO_PDSC_VW_DESCRLONG$0"><p>Applicants should hold a relevant degree and teaching experience. Duties include teaching operations management and supporting undergraduate students.</p><p>The appointee will start in July 2024.</p></div>'''
+        frame = f'https://{host}:8044/psc/hrmsxprod/jobs?Page=HRS_CE_JOB_DTL&JobOpeningId=9419'
+        client.get = Mock(side_effect=[f'<frame name="TargetContent" src="{frame}">', detail])
+        fetch_hkust_detail(job, client)
+        self.assertTrue(job['detail_complete']); self.assertEqual(job['department'], 'Department of ISOM')
+        self.assertIsNone(job['posted_date'])
+        with self.assertRaises(CrawlError):
+            parse_hkust_detail(job, detail.replace('>9419<', '>9420<'))
+        client.get = Mock(return_value=f'<frame name="TargetContent" src="{frame.replace("9419", "9420")}">')
+        with self.assertRaises(CrawlError):
+            fetch_hkust_detail(job, client)
+        self.assertEqual(client.get.call_count, 1)
+
     def test_hksyu_updated_english_attachment_without_filename_date(self):
         html = '''<div class="accordion"><div class="card"><div class="card-header">Academic Posts</div>
         <table class="table-striped"><tbody><tr><td>Counselling and Psychology</td><td><a href="/assets/careers/counpsy/2026/May/counpsy_ap_ft_2026-05-28.pdf">Assistant Professor</a></td><td>FT</td><td>Until filled</td></tr></tbody></table></div></div>'''

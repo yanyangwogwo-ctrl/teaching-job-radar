@@ -79,7 +79,8 @@ class PublicClient:
 
     def validate(self, url: str):
         bits = urlsplit(url)
-        if bits.scheme != 'https' or bits.hostname not in self.source['allowed_hosts'] or bits.username or bits.password or bits.port not in (None, 443):
+        ports = self.source.get('allowed_ports', {}).get(bits.hostname, [])
+        if bits.scheme != 'https' or bits.hostname not in self.source['allowed_hosts'] or bits.username or bits.password or (bits.port not in (None, 443) and bits.port not in ports):
             raise CrawlError('來源要求轉往未核准的網址，已停止。', stop_source=True)
 
     def _request(self, url: str, *, robots=False, method='GET', data=None, headers=None) -> requests.Response:
