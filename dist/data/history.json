@@ -4653,5 +4653,56 @@
     "kind": "baseline",
     "source_id": "lingnan",
     "title": "Administrative Officer, Taught Postgraduate Programmes Office, Faculty of Business"
+  },
+  {
+    "at": "2026-09-06T11:17:14+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-09-06",
+        "before": null
+      },
+      "deadline_type": {
+        "after": "closing",
+        "before": "unknown"
+      },
+      "department": {
+        "after": "Department of Marketing",
+        "before": ""
+      },
+      "description": {
+        "after": "Department of Marketing - Executive Officer / Assistant Officer\n(Ref: EO/AO (MKT) 2026-08-21)\nResponsibilities\nprovide support for academic staff to perform teaching and administrative duties;\nassist in the planning and implementation of initiatives on mentorship, internship and overseas exchange, etc.;\ncreate and curate content on websites and social media platforms;\norganise activities to engage students, alumni, and external stakeholders; and\nliaise with external stakeholders, such as educational institutions, business enterprises, trade associations, nonprofit organisations, and government agencies, to advance the Department’s strategic goals.\nApplicants Should\npossess a bachelor’s degree with at least 3 years of relevant work experience, preferably in the tertiary education sector;\nhave a good command of written and spoken English and Chinese (Cantonese and Putonghua);\nhave proficiency in the use of office software applications and good knowledge of social media platforms;\nhave good organisational and communication skills and the ability to work independently; and\nbe a team player, accountable and proactive.\nApplicants with less experience will be considered as an Assistant Officer.\n..................................................................................................................................................................\nS alary will be commensurate with qualifications and experience. Interested applicants should visit this link https://recruit.hsu.edu.hk/ and apply on or before 6 September 2026 . Review of applications will begin soon until the position is filled. The University reserves the right not to fill the position in this exercise.\nApplicants who are not invited to an interview within three months may consider their applications unsuccessful. All information received will be treated in strict confidence, and the data collected will be used for recruitment purposes only. The Personal Information Collection Statement will be provided upon request.\nThe Hang Seng University of Hong Kong, incorporated in Hong Kong with limited liability by guarantee, is an equal opportunity employer.\nApply Now!",
+        "before": ""
+      }
+    },
+    "job_id": "4d3cda856e0d7148237e1082",
+    "kind": "updated",
+    "source_id": "hsu",
+    "title": "Department of Marketing - Executive Officer / Assistant Officer"
+  },
+  {
+    "at": "2026-09-06T11:17:14+00:00",
+    "changes": {
+      "department": {
+        "after": "Department of Computer Science",
+        "before": "Research Fellow"
+      }
+    },
+    "job_id": "248fe258fff938457e0732a0",
+    "kind": "updated",
+    "source_id": "hsu",
+    "title": "Research Fellow - Department of Computer Science"
+  },
+  {
+    "at": "2026-09-06T11:17:14+00:00",
+    "changes": {
+      "department": {
+        "after": "Department of Supply Chan and Information Management",
+        "before": "Research Assistant"
+      }
+    },
+    "job_id": "84fc09a9c48945bc8df0efec",
+    "kind": "updated",
+    "source_id": "hsu",
+    "title": "Research Assistant – Department of Supply Chan and Information Management"
   }
 ]
