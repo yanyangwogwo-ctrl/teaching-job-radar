@@ -25777,6 +25777,20 @@
       ],
       "started_at": "2026-09-06T11:17:14+00:00",
       "status": "ok"
+    },
+    {
+      "finished_at": "2026-09-06T11:20:24+00:00",
+      "sources": [
+        {
+          "baseline": false,
+          "count": 0,
+          "new_records": 0,
+          "source_id": "hkust",
+          "status": "error"
+        }
+      ],
+      "started_at": "2026-09-06T11:20:09+00:00",
+      "status": "partial"
     }
   ],
   "sources": {
@@ -25869,7 +25883,7 @@
         "未能確認零職位結果。"
       ],
       "id": "hkust",
-      "last_attempt": "2026-09-06T10:58:15+00:00",
+      "last_attempt": "2026-09-06T11:20:09+00:00",
       "pages": 0,
       "status": "error"
     },

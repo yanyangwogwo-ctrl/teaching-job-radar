@@ -18451,21 +18451,21 @@
     "automation_active": true,
     "data_kind": "official-live-crawl",
     "discord_configured": false,
-    "generated_at": "2026-09-06T11:17:43+00:00",
+    "generated_at": "2026-09-06T11:20:09+00:00",
     "heartbeat_configured": false,
     "last_run": {
-      "finished_at": "2026-09-06T11:17:35+00:00",
+      "finished_at": "2026-09-06T11:20:24+00:00",
       "sources": [
         {
           "baseline": false,
-          "count": 15,
+          "count": 0,
           "new_records": 0,
-          "source_id": "hsu",
-          "status": "ok"
+          "source_id": "hkust",
+          "status": "error"
         }
       ],
-      "started_at": "2026-09-06T11:17:14+00:00",
-      "status": "ok"
+      "started_at": "2026-09-06T11:20:09+00:00",
+      "status": "partial"
     },
     "notification_rule": {
       "baseline": "silent",
@@ -18700,7 +18700,7 @@
       ],
       "id": "hkust",
       "institution": "HKUST",
-      "last_attempt": "2026-09-06T10:58:15+00:00",
+      "last_attempt": "2026-09-06T11:20:09+00:00",
       "name": "香港科技大學",
       "notes": "官方清單及舊 PeopleSoft 平台公開詳情已接入；Interfolio 詳情仍受限，須手動核對該部分內文。",
       "pages": 0,
