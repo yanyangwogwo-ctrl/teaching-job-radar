@@ -75,7 +75,7 @@ sources:
     allowed_hosts: [hkustcareers.hkust.edu.hk, apply.interfolio.com, hrmsxprod.psft.ust.hk]
     allowed_ports:
       hrmsxprod.psft.ust.hk: [8044]
-    notes: 官方清單及舊 PeopleSoft 平台公開詳情已接入；Interfolio 詳情仍受限，須手動核對該部分內文。
+    notes: 官方清單及舊招聘平台公開詳情已接入；清單連線失敗時只核對已知廣告，並提示可能遺漏新職位。Interfolio 詳情仍受限。
   - id: cityu
     institution: CityU
     name: 香港城市大學

@@ -1,13 +1,14 @@
 import json
 import unittest
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 
 from monitor.cornerstone import anonymous_headers, listing_date, parse_lingnan_page, parse_lingnan_detail, collect_lingnan
 from monitor.hsu import parse_hsu_list, parse_hsu_detail
 from monitor.http import CrawlError, PublicClient
 from monitor.official import parse_hksyu_list
-from monitor.peoplesoft import fetch_hkust_detail, parse_hkust_detail
+from monitor.peoplesoft import fetch_hkust_detail, parse_hkust_detail, collect_known_hkust
 from monitor.model import record
+from monitor.run import fetch_source
 
 SOURCE = {'id': 'lingnan', 'group': 'lingnan', 'institution': 'Lingnan',
           'url': 'https://lingnan.csod.com/ux/ats/careersite/4/home?c=lingnan&lang=en-US',
@@ -96,6 +97,26 @@ class LingnanTests(unittest.TestCase):
 
 
 class OfficialHTMLTests(unittest.TestCase):
+    def test_known_hkust_ads_never_claim_a_complete_fresh_list(self):
+        source = dict(SOURCE, id='hkust', group='hkust', adapter='hkust')
+        known = [record(source, 'Lecturer', f'https://hrmsxprod.psft.ust.hk:8044/job/{i}', str(i), detail_complete=False) for i in [1, 2]]
+        known.append(record(source, 'Professor', 'https://apply.interfolio.com/3', '3', detail_complete=False))
+        def detail(job, client):
+            if job['reference'] == '2':
+                raise CrawlError('connection failed')
+            job.update(detail_complete=True, description='Newly read public advertisement')
+            return job
+        with patch('monitor.peoplesoft.fetch_hkust_detail', side_effect=detail) as fetch:
+            batch = collect_known_hkust(source, Mock(), known, 'list connection failed')
+        self.assertFalse(batch.complete); self.assertEqual(batch.pages, 0)
+        self.assertEqual([j['reference'] for j in batch.jobs], ['1'])
+        self.assertEqual(fetch.call_count, 2)
+        self.assertIn('可能遺漏新增職位', batch.errors[0])
+        self.assertFalse(known[0]['detail_complete'])
+        with patch('monitor.run.collect', side_effect=CrawlError('denied', stop_source=True)), patch('monitor.peoplesoft.collect_known_hkust') as fallback:
+            batch = fetch_source(source, known)
+            fallback.assert_not_called(); self.assertFalse(batch.complete)
+
     def test_hkust_public_frame_identity_and_scoped_port(self):
         host = 'hrmsxprod.psft.ust.hk'
         source = dict(SOURCE, allowed_hosts=[host, 'example.edu'], allowed_ports={host: [8044]})

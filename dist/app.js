@@ -179,6 +179,7 @@ function sourceExplanation(source) {
   if (!source.enabled) return '尚未接入每日檢索，目前需要手動查看。原因見下方備註；系統唔會每日重試已停用來源。';
   if (sourceStatus(source) === 'ok') return '最近一次已讀完整個職位清單及可用詳情。';
   const error = (source.errors ?? []).join(' ');
+  if (source.id === 'hkust' && /清單未能更新/.test(error)) return '招聘清單暫時未能更新，系統正按之前已確認嘅官方連結核對內文。呢部分唔代表完整清單，仍有可能漏咗新職位。';
   if (/ConnectTimeout|ReadTimeout|逾時|timeout/i.test(error)) return '上次連線逾時，唔代表網站永久封鎖。已保留舊記錄，下一輪每日檢索會再次嘗試。';
   if (/ConnectionError/.test(error)) return '今輪連線中斷，未能完整取得新資料。已保留舊記錄，下一輪檢索會再次嘗試。';
   if (source.id === 'hkust') return '清單已接通，亦會讀取舊招聘平台嘅公開詳情。Interfolio 部分仍有存取限制，未取得嘅內文須到官方網站查看。';

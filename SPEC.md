@@ -18,6 +18,8 @@ Python 3.12 每日讀取公開來源 → `data/store.json` 原子寫入 → 產�
 
 HKUST 舊 PeopleSoft 平台經一般匿名 cookies、官方重新導向及公開 TargetContent frame 提供內文；只為官方主機明確允許 HTTPS 8044 port，並核對 frame 主機、頁面及職位編號。Interfolio 部分仍保留清單及未完成提示。
 
+HKUST 清單遇非拒絕性連線／讀取故障時，可依保存的官方廣告連結重新讀取獨立舊平台的詳情。只將真正重新讀到的廣告交給資料合併；清單分頁數為零，整批始終 partial，明示可能遺漏新增職位，不將未讀到的舊記錄判為消失。存取驗證／拒絕不走此備援。
+
 來源格式包括同頁摺疊區塊、HTML 清單＋詳情、PDF、PageUp、Oracle Recruiting 公開 JSON、Taleo 唯讀搜尋 POST＋資料字串。從不提交申請表。
 
 通用 HTML 模組支援 YAML selectors；不同平台不會只靠 URL 猜測。空白、驗證頁、找不到 selectors、無法確認的零結果均不是成功。

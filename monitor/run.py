@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import copy
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
@@ -30,10 +31,14 @@ def read_config(root: Path):
     return sources, prefs
 
 
-def fetch_source(source: dict) -> Batch:
+def fetch_source(source: dict, cached_jobs=()) -> Batch:
+    client = PublicClient(source)
     try:
-        return collect(source, PublicClient(source))
+        return collect(source, client)
     except CrawlError as error:
+        if source['adapter'] == 'hkust' and not error.stop_source and cached_jobs:
+            from .peoplesoft import collect_known_hkust
+            return collect_known_hkust(source, client, cached_jobs, str(error))
         return Batch(complete=False, errors=[str(error)])
     except Exception as error:
         # Parser failure is explicitly visible; never convert it to success/zero.
@@ -60,9 +65,10 @@ def main():
         if not selected:
             parser.error('沒有啟用的來源，未執行檢索。')
         summaries = []
+        cached_hkust = copy.deepcopy([job for job in state['jobs'].values() if job['source_id'] == 'hkust'])
         # Sources run in parallel; each site's requests remain paced/serial.
         with ThreadPoolExecutor(max_workers=3) as pool:
-            future_map = {pool.submit(fetch_source, s): s for s in selected}
+            future_map = {pool.submit(fetch_source, s, cached_hkust if s['adapter'] == 'hkust' else ()): s for s in selected}
             for future in as_completed(future_map):
                 source = future_map[future]
                 batch = future.result()
