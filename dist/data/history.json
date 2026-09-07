@@ -5012,5 +5012,140 @@
     "kind": "updated",
     "source_id": "hkust",
     "title": "Founding Head of the Division of Arts and Machine Creativity (AMC)"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "job_id": "b1bf41e2ca62a16ca2fd968e",
+    "kind": "new",
+    "source_id": "hkbu-sce",
+    "title": "Executive Officer"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "1c6acd6391339d3c16770c72",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Graduate School - Assistant Officer"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "4d3cda856e0d7148237e1082",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Department of Marketing - Executive Officer / Assistant Officer"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "84fc09a9c48945bc8df0efec",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Research Assistant – Department of Supply Chan and Information Management"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "b45f3a061154a047c3a8ac1d",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Graduate School - Executive Officer"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "b544d45d39e244e183a12d98",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Graduate School - Senior Executive Officer"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "job_id": "d3ccd0d0b9dca0ef10066fbd",
+    "kind": "new",
+    "source_id": "hksyu",
+    "title": "Assistant / Associate Professor"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "job_id": "7843205dbdda1b17daec7d5c",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Professor / Associate Professor / Assistant Professor (Social Work)"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "job_id": "c2804a8e0d7a8dab720742a2",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Lecturer / Lecturer I / Lecturer II (Social Work)"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "job_id": "57442d75b12d2d8b5d934a6d",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Academic Services Officer (Academic and Student Affairs Section), SCE"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "job_id": "5178d5dc58ee9a963d9c0cd4",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Assistant to Dean, Office of the Dean of Creative Arts"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "job_id": "297540210348852d7c4d314b",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "兼職體育設施助理 Part-time Sports Facilities Assistant"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "job_id": "357326461f72bb9ea44c6420",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Manager (Mainland Research Funding)"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "job_id": "5de0fb9061db26b03b635490",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Manager (Internal Grants and Secretariat Services)"
+  },
+  {
+    "at": "2026-09-07T04:52:01+00:00",
+    "job_id": "e9f366026aa8f883f638e85f",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Administrative Manager (Research Postgraduate Team), School of Graduate Studies"
   }
 ]
