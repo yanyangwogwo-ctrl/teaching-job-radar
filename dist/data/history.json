@@ -5533,5 +5533,195 @@
     "kind": "status",
     "source_id": "lingnan",
     "title": "Part-time Research Officer / Assistant Research Officer, School of Graduate Studies"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "8a9f69a0929f7a63cab59a37",
+    "kind": "status",
+    "source_id": "uowchk",
+    "title": "Lecturer/Senior Lecturer/Assistant Professor in Social Work, Faculty of Social Sciences"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "job_id": "118478719ca46bc13a719095",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Graduate Teaching Assistant"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "0c49b721117f04aad9d203fc",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Information Technology Manager (Data Analytics)"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "58671f3a0e7797192a0cfe5c",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Systems Analyst (IT Business Analyst), School of Continuing Education"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "e6305c61f267065650739c5d",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Information Technology Manager (Application Delivery & Support), School of Continuing Education"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "job_id": "d4c59eba23b06292e4ce6a77",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-10",
+        "before": "2026-07-27"
+      }
+    },
+    "job_id": "0eca5067d35a986a5009f46e",
+    "kind": "updated",
+    "source_id": "lingnan",
+    "title": "Information Manager, ITSC"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-10",
+        "before": "2026-07-14"
+      }
+    },
+    "job_id": "5aa1b156c44c2ba6939c4fed",
+    "kind": "updated",
+    "source_id": "lingnan",
+    "title": "Senior Information Officer, ITSC"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-10",
+        "before": "2026-08-21"
+      }
+    },
+    "job_id": "3f588387a3c7b964211b481d",
+    "kind": "updated",
+    "source_id": "lingnan",
+    "title": "Senior Information Security Analyst (at the rank of Senior Officer), ITSC"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-10",
+        "before": "2026-07-09"
+      }
+    },
+    "job_id": "f85c7ad9bf5cad43ec95a59b",
+    "kind": "updated",
+    "source_id": "lingnan",
+    "title": "Collection Development and Management Librarian (at the rank of Manager), Library"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "job_id": "47632ea7dfb62383b8f32f01",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Senior Administrative Officer, Registry"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "15cf621ee64403125787b4c9",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Administrative Officer, Wu Jieh Yee School of Interdisciplinary Studies"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "5301a5b392ab5d073ea0c27e",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Postdoctoral Fellow, Hong Kong Catastrophic Risk Centre"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "730cc55267ee37b64c6acd27",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Programme Officer / Assistant Programme Officer, MA in Chinese Programme, Department of Chinese"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "79baeaba9d32e1cb0db6192e",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Professor, Division of Science"
+  },
+  {
+    "at": "2026-09-10T04:50:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "c55d50b075775347343ddf78",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Research Assistant Professor, Division of Science"
   }
 ]
