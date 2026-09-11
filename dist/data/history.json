@@ -5723,5 +5723,230 @@
     "kind": "status",
     "source_id": "lingnan",
     "title": "Research Assistant Professor, Division of Science"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "changes": {},
+    "job_id": "bae393f9daae433918cf4b4e",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part Time Student Research Assistant"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-09-30",
+        "before": "2026-10-31"
+      }
+    },
+    "job_id": "2bb3e1de5ac9b7d648161286",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Full-time / Part-time Senior Lecturer / Lecturer / Assistant Lecturer (holding the title of Associate Project Director / Senior Project Manager / Project Manager) in the Faculty of Social Sciences"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "93d0e790f4d6c18f8dfc22b2",
+    "kind": "new",
+    "source_id": "hkbu-sce",
+    "title": "Assistant Information Technology Manager (Application Development & Delivery)"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "f12143f1d4b49f0ad75ad0bb",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Graduate Teaching Assistant"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "edce2f4c48cf774cb7600d30",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor "
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "5b974cf82639431f23d1b579",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Associate/ Assistant Professor in English Literary Studies"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "f44c759f3d5b8aeba4b5d224",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Professional Consultant"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "83c4faf1953d446feafc199e",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Lecturer"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "d68cd079f2b2f6381b8ad2ae",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "83b49b039bc4d5ab4cde7bfc",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Clinical Lecturer"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "37a0239a9c87225ae04d5f5a",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Professors / Associate Professors / Assistant Professors"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "f87cdd09f924fc36db1a5688",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Professor(s) / Associate Professor(s) / Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-11",
+        "before": "2026-08-10"
+      }
+    },
+    "job_id": "5c8d39dc185e45c288210091",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "運動設施助理 Sports Facilities Assistant"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-11",
+        "before": "2026-08-12"
+      }
+    },
+    "job_id": "9f466f0ccf7afe6dd0883859",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Systems Analyst (Artificial Intelligence)"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "13610ad745ec593e3e23e922",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Executive Officer, Academic Registry"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "138656a87780201bbf6134ef",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Assistant Executive Officer, Academic Registry"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "9becde8ec64547dd8a5a6370",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Research Assistant/Research Associate, Department of Biology"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "1c04f2f38c9c3f9650eb0fcc",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Associate Professor / Assistant Professor, Department of Chemistry"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "3c3d13012bcc770aa4184be4",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Library Officer"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "e924e1dc275a43d9db9cac4a",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Assistant Manager (Data & and Impact)"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "42f1d17c0cc18f26cd64bbe0",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Assistant Information Technology Manager, School of Continuing Education"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "e2f894847f2215db22c545e0",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "主管 (設施及校園管理)，物業處"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-11",
+        "before": "2026-06-02"
+      }
+    },
+    "job_id": "c6ddd4f8df196bbf6ba9e326",
+    "kind": "updated",
+    "source_id": "lingnan",
+    "title": "Administrative Officer (Technology Transfer and Entrepreneurship), ORKT"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "job_id": "e21a8ecfe4bc44feea104ef4",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Programme Officer, Taught Postgraduate Programmes Office, Office of the Faculty of Business"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "b2e1ecc9394423dc9990acc2",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Programme Officer, Taught Postgraduate Programmes Office, Office of the Faculty of Business"
+  },
+  {
+    "at": "2026-09-11T04:47:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "3721e145a7da0cfc0c5bc283",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Part-time Lecturer"
   }
 ]
