@@ -6116,5 +6116,83 @@
     "kind": "status",
     "source_id": "hku",
     "title": "Part-time Research Nurse (at the rank of Nurse) in the Division of Gastroenterology and Hepatology"
+  },
+  {
+    "at": "2026-09-13T04:54:50+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "7ee4277e5a59b0152bdde52f",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Systems Analyst (IT Business Analyst)"
+  },
+  {
+    "at": "2026-09-13T04:54:50+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "b3b9c8f6a4580f3e3d2afa0a",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Information Technology Manager (Application Delivery & Support)"
+  },
+  {
+    "at": "2026-09-13T04:54:50+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "3c0d8f9d197b1f04bcdd7526",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Part-time Lecturer (ARTT), Academy of Visual Arts"
+  },
+  {
+    "at": "2026-09-13T04:54:50+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "85fa908fef44219d92068854",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Associate Professor / Assistant Professor, Department of Chemistry"
+  },
+  {
+    "at": "2026-09-13T04:54:50+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "2124914742fcdae29a265621",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Senior Manager (Legal and Compliance) / Manager (Legal and Compliance), OCCBGA"
+  },
+  {
+    "at": "2026-09-13T04:54:50+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "401d1f5d280003f03f996048",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Administrative Manager, Taught Postgraduate Programmes Office, Office of the Faculty of Business"
   }
 ]
