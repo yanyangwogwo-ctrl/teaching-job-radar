@@ -6484,5 +6484,168 @@
     "kind": "new",
     "source_id": "lingnan",
     "title": "Project Officer / Assistant Project Officer, Hong Kong and South China Historical Research Programme"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "job_id": "ef8691bfa7222b3e4b4b730a",
+    "kind": "new",
+    "source_id": "uowchk",
+    "title": "Counsellor (Fractional)"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "job_id": "37d511192bd0ffd19415fce7",
+    "kind": "new",
+    "source_id": "uowchk",
+    "title": "Temporary Research Assistant in Faculty of Art and Humanities"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "job_id": "3afac4c46bf9982de6d45830",
+    "kind": "new",
+    "source_id": "uowchk",
+    "title": "Clerical Officer [Ref.2026NACAD036]"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "changes": {},
+    "job_id": "ef6e011e8779aa557b6b399b",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-Time Lecturer in Population and Policy Analysis"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "job_id": "00fe1ebf214669abed16d2b6",
+    "kind": "new",
+    "source_id": "hkbu-sce",
+    "title": "Programme Officer"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "job_id": "2d0e07ee543397ec475b5ff4",
+    "kind": "new",
+    "source_id": "hkbu-sce",
+    "title": "Assistant Programme Officer"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "job_id": "c32daaf678295a5496cfcbb9",
+    "kind": "new",
+    "source_id": "hkbu-sce",
+    "title": "Information Technology Manager (Cybersecurity and Network)"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "06a78a59fb0ed16c1fb3c925",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Provost and Vice-President (Academic and Research)"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-16",
+        "before": "2025-10-22"
+      }
+    },
+    "job_id": "0b0c15c072ef2574ebd09d30",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Manager (Administration and Accounting), Estates Office"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "job_id": "f14e6c6b7e795358bce14529",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Assistant Programme Officer, School of Continuing Education"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "job_id": "d27e4baf5cc9b1754dc9be77",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Programme Officer, School of Continuing Education"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "job_id": "aa9ae6dd6f01d0f2007ddd2c",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Information Technology Manager (Cybersecurity and Network), School of Continuing Education"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "job_id": "90c7c249846d0564d1459dda",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Project Assistant, Academy of Wellness and Human Development"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "job_id": "aa0e25d0fa9ca9081b6859c8",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Research Assistant, Academy of Wellness and Human Development"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "77d9cfc42dc1b9d77a295834",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Senior Executive Officer/Executive Officer, Office of the Dean of Creative Arts"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "adb15692ef6c3076cabb9a36",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Part-time Lecturer, School of Creative Arts"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "f2558a1024deeb26a0412f63",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Orchestra Officer, Academy of Music"
+  },
+  {
+    "at": "2026-09-16T04:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "f7113dfdfaf865bfc3fc79ff",
+    "kind": "status",
+    "source_id": "cuhk",
+    "title": "Professor(s)/ Associate Professor(s)/ Assistant Professor(s)"
   }
 ]
