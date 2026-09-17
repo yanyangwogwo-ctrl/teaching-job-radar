@@ -1,124 +1,419 @@
-# 新增相同格式來源：複製一節並選擇已支援 adapter；不要只貼 URL 而略過驗收。
+# 官方招聘來源；共同僱主只設一個來源，詳見 INSTITUTIONS.md。
 version: 1
 sources:
-  - id: hkuspace
-    institution: HKU SPACE
-    name: 香港大學專業進修學院
-    group: hku-space
-    url: https://jobs.hkuspace.hku.hk/jobs/list_pt.php?lang=eng
-    adapter: hkuspace
-    enabled: true
-    allowed_hosts: [jobs.hkuspace.hku.hk]
-    notes: 兼職教學職位清單；詳情另頁，持續招聘不等於已截止。
-  - id: uowchk
-    institution: UOW College HK
-    name: 香港伍倫貢學院
-    group: uowchk
-    url: https://www.uowchk.edu.hk/working-with-us/
-    adapter: uowchk
-    enabled: true
-    allowed_hosts: [www.uowchk.edu.hk]
-    notes: 職位內文同頁；刊登日期未必提供，不從職位編號推測。
-  - id: hkbu-sce
-    institution: HKBU-SCE
-    name: 香港浸會大學持續教育學院
-    group: hkbu
-    url: https://www.sce.hkbu.edu.hk/tc/job-vacancy/
-    adapter: hkbu_sce
-    enabled: true
-    allowed_hosts: [www.sce.hkbu.edu.hk]
-    notes: 須讀完所有分頁；一則廣告可以有多個職位編號。
-  - id: sfu
-    institution: Saint Francis University
-    name: 聖方濟各大學
-    group: sfu
-    url: https://www.sfu.edu.hk/en/career/academic-teaching-positions/index.html
-    adapter: sfu
-    enabled: true
-    allowed_hosts: [www.sfu.edu.hk]
-    notes: 學術職位內容在同頁摺疊區塊；原文未提供刊登日期則顯示首見。
-  - id: lingnan
-    institution: Lingnan
-    name: 嶺南大學
-    group: lingnan
-    url: https://lingnan.csod.com/ux/ats/careersite/4/home?c=lingnan&lang=en-US
-    adapter: lingnan
-    enabled: true
-    allowed_hosts: [lingnan.csod.com, uk.api.csod.com]
-    read_only_post_paths: [/rec-job-search/external/jobs]
-    notes: 使用官方招聘頁的匿名工作階段讀取公開清單及廣告；遵守每次請求至少 10 秒的要求，完整檢索需較長時間。
-  - id: hku
-    institution: HKU
-    name: 香港大學
-    group: hku
-    url: https://jobs.hku.hk/en/filter/?search-keyword=&work-type=fractional%20%2f%20part-time&work-type=hourly-paid
-    adapter: hku
-    enabled: true
-    allowed_hosts: [jobs.hku.hk]
-    notes: PageUp 兼職／時薪清單及完整分頁；遇到驗證要求即停止並保留舊資料。
-  - id: polyu
-    institution: PolyU
-    name: 香港理工大學
-    group: polyu
-    url: https://jobs.polyu.edu.hk/academic.php
-    adapter: polyu
-    enabled: true
-    allowed_hosts: [jobs.polyu.edu.hk]
-    notes: 學術職位清單及詳情；首輪審閱日期不當作截止日期。
-  - id: hkust
-    institution: HKUST
-    name: 香港科技大學
-    group: hkust
-    url: https://hkustcareers.hkust.edu.hk/join-us/current-opening/academic-careers
-    adapter: hkust
-    enabled: true
-    allowed_hosts: [hkustcareers.hkust.edu.hk, apply.interfolio.com, hrmsxprod.psft.ust.hk]
-    allowed_ports:
-      hrmsxprod.psft.ust.hk: [8044]
-    notes: 官方清單及舊招聘平台公開詳情已接入；清單連線失敗時只核對已知廣告，並提示可能遺漏新職位。Interfolio 詳情仍受限。
-  - id: cityu
-    institution: CityU
-    name: 香港城市大學
-    group: cityu
-    url: https://jobs1.cityu.edu.hk/apply/Default.aspx?jobtype=ACAD
-    adapter: cityu
-    enabled: true
-    allowed_hosts: [jobs1.cityu.edu.hk, www.cityu.edu.hk]
-    notes: 官方學術清單可讀；詳情主機出現驗證頁，目前內文搜尋不完整。
-  - id: hkbu
-    institution: HKBU
-    name: 香港浸會大學
-    group: hkbu-main
-    url: https://fa-ewqq-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/hkbu/jobs
-    adapter: hkbu_oracle
-    enabled: true
-    allowed_hosts: [fa-ewqq-saasfaprod1.fa.ocs.oraclecloud.com]
-    notes: Oracle 公開清單與詳情；依內層總數核对分頁。與 SCE 分開保存來源觀測。
-  - id: hsu
-    institution: 恒生大學
-    name: 香港恒生大學
-    group: hsu
-    url: https://www.hsu.edu.hk/en/job-opportunities/
-    adapter: hsu
-    enabled: true
-    allowed_hosts: [www.hsu.edu.hk, recruit.hsu.edu.hk]
-    notes: 已接入官方英文清單及公開職位詳情；曾遇連線及 robots.txt 502，按每日實際連線結果顯示狀態，無法確認規則時停止。
-  - id: hksyu
-    institution: 樹仁大學
-    name: 香港樹仁大學
-    group: hksyu
-    url: https://www.hksyu.edu/en/snippets/external-vacancy
-    adapter: hksyu
-    enabled: true
-    allowed_hosts: [www.hksyu.edu]
-    notes: 英文官方招聘清單及 PDF 內文；中文清單有過期附件，改用已核對的英文入口。不從 PDF 檔名推斷刊登日期。
-  - id: cuhk
-    institution: CUHK
-    name: 香港中文大學
-    group: cuhk
-    url: https://cuhk.taleo.net/careersection/cu_career_teach/jobsearch.ftl?lang=en&portal=10115020119
-    adapter: cuhk
-    enabled: true
-    allowed_hosts: [cuhk.taleo.net]
-    read_only_post_paths: [/careersection/rest/jobboard/searchjobs]
-    notes: Taleo 公開搜尋及詳情；總數與實際分頁數量不一致時顯示部分完成，保留所有舊記錄。
+- id: hkuspace
+  institution: HKU SPACE
+  name: 香港大學專業進修學院
+  group: hku-space
+  url: https://jobs.hkuspace.hku.hk/jobs/list_pt.php?lang=eng
+  adapter: hkuspace
+  enabled: true
+  allowed_hosts:
+  - jobs.hkuspace.hku.hk
+  notes: 兼職教學職位清單；詳情另頁，持續招聘不等於已截止。
+- id: uowchk
+  institution: UOW College HK
+  name: 香港伍倫貢學院
+  group: uowchk
+  url: https://www.uowchk.edu.hk/working-with-us/
+  adapter: uowchk
+  enabled: true
+  allowed_hosts:
+  - www.uowchk.edu.hk
+  notes: 職位內文同頁；刊登日期未必提供，不從職位編號推測。
+- id: hkbu-sce
+  institution: HKBU-SCE
+  name: 香港浸會大學持續教育學院
+  group: hkbu
+  url: https://www.sce.hkbu.edu.hk/tc/job-vacancy/
+  adapter: hkbu_sce
+  enabled: true
+  allowed_hosts:
+  - www.sce.hkbu.edu.hk
+  notes: 須讀完所有分頁；一則廣告可以有多個職位編號。
+- id: sfu
+  institution: Saint Francis University
+  name: 聖方濟各大學
+  group: sfu
+  url: https://www.sfu.edu.hk/en/career/academic-teaching-positions/index.html
+  adapter: sfu
+  enabled: true
+  allowed_hosts:
+  - www.sfu.edu.hk
+  notes: 學術職位內容在同頁摺疊區塊；原文未提供刊登日期則顯示首見。
+- id: lingnan
+  institution: Lingnan
+  name: 嶺南大學
+  group: lingnan
+  url: https://lingnan.csod.com/ux/ats/careersite/4/home?c=lingnan&lang=en-US
+  adapter: lingnan
+  enabled: true
+  allowed_hosts:
+  - lingnan.csod.com
+  - uk.api.csod.com
+  read_only_post_paths:
+  - /rec-job-search/external/jobs
+  notes: 使用官方招聘頁的匿名工作階段讀取公開清單及廣告；遵守每次請求至少 10 秒的要求，完整檢索需較長時間。
+- id: hku
+  institution: HKU
+  name: 香港大學
+  group: hku
+  url: https://jobs.hku.hk/en/filter/?search-keyword=&work-type=fractional%20%2f%20part-time&work-type=hourly-paid
+  adapter: hku
+  enabled: true
+  allowed_hosts:
+  - jobs.hku.hk
+  notes: PageUp 兼職／時薪清單及完整分頁；遇到驗證要求即停止並保留舊資料。
+- id: polyu
+  institution: PolyU
+  name: 香港理工大學
+  group: polyu
+  url: https://jobs.polyu.edu.hk/academic.php
+  adapter: polyu
+  enabled: true
+  allowed_hosts:
+  - jobs.polyu.edu.hk
+  notes: 學術職位清單及詳情；首輪審閱日期不當作截止日期。
+- id: hkust
+  institution: HKUST
+  name: 香港科技大學
+  group: hkust
+  url: https://hkustcareers.hkust.edu.hk/join-us/current-opening/academic-careers
+  adapter: hkust
+  enabled: true
+  allowed_hosts:
+  - hkustcareers.hkust.edu.hk
+  - apply.interfolio.com
+  - hrmsxprod.psft.ust.hk
+  allowed_ports:
+    hrmsxprod.psft.ust.hk:
+    - 8044
+  notes: 官方清單及舊招聘平台公開詳情已接入；清單連線失敗時只核對已知廣告，並提示可能遺漏新職位。Interfolio 詳情仍受限。
+- id: cityu
+  institution: CityU
+  name: 香港城市大學
+  group: cityu
+  url: https://jobs1.cityu.edu.hk/apply/Default.aspx?jobtype=ACAD
+  adapter: cityu
+  enabled: true
+  allowed_hosts:
+  - jobs1.cityu.edu.hk
+  - www.cityu.edu.hk
+  notes: 官方學術清單可讀；詳情主機出現驗證頁，目前內文搜尋不完整。
+- id: hkbu
+  institution: HKBU
+  name: 香港浸會大學
+  group: hkbu-main
+  url: https://fa-ewqq-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/hkbu/jobs
+  adapter: hkbu_oracle
+  enabled: true
+  allowed_hosts:
+  - fa-ewqq-saasfaprod1.fa.ocs.oraclecloud.com
+  notes: Oracle 公開清單與詳情；依內層總數核对分頁。與 SCE 分開保存來源觀測。
+- id: hsu
+  institution: 恒生大學
+  name: 香港恒生大學
+  group: hsu
+  url: https://www.hsu.edu.hk/en/job-opportunities/
+  adapter: hsu
+  enabled: true
+  allowed_hosts:
+  - www.hsu.edu.hk
+  - recruit.hsu.edu.hk
+  notes: 已接入官方英文清單及公開職位詳情；曾遇連線及 robots.txt 502，按每日實際連線結果顯示狀態，無法確認規則時停止。
+- id: hksyu
+  institution: 樹仁大學
+  name: 香港樹仁大學
+  group: hksyu
+  url: https://www.hksyu.edu/en/snippets/external-vacancy
+  adapter: hksyu
+  enabled: true
+  allowed_hosts:
+  - www.hksyu.edu
+  notes: 英文官方招聘清單及 PDF 內文；中文清單有過期附件，改用已核對的英文入口。不從 PDF 檔名推斷刊登日期。
+- id: cuhk
+  institution: CUHK
+  name: 香港中文大學
+  group: cuhk
+  url: https://cuhk.taleo.net/careersection/cu_career_teach/jobsearch.ftl?lang=en&portal=10115020119
+  adapter: cuhk
+  enabled: true
+  allowed_hosts:
+  - cuhk.taleo.net
+  read_only_post_paths:
+  - /careersection/rest/jobboard/searchjobs
+  notes: Taleo 公開搜尋及詳情；總數與實際分頁數量不一致時顯示部分完成，保留所有舊記錄。
+- id: cpce
+  institution: PolyU CPCE（HKCC／SPEED）
+  name: 香港理工大學專業及持續教育學院
+  group: cpce
+  url: https://jas.cpce-polyu.edu.hk/list?id=5011&sort=sort_rel
+  adapter: cpce
+  enabled: true
+  allowed_hosts:
+  - jas.cpce-polyu.edu.hk
+  notes: 香港專上學院 HKCC 與專業進修學院 SPEED 共用此官方學術招聘清單；與理大本部來源分開。
+- id: hkct
+  institution: 港專 HKCT／HKCTIHE
+  name: 香港專業進修學校／港專學院
+  group: hkct
+  url: https://www.hkct.edu.hk/en/abouthkct/join-us
+  adapter: catalog_html
+  enabled: true
+  allowed_hosts:
+  - www.hkct.edu.hk
+  notes: 港專與港專學院共用招聘頁；按實際廣告取得內文，缺少刊登日期時用首見日期。
+  selectors:
+    row: .collapse-content .item
+    title: .item-title
+    link: a[href]
+    department: .item-desc
+    detail_body: .job-position-detail
+    detail_title: .job-position-detail h3
+    detail_department: .job-position-detail h3 + h4
+  detail_remove:
+  - .__component_banner_detail_page_banner
+  - .__component_customview_page_breadcrumb
+  - .__component_customview_back_to_home
+- id: gcc
+  institution: 宏恩基督教學院
+  name: Gratia Christian College
+  group: gcc
+  url: https://www.gcc.edu.hk/jobsandcareers/
+  adapter: catalog_html
+  enabled: true
+  allowed_hosts:
+  - www.gcc.edu.hk
+  notes: 官方招聘列表及內嵌 PDF 廣告；刊登日期取自招聘文章，舊廣告保留但不混入最近兩個月結果。
+  detail_mode: gcc_pdf
+  selectors:
+    row: .wp-block-post
+    title: .wp-block-post-title a
+    link: .wp-block-post-title a
+    posted_date: .wp-block-post-date time
+    next: .wp-block-query-pagination a[href]
+    detail_body: main
+- id: hkas
+  institution: 香港藝術學院
+  name: Hong Kong Art School
+  group: hkas
+  url: https://www.hkas.edu.hk/job-vacancy/
+  adapter: catalog_html
+  enabled: true
+  allowed_hosts:
+  - www.hkas.edu.hk
+  notes: 香港藝術中心附屬學院的官方招聘清單；保留當前原文，不使用搜尋引擎舊快取。
+  selectors:
+    row: .post_content a[href*="/job-vacancy/"]
+    title: :self
+    link: :self
+    detail_body: .post_content.entry-content
+- id: cuscs
+  institution: CUHK CUSCS
+  name: 香港中文大學專業進修學院
+  group: cuscs
+  url: https://www.scs.cuhk.edu.hk/en/employment
+  adapter: intake
+  enabled: true
+  allowed_hosts:
+  - www.scs.cuhk.edu.hk
+  notes: 獨立兼職教學空缺頁；排除長期列出的導師科目例子。現有頁面明示暫無空缺，標示改變時會發出來源警告並要求核對新招聘格式。
+- id: hkit
+  institution: 香港科技專上書院
+  name: Hong Kong Institute of Technology
+  group: hkit
+  url: https://www.hkit.edu.hk/en/about-hkit/vacancies/
+  adapter: intake
+  enabled: true
+  allowed_hosts:
+  - www.hkit.edu.hk
+  notes: 官方招聘頁目前四個類別明示暫無空缺；每日核對標示，出現新內容或改版會警告，避免誤報零職位。
+- id: twc
+  institution: 東華學院
+  name: Tung Wah College
+  group: twc
+  url: https://careers.twc.edu.hk/search/?q=
+  adapter: catalog_html
+  enabled: true
+  allowed_hosts:
+  - careers.twc.edu.hk
+  notes: 由院校人力資源頁連結至官方招聘平台；讀取所有分頁及職位內文。
+  selectors:
+    row: tr.data-row
+    title: a.jobTitle-link
+    link: a.jobTitle-link
+    reference: .jobState
+    department: .jobFacility
+    deadline: .jobShifttype
+    next: .pagination a[href]
+    detail_body: '[itemprop="description"]'
+    detail_title: '[itemprop="title"]'
+    detail_posted: meta[itemprop="datePosted"]
+  detail_posted_format: successfactors_utc
+- id: vtc
+  institution: VTC（IVE／HKDI 等）
+  name: 職業訓練局
+  group: vtc
+  url: https://www.vtc.edu.hk/html/en/career.html
+  adapter: vtc
+  enabled: true
+  allowed_hosts:
+  - www.vtc.edu.hk
+  - vco.vtc.edu.hk
+  notes: VTC 共用招聘清單，涵蓋 IVE、HKDI、青年學院、SHAPE、PEAK 等；THEi 另有独立招聘來源。
+- id: thei
+  institution: THEi 高科院
+  name: 香港高等教育科技學院
+  group: thei
+  url: https://thei.edu.hk/career-opportunities/
+  adapter: thei
+  enabled: true
+  allowed_hosts:
+  - thei.edu.hk
+  notes: THEi 官方獨立招聘清單；與 VTC 分開檢查，避免漏掉只刊登在學院網站的教學職位。
+- id: hkapa
+  institution: 香港演藝學院
+  name: The Hong Kong Academy for Performing Arts
+  group: hkapa
+  url: https://www.hkapa.edu/job-opportunity
+  adapter: hkapa
+  enabled: true
+  allowed_hosts:
+  - www.hkapa.edu
+  notes: 官方招聘頁含完整廣告；英文頁要求參閱中文時按同一職位編號合併中文內文。
+- id: eduhk
+  institution: 香港教育大學
+  name: The Education University of Hong Kong
+  group: eduhk
+  url: https://www.eduhk.hk/en/current-openings
+  adapter: eduhk
+  enabled: true
+  allowed_hosts:
+  - www.eduhk.hk
+  notes: 官方清單含刊登日期及 PDF；讀取完整分頁。若網站或 robots.txt 未能連線，顯示失敗並保留舊資料。
+- id: hkmu
+  institution: 都會大學（含 LiPACE）
+  name: Hong Kong Metropolitan University
+  group: hkmu
+  url: https://hkmu.taleo.net/careersection/ex_non_full_time/jobsearch.ftl?lang=en
+  adapter: hkmu
+  enabled: true
+  allowed_hosts:
+  - hkmu.taleo.net
+  notes: 官方兼職／臨時職位入口，包含 LiPACE 招聘；完整讀取職責及資格欄位，不將所有臨時職位視作兼職。
+  read_only_post_paths:
+  - /careersection/rest/jobboard/searchjobs
+- id: chuhai
+  institution: 香港珠海學院
+  name: Hong Kong Chu Hai College
+  group: chuhai
+  url: https://www.chuhai.edu.hk/en/page/jobs?id=b9f07df8-bc36-430a-91ea-b8f196e36f18
+  adapter: catalog_inline
+  enabled: true
+  allowed_hosts:
+  - www.chuhai.edu.hk
+  notes: 官方新版學術招聘頁；廣告內容在同頁，未提供刊登日期時用首見。
+  selectors:
+    row: .article-content .accordion-widget
+    title: .accordion-title h3
+    detail_body: .accordion-body
+- id: yccece
+  institution: 耀中幼教學院
+  name: Yew Chung College of Early Childhood Education
+  group: yccece
+  url: https://www.yccece.edu.hk/en/about-us/career
+  adapter: yccece
+  enabled: true
+  allowed_hosts:
+  - www.yccece.edu.hk
+  - db.ycyw-edu.com
+  notes: 使用官方頁面公開職位清單及同站採用的公開資料介面；未標示用途的系統時間不冒充刊登日期。
+- id: nangyan
+  institution: 香港能仁專上學院
+  name: Hong Kong Nang Yan College of Higher Education
+  group: nangyan
+  url: https://www.ny.edu.hk/home/en/job-opportunities-and-tender-notice-eng/
+  adapter: availability_check
+  enabled: true
+  allowed_hosts:
+  - www.ny.edu.hk
+  notes: 官方招聘入口已加入；目前網站連線失敗，尚未取得可驗收的職位格式。每天核對連線，仍需完成職位讀取接入。
+- id: hkic
+  institution: 香港建造學院／CIC
+  name: Hong Kong Institute of Construction
+  group: hkic
+  url: https://www.cic.hk/career/chi/jobs/index.html
+  adapter: availability_check
+  enabled: true
+  allowed_hosts:
+  - www.cic.hk
+  - emea5-foc.lumessetalentlink.com
+  notes: 官方招聘頁可以開啟，但職位資料供應平台 Lumesse 的 robots.txt 不允許自動讀取。每日核對狀態；目前須自行查看官方職位。
+  check_robots_urls:
+  - https://emea5-foc.lumessetalentlink.com/
+- id: cice
+  institution: 明愛社區書院
+  name: Caritas Institute of Community Education
+  group: cice
+  url: https://www.cice.edu.hk/about_us.aspx
+  adapter: catalog_html
+  enabled: true
+  allowed_hosts:
+  - www.cice.edu.hk
+  notes: 官方招聘表格及 PDF 廣告；按真實截止日期處理舊廣告。
+  detail_mode: pdf
+  selectors:
+    row: tr[close-date]
+    title: td:nth-child(2) a[href$=".pdf"]
+    link: td:nth-child(2) a[href$=".pdf"]
+    department: td:nth-child(1) .SHOW_ENGLISH_ONLY
+    deadline: td:nth-child(3)
+    reference: td:nth-child(4)
+    detail_body: main
+- id: ymca
+  institution: 青年會專業書院
+  name: YMCA College of Careers
+  group: ymca
+  url: https://coc.cymca.edu.hk/about-coc/careers/?lang=en
+  adapter: catalog_inline
+  enabled: true
+  allowed_hosts:
+  - coc.cymca.edu.hk
+  notes: 官方兼職講師長期招聘頁；未列明刊登及截止日期，首見日期不代表剛刊登。
+  selectors:
+    row: '#text-block-9.mk-text-block'
+    title: h3
+    detail_body: :self
+- id: hkac
+  institution: 香港三育書院
+  name: Hong Kong Adventist College
+  group: hkac
+  url: https://www.hkac.edu/job-opening
+  adapter: catalog_html
+  enabled: true
+  allowed_hosts:
+  - www.hkac.edu
+  - f2c714d8-461b-411d-895b-e539a8ab5c66.filesusr.com
+  notes: 官方招聘 PDF；期限取自廣告內文，入職日期不當作刊登日期。
+  detail_mode: pdf
+  selectors:
+    row: a[href*="/_files/ugd/"][href$=".pdf"]
+    title: :self
+    link: :self
+    detail_body: main
+- id: hpshcc
+  institution: HKU SPACE 保良局何鴻燊社區書院
+  name: HKU SPACE Po Leung Kuk Stanley Ho Community College
+  group: hpshcc
+  url: https://hkuspace-plk.hku.hk/jobs
+  adapter: catalog_html
+  enabled: true
+  allowed_hosts:
+  - hkuspace-plk.hku.hk
+  notes: 獨立官方招聘頁；HKU SPACE 主清單只有學院連結，因此另行收集，避免漏掉職位。
+  selectors:
+    row: .fluid-block:has(a[href^="/jobs/detail/"])
+    title: .heading a[href^="/jobs/detail/"]
+    link: .heading a[href^="/jobs/detail/"]
+    deadline: .date
+    detail_body: section.inner-content > .container

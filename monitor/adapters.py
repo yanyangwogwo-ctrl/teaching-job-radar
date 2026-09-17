@@ -165,6 +165,30 @@ def parse_sce_detail(job: dict, html: str) -> dict:
 
 def collect(source: dict, client) -> Batch:
     adapter = source['adapter']
+    if adapter == 'catalog_html':
+        from .catalog import collect_catalog
+        return collect_catalog(source, client)
+    if adapter == 'catalog_inline':
+        from .catalog import collect_inline
+        return collect_inline(source, client)
+    if adapter == 'cpce':
+        from .cpce import collect_cpce
+        return collect_cpce(source, client)
+    if adapter == 'intake':
+        from .intake import collect_intake
+        return collect_intake(source, client)
+    if adapter in ('vtc', 'hkapa', 'thei', 'hkmu', 'eduhk'):
+        from .statutory import collect_statutory
+        return collect_statutory(source, client)
+    if adapter == 'yccece':
+        from .yccece import collect_yccece
+        return collect_yccece(source, client)
+    if adapter == 'availability_check':
+        client.get(source['url'])
+        for url in source.get('check_robots_urls', []):
+            if not client.allowed(url):
+                raise CrawlError('官方招聘頁可以開啟，但其職位資料供應平台的 robots.txt 不允許自動讀取；請到官方招聘頁查看。', stop_source=True)
+        raise CrawlError('官方頁面已能連線，但職位讀取格式仍待核對；目前只監察連線狀態，請先查看官方原文。')
     if adapter in ('sfu', 'hku', 'polyu', 'hkbu_oracle', 'hksyu', 'hkust', 'cityu', 'cuhk', 'lingnan', 'hsu'):
         from .official import collect_official
         return collect_official(source, client)

@@ -101,7 +101,7 @@ python -m monitor.run --notify-only
 常用設定只有兩個檔案：
 
 - `config/preferences.yaml`：科目關鍵字、相關度門檻、通知院校、排除字詞。
-- `config/sites.yaml`：13 個官方 URL、讀取模組、啟用狀態及備註。
+- `config/sites.yaml`：33 個官方 URL、讀取模組、啟用狀態及備註。
 
 相同格式的來源可只改 YAML；普通靜態 HTML 來源可使用 `generic_html` 和 CSS selectors，見 `config/site-template.yaml`。**不能保證任何新 URL 都不用修改程式**：新招聘系統、登入限制、改版及不同 PDF 格式仍需調整讀取模組。只貼 URL 不足以可靠辨識職位。
 
