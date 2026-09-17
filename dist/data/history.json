@@ -6794,5 +6794,1293 @@
     "kind": "new",
     "source_id": "lingnan",
     "title": "Assistant Programme Officer, Taught Postgraduate Programmes Office, Faculty of Business"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "ff415af02b4d21011c165b8c",
+    "kind": "baseline",
+    "source_id": "cpce",
+    "title": "Senior Lecturer / Lecturer in Social Work"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "b995375e2baa43d2a598859c",
+    "kind": "baseline",
+    "source_id": "cpce",
+    "title": "Visiting Lecturer (part-time) in various subject areas (several posts)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "3f082e66739ab0ff2e7d21d1",
+    "kind": "baseline",
+    "source_id": "cpce",
+    "title": "Senior Lecturer in Chinese"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "69c2c17dca8ab2ef22c41ccd",
+    "kind": "baseline",
+    "source_id": "cpce",
+    "title": "Lecturer in Surveying"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "db3fb948076b7514512193a0",
+    "kind": "baseline",
+    "source_id": "cpce",
+    "title": "Lecturer in Electrical Engineering"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "97ce749bdc450f9ffca7c458",
+    "kind": "baseline",
+    "source_id": "cpce",
+    "title": "Lecturer in Artificial Intelligence"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "642eb5ba36d97077972e0e65",
+    "kind": "baseline",
+    "source_id": "cpce",
+    "title": "Visiting Lecturer (part-time) in various subject areas / Visiting Lecturer (part-time) in Academic English / Visiting Lecturer (part-time) in AI and Technology-assisted Language Teaching and/or Learning / Visiting Lecturer (part-time) in AI Applications in Media and Creative Industries / Visiting Lecturer (part-time) in Chinese / Visiting Lecturer (part-time) in Chinese Media Studies / Visiting Lecturer (part-time) in Learning Analytics"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "a03823bf172f3fee4670e099",
+    "kind": "baseline",
+    "source_id": "cpce",
+    "title": "Senior Lecturer / Lecturer in Division of Business and Hospitality Management"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "5937fa2386d1c47fe37c7808",
+    "kind": "baseline",
+    "source_id": "cpce",
+    "title": "Principal Lecturer in Bilingual Studies and Communication / Chinese / English"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "7807c41879126bfdac967f7a",
+    "kind": "baseline",
+    "source_id": "cpce",
+    "title": "Visiting Lecturer (part-time) in Arts Management (Art Business/ Cultural Policy/ Curatorial Practice) / Visiting Lecturer (part-time) in Design (Media Design/ Interaction Design/ System Design) / Visiting Lecturer (part-time) in Cultural Studies (Digital Media Culture/ Digital Storytelling)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "380c5696f5358f99a15dc0ad",
+    "kind": "baseline",
+    "source_id": "gcc",
+    "title": "Associate Professor / Assistant Professor / Senior Lecturer for its Social Work Programmes"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "faeb32ba1de4ad0a70c1b5e7",
+    "kind": "baseline",
+    "source_id": "gcc",
+    "title": "Accounting Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "9ad0e80437e1c82a81a6c150",
+    "kind": "baseline",
+    "source_id": "gcc",
+    "title": "Library Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "bf4397bb144877c2003353f7",
+    "kind": "baseline",
+    "source_id": "gcc",
+    "title": "Library Helper"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "9199838e72c06d8b86f4e10f",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Vice President (Research and Innovation)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "9344b025b4bc0489a7694609",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Part-time Research Assistant"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "e77b8dc0fa8c79535a705372",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Part-time Research Assistant"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "f8bd353b61f7b0a0855555d7",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Assistant Professor (Research Track) in Psychology and Social Sciences"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "e80bfd4164d18578646975db",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Student Affairs Officer (Career Services)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "469ff74ea6207871ca790c74",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Assistant Executive Officer (Student Wellness and Inclusion)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "c6c039882b257ba1c49c2a54",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Registry Manager (Admissions)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "78e48880152314b6433dc6fc",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Executive Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "2f56e857a2911889e4c0e003",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Temporary Assistant Information Technology Officer (11.5 months)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "679262911de8f16083bbe73f",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Project Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "484882b0dff5b0d895cc0773",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Executive Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "1bd56dbea74e510df7972ef4",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Temporary Human Resources Officer (12 months)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "5a25ecdd58c18007e9c83632",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Associate Professor/Assistant Professor(Research Track) in Occupational Therapy"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "4b969cbdcd5d5ace26ecb76a",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Assistant Manager"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "188aef5c7e15b74657490d19",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Assistant Registrar"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "62c3836bf4fb0fd8f2bd3099",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Assistant Registry Manager (Admissions)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "d133677fd509b42ff63ce815",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Manager"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "f6e7d15942ccfdb007202318",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Executive Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "25fa6ba11e204ec270535ec2",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Professor (Research Track)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "43e63f1dc75b2e3f91c67995",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Professor / Associate Professor (Research Track) in Division of Science"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "9cfca06662d75cbe68a6de10",
+    "kind": "baseline",
+    "source_id": "twc",
+    "title": "Facilities Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "688987e60fbd6d56dfa0626a",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Professor / Associate Professor"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "6c9a196db573faac05d57d53",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Professor / Associate Professor"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "e673e88d9c57826b7a726cf5",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Professor / Associate Professor (Healthcare Management and Advanced Technology)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "c62aa649cc5c2e573fec3eda",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Professor / Associate Professor / Assistant Professor (Master of Science in Digital Tourism and Hospitality Management)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "c97cee6397999895be57ed77",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Professor / Associate Professor"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "3bd8dc608b5b315d9625b5e4",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Professor / Associate Professor / Assistant Professor (Master of Business Administration in Digital Transformation)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "d01cd9b386e9e3dbe354f00f",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Senior Lecturer (Master of Business Administration in Digital Transformation)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "0cc06812a1640d653801ea82",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Part-time Lecturer (Master of Business Administration in Digital Transformation)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "e79b7d8588c511a49879fd13",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Executive Assistant II"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "2c7652c897e51b5f8de3e1d7",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Human Resources Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "1c4915b76b51d885b7e912d4",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "a7129b5756c3e7a2f31aa29b",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Executive Assistant II"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "ffb86036769ab62d10166934",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Academic Services Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "7a4b96eae3d2dd075970032a",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Accounting Supervisor"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "552fa17e712f2885649160cb",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Accounting Assistant"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "9046adf28d29a2af13d5c564",
+    "kind": "baseline",
+    "source_id": "thei",
+    "title": "Internal Audit Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "78c0ebfe233a58a1fc14b8ca",
+    "kind": "baseline",
+    "source_id": "hkapa",
+    "title": "ADJUNCT FACULTY FOR POST-SECONDARY, UNDERGRADUATE AND POST-GRADUATE PROGRAMMES"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "370222494b35b41f7450a4d8",
+    "kind": "baseline",
+    "source_id": "hkapa",
+    "title": "BRANCH LIBRARY OFFICER"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "dfc21ff19f82556ac2fc6009",
+    "kind": "baseline",
+    "source_id": "hkapa",
+    "title": "EXECUTIVE (DEVELOPMENT AND ALUMNI AFFAIRS)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "3bfeb2e0e9cc4f137bd80c8f",
+    "kind": "baseline",
+    "source_id": "hkapa",
+    "title": "HEAD OF COST AND CONTRACT"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "33b0dc54ebef9b0fbf768a19",
+    "kind": "baseline",
+    "source_id": "hkapa",
+    "title": "HUMAN RESOURCES OFFICER / ASSISTANT HUMAN RESOURCES OFFICER / HUMAN RESOURCES ASSISTANT"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "2b8094f93bcd3d599ef92c4f",
+    "kind": "baseline",
+    "source_id": "hkapa",
+    "title": "INFORMATION TECHNOLOGY MANAGER (NETWORK AND SECURITY)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "f740ec5f2bd1c50a8a3adf76",
+    "kind": "baseline",
+    "source_id": "hkapa",
+    "title": "PART-TIME FRONT-OF-HOUSE USHERS"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "db5ee5e655902efcb60c9a8c",
+    "kind": "baseline",
+    "source_id": "hkapa",
+    "title": "SECURITY OFFICER"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "467a5f54d3df585165ec943a",
+    "kind": "baseline",
+    "source_id": "hkapa",
+    "title": "TECHNICIAN I (ELECTRICAL)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "21deb53210070c13663bf902",
+    "kind": "baseline",
+    "source_id": "hkapa",
+    "title": "TECHNICIAN II (MECHANICAL)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "413f710f6783af8223a38989",
+    "kind": "baseline",
+    "source_id": "hkapa",
+    "title": "TECHNICIAN II (MECHANICAL/ELECTRICAL)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "fa35bc6807c0b2e3f064b1e5",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Associate Vice President"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "71be12508665cdacc38491bd",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Associate Head / Head of Programme of Academic Department"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "19188ff7fe0ad7b4c98d175d",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Head of Department of Applied Social Sciences"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "4ac74c2f12a82613747c6ade",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Head of Division"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "d00f903f6fedfdc49d9a79ea",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Lecturer / Assistant Lecturer (Language and Communications)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "3a8afc75405a4ba89898843d",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Assistant Lecturer (Diploma of Applied Education)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "150898a135f9cec0a7d2ed3a",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Lecturer / Assistant Lecturer (Artificial Intelligence)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "c8c49f62caa5f834470b37b8",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Head of Programme (Building and Construction)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "ce3003d712aea3e8545f04b7",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Programme Administration Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "0c2db4749f3e907f477e9eb4",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Technical Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "5d37e3368166c2300874efde",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "設施技工"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "d13973eecacd3d8b9df8a614",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Facilities Management Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "004a875407aaf470b660734c",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "校舍助理員"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "c95c09fd0b0f4561b386edcd",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Senior Student Development Officer / Student Development Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "f109572643cbea6cf1b11be9",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Programme Coordinator (Part-time Courses)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "0be3d85025b2014bc5b1dadb",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "中心文員 (再培訓課程)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "4ff34ddfb00c965099452a19",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "行政助理 (職業訓練學院)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "6e4267ecca10dec40c9da6af",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Skills Training Support Service Centre Manager"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "160e8160590961f7e003c839",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "高級主任"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "e40bf5e05b44ad58f6cd2a24",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "主任 (技能培訓活動)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "6ad33dacea3a788fecb87956",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "主任 (宣傳)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "05a47d09fa3e1727bdf75c1c",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Assistant Course Development and Management Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "286ba57dc754a80582887b20",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "培訓及就業主任"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "4acb948f1809353a6d9f5dbf",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "兼職文員 (佐敦)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "1830c5256e2f6fc9bd8fcac7",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Part-time Clerk"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "8c41707ef974f053e109829d",
+    "kind": "baseline",
+    "source_id": "hkct",
+    "title": "Part-time Lecturer (Property Management)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "784e374f7f435d24d343ddbe",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Director of Continuing and Professional Education Office"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "72c02de786eb0620f9170fc3",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Director, Finance and Procurement Office"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "b73dd9d0ca707b01d4a7db31",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Deputy Executive Director"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "e6b833aae114fbecac8500fd",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Director, Human Resources Office"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "403ed11e236c41f8be65c768",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "教導員(屋宇裝備)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "688558132539389db31e8d89",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Lecturer (Airport Operations Management)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "1fef9eeab2cf1ee3cba2f544",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Instructor (Western Food Preparation)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "4c9c5cedf0a63a1c8a2abcfa",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Term / Part-time Evening Instructor"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "0098eaa313efb904eb218f61",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Dental Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "ca8841e9151b16c3589be9e9",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Assistant Lecturer (Fashion and Image Design)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "433798860ba6bc47974559e6",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Senior Project Officer (Aircraft Maintenance / Aviation Operations)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "b8dcf889ca016cfafac08a72",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "定期教導員"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "839db2e81732764ed2a539ef",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Term Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "d88dbf6c76e820b46a4a97a2",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Assistant Systems Manager (Systems Development)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "36befebcba9e46e37e21b31e",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Term Student Counsellor"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "f09d0c2e262f5d8746a5c7f5",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Procurement Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "ff822eabd156047c102f406d",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Term Officer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "e7d8de96b6a28b4a76ee425c",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "a256416f178906a1a9e394e7",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "3c178daa7aebcae9988730c5",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "定期二級雜務員"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "aa5b0c9858aa7ea8536f3af2",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "二級機械工"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "2b3c0fd39fc6362616b84365",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "二級機械工"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "95a6c14539b31ef9b5a7adb3",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Technician"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "575ae2bb4d27d05221d50074",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "司機"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "bd078c0257f427384e446621",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "8f1c4fc35fac924afe0e1ba5",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "5247846bfd9ffbbfab4b09b5",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "維修技工"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "e6338b778739ad2c5e8d69ef",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "一級機械工"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "7d359c00bc53ded8a818fb51",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "定期二級雜務員"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "e76c51b8e4168a6c51df6722",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "a9d92096a5b305938d7eeb49",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "a9cfa4586384ac3ff6829e13",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Term IT Assistant"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "8bc9953e09b7c88e55cc1b43",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "2dc1c06156bbc707c6e954d3",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Term Technician"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "3d26e0d3407354f419fbe9ae",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "日間兼職考評員 (美髮業專業能力評估考核)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "cb7c3330badcb0480012ecce",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Part-time (Day Time) Assessor (Arboricultural Industry)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "1265f376089856b3ab3fbdce",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "日間兼職考評員 (美容業專業能力考核)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "50c85a3e115ff1c5d2af081c",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Part-time Lecturer"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "95a36b5fbdd53bb91d1b6497",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Assistant Lecturer (English)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "42fb177248bf752df13c0e82",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "日間兼職教導員(電機與空調裝配課程)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "9520d54e1699302d95bc25bc",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Lecturer (Building Services Engineering)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "1cf26d4219531151fe651682",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Lecturer (Occupational Safety)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "fff658fd4a74b2175f69eebd",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Part-time Assistant Lecturer (Music and Media Production)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "8ec35ccb16bf3969c21e89c4",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Part-time (Day-time) Lecturer (Social Care and Play-based Services)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "4d0de8cf17c0ce64e8253baf",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Part-time (Day-time) Assistant Lecturer (Social Care and Play-based Services)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "461ad94ac5b8d13ebfd63c71",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Assistant Lecturer (Information Technology)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "9aaac2607ab02fcd6557643d",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "日間兼職教導員（屋宇裝備工程）"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "e5e5d693f17cc54a992cd5df",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "日間兼職教導員（升降機及自動梯工程）"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "7b5834952340d92e9f4feca9",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Lecturer (Fitness & Sports Studies)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "3485c4b3ea66cb58a783cccd",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "日間兼職導師（樹藝／園藝）"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "667f28995befeddcc1a8e8ea",
+    "kind": "baseline",
+    "source_id": "vtc",
+    "title": "Part-time Executive Assistant II"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "85a6503380050ab9cae134a8",
+    "kind": "baseline",
+    "source_id": "chuhai",
+    "title": "Assistant/Associate/Full Professor {Open Rank Application for Faculties}"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "c7eb77ab78541f211db8d01d",
+    "kind": "baseline",
+    "source_id": "chuhai",
+    "title": "Head, Department of Civil Engineering"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "c983ac05575d6bc0bd3ab938",
+    "kind": "baseline",
+    "source_id": "chuhai",
+    "title": "Dean, Faculty of Business"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "f29e5aeca3c8af01735638f9",
+    "kind": "baseline",
+    "source_id": "chuhai",
+    "title": "Lecturer, Department of Chinese Literature"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "acce30c9ced983c527809329",
+    "kind": "baseline",
+    "source_id": "hkmu",
+    "title": "Temporary Research Assistant II (N&HS) "
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "b93927d9fd38e37a0143d11a",
+    "kind": "baseline",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant II (N&HS)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "a884a7fb164a1c4795be6182",
+    "kind": "baseline",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Assistant of EDU 4410ECF (2026 Autumn Term) (E&L)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "88497358620650a016fa8403",
+    "kind": "baseline",
+    "source_id": "hkmu",
+    "title": "Part-time Technical Assistant (Project no: R6974) (B&A)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "37890f8ba69cb8d8e616bce4",
+    "kind": "baseline",
+    "source_id": "hkmu",
+    "title": "Temporary Research Assistant I (Artificial Intelligence or Data Science) (N&HS) "
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "7501691b51c26043a82e2208",
+    "kind": "baseline",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant I [R0167] (A&SS)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "523b6a07a36289013a18133f",
+    "kind": "baseline",
+    "source_id": "hkmu",
+    "title": "Part-Time Research Assistant II (A&SS) "
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "5da3ef8b52349843c127e08e",
+    "kind": "baseline",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistants (Project No.: 40025) (E&L)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "138d5c21cbd39c2273a6c641",
+    "kind": "baseline",
+    "source_id": "hkmu",
+    "title": "Part-time Technical Assistants (Project No.: 40025) (E&L)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "b5e6fc088766c98fd4a9467d",
+    "kind": "baseline",
+    "source_id": "hkmu",
+    "title": "兼職工人"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "caac3388c2147da12cd89dbd",
+    "kind": "baseline",
+    "source_id": "cice",
+    "title": "行政助理"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "930cff0bac4e187fb23a80b6",
+    "kind": "baseline",
+    "source_id": "cice",
+    "title": "Facilities Management Officer (Full-time)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "857e0d94791de95f3b142a3a",
+    "kind": "baseline",
+    "source_id": "cice",
+    "title": "Lecturer in English (Full-time)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "f9aabb23f1055c3f3514b368",
+    "kind": "baseline",
+    "source_id": "cice",
+    "title": "Assistant Manager, Quality Assurance"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "1a7fcc3ab8e207bbbbd05ad8",
+    "kind": "baseline",
+    "source_id": "cice",
+    "title": "Lecturer (Full-time)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "5f7b66729b09d630a539f9df",
+    "kind": "baseline",
+    "source_id": "cice",
+    "title": "Lecturer (Full-time)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "e284d46e9211e6076e757ef3",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "Director (Research and Knowledge Transfer)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "3c0d9f53b80fb11e847fde6a",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "Professor / Associate Professor / Assistant Professor (Psychology and/or Counselling)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "8d45a1aa6a5ddf5bffcf5111",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "Administrative Officer (Student Development)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "9ae7b73203f3ea2a6947d0fa",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "Digital Transformation Specialist (Short-Term Contract)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "a99e40ac5800c8b6fe0b9525",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "Hub Teaching Lead (JC CoolThink Junior)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "63b439475193982a0a9385eb",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "Postdoctoral Researcher (JC CoolThink Junior)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "107be563722ca043c03568c0",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "Project Manager (JC CoolPlay 2.0)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "eff7edb52eacae0c00a39660",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "Research Assistant (JCBS)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "8b98976500ac95f2730b7f9d",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "Research Assistant (JC CoolThink Junior)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "01e3a989a2145602b0631393",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "Research Officer (JCBS)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "4e1bb264c48eb9014e939cbb",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "Resource Development Specialist and Professional Development Trainer (JC CoolThink Junior)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "dcf6baf5d01c68f9fa90fc94",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "School Development Officer (JCCP)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "94a8d739aa5b2fc5e89fee59",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "Senior Project Officer (JC CoolThink Junior)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "7565eb628446355071652fdf",
+    "kind": "baseline",
+    "source_id": "yccece",
+    "title": "研究助理《宗族源流與弘揚：陳氏乾泰隆、黌利、元行與香港、東南亞米業及多元化企業、文化教育發展》"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "7e8c367f288cd1026c9eac91",
+    "kind": "baseline",
+    "source_id": "ymca",
+    "title": "Recruitment for Part-time Lecturers"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "70403cdbc7b645abc87f4b58",
+    "kind": "baseline",
+    "source_id": "hkac",
+    "title": "Administrative Assistant"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "7b668c29a00758c707bd0223",
+    "kind": "baseline",
+    "source_id": "hkac",
+    "title": "IT Manager"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "e846977475002db42f5fdf8f",
+    "kind": "baseline",
+    "source_id": "hkac",
+    "title": "Part-time Lecturer of Fitness (Daytime)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "da3a647b8446b924d9090fb0",
+    "kind": "baseline",
+    "source_id": "hkac",
+    "title": "Part-time Lecturer of Health (Daytime)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "f9d0cfb1b34ec798a66cdc55",
+    "kind": "baseline",
+    "source_id": "hkac",
+    "title": "Part-time Lecturer of Information Technology (Daytime)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "ff70decf6895c36aafd87fa0",
+    "kind": "baseline",
+    "source_id": "hkac",
+    "title": "Librarian"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "b7bae92987ab9c31884a2657",
+    "kind": "baseline",
+    "source_id": "hkac",
+    "title": "Marketing Assistant"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "c25292dba1a6f055bc03c350",
+    "kind": "baseline",
+    "source_id": "hpshcc",
+    "title": "Executive Assistant I (Ref: EAI/ft/26-02)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "2acecf2d968eaf471690b68f",
+    "kind": "baseline",
+    "source_id": "hpshcc",
+    "title": "Temporary Assistant Counsellor (Ref# SD/ft/26-01)"
+  },
+  {
+    "at": "2026-09-17T08:18:55+00:00",
+    "job_id": "488ed737865064dd504c9fcc",
+    "kind": "baseline",
+    "source_id": "hpshcc",
+    "title": "College Lecturer (Multiple Disciplines) (Ref# VP/ft/26-03)"
   }
 ]
