@@ -75,6 +75,7 @@ export function defaultCriteria(dataset) {
     presetEnabled:true,
     subjectKeywords:dataset.meta.subjects.flatMap(subject => subject.terms).join(', '),
     roleKeywords:'lecturer, tutor, instructor, teacher, teaching fellow, 講師, 導師, 教師',
+    presetExcludeKeywords:'',
     partTimeOnly:true, institutions:dataset.sources.map(source => source.id),
     status:'open', dateBasis:'effective', from:'', to:'', sort:'newest'
   };
@@ -125,7 +126,8 @@ export function searchText(job) {
 export function filterJobs(jobs, criteria, today = dayKey(new Date().toISOString())) {
   const query = parseQuery(criteria.query ?? '');
   const extra = parseQuery(criteria.exclude ?? '');
-  const negative = [...query.negative, ...extra.positive, ...extra.negative];
+  const presetNegative = criteria.presetEnabled ? keywordTerms(criteria.presetExcludeKeywords) : [];
+  const negative = [...query.negative, ...extra.positive, ...extra.negative, ...presetNegative];
   const selected = new Set(criteria.institutions ?? []);
   const subjects = keywordTerms(criteria.subjectKeywords);
   const roles = keywordTerms(criteria.roleKeywords);

@@ -69,6 +69,29 @@ test('CSV formulas are escaped',()=>{
   assert.equal(csvCell('a,"b"'),'"a,""b"""');
 });
 
+test('preset exclusions preserve phrases and cover title, department, subject and body',()=>{
+  const preset={...defaults,presetEnabled:true,subjectKeywords:'',roleKeywords:'',partTimeOnly:false,presetExcludeKeywords:'machine learning，護理\nAI literacy'};
+  assert.deepEqual(filterJobs(jobs,preset,'2026-09-05'),[]);
+  for (const fields of [{title:'Lecturer in 護理'},{department:'護理學系'},{subjects:[{id:'nursing',label:'護理'}]},{description:'Teach 護理.'}]) {
+    const advert={...jobs[0],description:'Teach ethics.',...fields};
+    assert.equal(filterJobs([advert],preset,'2026-09-05').length,0);
+  }
+  const differentPhrase={...jobs[0],description:'Teach AI ethics and digital literacy.'};
+  assert.equal(filterJobs([differentPhrase],preset,'2026-09-05').length,1);
+  assert.equal(filterJobs([{...differentPhrase,title:'Chair in Philosophy'}],{...preset,presetExcludeKeywords:'AI',query:''},'2026-09-05').length,0);
+  assert.equal(filterJobs([{...differentPhrase,title:'Chair in Philosophy',description:'Teach ethics.'}],{...preset,presetExcludeKeywords:'AI'},'2026-09-05').length,1);
+});
+test('preset exclusions toggle independently of manual exclusions and query negatives',()=>{
+  const preset={presetEnabled:true,subjectKeywords:'',roleKeywords:'',partTimeOnly:false,presetExcludeKeywords:'AI literacy'};
+  assert.deepEqual(find(preset),['b']);
+  assert.deepEqual(find({...preset,presetEnabled:false}),['b','a']);
+  assert.deepEqual(find({...preset,presetEnabled:false,exclude:'"machine learning"'}),['a']);
+  assert.deepEqual(find({...preset,presetEnabled:false,query:'-"machine learning"'}),['a']);
+  assert.deepEqual(find({...preset,exclude:'"machine learning"'}),[]);
+  assert.deepEqual(find({...preset,presetExcludeKeywords:''}),['b','a']);
+  assert.deepEqual(find(preset),['b']);
+});
+
 test('default criteria expose terms and put newer adverts ahead of higher scores',()=>{
   const data={meta:{subjects:[{terms:['philosophy','machine learning']}]},sources:[{id:'a'},{id:'b'}]};
   const criteria=defaultCriteria(data);
@@ -76,6 +99,7 @@ test('default criteria expose terms and put newer adverts ahead of higher scores
   assert.equal(criteria.subjectKeywords,'philosophy, machine learning');
   assert.ok(criteria.roleKeywords.includes('lecturer'));
   assert.equal(criteria.presetEnabled,true);
+  assert.equal(criteria.presetExcludeKeywords,'');
   assert.equal(Object.hasOwn(criteria,'presetMode'),false);
   assert.equal(criteria.partTimeOnly,true);
   assert.equal(Object.hasOwn(criteria,'relevantOnly'),false);
@@ -92,8 +116,16 @@ test('saved separate groups preserve empty values and disabled state',()=>{
   assert.equal(restored.presetEnabled,true);
   assert.equal(restored.partTimeOnly,false);
   assert.equal(restored.query,'ethics');
+  assert.equal(restored.presetExcludeKeywords,'');
   assert.deepEqual(restored.institutions,['a']);
   assert.equal(restoreCriteria({...old,presetEnabled:false},data).presetEnabled,false);
+  for (const value of ['', 'AI literacy，護理\naccounting']) {
+    const saved=JSON.parse(JSON.stringify({...old,presetEnabled:false,presetExcludeKeywords:value,exclude:'nursing'}));
+    const loaded=restoreCriteria(saved,data);
+    assert.equal(loaded.presetExcludeKeywords,value);
+    assert.equal(loaded.exclude,'nursing');
+    assert.equal(loaded.presetEnabled,false);
+  }
 });
 test('merged saved presets split into groups with original input retained for review',()=>{
   const data={meta:{subjects:[{terms:['philosophy']}]},sources:[{id:'a'},{id:'b'}]};
@@ -103,6 +135,7 @@ test('merged saved presets split into groups with original input retained for re
   assert.equal(restored.roleKeywords,'instructor');
   assert.equal(restored.presetEnabled,false);
   assert.equal(restored.partTimeOnly,false);
+  assert.equal(restored.presetExcludeKeywords,'');
   assert.deepEqual(restored.legacyMergedPreset,{keywords:merged.presetKeywords,mode:'AND'});
   assert.equal(Object.hasOwn(restored,'presetKeywords'),false);
   assert.equal(Object.hasOwn(restored,'presetMode'),false);

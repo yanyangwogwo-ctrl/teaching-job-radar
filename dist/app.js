@@ -1,5 +1,5 @@
 import { mountScheduleEditor } from './schedule-ui.mjs?v=20260905-time';
-import { parseQuery, filterJobs, dayKey, effectiveStatus, csvCell, defaultCriteria, restoreCriteria, recentCutoff, isRecent } from './search.mjs?v=20260905-grouped';
+import { parseQuery, filterJobs, dayKey, effectiveStatus, csvCell, defaultCriteria, restoreCriteria, recentCutoff, isRecent } from './search.mjs?v=20260918-preset-exclude';
 import { loadDataset, lastCrawlAt } from './data-source.mjs?v=20260905-session';
 
 const app = document.querySelector('#app');
@@ -70,7 +70,7 @@ function renderShell() {
     <section id="presets-view" class="secondary-view" hidden>
       <div class="section-title"><h2>預設搜尋條件</h2><p>開啟「預設條件」時，會連同搜尋頁嘅關鍵字、院校及日期一齊篩選。修改即時套用；可返回搜尋頁儲存常用搜尋。</p></div>
       <section class="preset-panel search-panel" aria-label="編輯預設條件">
-        <div class="criteria-heading"><h3>科目及職位關鍵字</h3><button type="button" class="text-button" id="reset-preset">還原原始預設</button></div>
+        <div class="criteria-heading"><h3>關鍵字與排除條件</h3><button type="button" class="text-button" id="reset-preset">還原原始預設</button></div>
         <p class="criteria-help"><strong>科目符合其中一個 AND 職位名稱符合其中一個。</strong> 兩組都要符合，只有 lecturer 或只有哲學字眼並不足夠。</p>
         <label class="field-label" for="subject-input">科目關鍵字 · 任一符合 OR</label>
         <textarea id="subject-input" rows="5" maxlength="5000" aria-describedby="subject-help">${escapeHTML(criteria.subjectKeywords)}</textarea>
@@ -78,6 +78,9 @@ function renderShell() {
         <label class="field-label" for="role-input">職位名稱關鍵字 · 任一符合 OR</label>
         <input type="text" id="role-input" value="${escapeHTML(criteria.roleKeywords)}" maxlength="1000" aria-describedby="role-help">
         <p id="role-help" class="field-help">逗號分隔，只搜尋職位名稱。清空其中一欄即可取消該組限制。</p>
+        <label class="field-label" for="preset-exclude-input">排除關鍵字 · 任一符合即排除</label>
+        <textarea id="preset-exclude-input" rows="2" maxlength="5000" placeholder="例如：nursing, accounting" aria-describedby="preset-exclude-help">${escapeHTML(criteria.presetExcludeKeywords)}</textarea>
+        <p id="preset-exclude-help" class="field-help">逗號或換行分隔，詞組內嘅空格保留，毋須加減號。職位名、部門、科目或內文包含任何一個字詞就會排除；留空即不排除。只在開啟「預設條件」時套用。</p>
         <details id="preset-migration-note" hidden><summary>已將舊合併搜尋轉回兩組條件，請核對</summary><p class="field-help">常見職位詞已分到職位名稱，其餘保留於科目；缺少嘅一組採原始預設。原本嘅匹配方式可能改變，以下保留合併版本供你核對。</p><p id="legacy-preset-mode" class="field-help"></p><label class="field-label" for="legacy-preset-input">原有合併關鍵字</label><textarea id="legacy-preset-input" rows="4" readonly></textarea></details>
         <label class="checkbox-label employment-filter"><input type="checkbox" id="part-time-only" ${criteria.partTimeOnly ? 'checked' : ''}>只看兼職／時薪（包括同時招聘全職及兼職）</label>
         <div class="preset-footer"><p class="field-help" id="preset-state"></p><button type="button" class="button" id="back-to-results">返回搜尋結果</button></div>
@@ -108,10 +111,10 @@ function bindControls() {
   document.querySelector('#select-all').addEventListener('click', () => { criteria.institutions = dataset.sources.map(s => s.id); syncControls(); renderResults(); });
   document.querySelector('#select-none').addEventListener('click', () => { criteria.institutions = []; syncControls(); renderResults(); });
   document.querySelector('#reset-filters').addEventListener('click', resetFilters);
-  document.querySelector('#reset-preset').addEventListener('click', () => { const defaults = initialCriteria(); for (const key of ['subjectKeywords','roleKeywords','partTimeOnly']) criteria[key] = defaults[key]; delete criteria.legacyMergedPreset; syncControls(); renderResults(); });
+  document.querySelector('#reset-preset').addEventListener('click', () => { const defaults = initialCriteria(); for (const key of ['subjectKeywords','roleKeywords','presetExcludeKeywords','partTimeOnly']) criteria[key] = defaults[key]; delete criteria.legacyMergedPreset; syncControls(); renderResults(); });
   document.querySelector('#preset-toggle').addEventListener('click', () => { criteria.presetEnabled = !criteria.presetEnabled; syncControls(); renderResults(); });
   document.querySelector('#back-to-results').addEventListener('click', () => { changeView('jobs'); document.querySelector('#query-input').focus(); });
-  for (const [id, key] of [['subject-input','subjectKeywords'],['role-input','roleKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) {
+  for (const [id, key] of [['subject-input','subjectKeywords'],['role-input','roleKeywords'],['preset-exclude-input','presetExcludeKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) {
     document.querySelector('#' + id).addEventListener(id.includes('input') ? 'input' : 'change', event => { criteria[key] = event.target.value; renderResults(); });
   }
   document.querySelector('#part-time-only').addEventListener('change', event => { criteria.partTimeOnly = event.target.checked; renderResults(); });
@@ -121,7 +124,7 @@ function bindControls() {
 }
 
 function syncControls() {
-  for (const [id, key] of [['subject-input','subjectKeywords'],['role-input','roleKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) document.querySelector('#' + id).value = criteria[key];
+  for (const [id, key] of [['subject-input','subjectKeywords'],['role-input','roleKeywords'],['preset-exclude-input','presetExcludeKeywords'],['query-input','query'],['exclude-input','exclude'],['date-from','from'],['date-to','to'],['date-basis','dateBasis'],['job-status','status'],['sort-by','sort']]) document.querySelector('#' + id).value = criteria[key];
   document.querySelector('#part-time-only').checked = criteria.partTimeOnly;
   document.querySelector('#preset-toggle').setAttribute('aria-checked', String(criteria.presetEnabled));
   document.querySelector('#preset-toggle-label').textContent = '預設條件：' + (criteria.presetEnabled ? '開啟' : '關閉');
