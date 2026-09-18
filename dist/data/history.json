@@ -8082,5 +8082,402 @@
     "kind": "baseline",
     "source_id": "hpshcc",
     "title": "College Lecturer (Multiple Disciplines) (Ref# VP/ft/26-03)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "8c8f26d13abcaaffb64e69a9",
+    "kind": "status",
+    "source_id": "uowchk",
+    "title": "Clerical Officer"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "0c57f798dc903dabc33b0330",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time Research Assistant I / Senior Research Assistant"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {},
+    "job_id": "39c0f33319ceff899d567f4e",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Research Assistant I / Senior Research Assistant in the Faculty of Law"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "f07d7885ac9f77b73b0d43b7",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Assistant Professor"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "5fc2db2e8be7e1cbbd716efd",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Part-time Graduate Teaching Assistant"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "ce35f3fbcfb8adfb4f1376d2",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Senior Teaching Fellow in Ruminant Clinical Practice/Teaching Fellow in Ruminant Clinical Practice/Instructor I in Ruminant Clinical Practice/Instructor II in Ruminant Clinical Practice"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "4f953ed81ff7787ada4e5cae",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professors"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "3388bf87a5893bc987e15b8e",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "2999e3a9ff6b178a5513d4da",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Part-time Instructors (Full-time – Higher Diploma and Diploma Programmes)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "1a468ec4f8c2775f3870565c",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Part-time Instructors (Part-time Programmes – General Courses and other Professional Continuing Education Programmes)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "7513d8e53ab84ab1d5e86568",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Assistant Professor"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-18",
+        "before": "2026-08-05"
+      }
+    },
+    "job_id": "4176901152f6ca52ab26573e",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Information Technology Officer (Network Unit)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-18",
+        "before": "2026-09-04"
+      }
+    },
+    "job_id": "c4e6445185c7977c88920b16",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Finance Manager / Finance Manager (Special Projects)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-18",
+        "before": "2026-09-04"
+      }
+    },
+    "job_id": "749e839afd432ba84a63fb92",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Finance Manager / Finance Manager (Accounting and Budgeting)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-18",
+        "before": "2026-09-04"
+      }
+    },
+    "job_id": "fda89771d662a733da28a9cd",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Assistant Director of Finance (Special Projects and Business Partnering)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "description": {
+        "after": "HUMAN RESOURCES OFFICE\nManager, Learning and Development (26270041)\nThe Office is looking for a learning and people development professional to support the development and of training and development strategies of the university.\nWe offer:\nA dynamic and transformative environment for passionate, driven and adaptable individuals to develop their skills and career;\nVarious opportunities to strategise and implement training initiatives that aim to make a difference in employee development and learning; and\nExposure to campaign and projects that build our learning culture.\nResponsibilities:\nResponsible for the following related to learning and development, including:\nConducting analysis to understand training needs from internal clients;\nDesigning targeted learning and development strategies;\nDeveloping appropriate learning tools and interventions;\nSelecting and managing external vendors;\nExecuting and overseeing programme delivery; and\nEvaluating programme effectiveness and preparing reports.\nSupporting corporate HR projects focused on Organisation and Talent Development.\nRequirements:\nA recognised degree, preferably in Human Resources, Language or Communications;\nA minimum of 7 years of work experience in managing Learning and Development programme with at least 3 years in a managerial role;\nExperience as a trainer / facilitator and an instructional designer\nStrong analytical, communication, problem solving and project management skills;\nExcellent written and spoken English and Chinese with proficiency in Putonghua; and\nA passion in people development, team spirit and strong attention to details.\nIn addition to the above requirements, candidates with the following experience will be highly preferred:\nKnowledge of talent management, career planning, succession planning to ensure learning is aligned with organisational objectives;\nWorking with HR Business Partners in enhancing organisational performance with learning initiatives;\nL&D management experience in public organisations or NGOs would be highly relevant; and\nThe appointed candidate may be assigned to take up other duties under the O&TD team, such as those related to staff complaint, equal opportunity matters, HR communications, and/or performance management, policy and governance, etc.\nShortlisted candidates will be invited to a written test and interview(s).\nThe role is a regular position. The successful candidate will be offered a fixed-term contract of two years.\nSalary will be commensurate with qualifications and experience.\nApplication Procedure:\nApplicants are invited to submit their applications at the HKBU e-Recruitment System. Those who are not invited for an interview 8 weeks after submission of the application may consider their applications unsuccessful. Details of the University's Personal Information Collection Statement can be found at https://hro.hkbu.edu.hk/en/worklife-at-hkbu/employee-favourable-environment.html#privacy-policy.\nThe University reserves the right not to make an appointment for the post advertised, and the appointment will be made according to the terms and conditions applicable at the time of offer.\nReview of applications begins immediately until the position is filled.",
+        "before": "HUMAN RESOURCES OFFICE\nManager, Learning and Development (26270041)\nThe Office is looking for a learning and people development professional to support the development and of training and development strategies of the university.\nWe offer:\nA dynamic and transformative environment for passionate, driven and adaptable individuals to develop their skills and career;\nVarious opportunities to strategise and implement training initiatives that aim to make a difference in employee development and learning; and\nExposure to campaign and projects that build our learning culture.\nResponsibilities:\nResponsible for the following related to learning and development, including:\nConducting analysis to understand training needs from internal clients;\nDesigning targeted learning and development strategies;\nDeveloping appropriate learning tools and interventions;\nSelecting and managing external vendors;\nExecuting and overseeing programme delivery; and\nEvaluating programme effectiveness and preparing reports.\nSupporting corporate HR projects focused on Organisation and Talent Development\nRequirements:\nA recognised degree, preferably in Human Resources, Language or Communications;\nA minimum of 7 years of work experience in managing Learning and Development programme with at least 3 years in a managerial role;\nExperience as a trainer / facilitator and an instructional designer\nStrong analytical, communication, problem solving and project management skills;\nExcellent written and spoken English and Chinese with proficiency in Putonghua; and\nA passion in people development, team spirit and strong attention to details.\nIn addition to the above requirements, candidates with the following experience will be highly preferred:\nKnowledge of talent management, career planning, succession planning to ensure learning is aligned with organisational objectives;\nWorking with HR Business Partners in enhancing organisational performance with learning initiatives;\nL&D management experience in public organisations or NGOs would be highly relevant; and\nThe appointed candidate may be assigned to take up other duties under the O&TD team, such as those related to staff complaint, equal opportunity matters, HR communications, and/or performance management, policy and governance, etc.\nShortlisted candidates will be invited to a written test and interview(s).\nThe role is a regular position. The successful candidate will be offered a fixed-term contract of two years.\nSalary will be commensurate with qualifications and experience.\nApplication Procedure:\nApplicants are invited to submit their applications at the HKBU e-Recruitment System. Those who are not invited for an interview 8 weeks after submission of the application may consider their applications unsuccessful. Details of the University's Personal Information Collection Statement can be found at https://hro.hkbu.edu.hk/en/worklife-at-hkbu/employee-favourable-environment.html#privacy-policy.\nThe University reserves the right not to make an appointment for the post advertised, and the appointment will be made according to the terms and conditions applicable at the time of offer.\nReview of applications begins immediately until the position is filled."
+      },
+      "posted_date": {
+        "after": "2026-09-18",
+        "before": "2026-07-20"
+      }
+    },
+    "job_id": "e2de7ac5ef4ce2c5294b5ab4",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Manager, Learning and Development"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-18",
+        "before": "2026-08-21"
+      }
+    },
+    "job_id": "b83989afe24a1b7d54c760de",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Finance Officer (Accounting and Budgeting Section)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-18",
+        "before": "2026-08-31"
+      }
+    },
+    "job_id": "b75e9af0ba4505eafd00934d",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Assistant Global Engagement Manager (Role: Global Engagement Manager)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "8b1e7a111994d26c1d4a4dfe",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Executive Officer, Academic Registry"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "fa0744cdcad9c25c89b7e19b",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Programme Officer, Undergraduate Studies Section"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "009f5d73b3435733cf15d7b9",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Postdoctoral Research Fellow / Senior Research Assistant in clinical research"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "20c61241534621677b8e4888",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Assistant to Director / Senior Officer, Alumni Affairs Office"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-18",
+        "before": "2026-08-20"
+      }
+    },
+    "job_id": "43e63f1dc75b2e3f91c67995",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Professor / Associate Professor (Research Track) in Division of Science"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "d9218bee5a610c86b6366ce4",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Assistant Lecturer (Special Educational Needs Support)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "999ee19c9c7530b327cbe888",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term / Part-time (Day-time) Assistant Lecturer"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "description": {
+        "after": "Hong Kong Institute of Vocational Education (Sha Tin)\nDepartment / Section : Campus Secretariat\nRef. no : O/ST-CS/Term_OFF/09/26\nMajor Duties :\n(a)\nTo perform administrative duties in respect of one or more of the following areas:\n(i)\nHuman resources management;\n(ii)\nStudent and course related administration;\n(iii)\nAdministrative and academic support (e.g. student admissions, student services, student records activities and matters relating to programme planning and operation);\n(iv)\nFinancial and supplies matters;\n(v)\nGeneral administration and facilities management;\n(vi)\nPlanning and organizing events; and\n(vii)\nProject administration and coordination;\n(b)\nTo assist the Head of Operational Unit to administer relevant policies and systems with a view to ensuring compliance with Council’s policies;\n(c)\nTo supervise and coordinate the work of clerical and supporting staff to ensure effective operation and management of the operational unit;\n(d)\nTo undertake committee work in various committees, boards and meetings;\n(e)\nTo assist in coordinating projects and events, and the publicity matters of the operational unit; and\n(f)\nTo help implement the quality policy of the operational unit.\nRequirements :\n(a)\nA recognised degree or equivalent;\n(b)\nAt least 2 years’ relevant work experience at the executive level, preferably in educational institutions or major organisations;\n(c)\nGood communication, presentation, interpersonal, organisation and administrative skills;\n(d)\nGood problem solving, time management and team building skills;\n(e)\nMature, dynamic, self-initiative, willingness to meet challenges and the ability to work independently and under pressure;\n(f)\nA high level of written and spoken language proficiency in both Chinese and English, preferably including Putonghua; and\n(g)\nPreferably good IT knowledge and skills.\nNote s :\n(1)\nApplicants are required to highlight their language proficiency (e.g. HKCEE, HKAL, IELTS, CRE, etc.) in their C.V.\n(2)\nShortlisted candidates may be required to take a written assessment.\n(3)\nThe appointee(s) may be required to work irregular hours or outside normal office hours.",
+        "before": "Hong Kong Institute of Vocational Education (Sha Tin)\nDepartment / Section : Campus Secretariat\nRef. no : O/ST-CS/Term_OFF/09/26\nMajor Duties :\n(a)\nTo perform administrative duties in respect of one or more of the following areas:\n(i)\nHuman resources management;\n(ii)\nStudent and course related administration;\n(iii)\nAdministrative academic support (e.g. student admissions, student services, student records activities and matters relating to programme planning and operation);\n(iv)\nFinancial and supplies matters;\n(v)\nGeneral administration and facilities management;\n(vi)\nPlanning and organizing events; and\n(vii)\nProject administration and coordination; and to assist the Head of Operational Unit to administer relevant policies and systems with a view to ensuring compliance with Council’s policies.\n(b)\nTo supervise and coordinate the work of clerical and supporting staff to ensure effective operation and management of the operational unit;\n(c)\nTo undertake committee work in various committees, boards and meetings;\n(d)\nTo assist in coordinating projects and events, and the publicity matters of the operational unit; and\n(e)\nTo help implement the quality policy of the operational unit.\nRequirements :\n(a)\nA recognised degree or equivalent;\n(b)\nAt least 2 years’ relevant work experience at the executive level, preferably in educational institutions or major organisations;\n(c)\nGood communication, interpersonal, organisation and administrative skills;\n(d)\nGood problem solving, time management and team building skills;\n(e)\nMature, dynamic, self-initiative, willingness to meet challenges and the ability to work independently and under pressure;\n(f)\nA high level of written and spoken language proficiency in both Chinese and English, preferably including Putonghua; and\n(g)\nPreferably good IT knowledge and skills.\nNote s :\n(1)\nApplicants are required to highlight their language proficiency (e.g. HKCEE, HKAL, IELTS, CRE, etc.) in their C.V.\n(2)\nShortlisted candidates may be required to take a written assessment.\n(3)\nThe appointee(s) may be required to work irregular hours or outside normal office hours."
+      }
+    },
+    "job_id": "839db2e81732764ed2a539ef",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "Term Officer"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "2dc1c06156bbc707c6e954d3",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Technician"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "e2e272328b78f3ec8735f33d",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant I (Project No: R6929) (E&L)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "b2bf5cc06e133f78d9404582",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Course Developer (ENGL 4425EEF) (Freelance) (E&L) (Ref: 2600225)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "job_id": "572fc021288566f9f1d1c4de",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Temporary Research Assistant II (N&HS) "
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "523b6a07a36289013a18133f",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-Time Research Assistant II (A&SS) "
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "930cff0bac4e187fb23a80b6",
+    "kind": "updated",
+    "source_id": "cice",
+    "title": "Facilities Management Officer (Full-time)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "857e0d94791de95f3b142a3a",
+    "kind": "updated",
+    "source_id": "cice",
+    "title": "Lecturer in English (Full-time)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "c25292dba1a6f055bc03c350",
+    "kind": "status",
+    "source_id": "hpshcc",
+    "title": "Executive Assistant I (Ref: EAI/ft/26-02)"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-18",
+        "before": "2026-09-10"
+      }
+    },
+    "job_id": "0eca5067d35a986a5009f46e",
+    "kind": "updated",
+    "source_id": "lingnan",
+    "title": "Information Manager, ITSC"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "08d59c36c9218532a217c726",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Administrative Manager II / Senior Administrative Officer, School of Graduate Studies"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "620b21632852929c7fbd268a",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Information Manager Ⅱ, ITSC"
+  },
+  {
+    "at": "2026-09-18T04:50:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "2bb3e1de5ac9b7d648161286",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Full-time / Part-time Senior Lecturer / Lecturer / Assistant Lecturer (holding the title of Associate Project Director / Senior Project Manager / Project Manager) in the Faculty of Social Sciences"
   }
 ]
