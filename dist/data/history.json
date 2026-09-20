@@ -8800,5 +8800,52 @@
     "kind": "new",
     "source_id": "lingnan",
     "title": "Assistant Administrative Officer, Department of Cultural Studies"
+  },
+  {
+    "at": "2026-09-20T04:58:48+00:00",
+    "changes": {},
+    "job_id": "39c0f33319ceff899d567f4e",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Research Assistant I / Senior Research Assistant in the Faculty of Law"
+  },
+  {
+    "at": "2026-09-20T04:58:48+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "a8ae773b6520a44c428a2bb7",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Accounting Manager (Income and Project)"
+  },
+  {
+    "at": "2026-09-20T04:58:48+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "5bde67f58d39fe3bc385ea4e",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Professor / Associate Professor / Assistant Professor, Department of Computer Science"
+  },
+  {
+    "at": "2026-09-20T04:58:48+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-20",
+        "before": "2026-08-22"
+      }
+    },
+    "job_id": "25fa6ba11e204ec270535ec2",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Professor (Research Track)"
   }
 ]
