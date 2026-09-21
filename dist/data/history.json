@@ -8847,5 +8847,263 @@
     "kind": "updated",
     "source_id": "twc",
     "title": "Professor (Research Track)"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-21",
+        "before": "2026-08-18"
+      }
+    },
+    "job_id": "174dbd431ce499820ad26d24",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Systems Analyst (Application Development & Support)"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "job_id": "82328c180e13c7ca3de1b04c",
+    "kind": "new",
+    "source_id": "polyu",
+    "title": "Associate Professor in Fashion and Textile Technology"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "job_id": "14932ce53b2ddfd64660975b",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Graduate Teaching Assistant"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "0cfc9ea6809d6c01fc3656ff",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Research Associate – Department of Supply Chain and Information Management"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "missing"
+      }
+    },
+    "job_id": "248fe258fff938457e0732a0",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Research Fellow - Department of Computer Science"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "51f3acc25fd203fe24b6ae49",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Project Officer – Centre for Innovation and Entrepreneurship"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "8641aac2340f97146a3b1ae5",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "School of Business - Senior Executive Officer"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "description": {
+        "after": "Department/Unit: Department of Systems Engineering and Engineering Management\nClosing Date: Until the post(s) is / are filled\nThe Department of Systems Engineering and Engineering Management (SEEM) under the Faculty of Engineering at The Chinese University of Hong Kong (CUHK) invites applications for the faculty posts at the levels of Professor / Associate Professor / Assistant Professor in the areas related to Database Systems/Data Mining, Artificial Intelligence/Machine Learning/Natural Language Processing, and Financial Technology. Outstanding candidates in closely related areas, including Operations Research and Operations Management, will also be considered.\nCUHK is one of the top universities in Asia. The Department of SEEM hosts one of the best research groups in operations management, operations research, financial engineering and technology, service engineering, and information systems. In addition to competitive salary and housing benefits, the Department also provides strong research support.\nApplicants should have a relevant PhD degree and a good scholarly record demonstrating potential for teaching and research excellence. Appointment(s) will normally be made on contract basis for up to three years initially commencing August 2027, which, subject to performance and mutual agreement, may lead to longer-term appointment or substantiation. The exact start date will be negotiated with the successful applicants.\nApplicants please submit application at the CUHK e-recruitment system at https://www.hro.cuhk.edu.hk/en-gb/career/career-opportunities with a full resume with cover letter, copies of academic credentials, publication list with abstracts of selected published papers, a research plan, a teaching statement, together with names and e-mail addresses of three to five referees to whom the applicant’s consent has been given for their providing reference.\nApplicants are strongly encouraged to submit their applications soon for early informal online interviews. Formal interviews will be conducted by SEEM faculty members on the CUHK campus if possible.\nFor general inquiry and further information about the Department of SEEM, please contact Ms. Anna Wong at yywong@se.cuhk.edu.hk .",
+        "before": "Department/Unit: Department of Systems Engineering and Engineering Management\nClosing Date: Until the post(s) is / are filled\nThe Department of Systems Engineering and Engineering Management (SEEM) under the Faculty of Engineering at The Chinese University of Hong Kong (CUHK) invites applications for the faculty posts at the levels of Professor / Associate Professor / Assistant Professor in the areas related to Database Systems/Data Mining, Artificial Intelligence/Machine Learning/Natural Language Processing, and Financial Technology. Outstanding candidates in closely related areas, including Operations Research and Operations Management, will also be considered.\nCUHK is one of the top universities in Asia. The Department of SEEM hosts one of the best research groups in operations management, operations research, financial engineering and technology, service engineering, and information systems. In addition to competitive salary and housing benefits, the Department also provides strong research support.\nApplicants should have a relevant PhD degree and a good scholarly record demonstrating potential for teaching and research excellence. Appointment(s) will normally be made on contract basis for up to three years initially commencing August 2026, which, subject to performance and mutual agreement, may lead to longer-term appointment or substantiation. The exact start date will be negotiated with the successful applicants.\nApplicants please submit application at the CUHK e-recruitment system at https://www.hro.cuhk.edu.hk/en-gb/career/career-opportunities with a full resume with cover letter, copies of academic credentials, publication list with abstracts of selected published papers, a research plan, a teaching statement, together with names and e-mail addresses of three to five referees to whom the applicant’s consent has been given for their providing reference.\nApplicants are strongly encouraged to submit their applications soon for early informal online interviews. Formal interviews will be conducted by SEEM faculty members on the CUHK campus if possible.\nFor general inquiry and further information about the Department of SEEM, please contact Ms. Anna Wong at yywong@se.cuhk.edu.hk ."
+      }
+    },
+    "job_id": "f87cdd09f924fc36db1a5688",
+    "kind": "updated",
+    "source_id": "cuhk",
+    "title": "Professor(s) / Associate Professor(s) / Assistant Professor(s)"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-21",
+        "before": "2026-07-22"
+      }
+    },
+    "job_id": "340bcaec079578321fc96100",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Officer/Officer, Communication and Public Relations Office"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "job_id": "2283201c6722c7e8378229fd",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Assistant Manager, Academic Registry"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "job_id": "e6a654d22f9142988dba3912",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Professor / Associate Professor / Assistant Professor (Computer Science)"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "job_id": "38393f35bef2a8b074b40646",
+    "kind": "new",
+    "source_id": "hkct",
+    "title": "Programme Administration Officer"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "7d359c00bc53ded8a818fb51",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "定期二級雜務員"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "2b8094f93bcd3d599ef92c4f",
+    "kind": "status",
+    "source_id": "hkapa",
+    "title": "INFORMATION TECHNOLOGY MANAGER (NETWORK AND SECURITY)"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "dfc21ff19f82556ac2fc6009",
+    "kind": "status",
+    "source_id": "hkapa",
+    "title": "EXECUTIVE (DEVELOPMENT AND ALUMNI AFFAIRS)"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "job_id": "29cf438fd2bf7e30074d7c91",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Assistant of GEN E143CF and GEN 1043ECF (2026 Autumn Term) (E&L)"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "description": {
+        "after": "Founded in 1989, Hong Kong Metropolitan University (HKMU) is a modern, vibrant and dynamic university. We tailor our professional programmes to adapt to market trends and meet industry needs, thus providing our students with quality professional education and clear career paths.\nAs a faculty-driven, student-centred university in support of innovative teaching and learning, strategic research, and stakeholder outreach to provide maximum benefit to our communities, we conduct research that advances knowledge and enhances teaching, focusing on strategic areas, including digital humanities and literature, international business, gerontechnology, smart city, open and innovative education, and bilingual learning and teaching.\nHKMU is becoming an ever more vital link in addressing and helping Hong Kong to solve many difficult challenges – as part of our involvement in, and commitment to, the ‘metropolis’ of Hong Kong. Our plans to expand into the Greater Bay Area (GBA) will also cultivate talent to serve Hong Kong and the wider metropolitan GBA.\nFor more information about the University, please visit https://www.hkmu.edu.hk .\nWe are now looking for a suitable person to fill the following position in the School of Education and Languages:\nMajor Duties and Responsibilities\nThe appointee will mainly assist the Project Team for the project “AI for Empowering Learning and Teaching Funding – School Support”. The appointee(s) will be responsible mainly for the following:\nAssisting in the design, development, and refinement of AI-enhanced teaching and learning materials, assessment tasks, and learning videos;\nExploring, evaluating, and testing emerging AI tools and technologies for educational applications;\nVisiting schools to support the implementation of AI-supported teaching initiatives;\nCollaborating with teachers in developing teaching materials, lesson plans, and classroom activities that effectively integrate AI tools;\nObserving and evaluating lessons conducted by teachers, and providing constructive feedback and professional recommendations to enhance teaching effectiveness;\nProviding pedagogical and technological support to teachers on the integration of AI into teaching and learning;\nAssisting in organizing teacher professional development activities, workshops, and learning circles;\nConducting quantitative and qualitative data collection and analysis for research and evaluation purposes;\nPreparing reports, research papers, presentations, and dissemination materials; and\nPerforming other research-related and project-related duties as assigned.\nCandidates\nCandidates should possess the following qualifications, experience and competence:\nA Bachelor’s degree or above, preferably in Education, Mathematics Education, Chinese Language Education, English Lanugauge Education, Chinese Language, Science, Visual Arts, or related subjects; preferably with research and publication experience.\nFluency in both written and spoken English and Chinese (Cantonese);\nPreferably with knowledge in AI in education;\nStrong sense of responsibility, self-motivation, attention to details, and a positive attitude;\nFluency in both written and spoken English and Chinese; and\nAble to meet deadlines and work independently.\nTerms and Conditions for Appointment\nSuccessful candidate will be appointed on a temporary part-time contract. Benefits will be provided in accordance with the statutory provisions.\nTo Apply\nCandidates who are interested in joining us may submit their applications via the University’s eRecruitment System.\n(Applicants who have responded to the previous advertisements 26001NK need not re-apply.)\nThe personal data collected will be used for the purpose of considering your application for employment. For details, please refer to the “Personal Data (Privacy) Notice for Job Applicant” on the University’s website. If you are not contacted by the University within eight weeks from the closing date of application, you may assume that your application was unsuccessful. The University will continue to review applications until the position(s) is/are filled.",
+        "before": "Founded in 1989, Hong Kong Metropolitan University (HKMU) is a modern, vibrant and dynamic university. We tailor our professional programmes to adapt to market trends and meet industry needs, thus providing our students with quality professional education and clear career paths.\nAs a faculty-driven, student-centred university in support of innovative teaching and learning, strategic research, and stakeholder outreach to provide maximum benefit to our communities, we conduct research that advances knowledge and enhances teaching, focusing on strategic areas, including digital humanities and literature, international business, gerontechnology, smart city, open and innovative education, and bilingual learning and teaching.\nHKMU is becoming an ever more vital link in addressing and helping Hong Kong to solve many difficult challenges – as part of our involvement in, and commitment to, the ‘metropolis’ of Hong Kong. Our plans to expand into the Greater Bay Area (GBA) will also cultivate talent to serve Hong Kong and the wider metropolitan GBA.\nFor more information about the University, please visit https://www.hkmu.edu.hk .\nWe are now looking for a suitable person to fill the following position in the School of Education and Languages:\nMajor Duties and Responsibilities\nThe appointee will mainly assist the Project Team for the project “AI for Empowering Learning and Teaching Funding – School Support”. The appointee(s) will be responsible mainly for the following:\nAssisting in the design, development, and refinement of AI-enhanced teaching and learning materials, assessment tasks, and learning videos;\nExploring, evaluating, and testing emerging AI tools and technologies for educational applications;\nVisiting schools to support the implementation of AI-supported teaching initiatives;\nCollaborating with teachers in developing teaching materials, lesson plans, and classroom activities that effectively integrate AI tools;\nObserving and evaluating lessons conducted by teachers, and providing constructive feedback and professional recommendations to enhance teaching effectiveness;\nProviding pedagogical and technological support to teachers on the integration of AI into teaching and learning;\nAssisting in organizing teacher professional development activities, workshops, and learning circles;\nConducting quantitative and qualitative data collection and analysis for research and evaluation purposes;\nPreparing reports, research papers, presentations, and dissemination materials; and\nPerforming other research-related and project-related duties as assigned.\nCandidates\nCandidates should possess the following qualifications, experience and competence:\nA Bachelor’s degree or above, preferably in Education, Mathematics Education, Chinese Language Education, English Lanugauge Education, Chinese Language, Science, Visual Arts, or related subjects; preferably with research and publication experience.\nTerms and Conditions for Appointment\nSuccessful candidate will be appointed on a temporary part-time contract. Benefits will be provided in accordance with the statutory provisions.\nTo Apply\nCandidates who are interested in joining us may submit their applications via the University’s eRecruitment System.\n(Applicants who have responded to the previous advertisements 26001NK need not re-apply.)\nThe personal data collected will be used for the purpose of considering your application for employment. For details, please refer to the “Personal Data (Privacy) Notice for Job Applicant” on the University’s website. If you are not contacted by the University within eight weeks from the closing date of application, you may assume that your application was unsuccessful. The University will continue to review applications until the position(s) is/are filled."
+      }
+    },
+    "job_id": "5da3ef8b52349843c127e08e",
+    "kind": "updated",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistants (Project No.: 40025) (E&L)"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "7501691b51c26043a82e2208",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant I [R0167] (A&SS)"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "job_id": "c3b0581c902b4f3a530b29db",
+    "kind": "new",
+    "source_id": "thei",
+    "title": "Senior Lecturer / Lecturer (Surveying)"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "job_id": "81cb145e805227517f3d098c",
+    "kind": "new",
+    "source_id": "thei",
+    "title": "Part-time Lecturer (Hotel Operations Management)"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "job_id": "5d0f1333298e7b15b6b8c671",
+    "kind": "new",
+    "source_id": "thei",
+    "title": "Professor / Associate Professor / Assistant Professor (Master of Science in Urban Forestry)"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "description": {
+        "after": "Assistant Manager I\n(Technology Transfer and Business Development)\nOffice\nof Research and Knowledge\nTransfer\n(Post\nRef.: 26/242)\nResponsibilities\n• Develop and execute the University’s technology transfer (TT) and commercialisation strategies\n• Manage the University’s Intellectual Property (IP) portfolio, identify and protect the University’s inventions and innovations\n• Promote the University’s inventions and technologies to potential licensees, industry partners and government fund providers in Hong Kong, the Chinese Mainland and beyond\n• Develop technology marketing initiatives, organise promotional events and marketing activities, prepare marketing and presentation materials\n• Work on licensing agreements and other commercialisation deals\n• Organise briefing and training sessions related to technology transfer\n• Co-ordinate and prepare reports and data as required\n• Develop and maintain the technology transfer website and database\n• Perform any other duties as assigned by supervisor(s)\nRequirements\n• A good Bachelor’s or higher degree in Science and Technology, and a postgraduate degree is highly preferred\n• Substantial relevant working experience on technology commercialisation\n• Proven experience in business negotiation and event management\n• Sound knowledge in IP management and licensing\n• Solid experience in corporate report writing and compiling statistical reports\n• Excellent interpersonal and communication skills in both verbal and written English and Chinese (including Putonghua)\n• Strong analytical and organisational skills\n• Travelling and site visits may be occasionally required\nSalary and Fringe Benefits\nThe rank and commencing salary will be commensurate\nwith qualifications and experience. Fringe benefits, where applicable, include\nannual leave, medical and dental benefits and mandatory provident fund and\ngratuity.\nApplication Procedure\nPlease click \" Apply Now \" to submit your application. Personal data collected will be used for recruitment purposes only .\nWe are an equal opportunities employer . Review of applications will continue until the post is filled. Qualified candidates are advised to submit their applications early for consideration.\nThe University reserves the right not to make an appointment for the post advertised, or to fill the post by invitation or by search. We regret that only shortlisted candidates will be notified .",
+        "before": "Assistant Manager I\n(Technology Transfer and Business Development)\nOffice\nof Research and Knowledge\nTransfer\n(Post\nRef.: 26/242)\nResponsibilities\n• Develop and execute the University’s technology transfer (TT) and commercialisation strategies\n• Manage the University’s Intellectual Property (IP) portfolio, identify and protect the University’s inventions and innovations\n• Promote the University’s inventions and technologies to potential licensees, industry partners and government fund providers in Hong Kong, the Chinese Mainland and beyond\n• Develop technology marketing initiatives, organise promotional events and marketing activities, prepare marketing and presentation materials\n• Work on licensing agreements and other commercialisation deals\n• Organise briefing and training sessions related to technology transfer\n• Co-ordinate and prepare reports and data as required\n• Develop and maintain the technology transfer website and database\n• Perform any other duties as assigned by supervisor(s)\nRequirements\n• A good Bachelor’s or higher degree, and a postgraduate degree is preferred\n• Substantial relevant working experience\n• Proven experience in TT, business development and event management\n• Sound knowledge in IP management and licensing\n• Solid experience in corporate report writing and compiling statistical reports\n• Excellent interpersonal and communication skills in both verbal and written English and Chinese (including Putonghua)\n• Strong analytical and organisational skills\n• Travelling and site visits may be occasionally required\nSalary and Fringe Benefits\nThe rank and commencing salary will be commensurate\nwith qualifications and experience. Fringe benefits, where applicable, include\nannual leave, medical and dental benefits and mandatory provident fund and\ngratuity.\nApplication Procedure\nPlease click \" Apply Now \" to submit your application. Personal data collected will be used for recruitment purposes only .\nWe are an equal opportunities employer . Review of applications will continue until the post is filled. Qualified candidates are advised to submit their applications early for consideration.\nThe University reserves the right not to make an appointment for the post advertised, or to fill the post by invitation or by search. We regret that only shortlisted candidates will be notified ."
+      }
+    },
+    "job_id": "0624207502ef8ef05a53792a",
+    "kind": "updated",
+    "source_id": "lingnan",
+    "title": "Assistant Manager I (Technology Transfer and Business Development), ORKT"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "ca3f68308b9ec94e3dddb6fb",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Executive Officer (Research Postgraduate Team), School of Graduate Studies"
+  },
+  {
+    "at": "2026-09-21T05:03:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "fa230114a57ff2f83d49026f",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Investigator / Research Officer (holding the title of Educational Psychologist) in the Department of Psychology"
   }
 ]
