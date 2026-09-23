@@ -9297,5 +9297,415 @@
     "kind": "updated",
     "source_id": "hkmu",
     "title": "Part-time Research Assistant I (Project No.: 40025) (E&L)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "15008f913fc6238d39675eba",
+    "kind": "new",
+    "source_id": "sfu",
+    "title": "Assistant Professor / Senior Lecturer / Lecturer, Faith Hope Love Department of General Education"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "description": {
+        "after": "SCHOOL OF CONTINUING EDUCATION\nThe School of Continuing Education, one of the seven Faculties/Schools of the University and a major provider of continuing and professional education in Hong Kong, offers a wide range of full-time and part-time programmes at the post-secondary, undergraduate and postgraduate levels for young learners and working adults. It also offers in-house training and short courses to meet the community needs and market demands. Operated on a self-financed basis, the School and its College of International Education currently employ about 400 full-time staff and 500 part-time instructors. The School is inviting applications for the following position:\nSystems Analyst (Infrastructure Engineer) (Ref. No.: 26270053)\nThe appointee is expected to perform the following duties:\nWe are building a high-performing IT infrastructure and operations team to support the School's ongoing digital transformation and future growth. We are seeking a motivated and technically capable professional who is passionate about modern IT infrastructure, cloud technologies, cybersecurity, and delivering reliable technology services that enable business success.\nThis role offers an opportunity to become a core member of the IT infrastructure team, reporting to Information Technical Manager, working closely with users, application team, vendors, and technology partners to maintain and enhance the School's Microsoft ecosystem, network environment, and security posture. The successful candidate will play an important role in supporting day-to-day IT operations, administering Microsoft 365 and hybrid identity platforms, managing network and server infrastructure, and contributing to infrastructure modernization initiatives that support the School's evolving digital landscape.\nKey Responsibilities:\nCore Infrastructure Management: Support deployment, configuration, and maintenance of Microsoft infrastructure including Windows Server, AD DS, Entra ID, Group Policy, and Intune.\nM365 Administration: Manage daily operations of Microsoft 365 services, including Exchange Online, SharePoint Online, Teams, and OneDrive, ensuring service health, configuration accuracy, and policy compliance.\nRoutine Server Operation: Conduct daily health checks, including reviewing logs, backups, disk usage, and service status. Perform housekeeping tasks, monitor server room equipment (power, cooling, cabling), and report abnormalities to ensure availability and proper functioning.\nManaging Network infrastructure: Deploy and maintain network infrastructure, including routers, switches, firewalls, and other network devices to ensure optimal performance and security.\nPerformance Monitoring: Monitor system and network performance, identify and resolve issues to minimize downtime and maintain service availability.\nUpdates and Maintenance: Participate in system and network updates and maintenance activities , including patch management and routine system upgrades.\nIT projects support: Assist with documentation, testing, and deployment activities. Contribute to initiatives such as SSO integration and system improvements.\nPerform ad hoc assignments and responsibilities requested by supervisor.\nRequired skills and experience:\nBachelor’s degree in Computer Science or related discipline (or equivalent experience).\nAt least 5 years of hands-on working experience in supporting Microsoft Active Directory, Microsoft 365, Entra ID, DNS, GPOs, Exchange & SharePoint Online, MS Teams, Intune, Cloud infrastructure (Azure or AWS).\nSolid experience in managing enterprise network environment, including switches, routers, firewalls, and wireless infrastructure.\nSolid understanding of cybersecurity technologies and best practices, including Microsoft Defender, EDR, SIEM, vulnerability management, and endpoint protection.\nProven troubleshooting and problem-solving skills with the ability to independently manage incidents and deliver end-to-end solutions.\nExcellent analytical and problem-solving skills, with the ability to identify and address complex system issues.\nPossess solid written and verbal communication skills to both technical and non-technical audiences, and strong commitment-to-task. Proficiency in both English and Chinese is required.\nProfessional certifications are highly desirable, including: Microsoft, public cloud (Azure/AWS), VMware, ITIL; CISSP is a plus.\nCandidates with more extensive experience may be considered for the position of Assistant Information Technology Manager (Infrastructure).\nShortlisted candidates will be invited to attend a written assessment.\nThe initial appointment will be offered a one-year contract (up to 31 August 2027). Re-appointment thereafter is subject to mutual agreement and availability of funding.\nSalary will be commensurate with qualifications and experience.\nApplication Procedure:\nApplicants are invited to submit their applications at the HKBU e-Recruitment System . Those who are not invited for interview 8 weeks after submission of application may consider their applications unsuccessful. Details of the University’s Personal Information Collection Statement can be found at https://hro.hkbu.edu.hk/en/worklife-at-hkbu/employee-favourable-environment.html#privacy-policy .\nThe School reserves the right not to make an appointment for the post advertised, and the appointment will be made according to the terms and conditions applicable at the time of offer.\nReview of applications is ongoing until the position is filled.",
+        "before": "SCHOOL OF CONTINUING EDUCATION\nThe School of Continuing Education, one of the seven Faculties/Schools of the University and a major provider of continuing and professional education in Hong Kong, offers a wide range of full-time and part-time programmes at the post-secondary, undergraduate and postgraduate levels for young learners and working adults. It also offers in-house training and short courses to meet the community needs and market demands. Operated on a self-financed basis, the School and its College of International Education currently employ about 400 full-time staff and 500 part-time instructors. The School is inviting applications for the following position:\nSystems Analyst (Senior System Engineer) (Ref. No.: 26270053)\nThe appointee is expected to perform the following duties:\nWe are building a high-performing IT infrastructure and operations team to support the School's ongoing digital transformation and future growth. We are seeking a motivated and technically capable professional who is passionate about modern IT infrastructure, cloud technologies, cybersecurity, and delivering reliable technology services that enable business success.\nThis role offers an opportunity to become a core member of the IT infrastructure team, reporting to Information Technical Manager, working closely with users, application team, vendors, and technology partners to maintain and enhance the School's Microsoft ecosystem, network environment, and security posture. The successful candidate will play an important role in supporting day-to-day IT operations, administering Microsoft 365 and hybrid identity platforms, managing network and server infrastructure, and contributing to infrastructure modernization initiatives that support the School's evolving digital landscape.\nKey Responsibilities:\nCore Infrastructure Management: Support deployment, configuration, and maintenance of Microsoft infrastructure including Windows Server, AD DS, Entra ID, Group Policy, and Intune.\nM365 Administration: Manage daily operations of Microsoft 365 services, including Exchange Online, SharePoint Online, Teams, and OneDrive, ensuring service health, configuration accuracy, and policy compliance.\nRoutine Server Operation: Conduct daily health checks, including reviewing logs, backups, disk usage, and service status. Perform housekeeping tasks, monitor server room equipment (power, cooling, cabling), and report abnormalities to ensure availability and proper functioning.\nManaging Network infrastructure: Deploy and maintain network infrastructure, including routers, switches, firewalls, and other network devices to ensure optimal performance and security.\nPerformance Monitoring: Monitor system and network performance, identify and resolve issues to minimize downtime and maintain service availability.\nUpdates and Maintenance: Participate in system and network updates and maintenance activities , including patch management and routine system upgrades.\nIT projects support: Assist with documentation, testing, and deployment activities. Contribute to initiatives such as SSO integration and system improvements.\nPerform ad hoc assignments and responsibilities requested by supervisor.\nRequired skills and experience:\nBachelor’s degree in Computer Science or related discipline (or equivalent experience).\nAt least 5 years of hands-on working experience in supporting Microsoft Active Directory, Microsoft 365, Entra ID, DNS, GPOs, Exchange & SharePoint Online, MS Teams, Intune, Cloud infrastructure (Azure or AWS).\nSolid experience in managing enterprise network environment, including switches, routers, firewalls, and wireless infrastructure.\nSolid understanding of cybersecurity technologies and best practices, including Microsoft Defender, EDR, SIEM, vulnerability management, and endpoint protection.\nProven troubleshooting and problem-solving skills with the ability to independently manage incidents and deliver end-to-end solutions.\nExcellent analytical and problem-solving skills, with the ability to identify and address complex system issues.\nPossess solid written and verbal communication skills to both technical and non-technical audiences, and strong commitment-to-task. Proficiency in both English and Chinese is required.\nProfessional certifications are highly desirable, including: Microsoft, public cloud (Azure/AWS), VMware, ITIL; CISSP is a plus.\nCandidates with more extensive experience may be considered for the position of Assistant Information Technology Manager (Infrastructure).\nShortlisted candidates will be invited to attend a written assessment.\nThe initial appointment will be offered a one-year contract (up to 31 August 2027). Re-appointment thereafter is subject to mutual agreement and availability of funding.\nSalary will be commensurate with qualifications and experience.\nApplication Procedure:\nApplicants are invited to submit their applications at the HKBU e-Recruitment System . Those who are not invited for interview 8 weeks after submission of application may consider their applications unsuccessful. Details of the University’s Personal Information Collection Statement can be found at https://hro.hkbu.edu.hk/en/worklife-at-hkbu/employee-favourable-environment.html#privacy-policy .\nThe School reserves the right not to make an appointment for the post advertised, and the appointment will be made according to the terms and conditions applicable at the time of offer.\nReview of applications is ongoing until the position is filled."
+      },
+      "posted_date": {
+        "after": "2026-09-23",
+        "before": "2026-08-18"
+      },
+      "title": {
+        "after": "Systems Analyst (Infrastructure Engineer)",
+        "before": "Systems Analyst (Senior System Engineer)"
+      }
+    },
+    "job_id": "198cc08c019d842e65590db3",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Systems Analyst (Infrastructure Engineer)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "6abf09b292aa5107d64de1bd",
+    "kind": "new",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree And Undergraduate Degree Programmes"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "cf29435bf624563c84e08d49",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Research Assistant I in the Department of Geography (Ref.: 537460)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {},
+    "job_id": "ff26e56f5a8c7acf8e20c9c4",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Senior Research Assistant / Research Assistant I/II in AI Curated Multilingual Visual Glossary for Architecture and Heritage in the Division of Landscape Architecture"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "9a9ea8dbf0a0a6f77f6eca2f",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Teaching Fellow in Construction and Real Estate Technology"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-23",
+        "before": "2026-09-11"
+      }
+    },
+    "job_id": "9f466f0ccf7afe6dd0883859",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Systems Analyst (Artificial Intelligence)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-23",
+        "before": "2026-08-19"
+      }
+    },
+    "job_id": "32a58369bfbd53b23b6de87d",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Assistant Director of Finance [Role: Head of Procurement]"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "description": {
+        "after": "SCHOOL OF CONTINUING EDUCATION\nThe School of Continuing Education, one of the seven Faculties/Schools of the University and a major provider of continuing and professional education in Hong Kong, offers a wide range of full-time and part-time programmes at the post-secondary, undergraduate and postgraduate levels for young learners and working adults. It also offers in-house training and short courses to meet the community needs and market demands. Operated on a self-financed basis, the School and its College of International Education currently employ about 400 full-time staff and 500 part-time instructors. The School is inviting applications for the following position:\nSystems Analyst ( Infrastructure Engineer) (Ref. No.: 26270053)\nThe appointee is expected to perform the following duties:\nWe are building a high-performing IT infrastructure and operations team to support the School's ongoing digital transformation and future growth. We are seeking a motivated and technically capable professional who is passionate about modern IT infrastructure, cloud technologies, cybersecurity, and delivering reliable technology services that enable business success.\nThis role offers an opportunity to become a core member of the IT infrastructure team, reporting to Information Technical Manager, working closely with users, application team, vendors, and technology partners to maintain and enhance the School's Microsoft ecosystem, network environment, and security posture. The successful candidate will play an important role in supporting day-to-day IT operations, administering Microsoft 365 and hybrid identity platforms, managing network and server infrastructure, and contributing to infrastructure modernization initiatives that support the School's evolving digital landscape.\nKey Responsibilities:\nCore Infrastructure Management: Support deployment, configuration, and maintenance of Microsoft infrastructure including Windows Server, AD DS, Entra ID, Group Policy, and Intune.\nM365 Administration: Manage daily operations of Microsoft 365 services, including Exchange Online, SharePoint Online, Teams, and OneDrive, ensuring service health, configuration accuracy, and policy compliance.\nRoutine Server Operation: Conduct daily health checks, including reviewing logs, backups, disk usage, and service status. Perform housekeeping tasks, monitor server room equipment (power, cooling, cabling), and report abnormalities to ensure availability and proper functioning.\nManaging Network infrastructure: Deploy and maintain network infrastructure, including routers, switches, firewalls, and other network devices to ensure optimal performance and security.\nPerformance Monitoring: Monitor system and network performance, identify and resolve issues to minimize downtime and maintain service availability.\nUpdates and Maintenance: Participate in system and network updates and maintenance activities , including patch management and routine system upgrades.\nIT projects support: Assist with documentation, testing, and deployment activities. Contribute to initiatives such as SSO integration and system improvements.\nPerform ad hoc assignments and responsibilities requested by supervisor.\nRequired skills and experience:\nBachelor’s degree in Computer Science or related discipline (or equivalent experience).\nAt least 5 years of hands-on working experience in supporting Microsoft Active Directory, Microsoft 365, Entra ID, DNS, GPOs, Exchange & SharePoint Online, MS Teams, Intune, Cloud infrastructure (Azure or AWS).\nSolid experience in managing enterprise network environment, including switches, routers, firewalls, and wireless infrastructure.\nSolid understanding of cybersecurity technologies and best practices, including Microsoft Defender, EDR, SIEM, vulnerability management, and endpoint protection.\nProven troubleshooting and problem-solving skills with the ability to independently manage incidents and deliver end-to-end solutions.\nExcellent analytical and problem-solving skills, with the ability to identify and address complex system issues.\nPossess solid written and verbal communication skills to both technical and non-technical audiences, and strong commitment-to-task. Proficiency in both English and Chinese is required.\nProfessional certifications are highly desirable, including: Microsoft, public cloud (Azure/AWS), VMware, ITIL; CISSP is a plus.\nCandidates with more extensive experience may be considered for the position of Assistant Information Technology Manager (Infrastructure).\nShortlisted candidates will be invited to attend a written assessment.\nThe initial appointment will be offered a one-year contract (up to 31 August 2027). Re-appointment thereafter is subject to mutual agreement and availability of funding.\nSalary will be commensurate with qualifications and experience.\nApplication Procedure:\nApplicants are invited to submit their applications at the HKBU e-Recruitment System . Those who are not invited for interview 8 weeks after submission of application may consider their applications unsuccessful. Details of the University’s Personal Information Collection Statement can be found at https://hro.hkbu.edu.hk/en/worklife-at-hkbu/employee-favourable-environment.html#privacy-policy .\nThe School reserves the right not to make an appointment for the post advertised, and the appointment will be made according to the terms and conditions applicable at the time of offer.\nReview of applications is ongoing until the position is filled.",
+        "before": "SCHOOL OF CONTINUING EDUCATION\nThe School of Continuing Education, one of the seven Faculties/Schools of the University and a major provider of continuing and professional education in Hong Kong, offers a wide range of full-time and part-time programmes at the post-secondary, undergraduate and postgraduate levels for young learners and working adults. It also offers in-house training and short courses to meet the community needs and market demands. Operated on a self-financed basis, the School and its College of International Education currently employ about 400 full-time staff and 500 part-time instructors. The School is inviting applications for the following position:\nSystems Analyst (Senior System Engineer) (Ref. No.: 26270053)\nThe appointee is expected to perform the following duties:\nWe are building a high-performing IT infrastructure and operations team to support the School's ongoing digital transformation and future growth. We are seeking a motivated and technically capable professional who is passionate about modern IT infrastructure, cloud technologies, cybersecurity, and delivering reliable technology services that enable business success.\nThis role offers an opportunity to become a core member of the IT infrastructure team, reporting to Information Technical Manager, working closely with users, application team, vendors, and technology partners to maintain and enhance the School's Microsoft ecosystem, network environment, and security posture. The successful candidate will play an important role in supporting day-to-day IT operations, administering Microsoft 365 and hybrid identity platforms, managing network and server infrastructure, and contributing to infrastructure modernization initiatives that support the School's evolving digital landscape.\nKey Responsibilities:\nCore Infrastructure Management: Support deployment, configuration, and maintenance of Microsoft infrastructure including Windows Server, AD DS, Entra ID, Group Policy, and Intune.\nM365 Administration: Manage daily operations of Microsoft 365 services, including Exchange Online, SharePoint Online, Teams, and OneDrive, ensuring service health, configuration accuracy, and policy compliance.\nRoutine Server Operation: Conduct daily health checks, including reviewing logs, backups, disk usage, and service status. Perform housekeeping tasks, monitor server room equipment (power, cooling, cabling), and report abnormalities to ensure availability and proper functioning.\nManaging Network infrastructure: Deploy and maintain network infrastructure, including routers, switches, firewalls, and other network devices to ensure optimal performance and security.\nPerformance Monitoring: Monitor system and network performance, identify and resolve issues to minimize downtime and maintain service availability.\nUpdates and Maintenance: Participate in system and network updates and maintenance activities , including patch management and routine system upgrades.\nIT projects support: Assist with documentation, testing, and deployment activities. Contribute to initiatives such as SSO integration and system improvements.\nPerform ad hoc assignments and responsibilities requested by supervisor.\nRequired skills and experience:\nBachelor’s degree in Computer Science or related discipline (or equivalent experience).\nAt least 5 years of hands-on working experience in supporting Microsoft Active Directory, Microsoft 365, Entra ID, DNS, GPOs, Exchange & SharePoint Online, MS Teams, Intune, Cloud infrastructure (Azure or AWS).\nSolid experience in managing enterprise network environment, including switches, routers, firewalls, and wireless infrastructure.\nSolid understanding of cybersecurity technologies and best practices, including Microsoft Defender, EDR, SIEM, vulnerability management, and endpoint protection.\nProven troubleshooting and problem-solving skills with the ability to independently manage incidents and deliver end-to-end solutions.\nExcellent analytical and problem-solving skills, with the ability to identify and address complex system issues.\nPossess solid written and verbal communication skills to both technical and non-technical audiences, and strong commitment-to-task. Proficiency in both English and Chinese is required.\nProfessional certifications are highly desirable, including: Microsoft, public cloud (Azure/AWS), VMware, ITIL; CISSP is a plus.\nCandidates with more extensive experience may be considered for the position of Assistant Information Technology Manager (Infrastructure).\nShortlisted candidates will be invited to attend a written assessment.\nThe initial appointment will be offered a one-year contract (up to 31 August 2027). Re-appointment thereafter is subject to mutual agreement and availability of funding.\nSalary will be commensurate with qualifications and experience.\nApplication Procedure:\nApplicants are invited to submit their applications at the HKBU e-Recruitment System . Those who are not invited for interview 8 weeks after submission of application may consider their applications unsuccessful. Details of the University’s Personal Information Collection Statement can be found at https://hro.hkbu.edu.hk/en/worklife-at-hkbu/employee-favourable-environment.html#privacy-policy .\nThe School reserves the right not to make an appointment for the post advertised, and the appointment will be made according to the terms and conditions applicable at the time of offer.\nReview of applications is ongoing until the position is filled."
+      },
+      "posted_date": {
+        "after": "2026-09-23",
+        "before": "2026-07-22"
+      },
+      "title": {
+        "after": "Systems Analyst (Infrastructure Engineer), School of Continuing Education",
+        "before": "Systems Analyst (Senior System Engineer), School of Continuing Education"
+      }
+    },
+    "job_id": "3c2197391f2b6dcc6561a6d4",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Systems Analyst (Infrastructure Engineer), School of Continuing Education"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-23",
+        "before": "2026-08-19"
+      }
+    },
+    "job_id": "b8c11fdab8c285479cd9a5e0",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Purchasing Manager / Purchasing Manager (Purchasing and Support Services)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "df9a5994927584d898b54336",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Research Assistant Professor, Department of Biology"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "d7e5e51e7dfc67ce22cf5719",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Research Assistant Professor, Department of Mathematics"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "5cd9684a74a485eabfbbdf77",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Scientific Officer, Centre for Exercise Science and Medicine"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "249aed3cf2e7f7e735810932",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Research Associate, Department of Computer Science"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "8d8be6cdfa273ca2f7a0e0cf",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Research Assistant, Department of Computer Science"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "d17e66b9477ed4d056662773",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Research Assistant, Department of Biology"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "5aad8acb72ad9bcde883b8ed",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Post-Doctoral Research Fellow, Department of Biology"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "18a5b08305909dd0ab84616d",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Research Assistant, Centre for Quantitative Systems Biology"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "89c97c2caca5af6b9fb8669e",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Executive Officer / Executive Officer, University Engagement Office"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "5b8b6c4d3e56698f84bcec2f",
+    "kind": "new",
+    "source_id": "twc",
+    "title": "Assistant Professor (Research Track)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-23",
+        "before": "2026-08-24"
+      }
+    },
+    "job_id": "f6e7d15942ccfdb007202318",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Executive Officer"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-23",
+        "before": "2026-08-24"
+      }
+    },
+    "job_id": "d133677fd509b42ff63ce815",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Manager"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "description": {
+        "after": "Tung Wah College\nEstablished by Tung Wah Group of Hospitals (“TWGHs”) in 2010, Tung Wah College (TWC) is a self-financing degree-granting institution registered under the Post Secondary Colleges Ordinance (Cap.320). Following the educational ideals of TWGHs and leveraging on its renowned strengths and expertise, TWC aims to provide high quality tertiary education to nurture competent, socially responsible and caring professionals for the benefits of society.\nWith the staunch support of TWGHs, TWC has been developing rapidly and built up a niche in healthcare education. It is the first self-financing tertiary institution offering six professionally accredited degrees to train nurses and allied health professionals such as medical laboratory technologists, occupational therapists, diagnostic radiographer, therapeutic radiographer and physiotherapists. Besides, the College is also the first institution registered under Cap. 320 offering early childhood education degree and higher diploma programmes to train qualified kindergarten teachers and childcare professionals.\nCurrently, TWC has 4 schools (namely School of Arts and Humanities, School of Management, School of Medical and Health Sciences, and School of Nursing) running a total of 20 doctoral degree, bachelor degree, sub-degree, diploma and certificate programmes in various disciplines. It has a student population of around 5,000 in 2025/2026 and nurtured more than 7,200 graduates since its inception in 2010.\nBeing a young and vibrant institution, TWC aspires to become a leading private university in the long term. It is planning to launch a number of new programmes, strengthen teaching and learning facilities and quality, and enhance research capability etc. in coming years. To cope with its continuous development, we are now inviting highly qualified candidates to fill the following post:\nDuties and Responsibilities\nThe appointee will be required to:\nAssist the Market Development & Public Relations Manager to develop and execute the programme promotion plan;\nExecute the marketing plan to enhance the College image;\nProvide visual outputs for the College website, social media, print and electronic publications;\nOrganize PR events / activities / exhibitions / ceremonies / campaigns, etc.;\nLiaise and coordinate with internal and external stakeholders for PR, marketing and alumni development activities;\nWork in collaboration with the wider team for communications, resources development, marketing and internal collaboration;\nProvide administrative support for CPRO including resource allocation, budget planning, procurement;\nProvide secretariat / administrative support to committees, meetings and events; and\nPerform any other duties to achieve unit’s objectives as assigned by Unit head.\nQualifications and Experience Required\ni) Preferably hold a recognized Bachelor’s degree in Marketing, Journalism, Communications, or a related discipline;\nii) Have at least 3 years’ relevant working experience, preferably in media, communications, public relations, or marketing;\niii) Demonstrate strong organizational and communication skills, with the ability to work independently and as part of a team;\niv) Be Proactive and adaptable, with good problem-solving skills;\nv) Possess excellent command of English and Chinese; and\nvi) Be proficient in common computer applications; knowledge of PowerPoint, Photoshop, Illustrator, or Chinese word processing will be an advantage.\nApplication\nSalary will be competitive and commensurate with qualifications and experience.\nTo apply, please submit your application via system. The College reserves the right to fill or not to fill the post. Applicants who are not contacted by the College 6 months after the application deadline may consider their applications unsuccessful. For enquiries, please phone or send WhatsApp to 9172-8618.\nApplication Deadline: Until the position is filled\nAll information and personal data collected will be used solely for recruitment related purposes. For more information about the College, please visit our website: https://www.twc.edu.hk .\nWE ARE AN EQUAL OPPORTUNITIES EMPLOYER",
+        "before": "Tung Wah College\nEstablished by Tung Wah Group of Hospitals (“TWGHs”) in 2010, Tung Wah College (TWC) is a self-financing degree-granting institution registered under the Post Secondary Colleges Ordinance (Cap.320). Following the educational ideals of TWGHs and leveraging on its renowned strengths and expertise, TWC aims to provide high quality tertiary education to nurture competent, socially responsible and caring professionals for the benefits of society.\nWith the staunch support of TWGHs, TWC has been developing rapidly and built up a niche in healthcare education. It is the first self-financing tertiary institution offering six professionally accredited degrees to train nurses and allied health professionals such as medical laboratory technologists, occupational therapists, diagnostic radiographer, therapeutic radiographer and physiotherapists. Besides, the College is also the first institution registered under Cap. 320 offering early childhood education degree and higher diploma programmes to train qualified kindergarten teachers and childcare professionals.\nCurrently, TWC has 4 schools (namely School of Arts and Humanities, School of Management, School of Medical and Health Sciences, and School of Nursing) running a total of 20 doctoral degree, bachelor degree, sub-degree, diploma and certificate programmes in various disciplines. It has a student population of around 5,000 in 2025/2026 and nurtured more than 7,200 graduates since its inception in 2010.\nBeing a young and vibrant institution, TWC aspires to become a leading private university in the long term. It is planning to launch a number of new programmes, strengthen teaching and learning facilities and quality, and enhance research capability etc. in coming years. To cope with its continuous development, we are now inviting highly qualified candidates to fill the following post:\nDuties and Responsibilities\nThe appointee will be required to:\nAssist the Market Development & Public Relations Manager to develop and execute the programme promotion plan;\nExecute the marketing plan to enhance the College image;\nProvide visual outputs for the College website, social media, print and electronic publications;\nOrganize PR events / activities / exhibitions / ceremonies / campaigns, etc.;\nLiaise and coordinate with internal and external stakeholders for PR, marketing and alumni development activities;\nWork in collaboration with the wider team for communications, resources development, marketing and internal collaboration;\nProvide administrative support for CPRO including resource allocation, budget planning, procurement;\nProvide secretariat / administrative support to committees, meetings and events; and\nPerform any other duties to achieve unit’s objectives as assigned by Unit head.\nQualifications and Experience Required\nApplicants should:\nPossess a recognized Bachelor’s degree in Marketing/ Journalism / Communications or a related discipline;\nHave at least 3 years’ relevant working experience, preferably in media, communications, public relations and marketing;\nHave good problem-solving, organizational, communication and interpersonal skills\nBe mature, self-motivated, proactive and ability of multi-tasking;\nCapable of creating Facebook posts, ads or Instagram posts, etc.;\nBe a good team player and work independently;\nHave excellent command of both written and spoken English and Chinese; and\nBe proficient in computer applications, and having knowledge of PowerPoint, Photoshop, Illustrator and Chinese word processing will be an advantage.\nApplication\nSalary will be competitive and commensurate with qualifications and experience.\nTo apply, please submit your application via system. The College reserves the right to fill or not to fill the post. Applicants who are not contacted by the College 6 months after the application deadline may consider their applications unsuccessful. For enquiries, please phone or send WhatsApp to 9172-8618.\nApplication Deadline: Until the position is filled\nAll information and personal data collected will be used solely for recruitment related purposes. For more information about the College, please visit our website: https://www.twc.edu.hk .\nWE ARE AN EQUAL OPPORTUNITIES EMPLOYER"
+      }
+    },
+    "job_id": "484882b0dff5b0d895cc0773",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Executive Officer"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "89246c282c1432ab1ceacccb",
+    "kind": "new",
+    "source_id": "thei",
+    "title": "Term Research Assistant I/II (Civil Engineering)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "0cc06812a1640d653801ea82",
+    "kind": "status",
+    "source_id": "thei",
+    "title": "Part-time Lecturer (Master of Business Administration in Digital Transformation)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "3bd8dc608b5b315d9625b5e4",
+    "kind": "status",
+    "source_id": "thei",
+    "title": "Professor / Associate Professor / Assistant Professor (Master of Business Administration in Digital Transformation)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "d01cd9b386e9e3dbe354f00f",
+    "kind": "status",
+    "source_id": "thei",
+    "title": "Senior Lecturer (Master of Business Administration in Digital Transformation)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "1ce2c47480790ce7f8abbdaf",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Assistant Lecturer (Whole Person Development)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "7e68871a61f3a308b35b9acc",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term / Temporary / Part-time Executive Assistant II"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "4d0de8cf17c0ce64e8253baf",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Day-time) Assistant Lecturer (Social Care and Play-based Services)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "5247846bfd9ffbbfab4b09b5",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "維修技工"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "8ec35ccb16bf3969c21e89c4",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Day-time) Lecturer (Social Care and Play-based Services)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "8f1c4fc35fac924afe0e1ba5",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "e6338b778739ad2c5e8d69ef",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "一級機械工"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "f09d0c2e262f5d8746a5c7f5",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Procurement Officer"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "bba414adb114a345e47503f2",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Temporary Research Assistant II (Project Code: R6958) (A&SS)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "job_id": "d9f1f1d9c886fdd77383b159",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant(s) I/II (Project no.: R7068) (A&SS) "
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "description": {
+        "after": "Founded in 1989, Hong Kong Metropolitan University (HKMU) is a modern, vibrant and dynamic university. We tailor our professional programmes to adapt to market trends and meet industry needs, thus providing our students with quality professional education and clear career paths.\nAs a faculty-driven, student-centred university in support of innovative teaching and learning, strategic research, and stakeholder outreach to provide maximum benefit to our communities, we conduct research that advances knowledge and enhances teaching, focusing on strategic areas, including digital humanities and literature, international business, gerontechnology, smart city, open and innovative education, and bilingual learning and teaching.\nHKMU is becoming an ever more vital link in addressing and helping Hong Kong to solve many difficult challenges – as part of our involvement in, and commitment to, the ‘metropolis’ of Hong Kong. Our plans to expand into the Greater Bay Area (GBA) will also cultivate talent to serve Hong Kong and the wider metropolitan GBA.\nFor more information about the University, please visit https://www.hkmu.edu.hk .\nWe are now looking for a suitable person to fill the following position in the School of Education and Languages:\nMajor Duties and Responsibilities\nThe appointee will assist the Principal Investigator for the Research Project “Study of the Distinctive Syntax of Classical Chinese Poetry Recommended for Primary Schools”. The appointee will be responsible mainly for the following:\nAssisting and supporting the Principal Investigator in implementing all aspects related to the research project;\nConducting preliminary research for the project and assisting in data collection, data analysis, and related research activities;\nProviding a wide range of administrative support to the project; and\nCarrying out other duties as assigned by Principal Investigator.\nCandidates\nCandidates should possess the following qualifications, experience and competence:\nA recognised master’s degree or above, preferably in Chinese Language, Chinese literature, or a related discipline;\nStrong ability and knowledge of Chinese Language and Literature;\nStrong organisational and planning skills, good interpersonal and communication skills, and competent at computer skills (MS Office using Word, Excel, PowerPoint etc.) as well as editing skills;\nBe self-motivated and meticulous;\nBe able to meet deadlines and work independently; and\nExcellent command of both written and spoken English and Chinese\nThe appointee will be normally assigned to work less than 68 hours per four consecutive weeks.\nTerms and Conditions for Appointment\nSuccessful candidate will be appointed on a temporary full-time contract. Benefits will be provided in accordance with the statutory provisions.\nTo Apply\nCandidates who are interested in joining us may submit their applications via the University’s eRecruitment System.\nThe personal data collected will be used for the purpose of considering your application for employment. For details, please refer to the “Personal Data (Privacy) Notice for Job Applicant” on the University’s website. If you are not contacted by the University within eight weeks from the closing date of application, you may assume that your application was unsuccessful. The University will continue to review applications until the position(s) is/are filled.",
+        "before": "Founded in 1989, Hong Kong Metropolitan University (HKMU) is a modern, vibrant and dynamic university. We tailor our professional programmes to adapt to market trends and meet industry needs, thus providing our students with quality professional education and clear career paths.\nAs a faculty-driven, student-centred university in support of innovative teaching and learning, strategic research, and stakeholder outreach to provide maximum benefit to our communities, we conduct research that advances knowledge and enhances teaching, focusing on strategic areas, including digital humanities and literature, international business, gerontechnology, smart city, open and innovative education, and bilingual learning and teaching.\nHKMU is becoming an ever more vital link in addressing and helping Hong Kong to solve many difficult challenges – as part of our involvement in, and commitment to, the ‘metropolis’ of Hong Kong. Our plans to expand into the Greater Bay Area (GBA) will also cultivate talent to serve Hong Kong and the wider metropolitan GBA.\nFor more information about the University, please visit https://www.hkmu.edu.hk .\nWe are now looking for a suitable person to fill the following position in the School of Education and Languages:\nMajor Duties and Responsibilities\nThe appointee will assist the Principal Investigator for the Research Project “Study of the Distinctive Syntax of Classical Chinese Poetry Recommended for Primary Schools”. The appointee will be responsible mainly for the following:\nAssisting and supporting the project investigator in implementing all aspects related to the research project;\nConducting preliminary research for the project and assisting in data collection, data analysis, and related research activities;\nProviding a wide range of administrative support to the project; and\nCarrying out other duties as assigned by project investigator.\nCandidates\nCandidates should possess the following qualifications, experience and competence:\nA recognised master’s degree or above, preferably in Chinese Language, Chinese literature, or a related discipline;\nStrong ability and knowledge of Chinese Language and Literature;\nStrong organisational and planning skills, good interpersonal and communication skills, and competent at computer skills (MS Office using Word, Excel, PowerPoint etc.) as well as editing skills;\nBe self-motivated and meticulous;\nBe able to meet deadlines and work independently; and\nExcellent command of both written and spoken English and Chinese\nHe/she will be normally assigned to work less than 68 hours per four consecutive weeks.\nTerms and Conditions for Appointment\nSuccessful candidate will be appointed on a temporary part-time contract. Benefits will be provided in accordance with the statutory provisions.\nTo Apply\nCandidates who are interested in joining us may submit their applications via the University’s eRecruitment System.\nThe personal data collected will be used for the purpose of considering your application for employment. For details, please refer to the “Personal Data (Privacy) Notice for Job Applicant” on the University’s website. If you are not contacted by the University within eight weeks from the closing date of application, you may assume that your application was unsuccessful. The University will continue to review applications until the position(s) is/are filled."
+      }
+    },
+    "job_id": "b733279737a3876894bfb9a9",
+    "kind": "updated",
+    "source_id": "hkmu",
+    "title": "Temporary Research Assistant I (Project No: R6980)  (E&L)"
+  },
+  {
+    "at": "2026-09-23T04:51:00+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "50617a5f8a979c0d4599b4e1",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Project Manager I, Office of Campus Development and Management"
   }
 ]
