@@ -10075,5 +10075,473 @@
     "kind": "status",
     "source_id": "hkust",
     "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "35c3ef62012371b365e958e2",
+    "kind": "new",
+    "source_id": "uowchk",
+    "title": "Part-time Teaching Assistants (ApL Drone Training), Faculty of Science and Technology"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "a14be0db7afa726327aa8b06",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part Time Research Assistant I / II"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {},
+    "job_id": "270618403a0e981bb2bf8c8e",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Student Affairs Assistant I"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "97c638613370caa5956958b0",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Professor / Associate Professor / Assistant Professor (Embedded and Physical AI)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "0e4ef3edc397d0784471cc7a",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Professor / Associate Professor / Assistant Professor (Optical Communication, Quantum Computing and Wireless Systems)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "d11c608a8b8228cc642634ef",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Professor / Associate Professor / Assistant Professor (AI for Health and Science)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "810698ee85b9c515c92c7e84",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Part-time Lecturer(s)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "c8ac829765d3a5791a6c4c92",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Professor/ Associate Professor/ Assistant Professor in Mathematics Education"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "33229ee4bf8afacc4fec9ae3",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Professor(s)/ Associate Professor(s) in Quantitative Marketing"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "adc50a795822537b4c54e79e",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Professor/ Associate Professor/ Assistant Professor in Education"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "f0ab5ef5a0c1c25b218d88fb",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Assistant Academic Services Manager/ Senior Academic Services Officer, SCE"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "78878a597b330c767a183d87",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Manager, Academic Registry"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "1654817cb75c539711a37183",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Research Assistant Professor, Department of Mathematics"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "2e92a3aad4b4d7f369eb1ce1",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Research Assistant, Department of Computer Science"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "353b6749ddb25a38dc372807",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Research Assistant Professor, Department of Biology"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "3a166ddf279a279af7c75569",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Assistant Officer, Human Resources Shared Services"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "4de591e070068359f4b027eb",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Research Assistant, Department of Biology"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "6f9d23d4221ea15da487b2fc",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Officer, Graduate School"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "ac4e96094ab0de0bb76ca65b",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Research Assistant, Centre for Quantitative Systems Biology"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "da000e0150b44a894a7d7b70",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Assistant Manager, Research Office"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "e49e296b1255fa2ebf28387d",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Post-Doctoral Research Fellow, Department of Biology"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "4f9be589d62f55ccfb7208ca",
+    "kind": "new",
+    "source_id": "cpce",
+    "title": "Lecturer in Electrical Engineering"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "683dd2f7ca15cf5011c56114",
+    "kind": "new",
+    "source_id": "cpce",
+    "title": "Lecturer in Artificial Intelligence"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-25",
+        "before": "2026-08-19"
+      }
+    },
+    "job_id": "7ab4a76b180310c119ec113f",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Assistant Administration Manager"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "78e48880152314b6433dc6fc",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Executive Officer"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "c6c039882b257ba1c49c2a54",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Registry Manager (Admissions)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "b87eeeb32d2d207eeeef159a",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Assistants of ENGL 3370EEF and ENGL 3373EEF (2026 Autumn Term)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "ab2d3da3751b9c9070d66581",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturers of ENGL 1202EEF (2027 Spring Term)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "dafef4a033c547fa8af45264",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Temporary Lecturers of ENGL 1202EEF (2027 Spring Term) (E&L) "
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "b93927d9fd38e37a0143d11a",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant II (N&HS)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "e2e272328b78f3ec8735f33d",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant I (Project No: R6929) (E&L)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "ba00088f7f1a73571d35fb1b",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Physical Education Officer II"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "a19d5af3e3a77a39b5232376",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Assistant Director"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-10-23",
+        "before": "2026-09-20"
+      },
+      "status": {
+        "after": "open",
+        "before": "closed"
+      }
+    },
+    "job_id": "7d359c00bc53ded8a818fb51",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "定期二級雜務員"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-10-12",
+        "before": "2026-09-28"
+      },
+      "description": {
+        "after": "香港專業教育學院（李惠利）\nDepartment / Section : 工程系\nRef. no : C/LWL-ENG/MEC2/09/26-AP1\n主要職責 ：\n(a)\n安裝、操作、定期維修及保養有關教學設施、工具和設備，並執行相關的改善和維修工程；\n(b)\n協助導師進行課前預備工作，包括準備教學及實務課堂所需的物料、工具及儀器等；\n(c)\n採購、收發、存取及管理工場／實驗室的物資、工具和儀器，並監察消耗品的使用情況及協助倉儲管理與運作；\n(d)\n監督初級員工及承建商進行的維修和保養工作／建設項目的進度、設備運輸、安裝工程、工場維護及評估工作安全；\n(e)\n搬運教學設備、儀器及處理棄置物資，並保持工場的安全及整潔；及\n(f)\n支援學院舉辦之活動、展覽和表演。\n入職條件 ：\n(a)\n(i)\n完成認可的相關訓練課程（包括學徒及技工訓練），並於取得有關學歷後具有最少兩年相關工作經驗； 或\n(ii)\n通過技能測試或相等水平測試，並具有最少兩年相關工作經驗；\n(b)\n懂得操控銑床、車床及三維打印機；\n(c)\n對電腦應用及操作有基本認識（包括電郵的收發及日常通訊和文書應用）；\n(d)\n能閱讀及書寫中文和簡單英語；及\n(e)\n持有急救證書／具保養及維修機械工程工場器材工作經驗者可獲優先考慮。\n備註 ：\n(1)\n請於申請表「(VI) 其他資料」欄內列出能操作的機器設備和技能。\n(2)\n應徵者需要參加技能測試。\n(3)\n受聘者或需外勤及在辦公時間以外工作。\n(4)\n為配合運作需要，受聘者日後可能會被調派至不同運作單位。",
+        "before": "香港專業教育學院（李惠利）\nDepartment / Section : 工程系\nRef. no : C/LWL-ENG/MEC2/09/26-AP1\n主要職責 ：\n(a)\n安裝、操作、定期維修及保養有關教學設施、工具和設備，並執行相關的改善和維修工程；\n(b)\n協助導師進行課前預備工作，包括準備教學及實務課堂所需的物料、工具及儀器等；\n(c)\n採購、收發、存取及管理工場／實驗室的物資、工具和儀器，並監察消耗品的使用情況及協助倉儲管理與運作；\n(d)\n監督初級員工及承建商進行的維修和保養工作／建設項目的進度、設備運輸、安裝工程、工場維護及評估工作安全；\n(e)\n搬運教學設備、儀器及處理棄置物資，並保持工場的安全及整潔；及\n(f)\n支援學院舉辦之活動、展覽和表演。\n入職條件 ：\n(a)\n(i)\n完成認可的相關訓練課程（包括學徒及技工訓練），並於取得有關學歷後具有最少兩年相關工作經驗； 或\n(ii)\n通過技能測試或相等水平測試，並具有最少兩年相關工作經驗；\n(b)\n懂得操控銑床、車床及三維打印機；\n(c)\n對電腦應用及操作有基本認識（包括電郵的收發及日常通訊和文書應用）；\n(d)\n能閱讀及書寫中文和簡單英語；及\n(e)\n持有急救證書／具保養及維修機械工程工場器材工作經驗者可獲優先考慮。\n備註 ：\n(1)\n申請人如具有在相關領域中豐富經驗和成就但缺乏所需的學術／專業資格，或者具有卓越的學術／專業資格但經驗較少也可以申請。\n(2)\n請於申請表「(VI) 其他資料」欄內列出能操作的機器設備和技能。\n(3)\n應徵者需要參加技能測試。\n(4)\n受聘者或需外勤及在辦公時間以外工作。\n(5)\n為配合運作需要，受聘者日後可能會被調派至不同運作單位。"
+      }
+    },
+    "job_id": "2b3c0fd39fc6362616b84365",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "二級機械工"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-10-31",
+        "before": "2026-09-30"
+      }
+    },
+    "job_id": "3d26e0d3407354f419fbe9ae",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "日間兼職考評員 (美髮業專業能力評估考核)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-10-31",
+        "before": "2026-09-30"
+      }
+    },
+    "job_id": "1265f376089856b3ab3fbdce",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "日間兼職考評員 (美容業專業能力考核)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-10-31",
+        "before": "2026-09-30"
+      }
+    },
+    "job_id": "cb7c3330badcb0480012ecce",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "Part-time (Day Time) Assessor (Arboricultural Industry)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-10-09",
+        "before": "2026-09-25"
+      }
+    },
+    "job_id": "42fb177248bf752df13c0e82",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "日間兼職教導員(電機與空調裝配課程)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "80ae09b7d1e72d642e065daf",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Part-Time (Daytime / Evening) Lecturer"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "job_id": "88d8a18cb2bb52c31d43fcb9",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "兼職餐飲服務員"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "95a6c14539b31ef9b5a7adb3",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Technician"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "ca8841e9151b16c3589be9e9",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Assistant Lecturer (Fashion and Image Design)"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "d8da48960305b1f5548d724a",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Registry Services Officer, Registry"
+  },
+  {
+    "at": "2026-09-25T05:03:22+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "2f56e857a2911889e4c0e003",
+    "kind": "status",
+    "source_id": "twc",
+    "title": "Temporary Assistant Information Technology Officer (11.5 months)"
   }
 ]
