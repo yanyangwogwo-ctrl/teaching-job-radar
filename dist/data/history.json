@@ -10736,5 +10736,57 @@
     "kind": "status",
     "source_id": "lingnan",
     "title": "Lecturer, Department of Chinese"
+  },
+  {
+    "at": "2026-09-27T05:24:27+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "912fa8853632c4c7a3ab323c",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Cleaner, School of Chinese Medicine"
+  },
+  {
+    "at": "2026-09-27T05:24:27+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "0219f6ff0dc2232c6dd25ccc",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Senior Information Technology Officer (End User Computing)"
+  },
+  {
+    "at": "2026-09-27T05:24:27+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "93b7c2e7f2b880216b96e244",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Research Assistant Professor, Department of Philosophy"
+  },
+  {
+    "at": "2026-09-27T05:24:27+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "a2e2e045394537b1dd00efd5",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Research Assistant Professor, Hong Kong Catastrophic Risk Centre"
   }
 ]
