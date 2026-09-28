@@ -10788,5 +10788,197 @@
     "kind": "status",
     "source_id": "lingnan",
     "title": "Research Assistant Professor, Hong Kong Catastrophic Risk Centre"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "changes": {},
+    "job_id": "270618403a0e981bb2bf8c8e",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Student Affairs Assistant I"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "75427c0e4789aaeebd8d87c0",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Associate Professor / Assistant Professor in Design"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "job_id": "6b89b8d4a05d5f6b6e1a51bb",
+    "kind": "new",
+    "source_id": "hsu",
+    "title": "Information Technology Services Centre - Technical Officer"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "5b0dbba0f995b2654c4e5962",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "School of Translation and Foreign Languages - Executive Officer / Assistant Officer"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "717cf7c39dc04301916e0f18",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Department of Social Science - Executive Officer"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "e6db3363c7b96e2e7bd6bd26",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Finance Office - Assistant Manager, Financial Planning"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "f66519a437dd807d1a0ac4cd",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Library - Library Assistant I/ Library Assistant II (Collections and Technical Services)"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "fa457cc7040c09de164c271a",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Research Associate / Senior Research Assistant / Research Assistant – Department of Computer Science"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-28",
+        "before": "2026-09-09"
+      }
+    },
+    "job_id": "1997a2e24004466a0c6d8a3a",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Digital Experience Specialist, Office of Information Technology"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-28",
+        "before": "2026-09-09"
+      }
+    },
+    "job_id": "5deb3187edcdc13d69d3679d",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Systems Analyst (Digital Experience Services)"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "job_id": "8fc7a9d4efe8482892be99d1",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Knowledge Transfer Officer"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "518bf9dba35d24a171bfe25a",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Senior Multimedia Specialist, University Engagement Office"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "job_id": "9bd8c5c7c90d33fc3121641e",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Senior Instructor (Food Preparation Western)"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "job_id": "15df9e022a78059f445a0759",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Manager"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "a9d92096a5b305938d7eeb49",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "e76c51b8e4168a6c51df6722",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-09-28T05:31:15+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "77a2b108d08cad80e99d7459",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-Time Technical Assistant (A&SS) "
   }
 ]
