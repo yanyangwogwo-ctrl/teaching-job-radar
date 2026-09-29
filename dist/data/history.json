@@ -10980,5 +10980,214 @@
     "kind": "status",
     "source_id": "hkmu",
     "title": "Part-Time Technical Assistant (A&SS) "
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "job_id": "741d288b935ea23a4d2e1700",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time Research Assistant I/II in the Division of Haematology, Medical Oncology and Haemopoietic Stem Cell Transplantation"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {},
+    "job_id": "4e6204143fdcf409b7d7728d",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Fractional / Full-Time Scientific Officer (holding the title of Educational Psychologist) in the Department of Psychology"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {},
+    "job_id": "a34a941717fdff69e30495bc",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Nurse / Enrolled Nurse (several posts) in the Division of Epidemiology and Biostatistics, School of Public Health"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {},
+    "job_id": "270618403a0e981bb2bf8c8e",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Student Affairs Assistant I"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-10-31",
+        "before": "2026-09-30"
+      }
+    },
+    "job_id": "bae393f9daae433918cf4b4e",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part Time Student Research Assistant"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "job_id": "3c98077e3f465f82b7e96db7",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Lecturer (Aircraft Maintenance Engineering / Aviation Systems and Operations)"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-10-07",
+        "before": "2026-09-30"
+      }
+    },
+    "job_id": "575ae2bb4d27d05221d50074",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "司機"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-10-05",
+        "before": "2026-09-28"
+      }
+    },
+    "job_id": "95a36b5fbdd53bb91d1b6497",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Assistant Lecturer (English)"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-10-05",
+        "before": "2026-09-28"
+      }
+    },
+    "job_id": "461ad94ac5b8d13ebfd63c71",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Assistant Lecturer (Information Technology)"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "job_id": "c7dafa0047d09338a0c4b597",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Project Supervisor [BSc (Hons) Human Biosciences]"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "1fef9eeab2cf1ee3cba2f544",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Instructor (Western Food Preparation)"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "4c9c5cedf0a63a1c8a2abcfa",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term / Part-time Evening Instructor"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "688558132539389db31e8d89",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Lecturer (Airport Operations Management)"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "999ee19c9c7530b327cbe888",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term / Part-time (Day-time) Assistant Lecturer"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "aa5b0c9858aa7ea8536f3af2",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "二級機械工"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "b73dd9d0ca707b01d4a7db31",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Deputy Executive Director"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "d88dbf6c76e820b46a4a97a2",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Assistant Systems Manager (Systems Development)"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "job_id": "3bc053f576f80f80910e8089",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Research Associate / Assistant I/II / Technical Assistant (Project no: R6935) (B&A)"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "job_id": "913d64da72b980ae9c259a10",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Technical Assistant(s) (Project No.: R6975) (E&L)"
+  },
+  {
+    "at": "2026-09-29T05:49:23+00:00",
+    "job_id": "5bd798e4baed2e4f07bd39af",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant(s) (Project No: R6975) (E&L) "
   }
 ]
