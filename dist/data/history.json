@@ -11189,5 +11189,347 @@
     "kind": "new",
     "source_id": "hkmu",
     "title": "Part-time Research Assistant(s) (Project No: R6975) (E&L) "
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "1899803220cc1e0d45a6a7ca",
+    "kind": "new",
+    "source_id": "hkuspace",
+    "title": "兼職教師招聘 - 智能平台的應用課程"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "80f18166b0fcbc46b2f8c0b8",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time Research Assistant"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "6e1789a14c6a36812263b2df",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time Student Research Assistant"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {},
+    "job_id": "0c57f798dc903dabc33b0330",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Research Assistant I / Senior Research Assistant"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-10-09",
+        "before": "2026-09-30"
+      }
+    },
+    "job_id": "4e6204143fdcf409b7d7728d",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Fractional / Full-Time Scientific Officer (holding the title of Educational Psychologist) in the Department of Psychology"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "d3c36c63e0b85f9b8e316f0b",
+    "kind": "new",
+    "source_id": "hkbu-sce",
+    "title": "Senior Academic Services Manager (Quality Assurance Support Section)"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "54a1aae4d8e65363b67e2d5a",
+    "kind": "new",
+    "source_id": "hkbu-sce",
+    "title": "Assistant Academic Services Manager / Senior Academic Services Officer"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "09108ab43e1690c8c745c4b2",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Information Technology Services Centre - Technical Officer"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "7d4cd5420c909d7e52c9fc71",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "學生事務處 - 兼職體育助理"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "e262459cfbafb93e654c93d5",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "學生事務處 - 體育助理"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-30",
+        "before": "2026-08-26"
+      }
+    },
+    "job_id": "e408a8f4e14f5ed30a138fdd",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "高級技術員 (維修及保養)，物業處"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-30",
+        "before": "2026-08-19"
+      }
+    },
+    "job_id": "1a93bbdd693cdac87fc29a75",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Engineer, Estates Office"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "82f25ccc2bf3614d61e87f5e",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Academic Services Manager (Quality Assurance Support Section), School of Continuing Education"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "e5e334fac410f818514612d8",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Research Assistant Professor,Centre for Chinese Herbal Medicine Drug Development"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "847a78b47af52b4bdfd299d2",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Assistant Engineer (Operation Maintenance Services)"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "bb7ad8827d9a5b66fd6b670c",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Information Technology Manager (Digital Enablement and Solution)"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "8165429ab450505a42882ad6",
+    "kind": "new",
+    "source_id": "twc",
+    "title": "Quality Assurance Manager / Assistant Quality Assurance Manager"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-30",
+        "before": "2026-09-01"
+      }
+    },
+    "job_id": "5a25ecdd58c18007e9c83632",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Associate Professor/Assistant Professor(Research Track) in Occupational Therapy"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-30",
+        "before": "2026-09-01"
+      }
+    },
+    "job_id": "188aef5c7e15b74657490d19",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Assistant Registrar"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-09-30",
+        "before": "2026-09-01"
+      }
+    },
+    "job_id": "4b969cbdcd5d5ace26ecb76a",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Assistant Manager"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "44e24b13827e97d07aa38aad",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term / Temporary / Part-time (Daytime) Instructor (Jewellery)"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "e4fbb97d9a4073c81fdad6ba",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-10-16",
+        "before": "2026-10-02"
+      }
+    },
+    "job_id": "07af2b482974fd66b9901dba",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Assistant Lecturer (Beauty Care)"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "c58e3449c9bcecffdaa24819",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "夜間兼職教導員"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "839db2e81732764ed2a539ef",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Officer"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "a256416f178906a1a9e394e7",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "e7d8de96b6a28b4a76ee425c",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "7443ec92616fcfe3eadfa529",
+    "kind": "new",
+    "source_id": "hkapa",
+    "title": "LIBRARY OFFICER (for Systems & Digital Services)"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "d3987e6166def2f35731ff20",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant (Project code: R7079) (A&SS)"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "2cab2e50e70cb886f1124445",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Registered Nutritionist/ Registered Dietitian (Freelance) (N&HS) (Project No. R7070)"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "126a24762e81d894775e013c",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Tutorship (2027 Spring Term starting in January) (E&L)"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "job_id": "c272b4bf7d9037cfa8f36a20",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Assistant(s) [2026 Autumn] (S&T)"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "29cf438fd2bf7e30074d7c91",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Assistant of GEN E143CF and GEN 1043ECF (2026 Autumn Term) (E&L)"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "a33cfc56b67e8e2d4f30f122",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Research Officer / Research Officer, Department of Psychology"
+  },
+  {
+    "at": "2026-09-30T05:39:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "9c64964d3e2c701545940132",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "全職/半職宿舍服務員"
   }
 ]
