@@ -11531,5 +11531,305 @@
     "kind": "status",
     "source_id": "hku",
     "title": "全職/半職宿舍服務員"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "description": {
+        "after": "兼職教師招聘 - 智能平台的應用課程\n[RF: 2026/27-PT-065-JDB]\n職責： 獲聘者將教授以下 智能平台的應用 課程 的兼讀課程：\n智能零售\n零售管理\n顧客服務\n存貨管理\n員工培訓及人事管理\n商業計劃\n申請人須符合以下其中一項資格：\n持有碩士學位，並具備五年相關行業工作經驗；或\n持有學士學位，並具備八年相關行業工作經驗；或\n具備十五年相關行業工作經驗；及\n良好的溝通和人際交往能力以及有效的課堂管理能力。\n申請方法： 請填妥申請表並在截止申請日期前寄交九龍荔枝角道八八八號南商金融創新中心十樓 A5 室香港大學專業進修學院學務部教師支援組。來函須註明「職位編號」。申請表可透過互聯網站 http://hkuspace.hku.hk/jobs 下載。申請人亦可直接於該互聯網上提交申請。\n截止申請日期 : 持續進行\n申請表內所提供的資料將只作香港大學專業進修學院招聘用途。申請人於八星期內不被邀請參加面試將視作落選，相關申請表格將於十二個月後被銷毀。\nPosted on:\n29-Sep-2026",
+        "before": "兼職教師招聘 - 智能平台的應用課程\n[RF: 2026/27-PT-065-JDB]\n職責： 獲聘者將教授以下 智能平台的應用 課程 的兼讀課程：\n零售管理\n顧客服務\n存貨管理\n員工培訓及人事管理\n智能零售\n商業計劃\n申請人須符合以下其中一項資格：\n持有碩士學位，並具備五年相關行業工作經驗；或\n持有學士學位，並具備八年相關行業工作經驗；或\n具備十五年相關行業工作經驗；及\n良好的溝通和人際交往能力以及有效的課堂管理能力。\n申請方法： 請填妥申請表並在截止申請日期前寄交九龍荔枝角道八八八號南商金融創新中心十樓 A5 室香港大學專業進修學院學務部教師支援組。來函須註明「職位編號」。申請表可透過互聯網站 http://hkuspace.hku.hk/jobs 下載。申請人亦可直接於該互聯網上提交申請。\n截止申請日期 : 持續進行\n申請表內所提供的資料將只作香港大學專業進修學院招聘用途。申請人於八星期內不被邀請參加面試將視作落選，相關申請表格將於十二個月後被銷毀。\nPosted on:\n29-Sep-2026"
+      }
+    },
+    "job_id": "1899803220cc1e0d45a6a7ca",
+    "kind": "updated",
+    "source_id": "hkuspace",
+    "title": "兼職教師招聘 - 智能平台的應用課程"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "f064f460efeb89a3432335de",
+    "kind": "status",
+    "source_id": "hkuspace",
+    "title": "Part-time Teacher (Housing and Built Environment) in the College of Humanities and Law"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "job_id": "ce49ec6246e0afe6865ab5fd",
+    "kind": "new",
+    "source_id": "polyu",
+    "title": "Professor / Associate Professor / Assistant Professor in Nursing"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "f9b58402d6790a149fb36adf",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Teaching Fellow"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "title": {
+        "after": "Senior Academic Services Manager (Quality Assurance Support Section), SCE",
+        "before": "Senior Academic Services Manager (Quality Assurance Support Section), School of Continuing Education"
+      }
+    },
+    "job_id": "82f25ccc2bf3614d61e87f5e",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Academic Services Manager (Quality Assurance Support Section), SCE"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "missing"
+      }
+    },
+    "job_id": "b3b8cac609b9ff38c34118ef",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Project Assistant (Talented Athletes Direct Admission Scheme)"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-10-15",
+        "before": "2026-10-01"
+      }
+    },
+    "job_id": "403ed11e236c41f8be65c768",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "教導員(屋宇裝備)"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "50c85a3e115ff1c5d2af081c",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time Lecturer"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "667f28995befeddcc1a8e8ea",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time Executive Assistant II"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "bd078c0257f427384e446621",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "fff658fd4a74b2175f69eebd",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time Assistant Lecturer (Music and Media Production)"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "138d5c21cbd39c2273a6c641",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Technical Assistants (Project No.: 40025) (E&L)"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "5da3ef8b52349843c127e08e",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistants (Project No.: 40025) (E&L)"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "b733279737a3876894bfb9a9",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Temporary Research Assistant I (Project No: R6980)  (E&L)"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "job_id": "ef3fc41c74096a6b33781a4f",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Research Officer (Computational Text Analysis and Qualitative Research), SOCSP"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "3a6c7baaf35c3df1ec3b3818",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Senior Research Officer / Research Officer, Department of Sociology and Social Policy"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "c0de63c196970e26838b2587",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Administrative Officer, Department of Economics"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "37970d2c63ea3bc13b8dd3bf",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Full-time/Part-time Research Assistant I/II (several posts)"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "469ff74ea6207871ca790c74",
+    "kind": "status",
+    "source_id": "twc",
+    "title": "Assistant Executive Officer (Student Wellness and Inclusion)"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "83c4faf1953d446feafc199e",
+    "kind": "status",
+    "source_id": "cuhk",
+    "title": "Lecturer"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "92304f4292042aae2171a170",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Part-time Pharmacist"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "e80bfd4164d18578646975db",
+    "kind": "status",
+    "source_id": "twc",
+    "title": "Student Affairs Officer (Career Services)"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "ef6e011e8779aa557b6b399b",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Part-Time Lecturer in Population and Policy Analysis"
+  },
+  {
+    "at": "2026-10-01T06:04:23+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "f32090de6822b7ee4d02db0c",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Adjunct Associate Professor, Adjunct Assistant Professor, and Part-time Hourly-paid Lecturer in the Division of Landscape Architecture"
   }
 ]
