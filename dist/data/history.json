@@ -12271,5 +12271,270 @@
     "kind": "status",
     "source_id": "cuhk",
     "title": "Assistant Professor (Ancient World History)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "4ed264f13a5e3059c0bf9b9d",
+    "kind": "new",
+    "source_id": "uowchk",
+    "title": "Senior Lecturer / Principal Lecturer / Assistant Professor / Associate Professor in Social Work, Faculty of Social Sciences"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "96c294aca358aabd350d7d2e",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-Time Research Nurse"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "8581ac8a734f6f82ee5316e9",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Professor / Associate Professor / Assistant Professor in Nursing"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "dc8d206e18fa9a1eeab32243",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Assistant Professor in Artificial Intelligence and Humanities (two posts)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "5119b871b0e5a1bb923369fd",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Artificial Intelligence and Creative Media)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "0d45fe28789021a9204efd2a",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Film, Cinematography and Virtual Production)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "8240568ab2f56ae0ba2a44e9",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Games)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "e4dd6ddfa048e9357ece2d8a",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Media Art)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "a1f5ed1e05c514866c43c413",
+    "kind": "new",
+    "source_id": "hsu",
+    "title": "School of Communication - Assistant Officer / Executive Assistant"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "862f14df18b83e0bc6e2c6c1",
+    "kind": "new",
+    "source_id": "hsu",
+    "title": "Student Affairs Office - Temporary Assistant Officer"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "2b6833ea64ba701e34d0720c",
+    "kind": "new",
+    "source_id": "hsu",
+    "title": "School of Business - Executive Officer"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "ca458a48551ed91fb8181d9f",
+    "kind": "new",
+    "source_id": "hsu",
+    "title": "Research Assistant – Department of Supply Chain and Information Management"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "8b1e7a111994d26c1d4a4dfe",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Senior Executive Officer, Academic Registry"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "3f6c63ea8e8e5b5b9da558ac",
+    "kind": "new",
+    "source_id": "twc",
+    "title": "Assistant Executive Officer, Student Development"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "d237cb95a71c5cf2496d454b",
+    "kind": "new",
+    "source_id": "hkct",
+    "title": "Information Technology Officer (Network)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "d93b8bd5ba6402cfb400e4f1",
+    "kind": "new",
+    "source_id": "hkapa",
+    "title": "EDUCATIONAL DESIGNER (DIGITAL LEARNING)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "169210af6f9cd5fffd569258",
+    "kind": "new",
+    "source_id": "hkapa",
+    "title": "SECRETARY (MUSIC)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "370222494b35b41f7450a4d8",
+    "kind": "status",
+    "source_id": "hkapa",
+    "title": "BRANCH LIBRARY OFFICER"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "cae9f93d62048bb3f27e7681",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Lecturer (Hospitality Management)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "716e7da72302f68c86e42a0e",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Project Manager (Architect)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "9e4f36b708e171f884539f10",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Technician"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "fe8a33b16b4c5f50f521ef43",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Part-time Lecturer (Intellectual Property)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "1ead431da8b8246ea9cb0229",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "d9218bee5a610c86b6366ce4",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Assistant Lecturer (Special Educational Needs Support)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "ffbaa7ed90a75bb4007725cc",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Project Officer (Mega Sports Events Talent)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "1a392aa03aae17a75eaa2ce9",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant II (N&HS) (Project No. R6A30)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "917f08cbac86943664dee153",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Technical Assistant (N&HS) (Project No. R6A30)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "262fa0a21310824419b0ce79",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Temporary Research Assistant II (N&HS) "
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "09a3cea1836f1834d891b14d",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Temporary Research Assistant I/II (N&HS) (Project No. Q1129)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "3bc053f576f80f80910e8089",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Research Associate / Assistant I/II / Technical Assistant (Project no: R6935) (B&A)"
+  },
+  {
+    "at": "2026-10-03T05:24:17+00:00",
+    "job_id": "e20f3b4d38cdbf804725e23a",
+    "kind": "new",
+    "source_id": "hpshcc",
+    "title": "Executive Assistant I (Ref: EAI/ft/26-03)"
   }
 ]
