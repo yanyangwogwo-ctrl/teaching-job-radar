@@ -12536,5 +12536,122 @@
     "kind": "new",
     "source_id": "hpshcc",
     "title": "Executive Assistant I (Ref: EAI/ft/26-03)"
+  },
+  {
+    "at": "2026-10-04T06:00:09+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "9ed4623de2e895e511c6e17e",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Part-time Instructors for Diploma of College Foundation Studies (Full Time)"
+  },
+  {
+    "at": "2026-10-04T06:00:09+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "a0baef6e31177729e5a79c6e",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Part-time Instructor for Short Course"
+  },
+  {
+    "at": "2026-10-04T06:00:09+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "d3b0a47e6d1daccc02ffc61c",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "兼職導師 (應用教育文憑課程)"
+  },
+  {
+    "at": "2026-10-04T06:00:09+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "c50bccf9fc5f80ecb723e742",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Clinical Associate / Teaching Fellow in Radiography"
+  },
+  {
+    "at": "2026-10-04T06:00:09+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "642eb5ba36d97077972e0e65",
+    "kind": "status",
+    "source_id": "cpce",
+    "title": "Visiting Lecturer (part-time) in various subject areas / Visiting Lecturer (part-time) in Academic English / Visiting Lecturer (part-time) in AI and Technology-assisted Language Teaching and/or Learning / Visiting Lecturer (part-time) in AI Applications in Media and Creative Industries / Visiting Lecturer (part-time) in Chinese / Visiting Lecturer (part-time) in Chinese Media Studies / Visiting Lecturer (part-time) in Learning Analytics"
+  },
+  {
+    "at": "2026-10-04T06:00:09+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "05a47d09fa3e1727bdf75c1c",
+    "kind": "status",
+    "source_id": "hkct",
+    "title": "Assistant Course Development and Management Officer"
+  },
+  {
+    "at": "2026-10-04T06:00:09+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "286ba57dc754a80582887b20",
+    "kind": "status",
+    "source_id": "hkct",
+    "title": "培訓及就業主任"
+  },
+  {
+    "at": "2026-10-04T06:00:09+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "16aaf4657d483a766beec167",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Alumni Affairs Officer/ Assistant Alumni Affairs Officer, OIAAA"
+  },
+  {
+    "at": "2026-10-04T06:00:09+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "88ba4bbe5ead828136d8a208",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Part-time Helper, Office of National Engagement"
   }
 ]
