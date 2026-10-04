@@ -30913,7 +30913,7 @@
     "automation_active": true,
     "data_kind": "official-live-crawl",
     "discord_configured": false,
-    "generated_at": "2026-10-04T06:00:09+00:00",
+    "generated_at": "2026-10-04T06:15:48+00:00",
     "heartbeat_configured": false,
     "last_run": {
       "finished_at": "2026-10-04T06:15:35+00:00",
