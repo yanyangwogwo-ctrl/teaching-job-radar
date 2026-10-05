@@ -12653,5 +12653,289 @@
     "kind": "status",
     "source_id": "lingnan",
     "title": "Part-time Helper, Office of National Engagement"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "job_id": "d4a2cb8c0519be9df03411ea",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time Research Assistant I"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {},
+    "job_id": "a14be0db7afa726327aa8b06",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part Time Research Assistant I / II"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "2a58816d8b79e892a35645e2",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Uncovering the Synergy of Seru Formation and Seru Scheduling”, funded by the Research Grants Council.\nPostdoctoral Fellow - Department of Supply Chain and Information Management"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "2ba38e710517ac9e10439e09",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Global Affairs Office – Executive Officer"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "6cf17af3fe87e87dc82d80f4",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Finance Office – Procurement Assistant"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "9e099916168ee184036cd665",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Student Affairs Office – Senior Student Counsellor"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "a5ff5ccfa03923b44b63017b",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "A New Item-on-Pod Replenishment Approach”, funded by the Research Grants Council.\nPostdoctoral Fellow (Full-time / Part-time) – Department of Supply Chain and Information Management"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "c4386f09b47a1d646e004847",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Department of Mathematics, Statistics and Insurance – Part-time Lecturer"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "f17eff361e7da74bb8025c2f",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Uncovering the Synergy of Seru Formation and Seru Scheduling”, funded by the Research Grants Council.\nSenior Research Assistant - Department of Supply Chain and Information Management"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "job_id": "31b930b594805bbfafcc8318",
+    "kind": "new",
+    "source_id": "hksyu",
+    "title": "Part-time Lecturer"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "job_id": "2a70c2c9dec12a4d881a7e02",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Research Assistant Professor (CBRC), School of Chinese Medicine"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "job_id": "13615b3c4ec8bf38af050656",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Research Assistant Professor, School of Chinese Medicine"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "job_id": "0fefc0d4175c3e298f1eb6b2",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Assistant Executive Officer, Office of the Dean of Science and Technology"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "bc2ee706c77b5c9214ab7bcf",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Digital Experience Specialist, Office of Information Technology"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-04",
+        "before": "2026-09-06"
+      }
+    },
+    "job_id": "484882b0dff5b0d895cc0773",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Executive Officer"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-04",
+        "before": "2026-09-06"
+      }
+    },
+    "job_id": "1bd56dbea74e510df7972ef4",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Temporary Human Resources Officer (12 months)"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "006dc71c61668357055c9e1e",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term / Temporary Executive Assistant II"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "7e68871a61f3a308b35b9acc",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term / Temporary / Part-time Executive Assistant II"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "88d8a18cb2bb52c31d43fcb9",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "兼職餐飲服務員"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "1f290da9118db262bd21d25a",
+    "kind": "status",
+    "source_id": "hkapa",
+    "title": "PROJECT OFFICER"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "7443ec92616fcfe3eadfa529",
+    "kind": "status",
+    "source_id": "hkapa",
+    "title": "LIBRARY OFFICER (for Systems & Digital Services)"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "d9f1f1d9c886fdd77383b159",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant(s) I/II (Project no.: R7068) (A&SS) "
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "2acecf2d968eaf471690b68f",
+    "kind": "status",
+    "source_id": "hpshcc",
+    "title": "Temporary Assistant Counsellor (Ref# SD/ft/26-01)"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "job_id": "9c3cba67d508f7279725bc39",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Assistant Executive Officer (Research Postgraduate Team), School of Graduate Studies"
+  },
+  {
+    "at": "2026-10-05T05:49:16+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "ad052ff3074f280ed0222439",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Research Officer, School of Graduate Studies"
   }
 ]
