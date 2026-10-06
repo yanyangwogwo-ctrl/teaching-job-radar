@@ -270,6 +270,7 @@ def parse_cuhk_detail(job, html):
 
 def collect_cuhk(source, client):
     result, indexed, page, expected = Batch(), {}, 1, None
+    page_sizes, rows_read = [], 0
     endpoint = urljoin(source['url'], '/careersection/rest/jobboard/searchjobs?lang=en&portal=10115020119')
     try:
         while True:
@@ -293,6 +294,8 @@ def collect_cuhk(source, client):
                              unposting_raw=fields[3])
                 job['employment_type'] = employment_of(job['title'])
                 indexed[job['id']] = job
+            page_sizes.append(len(data['requisitionList']))
+            rows_read += len(data['requisitionList'])
             result.pages += 1
             if page * size >= total:
                 result.explicit_empty = total == 0
@@ -300,7 +303,8 @@ def collect_cuhk(source, client):
             page += 1
         if len(indexed) != expected:
             result.complete = False
-            result.errors.append(f'已讀完 {page} 頁，但找到 {len(indexed)} 個職位，系統顯示 {expected}；暫不判定舊職位消失。')
+            sizes = '、'.join(map(str, page_sizes))
+            result.errors.append(f'官方回報 {expected} 個職位；已讀取 {result.pages} 頁（每頁 {sizes} 列），合共 {rows_read} 列、{len(indexed)} 個不重複職位。數量仍未核對一致，暫不判定舊職位消失。')
     except (CrawlError, KeyError, ValueError, IndexError) as error:
         result.complete = False
         result.errors.append(str(error) if isinstance(error, CrawlError) else 'CUHK 公開搜尋格式有變。')
@@ -391,14 +395,19 @@ def collect_official(source, client):
             # Listing is useful, but challenged details are not a full-text feed.
             # No access retry against those detail hosts after the audit denial.
             result.complete = False
-            result.errors = ['已讀取官方清單；詳情平台要求存取驗證，內文及相關度未能完整核對。']
+            result.errors = ['官方清單已更新；詳情讀取因先前的存取驗證限制暫停，本輪未重新嘗試。職位內文及相關度未能完整核對。']
             return result
         if adapter == 'hkust':
             from .peoplesoft import fetch_hkust_detail, HOST
             restricted = [job for job in result.jobs if urlsplit(job['url']).hostname != HOST]
             if restricted:
                 result.complete = False
-                result.errors.append(f'{len(restricted)} 則職位的詳情平台仍有存取限制；其餘舊招聘平台廣告另行讀取。')
+                interfolio_count = sum(urlsplit(job['url']).hostname == 'apply.interfolio.com' for job in restricted)
+                other_count = len(restricted) - interfolio_count
+                if interfolio_count:
+                    result.errors.append(f'{interfolio_count} 則職位的 Interfolio 詳情讀取尚未接入；本輪只取得清單資料，未重新嘗試該平台。')
+                if other_count:
+                    result.errors.append(f'{other_count} 則職位使用尚未接入的其他詳情平台；本輪只取得清單資料，需核對公開讀取方式。')
             failures = 0
             for job in result.jobs:
                 if urlsplit(job['url']).hostname != HOST:

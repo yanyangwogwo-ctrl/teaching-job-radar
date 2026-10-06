@@ -75,6 +75,8 @@ def reconcile(state: dict, source: dict, batch: Batch, now: str, prefs: dict) ->
         old = state['jobs'].get(key)
         job = dict(incoming)
         if old and not job.get('detail_complete'):
+            # Only a verified live advertisement may undo an explicit closure.
+            job['source_closed'] = bool(job.get('source_closed') or old.get('source_closed'))
             for field in ('title', 'description', 'match_text', 'employment_type'):
                 job[field] = old.get(field, job.get(field))
             if not job.get('department'):
@@ -91,7 +93,8 @@ def reconcile(state: dict, source: dict, batch: Batch, now: str, prefs: dict) ->
         job['first_seen'] = old['first_seen'] if old else now
         job['last_seen'] = now
         job['missing_count'] = 0
-        job['status'] = 'closed' if job.get('deadline_type') == 'closing' and job.get('deadline') and job['deadline'] < today else 'open'
+        dated_closed = job.get('deadline_type') == 'closing' and job.get('deadline') and job['deadline'] < today
+        job['status'] = 'closed' if job.get('source_closed') or dated_closed else 'open'
         job['eligible_new_notification'] = old.get('eligible_new_notification', False) if old else not baseline
         job['changed_at'] = old.get('changed_at', now) if old else now
         if not old:
@@ -110,7 +113,7 @@ def reconcile(state: dict, source: dict, batch: Batch, now: str, prefs: dict) ->
                 continue
             before = dict(old)
             old['missing_count'] = old.get('missing_count', 0) + 1
-            if old.get('deadline_type') == 'closing' and old.get('deadline') and old['deadline'] < today:
+            if old.get('source_closed') or (old.get('deadline_type') == 'closing' and old.get('deadline') and old['deadline'] < today):
                 old['status'] = 'closed'
             elif old['missing_count'] >= prefs['missing_after_successes']:
                 old['status'] = 'missing'

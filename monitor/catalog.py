@@ -73,6 +73,13 @@ def parse_catalog_page(source, html, url=None):
         explicit = field_at(row, selectors.get('employment_type')) or source.get('employment_type', '')
         job['employment_type'] = employment_of(title, explicit)
         closing = field_at(row, selectors.get('deadline'))
+        closing_node = node_at(row, selectors.get('deadline'))
+        if closing_node and source.get('deadline_attribute'):
+            attribute_date = closing_node.get(source['deadline_attribute'], '').strip()
+            if attribute_date:
+                if not source_date(attribute_date, source):
+                    raise CrawlError('職位清單的截止日期欄位格式改變，需核對。')
+                closing = attribute_date
         parsed = source_date(closing, source)
         if parsed:
             job.update(deadline=parsed, deadline_type='closing', deadline_raw=closing)
@@ -91,6 +98,16 @@ def parse_catalog_detail(source, job, html):
     soup = soup_of(html)
     content = soup.select_one(selectors['detail_body'])
     if not content:
+        # A stale listing can still link to an explicitly filled TWC vacancy.
+        # Confirm both the exact notice and the retained job title; a generic
+        # error/login/empty page is never evidence that a vacancy has closed.
+        display = soup.select_one('.jobDisplay') if source['id'] == 'twc' else None
+        title_text = clean_text(soup.title.get_text(' ', strip=True)) if soup.title else ''
+        expected_title = clean_text(job['title']) + ' Job Details | TWC'
+        if (display and title_text.casefold() == expected_title.casefold()
+                and clean_text(display.get_text(' ', strip=True)) == 'Sorry, this position has been filled.'):
+            job.update(source_closed=True, detail_complete=False)
+            return job
         raise CrawlError('詳情頁缺少已確認的職位內容區塊。')
     for selector in source.get('detail_remove', []):
         for element in content.select(selector):
@@ -99,6 +116,7 @@ def parse_catalog_detail(source, job, html):
     if len(text) < 100:
         raise CrawlError('職位詳情內文過短，需核對原文。')
     title = field_at(soup, selectors.get('detail_title')) or job['title']
+    job.pop('source_closed', None)
     job.update(title=title, description=text, match_text=text, detail_complete=True)
     department = field_at(soup, selectors.get('detail_department'))
     if department:
@@ -167,7 +185,9 @@ def read_details(source, client, result, detail=None):
             failures = 0
         except (CrawlError, ValueError, KeyError, IndexError) as error:
             result.complete = False
-            result.errors.append(str(error) if isinstance(error, CrawlError) else '職位詳情格式改變，保留清單及舊記錄。')
+            reason = str(error) if isinstance(error, CrawlError) else '職位詳情格式改變，保留清單及舊記錄。'
+            label = (job.get('reference') or job['title'])[:100]
+            result.errors.append(f'職位 {label}：{reason}')
             failures += 1
             if getattr(error, 'stop_source', False) or failures >= 3:
                 break

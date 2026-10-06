@@ -14,6 +14,21 @@ class CrawlError(RuntimeError):
         self.stop_source = stop_source
 
 
+def tls_failure_reason(error):
+    # Inspect locally but emit only fixed labels, never exception URLs,
+    # query strings, headers or certificates.
+    message = str(error).upper()
+    reasons = (
+        ('UNSAFE_LEGACY_RENEGOTIATION_DISABLED', '網站使用不相容的舊式 TLS 重新協商'),
+        ('CERTIFICATE_VERIFY_FAILED', '網站憑證驗證失敗'),
+        ('TLSV1_ALERT_PROTOCOL_VERSION', '網站 TLS 協議版本不相容'),
+        ('SSLV3_ALERT_HANDSHAKE_FAILURE', '網站 TLS 握手失敗'),
+        ('UNEXPECTED_EOF_WHILE_READING', '網站在 TLS 連線期間提早中斷'),
+        ('WRONG_VERSION_NUMBER', '網站回應的 TLS 版本不符'),
+    )
+    return next((label for marker, label in reasons if marker in message), '網站 TLS 連線未完成，原因待核對')
+
+
 def robot_path(value):
     # RFC 9309 comparison: decode unreserved octets, retain encoded reserved
     # characters, and compare non-ASCII text as percent-encoded UTF-8.
@@ -137,6 +152,9 @@ class PublicClient:
             except requests.RequestException as error:
                 if response is not None:
                     response.close()
+                if isinstance(error, requests.exceptions.SSLError):
+                    phase = 'robots.txt' if robots else '網頁'
+                    raise CrawlError(f'{host} {phase}：{tls_failure_reason(error)}；未降低連線安全設定。', stop_source=True) from None
                 # One bounded retry for a dropped GET connection before headers.
                 # Certificate/proxy errors, robots and POST requests stay failures.
                 if (isinstance(error, requests.ConnectionError)

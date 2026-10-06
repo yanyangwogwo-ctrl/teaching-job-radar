@@ -88,7 +88,7 @@ sources:
   allowed_ports:
     hrmsxprod.psft.ust.hk:
     - 8044
-  notes: 官方清單及舊招聘平台公開詳情已接入；清單連線失敗時只核對已知廣告，並提示可能遺漏新職位。Interfolio 詳情仍受限。
+  notes: 官方清單及舊招聘平台公開詳情已接入；Interfolio 詳情讀取尚未接入。清單連線失敗時只核對已知廣告，並提示可能遺漏新職位。
 - id: cityu
   institution: CityU
   name: 香港城市大學
@@ -99,7 +99,7 @@ sources:
   allowed_hosts:
   - jobs1.cityu.edu.hk
   - www.cityu.edu.hk
-  notes: 官方學術清單可讀；詳情主機出現驗證頁，目前內文搜尋不完整。
+  notes: 官方學術清單可讀；詳情讀取因先前存取驗證限制暫停，本輪不會重試詳情，內文搜尋不完整。
 - id: hkbu
   institution: HKBU
   name: 香港浸會大學
@@ -202,7 +202,7 @@ sources:
   enabled: true
   allowed_hosts:
   - www.hkas.edu.hk
-  notes: 香港藝術中心附屬學院的官方招聘清單；保留當前原文，不使用搜尋引擎舊快取。
+  notes: 學院招聘頁的 robots.txt 目前回傳 403。母機構另有官方招聘頁 https://hkac.org.hk/en/about_join/ 可供補充查看，但未確認涵蓋全部學院空缺。
   selectors:
     row: .post_content a[href*="/job-vacancy/"]
     title: :self
@@ -290,7 +290,7 @@ sources:
   enabled: true
   allowed_hosts:
   - www.eduhk.hk
-  notes: 官方清單含刊登日期及 PDF；讀取完整分頁。若網站或 robots.txt 未能連線，顯示失敗並保留舊資料。
+  notes: 官方清單含刊登日期及 PDF；雲端連線確認遇到舊式 TLS 重新協商不相容，暫未取得清單，仍保留憑證與連線安全檢查。
 - id: hkmu
   institution: 都會大學（含 LiPACE）
   name: Hong Kong Metropolitan University
@@ -360,10 +360,11 @@ sources:
   enabled: true
   allowed_hosts:
   - www.cice.edu.hk
-  notes: 官方招聘表格及 PDF 廣告；按真實截止日期處理舊廣告。
+  notes: 官方招聘表格及 PDF 廣告；已支援新版日期欄位，按實際截止日期處理舊廣告。
+  deadline_attribute: data-close-date
   detail_mode: pdf
   selectors:
-    row: tr[close-date]
+    row: '.post_display_table tr:has(td:nth-child(2) a[href$=".pdf"])'
     title: td:nth-child(2) a[href$=".pdf"]
     link: td:nth-child(2) a[href$=".pdf"]
     department: td:nth-child(1) .SHOW_ENGLISH_ONLY

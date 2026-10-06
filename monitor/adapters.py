@@ -184,11 +184,15 @@ def collect(source: dict, client) -> Batch:
         from .yccece import collect_yccece
         return collect_yccece(source, client)
     if adapter == 'availability_check':
-        client.get(source['url'])
-        for url in source.get('check_robots_urls', []):
-            if not client.allowed(url):
-                raise CrawlError('官方招聘頁可以開啟，但其職位資料供應平台的 robots.txt 不允許自動讀取；請到官方招聘頁查看。', stop_source=True)
-        raise CrawlError('官方頁面已能連線，但職位讀取格式仍待核對；目前只監察連線狀態，請先查看官方原文。')
+        pending = '職位讀取尚未接入，目前只檢查招聘入口連線。'
+        try:
+            client.get(source['url'])
+            for url in source.get('check_robots_urls', []):
+                if not client.allowed(url):
+                    raise CrawlError('職位資料供應平台的 robots.txt 不允許自動讀取；請到官方招聘頁查看。', stop_source=True)
+        except CrawlError as error:
+            raise CrawlError(pending + str(error), stop_source=error.stop_source) from None
+        raise CrawlError(pending + '本輪入口已能連線，但仍需完成職位格式核對。')
     if adapter in ('sfu', 'hku', 'polyu', 'hkbu_oracle', 'hksyu', 'hkust', 'cityu', 'cuhk', 'lingnan', 'hsu'):
         from .official import collect_official
         return collect_official(source, client)
