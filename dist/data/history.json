@@ -12937,5 +12937,141 @@
     "kind": "status",
     "source_id": "lingnan",
     "title": "Assistant Research Officer, School of Graduate Studies"
+  },
+  {
+    "at": "2026-10-06T06:23:48+00:00",
+    "job_id": "b99e7a59bc59ed4061b227a7",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time / Full-time Pharmacist"
+  },
+  {
+    "at": "2026-10-06T06:23:48+00:00",
+    "changes": {},
+    "job_id": "6e1789a14c6a36812263b2df",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Student Research Assistant"
+  },
+  {
+    "at": "2026-10-06T06:23:48+00:00",
+    "changes": {},
+    "job_id": "741d288b935ea23a4d2e1700",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Research Assistant I/II in the Division of Haematology, Medical Oncology and Haemopoietic Stem Cell Transplantation"
+  },
+  {
+    "at": "2026-10-06T06:23:48+00:00",
+    "job_id": "1be5cb736701a0a487d232bd",
+    "kind": "new",
+    "source_id": "cice",
+    "title": "Assistant Manager, Administration (Full-time)"
+  },
+  {
+    "at": "2026-10-06T06:23:48+00:00",
+    "changes": {},
+    "job_id": "caac3388c2147da12cd89dbd",
+    "kind": "updated",
+    "source_id": "cice",
+    "title": "行政助理"
+  },
+  {
+    "at": "2026-10-06T06:23:48+00:00",
+    "job_id": "8415acd7a4f964ac606a680b",
+    "kind": "new",
+    "source_id": "cice",
+    "title": "二級服務員"
+  },
+  {
+    "at": "2026-10-06T06:23:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "0dc8f8a56552a5629363d976",
+    "kind": "status",
+    "source_id": "uowchk",
+    "title": "Part-time Lecturer, DAE (Clerical Work in Practice in Government), Faculty of Arts and Humanities"
+  },
+  {
+    "at": "2026-10-06T06:23:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "461ad94ac5b8d13ebfd63c71",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Assistant Lecturer (Information Technology)"
+  },
+  {
+    "at": "2026-10-06T06:23:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "784e374f7f435d24d343ddbe",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Director of Continuing and Professional Education Office"
+  },
+  {
+    "at": "2026-10-06T06:23:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "80ae09b7d1e72d642e065daf",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-Time (Daytime / Evening) Lecturer"
+  },
+  {
+    "at": "2026-10-06T06:23:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "95a36b5fbdd53bb91d1b6497",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Assistant Lecturer (English)"
+  },
+  {
+    "at": "2026-10-06T06:23:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "b87eeeb32d2d207eeeef159a",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Assistants of ENGL 3370EEF and ENGL 3373EEF (2026 Autumn Term)"
+  },
+  {
+    "at": "2026-10-06T06:23:48+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "c7dafa0047d09338a0c4b597",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Project Supervisor [BSc (Hons) Human Biosciences]"
   }
 ]
