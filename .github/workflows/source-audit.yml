@@ -1,0 +1,22 @@
+name: Read-only source audit
+on:
+  push:
+    branches: [audit/source-health-20261006]
+    paths: ['scripts/audit_source_health.py', '.github/workflows/source-audit.yml']
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python scripts/audit_source_health.py
+        env:
+          PYTHONPATH: .
