@@ -89,6 +89,18 @@ class SourceHealthReviewTests(unittest.TestCase):
         self.assertEqual(state['jobs'][original['id']]['status'],'open')
         self.assertFalse(state['jobs'][original['id']].get('source_closed'))
 
+    def test_bad_detail_date_cannot_reopen_a_previously_filled_post(self):
+        state = fresh_store()
+        reconcile(state,TWC,Batch(jobs=[vacancy(source_closed=True,detail_complete=False)]),DAY,PREFS)
+        incoming = vacancy(detail_complete=False)
+        client = Mock()
+        client.get.return_value = '<meta itemprop="datePosted" content="not a date"><article itemprop="description">' + 'A newly fetched advertisement. ' * 8 + '</article>'
+        batch = read_details(TWC,client,Batch(jobs=[incoming]))
+        self.assertFalse(batch.complete)
+        self.assertFalse(incoming['detail_complete'])
+        reconcile(state,TWC,batch,DAY,PREFS)
+        self.assertEqual(state['jobs'][incoming['id']]['status'],'closed')
+
     def test_tls_reports_fixed_reason_without_exception_secrets_or_retry(self):
         error = requests.exceptions.SSLError('UNSAFE_LEGACY_RENEGOTIATION_DISABLED https://example.edu/?token=do-not-print')
         self.assertEqual(tls_failure_reason(error),'網站使用不相容的舊式 TLS 重新協商')

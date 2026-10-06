@@ -94,6 +94,7 @@ def parse_catalog_page(source, html, url=None):
 
 
 def parse_catalog_detail(source, job, html):
+    job['detail_complete'] = False
     selectors = source['selectors']
     soup = soup_of(html)
     content = soup.select_one(selectors['detail_body'])
@@ -116,8 +117,7 @@ def parse_catalog_detail(source, job, html):
     if len(text) < 100:
         raise CrawlError('職位詳情內文過短，需核對原文。')
     title = field_at(soup, selectors.get('detail_title')) or job['title']
-    job.pop('source_closed', None)
-    job.update(title=title, description=text, match_text=text, detail_complete=True)
+    job.update(title=title, description=text, match_text=text)
     department = field_at(soup, selectors.get('detail_department'))
     if department:
         job['department'] = department
@@ -138,6 +138,8 @@ def parse_catalog_detail(source, job, html):
         else:
             job['posted_date'] = source_date(raw, source) or job['posted_date']
     apply_deadline(job, text)
+    job.pop('source_closed', None)
+    job['detail_complete'] = True
     return job
 
 
