@@ -1,4 +1,6 @@
 beautifulsoup4==4.15.0
+# Keep CSS selector semantics verified by the monitor tests; 3.x rejects CICE's :has selector.
+soupsieve==2.10
 requests==2.34.2
 PyYAML==6.0.2
 pypdf==6.10.0
