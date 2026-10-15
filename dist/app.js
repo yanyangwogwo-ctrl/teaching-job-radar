@@ -1,5 +1,5 @@
 import { mountScheduleEditor } from './schedule-ui.mjs?v=20260905-time';
-import { parseQuery, filterJobs, dayKey, effectiveStatus, csvCell, defaultCriteria, restoreCriteria, recentCutoff, isRecent } from './search.mjs?v=20260918-preset-exclude';
+import { parseQuery, filterJobs, dayKey, effectiveStatus, csvCell, defaultCriteria, restoreCriteria, recentCutoff, isRecent } from './search.mjs?v=20261015-all-employment';
 import { loadDataset, lastCrawlAt } from './data-source.mjs?v=20260905-session';
 
 const app = document.querySelector('#app');

@@ -101,9 +101,9 @@ test('default criteria expose terms and put newer adverts ahead of higher scores
   assert.equal(criteria.presetEnabled,true);
   assert.equal(criteria.presetExcludeKeywords,'');
   assert.equal(Object.hasOwn(criteria,'presetMode'),false);
-  assert.equal(criteria.partTimeOnly,true);
+  assert.equal(criteria.partTimeOnly,false);
   assert.equal(Object.hasOwn(criteria,'relevantOnly'),false);
-  assert.deepEqual(filterJobs(jobs,{...criteria,partTimeOnly:false},'2026-09-05').map(j=>j.id),['b','a']);
+  assert.deepEqual(filterJobs(jobs,criteria,'2026-09-05').map(j=>j.id),['b','a']);
   const restored=restoreCriteria({...defaults,relevantOnly:false},data);
   assert.equal(restored.presetEnabled,false);
 });

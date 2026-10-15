@@ -76,7 +76,7 @@ export function defaultCriteria(dataset) {
     subjectKeywords:dataset.meta.subjects.flatMap(subject => subject.terms).join(', '),
     roleKeywords:'lecturer, tutor, instructor, teacher, teaching fellow, 講師, 導師, 教師',
     presetExcludeKeywords:'',
-    partTimeOnly:true, institutions:dataset.sources.map(source => source.id),
+    partTimeOnly:false, institutions:dataset.sources.map(source => source.id),
     status:'open', dateBasis:'effective', from:'', to:'', sort:'newest'
   };
 }
