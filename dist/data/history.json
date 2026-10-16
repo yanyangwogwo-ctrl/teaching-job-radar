@@ -15990,5 +15990,492 @@
     "kind": "status",
     "source_id": "hkmu",
     "title": "Course Developer (EDU 8840ECD) (Freelance) (E&L) "
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "37d511192bd0ffd19415fce7",
+    "kind": "status",
+    "source_id": "uowchk",
+    "title": "Temporary Research Assistant in Faculty of Art and Humanities"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "ef8691bfa7222b3e4b4b730a",
+    "kind": "status",
+    "source_id": "uowchk",
+    "title": "Counsellor (Fractional)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "8a4e1a5686229f232388612d",
+    "kind": "status",
+    "source_id": "sfu",
+    "title": "Assistant Professors/ Senior Lecturers/ Lecturers, S.K. Yee School of Health Sciences"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "f94c1a7e67765103904ae40f",
+    "kind": "status",
+    "source_id": "sfu",
+    "title": "Professor in Physiotherapy, S.K. Yee School of Health Sciences"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "f102d4418278fac36ae7c81b",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree Programmes"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-16",
+        "before": "2026-10-02"
+      }
+    },
+    "job_id": "749e839afd432ba84a63fb92",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Finance Manager / Finance Manager (Accounting and Budgeting)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "eb047ed3f1a31bb5f6c12dc2",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Assistant Manager / Senior Executive Officer (Human Resources and Finance)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "d938b85322a9c298e9fc20e3",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Assistant Manager / Senior Executive Officer (Curriculum and Programme)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "eb3e7ec31051e46ab8367cdd",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Part-time Lecturer (various positions), Academy of Visual Arts"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "005cdbc43360fae303377a6e",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Assistant Purchasing Manager, Finance Office"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "5d09d315e07f6d767858f839",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Purchasing Officer / Assistant Purchasing Officer, Finance Office"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "8ab19e4e9abcd15726a9fadb",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Digital Experience Specialist, Office of Information Technology"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "21f438c4394581fc66b7ad27",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Accounting Manager (Treasury, Income Collection and Payment), SCE"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "e8b6dc303f9393de9dbd60bf",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Director, International Office"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "6e5618d53b128153d0c67a5a",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Student Development Assistant, School of Continuing Education"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "72ccbf2123c42b950447d14e",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Senior Technical Officer / Technical Officer, Academy of Music"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "8db13d0931a1c057a728159a",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Technical Manager (Creative Hub), Academy of Music"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "af3aa639cbef350a2660dfb5",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Senior Programme Officer / Programme Officer, Academy of Visual Arts"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "b8c11fdab8c285479cd9a5e0",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Senior Purchasing Manager/Purchasing Manager (Purchasing and Support Services)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "e11bf13986aa307a00b386d2",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Director of Internal Audit"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "cfb7b5e0ed05ca56f977edeb",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Assistant Professor (Cultural Studies)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "17abd7b2bb73fece8a11d0dd",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "bc6793a90a639cad3b870678",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Lecturer (AI Humanities)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "description": {
+        "after": "Tung Wah College\nEstablished by Tung Wah Group of Hospitals (“TWGHs”) in 2010, Tung Wah College (TWC) is a self-financing degree-granting institution registered under the Post Secondary Colleges Ordinance (Cap.320). Following the educational ideals of TWGHs and leveraging on its renowned strengths and expertise, TWC aims to provide high quality tertiary education to nurture competent, socially responsible and caring professionals for the benefits of society.\nWith the staunch support of TWGHs, TWC has been developing rapidly and built up a niche in healthcare education. It is the first self-financing tertiary institution offering six professionally accredited degrees to train nurses and allied health professionals such as medical laboratory technologists, occupational therapists, diagnostic radiographer, therapeutic radiographer and physiotherapists. Besides, the College is also the first institution registered under Cap. 320 offering early childhood education degree and higher diploma programmes to train qualified kindergarten teachers and childcare professionals.\nCurrently, TWC has 4 schools (namely School of Arts and Humanities, School of Management, School of Medical and Health Sciences, and School of Nursing) running a total of 20 doctoral degree, bachelor degree, sub-degree, diploma and certificate programmes in various disciplines. It has a student population of around 5,000 in 2025/2026 and nurtured more than 7,200 graduates since its inception in 2010.\nBeing a young and vibrant institution, TWC aspires to become a leading private university in the long term. It is planning to launch a number of new programmes, strengthen teaching and learning facilities and quality, and enhance research capability etc. in coming years. To cope with its continuous development, we are now inviting highly qualified candidates to fill the following post\nDuties and Responsibilities\nThe appointee will be required but not limited to:\nOversee the end-to-end lifecycle of research grants, including compliance checking, advisory support, progress and budget monitoring, from application to post-award maintenance;\nManage research ethics and health, safety, and environmental applications, ensuring timely follow-up and full compliance with institutional requirements;\nPlan and organise research-related events to foster research culture;\nFormulate and implement research-related policies and guidelines to strengthen compliance and streamline operations;\nPromote TWC’s research excellence and impact to elevate its public profile and strengthen community engagement;\nSupport knowledge transfer activities that promote the application and commercialisation of research outcomes;\nProvide administrative support to the office in areas such as committee and theme group coordination, website maintenance, and preparation of reports and promotional materials; and\nPerform any other duties or special projects as assigned.\nQualifications and Experience Required\nApplicants should:\nPossess a Bachelor’s degree or above, with at least 5 years of administrative and supervisory experience, preferably in the higher education sector, a funding organisation, or a related field;\nHave an excellent command of written and spoken English and Chinese (including Putonghua);\nHave experience in managing the full cycle of research grant administration, which is highly preferred;\nHave experience in research communication, including content preparation for websites, social media, and publications;\nHave high proficiency in AI tools and design software such as Canva, with demonstrated experience in producing creative assets;\nHave a strong sense of accountability, meticulous attention to detail and accuracy, coupled with robust analytical, project management, and problem-solving capabilities; and\nBe proactive, mature, eager to learn, and self-driven, with the ability to work independently and collaboratively within a team.\nApplication\nSalary will be competitive and commensurate with qualifications and experience\nTo apply, please submit your application via system. The College reserves the right to fill or not to fill the post. Applicants who are not contacted by the College 6 months after the application deadline may consider their applications unsuccessful. For enquiries, please phone or send WhatsApp to 9172-8618.\nReview of applications is ongoing until the position is filled.\nAll information and personal data collected will be used solely for recruitment related purposes. For more information about the College, please visit our website: https://www.twc.edu.hk .\nTung Wah College is an equal opportunities employer. We embrace the values of equality, diversity and inclusion and are dedicated to fostering an environment that respects and supports people with diverse perspectives, abilities, cultures and experiences.",
+        "before": "Tung Wah College\nEstablished by Tung Wah Group of Hospitals (“TWGHs”) in 2010, Tung Wah College (TWC) is a self-financing degree-granting institution registered under the Post Secondary Colleges Ordinance (Cap.320). Following the educational ideals of TWGHs and leveraging on its renowned strengths and expertise, TWC aims to provide high quality tertiary education to nurture competent, socially responsible and caring professionals for the benefits of society.\nWith the staunch support of TWGHs, TWC has been developing rapidly and built up a niche in healthcare education. It is the first self-financing tertiary institution offering six professionally accredited degrees to train nurses and allied health professionals such as medical laboratory technologists, occupational therapists, diagnostic radiographer, therapeutic radiographer and physiotherapists. Besides, the College is also the first institution registered under Cap. 320 offering early childhood education degree and higher diploma programmes to train qualified kindergarten teachers and childcare professionals.\nCurrently, TWC has 4 schools (namely School of Arts and Humanities, School of Management, School of Medical and Health Sciences, and School of Nursing) running a total of 20 doctoral degree, bachelor degree, sub-degree, diploma and certificate programmes in various disciplines. It has a student population of around 5,000 in 2025/2026 and nurtured more than 7,200 graduates since its inception in 2010.\nBeing a young and vibrant institution, TWC aspires to become a leading private university in the long term. It is planning to launch a number of new programmes, strengthen teaching and learning facilities and quality, and enhance research capability etc. in coming years. To cope with its continuous development, we are now inviting highly qualified candidates to fill the following post\nDuties and Responsibilities\nThe appointee will be required but not limited to:\nOversee the end-to-end lifecycle of research grants, including compliance checking, advisory support, progress and budget monitoring, from application to post-award maintenance;\nManage research ethics and health, safety, and environmental applications, ensuring timely follow-up and full compliance with institutional requirements;\nPlan and organise research-related events to foster research culture;\nFormulate and implement research-related policies and guidelines to strengthen compliance and streamline operations;\nPromote TWC’s research excellence and impact to elevate its public profile and strengthen community engagement;\nSupport knowledge transfer activities that promote the application and commercialisation of research outcomes;\nProvide administrative support to the office in areas such as committee and theme group coordination, website maintenance, and preparation of reports and promotional materials; and\nPerform any other duties or special projects as assigned.\nQualifications and Experience Required\nApplicants should:\nPossess a Bachelor’s degree or above, with at least 3 years of relevant experience, preferably in the education sector or a related sector;\nHave an excellent command of written and spoken English and Chinese (including Putonghua);\nHave experience in managing the full cycle of research grant administration is highly preferred;\nHave experience in research communication, including content preparation for websites, social media, and publications is a plus;\nHave high proficiency in AI tools and design software such as Canva, with demonstrated experience in producing creative assets, is preferred;\nHave a strong sense of accountability, meticulous attention to detail and accuracy, coupled with robust analytical, project management, and problem-solving capabilities; and\nBe proactive, mature, eager to learn, and self-driven, with the ability to work independently and collaboratively within a team.\nApplication\nSalary will be competitive and commensurate with qualifications and experience\nTo apply, please submit your application via system. The College reserves the right to fill or not to fill the post. Applicants who are not contacted by the College 6 months after the application deadline may consider their applications unsuccessful. For enquiries, please phone or send WhatsApp to 9172-8618.\nReview of applications is ongoing until the position is filled.\nAll information and personal data collected will be used solely for recruitment related purposes. For more information about the College, please visit our website: https://www.twc.edu.hk .\nTung Wah College is an equal opportunities employer. We embrace the values of equality, diversity and inclusion and are dedicated to fostering an environment that respects and supports people with diverse perspectives, abilities, cultures and experiences."
+      }
+    },
+    "job_id": "f6e7d15942ccfdb007202318",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Assistant Manager"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "81fdbd4234942253098f1b30",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "定期教導員 (汽車業)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "fd19860a4d2c025b9b4a2a19",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Assistant Systems Manager (Infrastructure Management)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "description": {
+        "after": "VTC Headquarters (Industry Partnership)\nDepartment / Section : Institutional Advancement Office\nRef. no : O/HQIP/IAO/Term_Temp_OFF(AS)/10/26\nInstitutional Advancement Office focuses on engaging industry partners, philanthropists and alumni to foster collaborations and solicit financial and in-kind support for student development and institutional advancement of VTC.\nMajor Duties :\n(a)\nTo contribute to alumni engagement strategies and their implementation;\n(b)\nTo produce content, stories, social media content with alumni that align with Vocational and Professional Education and Training (VPET) values;\n(c)\nTo devise advertising strategy to best promote alumni engagement contents on media;\n(d)\nTo administer the design and publications for alumni portal and alumni e-news;\n(e)\nTo implement projects and campaigns to enhance alumni relations and strengthen alumni’s connections with alma mater in support of the on-going development of VTC; and\n(f)\nTo provide administrative support to maintenance and enhancement of the alumni website and database system, and the sponsorship scheme to alumni activities.\nRequirements :\n(a)\nA recognised degree or equivalent, preferably in Communications, Marketing, or a related discipline;\n(b)\nAt least 2 years’ relevant work experience. Experience in creative media, graphic design, copywriting, newsletter, would be an advantage;\n(c)\nGood knowledge of digital and social media marketing in engaging stakeholders;\n(d)\nStrong people skills to work and build connection with stakeholders;\n(e)\nGood communication and presentation skills; and\n(f)\nProactive, good adaptability in a multi-facet work environment, strong sense of responsibility, able to handle multi-tasks independently.\nNotes :\n(1)\nThe employment period ranges from 3 to 12 months.\n(2)\nShortlisted candidates will be required to take a written assessment.\n(3)\nThe appointee may be required to work on shift / outside normal office hours.",
+        "before": "VTC Headquarters (Industry Partnership)\nDepartment / Section : Institutional Advancement Office\nRef. no : O/HQIP/IAO/Term_Temp_OFF(AS)/10/26\nInstitutional Advancement Office focuses on engaging industry partners, philanthropists and alumni to foster collaborations and solicit financial and in-kind support for student development and institutional advancement of VTC.\nMajor Duties :\n(a)\nTo contribute to alumni engagement strategies and their implementation;\n(b)\nTo produce content, stories, social media content with alumni that align with Vocational and Professional Education and Training (VPET) values;\n(c)\nTo devise advertising strategy to best promote alumni engagement contents on media;\n(d)\nTo administer the design and publications for alumni portal and alumni e-news;\n(e)\nTo implement projects and campaigns to enhance alumni relations and strengthen alumni’s connections with alma mater in support of the on-going development of VTC;\n(f)\nTo provide administrative support to maintenance and enhancement of the alumni website and database system; and\n(g)\nTo support the sponsorship scheme to alumni activities.\nRequirements :\n(a)\nA recognised degree or equivalent, preferably in Communications, Marketing, or a related discipline;\n(b)\nAt least 2 years’ relevant work experience. Experience in creative media, graphic design, copywriting, newsletter, would be an advantage;\n(c)\nGood knowledge of digital and social media marketing in engaging stakeholders;\n(d)\nStrong people skills to work and build connection with stakeholders;\n(e)\nGood communication and presentation skills; and\n(f)\nProactive, good adaptability in a multi-facet work environment, strong sense of responsibility, able to handle multi-tasks independently.\nNotes :\n(1)\nShortlisted candidates will be required to take a written assessment.\n(2)\nThe appointee may be required to work on shift / outside normal office hours."
+      },
+      "title": {
+        "after": "Term / Temp Officer (Alumni Services)",
+        "before": "Term / Temporary Officer (Alumni Services)"
+      }
+    },
+    "job_id": "66d2eacb43edbaedd3e1473d",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "Term / Temp Officer (Alumni Services)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "ac4f1a456f8b481880adcf72",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-03",
+        "before": "2026-10-20"
+      }
+    },
+    "job_id": "05846e6e173a7b609adb333b",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "Senior Technician (IT Services)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "d763f084c9e52dc8cf630e5f",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Executive Floor Assistant (The T Hotel)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "c62b24efc1b2996399a7be00",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Part-time Executive Assistant II (VTC Symphony Orchestra and Chorus)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "15df9e022a78059f445a0759",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Manager"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "403ed11e236c41f8be65c768",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "教導員(屋宇裝備)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "716e7da72302f68c86e42a0e",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Project Manager (Architect)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "169210af6f9cd5fffd569258",
+    "kind": "status",
+    "source_id": "hkapa",
+    "title": "SECRETARY (MUSIC)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "7443ec92616fcfe3eadfa529",
+    "kind": "status",
+    "source_id": "hkapa",
+    "title": "LIBRARY OFFICER (for Systems & Digital Services)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "9bf4fedc41c3a826f03fecdd",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Assistant Public Affairs Manager (Digital & Web Project Specialist) (PAO)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "job_id": "4ebe87fadfbbe4f9944f45f7",
+    "kind": "new",
+    "source_id": "hpshcc",
+    "title": "Assistant Manager (Ref: RS/ft/26-03)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "e20f3b4d38cdbf804725e23a",
+    "kind": "status",
+    "source_id": "hpshcc",
+    "title": "Executive Assistant I (Ref: EAI/ft/26-03)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "0624207502ef8ef05a53792a",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Manager I (Technology Transfer and Business Development), ORKT"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "47632ea7dfb62383b8f32f01",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Senior Administrative Officer, Registry"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "f8b15d59802cbebc9c0498cc",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Manager I (Technology Transfer and Business Development), ORKT"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "810698ee85b9c515c92c7e84",
+    "kind": "status",
+    "source_id": "cuhk",
+    "title": "Part-time Lecturer(s)"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "a14be0db7afa726327aa8b06",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Part Time Research Assistant I / II"
+  },
+  {
+    "at": "2026-10-16T04:38:43+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "c44ee8a8591a2243d7fc9086",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Part-Time Student Research Assistant in the HKU-Pasteur Research Pole"
   }
 ]
