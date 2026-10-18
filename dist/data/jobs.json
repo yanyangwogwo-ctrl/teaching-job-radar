@@ -35850,7 +35850,7 @@
     "automation_active": true,
     "data_kind": "official-live-crawl",
     "discord_configured": false,
-    "generated_at": "2026-10-18T04:41:28+00:00",
+    "generated_at": "2026-10-18T04:58:03+00:00",
     "heartbeat_configured": false,
     "last_run": {
       "finished_at": "2026-10-18T04:57:52+00:00",
