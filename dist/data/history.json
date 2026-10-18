@@ -16783,5 +16783,70 @@
     "kind": "status",
     "source_id": "hku",
     "title": "Part-time Nurse / Enrolled Nurse (several posts) in the Division of Epidemiology and Biostatistics, School of Public Health"
+  },
+  {
+    "at": "2026-10-18T04:41:28+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "21186ca58021614428f98aa9",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Assistant Manager, Research Postgraduate Programme (PhD)"
+  },
+  {
+    "at": "2026-10-18T04:41:28+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "ab2563d3de648797abe37b67",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Assistant Manager (Procurement & Contract Management)"
+  },
+  {
+    "at": "2026-10-18T04:41:28+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "8e7f76c49af5918fbf79d7b3",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime / Evening) Lecturer / Part-time (Daytime) Fieldwork Supervisor (Social Work)"
+  },
+  {
+    "at": "2026-10-18T04:41:28+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "c82523f0aba2da9100bf0923",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Practice Supervisor EDU 4470ECF (2026 Autumn Term) (E&L) "
+  },
+  {
+    "at": "2026-10-18T04:41:28+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "ca727a041b4d9325150e13c2",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Fractional Clinical Associate Professor/Clinical Assistant Professor in Implant Dentistry"
   }
 ]
