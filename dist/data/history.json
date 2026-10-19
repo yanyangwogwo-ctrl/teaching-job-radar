@@ -16848,5 +16848,148 @@
     "kind": "status",
     "source_id": "hku",
     "title": "Fractional Clinical Associate Professor/Clinical Assistant Professor in Implant Dentistry"
+  },
+  {
+    "at": "2026-10-19T04:49:32+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "2b6833ea64ba701e34d0720c",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "School of Business - Executive Officer"
+  },
+  {
+    "at": "2026-10-19T04:49:32+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "5844e70de5b9ec663aed8a93",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Centre for Innovation and Entrepreneurship - Project Officer"
+  },
+  {
+    "at": "2026-10-19T04:49:32+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "6bc82ec9faa0a54457d52d3b",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "School of Humanities and Social Science - Part-time Lecturer(s)"
+  },
+  {
+    "at": "2026-10-19T04:49:32+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "862f14df18b83e0bc6e2c6c1",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Student Affairs Office - Temporary Assistant Officer"
+  },
+  {
+    "at": "2026-10-19T04:49:32+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "a1f5ed1e05c514866c43c413",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "School of Communication - Assistant Officer / Executive Assistant"
+  },
+  {
+    "at": "2026-10-19T04:49:32+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "a9374dc7c23c4655e23c173e",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Research Assistant (Full-time / Part-time) – Department of Computer Science"
+  },
+  {
+    "at": "2026-10-19T04:49:32+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "c8cb0eab392a9873d8df2a9a",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Student Affairs Office - Assistant Student Affairs Officer (Part-time)"
+  },
+  {
+    "at": "2026-10-19T04:49:32+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "df04470def6f8df047b0db6a",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Executive Officer, Department of Accountancy, Economics and Finance"
+  },
+  {
+    "at": "2026-10-19T04:49:32+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-18",
+        "before": "2026-09-20"
+      }
+    },
+    "job_id": "25fa6ba11e204ec270535ec2",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Professor (Research Track)"
+  },
+  {
+    "at": "2026-10-19T04:49:32+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "66958eef4f469af0d765a82e",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Officer"
+  },
+  {
+    "at": "2026-10-19T04:49:32+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "7e68871a61f3a308b35b9acc",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term / Temporary / Part-time Executive Assistant II"
   }
 ]
