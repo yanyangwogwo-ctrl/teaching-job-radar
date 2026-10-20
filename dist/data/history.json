@@ -16991,5 +16991,97 @@
     "kind": "status",
     "source_id": "vtc",
     "title": "Term / Temporary / Part-time Executive Assistant II"
+  },
+  {
+    "at": "2026-10-20T04:57:57+00:00",
+    "job_id": "25b1ceabd33fc029c4e013f8",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time Teaching Assistant"
+  },
+  {
+    "at": "2026-10-20T04:57:57+00:00",
+    "job_id": "68a13ac18a460974886e1822",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time Teaching Assistant"
+  },
+  {
+    "at": "2026-10-20T04:57:57+00:00",
+    "changes": {},
+    "job_id": "b25aae0c11bc3517136abdec",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Student Research Assistant (several posts)"
+  },
+  {
+    "at": "2026-10-20T04:57:57+00:00",
+    "changes": {},
+    "job_id": "272550d0d04e9dc2c65d4820",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Fractional Senior Clinical Practitioner in Periodontology"
+  },
+  {
+    "at": "2026-10-20T04:57:57+00:00",
+    "job_id": "bd9cd108f8a4ac893ca85262",
+    "kind": "new",
+    "source_id": "hkbu-sce",
+    "title": "日間兼職導師 - 應用學習中文"
+  },
+  {
+    "at": "2026-10-20T04:57:57+00:00",
+    "changes": {},
+    "job_id": "4b969cbdcd5d5ace26ecb76a",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Assistant Manager"
+  },
+  {
+    "at": "2026-10-20T04:57:57+00:00",
+    "job_id": "ca10cabc2f22308bc1134961",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Assistant Manager / Officer (Corporate Communications)"
+  },
+  {
+    "at": "2026-10-20T04:57:57+00:00",
+    "job_id": "1d594ac99a16f1d26c700948",
+    "kind": "new",
+    "source_id": "hkapa",
+    "title": "TEMPORARY TECHNICIAN (FILM/TV)"
+  },
+  {
+    "at": "2026-10-20T04:57:57+00:00",
+    "job_id": "797264a43c84a7bd7120dfcf",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant(s) I/II (Project reference no.: R7068) (A&SS)"
+  },
+  {
+    "at": "2026-10-20T04:57:57+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "5d6b587b8674b97f6a325a0e",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Temporary Research Associate (N&HS) (Project No. Q1129)"
+  },
+  {
+    "at": "2026-10-20T04:57:57+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "d4a2cb8c0519be9df03411ea",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Part-time Research Assistant I"
   }
 ]
