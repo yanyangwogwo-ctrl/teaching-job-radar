@@ -17329,5 +17329,342 @@
     "kind": "new",
     "source_id": "lingnan",
     "title": "Administrative Officer (TPg Programme Team), School of Graduate Studies"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "3b0fbaa74bca08808871c284",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time Lecturer in Geography in the Faculty of Social Sciences (Ref.: 537714)"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "42008e371ec071b95a67eda6",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time Research Assistant I/II"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {},
+    "job_id": "68a13ac18a460974886e1822",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Teaching Assistant"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {},
+    "job_id": "96bcb5a589e9b888ba9acfa4",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Full-time Research Assistant I and Part-time Student Research Assistant (several posts) in the Teaching and Learning Innovation Centre (TALIC) for seven months"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-22",
+        "before": "2026-09-10"
+      }
+    },
+    "job_id": "93d0e790f4d6c18f8dfc22b2",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Assistant Information Technology Manager (Application Development & Delivery)"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-22",
+        "before": "2026-09-21"
+      }
+    },
+    "job_id": "174dbd431ce499820ad26d24",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Systems Analyst (Application Development & Support)"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "1431bbaf7276b8445b5f8413",
+    "kind": "new",
+    "source_id": "polyu",
+    "title": "Chair Professor / Professor / Associate Professor / Assistant Professor in Atmospheric Chemistry and Modelling under Strategic Hiring Scheme"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "4195b7aac5753a5c3a63b6e1",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Instructor (Temporary Appointment)"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-22",
+        "before": "2026-08-18"
+      }
+    },
+    "job_id": "45a888bc9c6470266489a35e",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Systems Analyst (Application Development & Support), School of Continuing Education"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-22",
+        "before": "2026-09-10"
+      }
+    },
+    "job_id": "42f1d17c0cc18f26cd64bbe0",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Assistant Information Technology Manager, School of Continuing Education"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "5fcbe240440ae8f62d450300",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Assistant Executive Officer, Academic Registry"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "7ac3c0fd118f51f66523ec4f",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "8d6b0514f7b29f6cd6f63e3f",
+    "kind": "new",
+    "source_id": "twc",
+    "title": "Assistant Administration Manager"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-21",
+        "before": "2026-09-23"
+      }
+    },
+    "job_id": "f6e7d15942ccfdb007202318",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Assistant Manager"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-21",
+        "before": "2026-09-23"
+      }
+    },
+    "job_id": "d133677fd509b42ff63ce815",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Manager"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "03af2e351bffa093e287f4ca",
+    "kind": "status",
+    "source_id": "twc",
+    "title": "Project and Events Coordinator"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "59fdbb618be5a0e668f59c85",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term / Part-time (Daytime) Assistant Lecturer (Multimedia and Entertainment Technology)"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "ece56cbccd79c691cd5d9f37",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "定期教導員(綜合服務)"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "e182961b67803968d1efd41a",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Assistant Lecturer (Office and Library Practice)"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "3247baf387af3e7bc50253b3",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Technician"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "ebc1978a6eb9277b7b8534f2",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "福利工作員"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-30",
+        "before": "2026-10-31"
+      }
+    },
+    "job_id": "cb7c3330badcb0480012ecce",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "Part-time (Day Time) Assessor (Arboricultural Industry)"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-30",
+        "before": "2026-10-31"
+      }
+    },
+    "job_id": "3d26e0d3407354f419fbe9ae",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "日間兼職考評員 (美髮業專業能力評估考核)"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-30",
+        "before": "2026-10-31"
+      }
+    },
+    "job_id": "1265f376089856b3ab3fbdce",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "日間兼職考評員 (美容業專業能力考核)"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "f2138503e8e0652a05bd42df",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Part-time (Day-time) Assistant Lecturer (Beauty Care)"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "e87576d86320faffcf85189f",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "夜間兼職教導員（屋宇裝備-水務設施）"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "795c1ba01cb882e2f113f829",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "夜間兼職教導員（屋宇裝備）"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "f6620b9e5284216b82147f4d",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "夜間兼職教導員（空調製冷）"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "004f7a180ee5a34af60bcb86",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "夜間兼職教導員（電機工程）"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "faedbc7af2ab538c15bed344",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "夜間兼職教導員（升降機及自動梯工程）"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "38f512d1f886efb9c1172514",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "夜間兼職一級工場雜務員"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "job_id": "94a2a71334052da540c0102a",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Research Associate / Assistant I/ II / Technical Assistant (Project No: R2088)(B&A)"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "0effe026171fe0944867068d",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Assistant(s) (Construction and Quality Management) (2026 Autumn Term) (S&T)"
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "789039bb58aa61a2e3e4ecfc",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant I/II (N&HS) "
+  },
+  {
+    "at": "2026-10-22T04:57:40+00:00",
+    "changes": {
+      "description": {
+        "after": "Assistant Professor of Teaching\nDivision of Industrial Data Science\n(Post Ref.: 26/249)\nThe Division is looking for an experienced Assistant Professor of Teaching who will (1) undertake teaching duties at the postgraduate levels, including the coordination and supervision of student seminars, tutorials and capstone projects/dissertation, (2) engage in teaching, learning and scholarly activities, (3) contribute to the planning, administration and development of programmes/courses, (4) assist in organising student activities or training workshops to enhance students’ learning experience, (5) undertake administrative duties related to academic and departmental affairs, and (6) perform any other duties as assigned by the Person in Charge of Division or her delegates.\nGeneral Requirements\nCandidates should have (i) a doctoral degree in data science, industrial engineering, computer engineering, computer science, artificial intelligence, information engineering, or other relevant areas; (ii) experience in teaching relevant courses and/or relevant professional, practical or industrial experience; and (iii) good command of English and Chinese (including Putonghua).\nAppointment\nThe conditions of appointment will be competitive. The remuneration will be commensurate with qualifications and experience. Fringe benefits include annual leave, medical and dental benefits, mandatory provident fund, gratuity, and incoming passage and baggage allowance for the eligible appointee. Appointment will normally be made on contract basis for up to two years.\nApplication Procedure (online application only)\nPlease click \" Apply Now \" to submit your application. Applicants shall provide names and contact information of at least three referees to whom applicants’ consent has been given for their providing references. Personal data collected will be used for recruitment purposes only.\nWe are an equal opportunities employer. Review of applications will continue until the post is filled. Qualified candidates are advised to submit their applications early for consideration.\nThe University reserves the right not to make an appointment for the post advertised, or to fill the post by invitation or by search. We regret that only shortlisted candidates will be notified.",
+        "before": "Assistant Professor of Teaching\nDivision of Industrial Data Science\n(Post Ref.: 26/249)\nThe Division is looking for an experienced Assistant Professor of Teaching who will (1) undertake teaching duties at the postgraduate levels, including the coordination and supervision of student seminars, tutorials and capstone projects/dissertation, (2) engage in teaching, learning and scholarly activities, (3) contribute to the planning, administration and development of programmes/courses, (4) assist in organising student activities or training workshops to enhance students’ learning experience, (5) undertake administrative duties related to academic and departmental affairs, and (6) perform any other duties as assigned by the Person in Charge of Division or her delegates.\nGeneral Requirements\nCandidates should have (i) a doctoral degree in data science, industrial engineering, computer engineering, computer science, artificial intelligence, information engineering, or other relevant areas; (ii) at least 3 years of experience in teaching relevant courses and/or relevant professional, practical or industrial experience; and (iii) good command of English and Chinese (including Putonghua).\nAppointment\nThe conditions of appointment will be competitive. The remuneration will be commensurate with qualifications and experience. Fringe benefits include annual leave, medical and dental benefits, mandatory provident fund, gratuity, and incoming passage and baggage allowance for the eligible appointee. Appointment will normally be made on contract basis for up to two years.\nApplication Procedure (online application only)\nPlease click \" Apply Now \" to submit your application. Applicants shall provide names and contact information of at least three referees to whom applicants’ consent has been given for their providing references. Personal data collected will be used for recruitment purposes only.\nWe are an equal opportunities employer. Review of applications will continue until the post is filled. Qualified candidates are advised to submit their applications early for consideration.\nThe University reserves the right not to make an appointment for the post advertised, or to fill the post by invitation or by search. We regret that only shortlisted candidates will be notified."
+      }
+    },
+    "job_id": "609b28fe17b0fc9408934d31",
+    "kind": "updated",
+    "source_id": "lingnan",
+    "title": "Assistant Professor of Teaching, Division of Industrial Data Science"
   }
 ]
