@@ -18346,5 +18346,83 @@
     "kind": "new",
     "source_id": "lingnan",
     "title": "Library Officer (at the rank of Officer), Library"
+  },
+  {
+    "at": "2026-10-25T04:51:03+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "433295665d89c22e5eb19b5f",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Information Technology Manager (Digital Services Support)"
+  },
+  {
+    "at": "2026-10-25T04:51:03+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "7807c41879126bfdac967f7a",
+    "kind": "status",
+    "source_id": "cpce",
+    "title": "Visiting Lecturer (part-time) in Arts Management (Art Business/ Cultural Policy/ Curatorial Practice) / Visiting Lecturer (part-time) in Design (Media Design/ Interaction Design/ System Design) / Visiting Lecturer (part-time) in Cultural Studies (Digital Media Culture/ Digital Storytelling)"
+  },
+  {
+    "at": "2026-10-25T04:51:03+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "386899434799c070a036ec9f",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Senior Programme Officer, Taught Postgraduate Programmes Office, Office of the Faculty of Business"
+  },
+  {
+    "at": "2026-10-25T04:51:03+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "b891240707340212372c3404",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Administrative Officer, Taught Postgraduate Programmes Office, Faculty of Business"
+  },
+  {
+    "at": "2026-10-25T04:51:03+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "d46b7739361c8f3ff9645044",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Human Resources Officer, Human Resources Office"
+  },
+  {
+    "at": "2026-10-25T04:51:03+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "e21a8ecfe4bc44feea104ef4",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Programme Officer, Taught Postgraduate Programmes Office, Office of the Faculty of Business"
   }
 ]
