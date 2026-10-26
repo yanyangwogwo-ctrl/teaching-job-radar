@@ -18424,5 +18424,290 @@
     "kind": "status",
     "source_id": "lingnan",
     "title": "Programme Officer, Taught Postgraduate Programmes Office, Office of the Faculty of Business"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "job_id": "58dd51ef838dc1dbe4631301",
+    "kind": "new",
+    "source_id": "hkbu-sce",
+    "title": "Systems Analyst (Infrastructure Engineer)"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "c755e93bcfcac723d502802d",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Student Development Assistant"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "de096937425996efda9e11c5",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Assistant Programme Officer"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "job_id": "a5033a72efa904130a66ca50",
+    "kind": "new",
+    "source_id": "polyu",
+    "title": "Visiting Lecturer (Part-time)"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "job_id": "5a23fdfceef1a2600200f9fb",
+    "kind": "new",
+    "source_id": "polyu",
+    "title": "Visiting Lecturer (Part-time)"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "job_id": "08d8de8786c10f32d3db68a7",
+    "kind": "new",
+    "source_id": "polyu",
+    "title": "Visiting Lecturer (Part-time)"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "0af1293e4cd780a45a7baa87",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Finance Office - Accounting Assistant"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "23454fac3072a7e7a683820f",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Office of Vice-President (Learning and Student Experience) - Assistant Manager / Senior Executive Officer"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "45444080f04cbcb591ee2341",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Department of Accountancy - Executive Officer"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "77aa483e0f8c8237119de49a",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Department of Marketing - Part-time Lecturer(s)"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "9bf81cfc06ab0a842a066898",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Office of Vice-President (Learning and Student Experience) - Senior Secretary to Vice-President (Learning and Student Experience)"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "b72723859f24e8a928541690",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Part-time Research Assistant (Part-time) – Research Centre for ESG"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-26",
+        "before": "2026-09-28"
+      }
+    },
+    "job_id": "1997a2e24004466a0c6d8a3a",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Digital Experience Specialist, Office of Information Technology"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-26",
+        "before": "2026-09-28"
+      }
+    },
+    "job_id": "5deb3187edcdc13d69d3679d",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Systems Analyst (Digital Experience Services)"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-26",
+        "before": "2026-10-07"
+      }
+    },
+    "job_id": "0508cc147b6ed6bc51a5a17c",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Programme Officer, Office of the Dean of Business"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "job_id": "8c920ef60b16c66b3699da5a",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Officer / Officer, Graduate School"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "job_id": "b0d5e77328cb3603f6c11e36",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Systems Analyst (Infrastructure Engineer), School of Continuing Education"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "job_id": "6f05269a7ebfd3289a43fe16",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Executive Officer, Office of the Dean of Arts and Social Sciences"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "job_id": "561cf1ea673f404e1edb07c6",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Post-Doctoral Research Fellow, David C. Lam Institute for East-West Studies"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "job_id": "e77fced406ee668b9c7fe468",
+    "kind": "new",
+    "source_id": "twc",
+    "title": "Assistant Registry Manager"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "90c4d599b916fb8f006a022c",
+    "kind": "status",
+    "source_id": "twc",
+    "title": "Temporary Assistant Executive Officer"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "job_id": "e1195b64c79c0d5bdd38440b",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Teaching Associate"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-04",
+        "before": "2026-10-28"
+      }
+    },
+    "job_id": "81fdbd4234942253098f1b30",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "定期教導員 (汽車業)"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "job_id": "0588bcf9b8c00ec0c2706ccb",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Deputy Director"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "4a1af9d97a0439087eb2bb57",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturer of EDU 1150ECF (2027 Spring Term) (E&L)"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "984aa97cca9fe0bfd57459ca",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Temporary Laboratory Assistant (S&T)"
+  },
+  {
+    "at": "2026-10-26T04:55:26+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "f7f31db1fd64a3c53b3f4afd",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Temporary Research Assistant II (R7505) (S&T)"
   }
 ]
