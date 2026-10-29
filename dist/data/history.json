@@ -19251,5 +19251,248 @@
     "kind": "status",
     "source_id": "hku",
     "title": "Full-time/Part-time Certificated Dental Surgery Assistant I/II/Dental Clinic Assistant (at the rank of Facilities Assistant) (several posts) in the Institute for Advanced Dentistry Multi-Specialty Clinic (IAD-MSC)"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-30",
+        "before": null
+      },
+      "deadline_type": {
+        "after": "closing",
+        "before": "unknown"
+      }
+    },
+    "job_id": "5dcf5c67fcb4f38ef0b12e7b",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Teaching Assistant in the School of Future Media"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-04",
+        "before": "2026-11-03"
+      }
+    },
+    "job_id": "d143ab078e99a46dea06b96b",
+    "kind": "updated",
+    "source_id": "hkust",
+    "title": "Principal Research Scientist"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "1eebcfb91f9fbfa1d039f68d",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Manager, School of Creative Arts"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "d9f76cc6c7802949034fa56f",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Finance Manager (Creative Hub), Academy of Music"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "job_id": "5c4a9e1c387d409a579a993e",
+    "kind": "new",
+    "source_id": "hkct",
+    "title": "Marketing Officer (Branding & Content) [1-year contract]"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "job_id": "576b6eef94d7029bb87ff022",
+    "kind": "new",
+    "source_id": "hkct",
+    "title": "Marketing Officer (Digital Marketing & Analytics) [1-year contract]"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "job_id": "a14cf2f2d4a766d64bd335d4",
+    "kind": "new",
+    "source_id": "hkct",
+    "title": "教學助理 (旅遊及餐飲訓練中心)"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "job_id": "b264ce2058ad984f67ff4832",
+    "kind": "new",
+    "source_id": "twc",
+    "title": "Senior Lecturer / Senior Clinical Associate in Medical Imaging"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "job_id": "cc2ab64c61561024bc66589c",
+    "kind": "new",
+    "source_id": "twc",
+    "title": "Senior Manager / Manager"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "5a25ecdd58c18007e9c83632",
+    "kind": "status",
+    "source_id": "twc",
+    "title": "Associate Professor/Assistant Professor(Research Track) in Occupational Therapy"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "ada5c9192533dd83d180ac55",
+    "kind": "status",
+    "source_id": "twc",
+    "title": "Assistant Executive Officer"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "job_id": "7c299a14f80c0d338906280f",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant I/II (N&HS) (Project No. R6994)"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "job_id": "f865b60d6521177bb72ca57a",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Tutorship (2027 Spring Term starting in January) (E&L)"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "346e56195359eab0c0870138",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Technical Assistant (R7063) (N&HS)"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "f5850abe9ec54f05c1e62552",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Technical Assistant (Phlebotomist) (N&HS)"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "job_id": "eb18edd7b3e83588ca1925ba",
+    "kind": "new",
+    "source_id": "cice",
+    "title": "行政助理"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "job_id": "aab715a9ea1f99c6281890e9",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Programme Officer, Taught Postgraduate Programmes Office, Office of the Faculty of Business"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "job_id": "6d565d929dc6302f7f00beaf",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Associate Professor of Teaching / Assistant Professor of Teaching, Department of Finance"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "5aa1b156c44c2ba6939c4fed",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Senior Information Officer, ITSC"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "a8f8bf721f5a862539e38284",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Manager I, Office of Global Education"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "741d288b935ea23a4d2e1700",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Part-time Research Assistant I/II in the Division of Haematology, Medical Oncology and Haemopoietic Stem Cell Transplantation"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "9166f9cc36a853820bbd2267",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Lecturer [BSc (Hons) Food Science and Nutrition]"
+  },
+  {
+    "at": "2026-10-29T05:55:19+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "ca8d79142b83664b43bbb459",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time Technician"
   }
 ]
