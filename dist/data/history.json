@@ -19494,5 +19494,599 @@
     "kind": "status",
     "source_id": "vtc",
     "title": "Part-time Technician"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "c697092d4706d063b1788c64",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time Student Research Assistant"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "082e129222da3b6f872cec43",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time Student Research Assistant (several posts) in the Division of Community Medicine and Public Health Practice"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "720d36b518177d10b2f9db37",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Full-time/Part-time Research Assistant I/II in the Division of Community Medicine and Public Health Practice"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {},
+    "job_id": "5dcf5c67fcb4f38ef0b12e7b",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Teaching Assistant in the School of Future Media"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {},
+    "job_id": "f8d783445d0dabe9efb99bf1",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Senior Technical Officer in the Division of Gastroenterology and Hepatology"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {},
+    "job_id": "5b73b538e0293b3dbd0c61af",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Part-time Research Assistant I/II (1–2 positions)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "b71fd927614d3fd9278ea8c1",
+    "kind": "new",
+    "source_id": "polyu",
+    "title": "Visiting Lecturer (Part-time)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "c75482194ad738167c81a141",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "aebad0c78106c1586be42f5a",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Intensive Production Animal Health)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "43a25f0126aa2d7bf15969bc",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Artificial Intelligence and Machine Learning for Environmental Engineering)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "957fb4985fba3cfa997d612b",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Chair Professor/Professor/Associate Professor/Assistant Professor (Energy Storage, Hydrogen Technologies, Renewable Energy Conversion and Catalysis)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-05",
+        "before": "2026-11-04"
+      }
+    },
+    "job_id": "d143ab078e99a46dea06b96b",
+    "kind": "updated",
+    "source_id": "hkust",
+    "title": "Principal Research Scientist"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "190e1a280e2bb85bc2745dae",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Associate Professor/ Assistant Professor (Urban Studies)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "bb0dbd5a49e537c511abb1bf",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Assistant Professor"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "e6e66f005fcd719f23d73166",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "90710da81bdf2ff89de6c916",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Lecturer(s)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "17e9d884855f4ba0a91ed1d7",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Assistant Professor (Pharmaceutical Sciences)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "4a54c0e3bfb7c33ae4f86e09",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Assistant Professor(s)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "a0e593675fbd3d0d2f151133",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Lecturer"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-30",
+        "before": "2026-10-16"
+      }
+    },
+    "job_id": "749e839afd432ba84a63fb92",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Finance Manager / Finance Manager (Accounting and Budgeting)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "87da819b947a949e4130e815",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Finance Manager / Finance Manager (Special Projects)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-30",
+        "before": "2026-10-16"
+      }
+    },
+    "job_id": "005cdbc43360fae303377a6e",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Assistant Purchasing Manager, Finance Office"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-30",
+        "before": "2026-10-16"
+      }
+    },
+    "job_id": "5d09d315e07f6d767858f839",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Purchasing Officer / Assistant Purchasing Officer, Finance Office"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "20d06e982c3ab31578c7be3c",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Officer / Assistant Officer, Organisation and Talent Development"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "8957b56a3b6e03a6291f549a",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Manager, Academic Registry"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "c4e6445185c7977c88920b16",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Senior Finance Manager / Finance Manager (Special Projects)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "c08cce76feb04ea9ee68fc39",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "定期 / 臨時助理講師"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "29daa770c2fce76d1f38c70f",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term / Part-time Instructor"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "15e9b3ccc68b6d3cca1520fc",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Lecturer"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "8d2c9fef81b56a330f27ab51",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "定期教導員"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-05",
+        "before": "2026-10-29"
+      }
+    },
+    "job_id": "4663e4402e852feb662976bf",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "Term Lecturer (Airport Operations Management)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "fb5c1032d966143c89f43a29",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "助理舍監"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "description": {
+        "after": "Hong Kong Institute of Vocational Education (Chai Wan)\nDepartment / Section : Computer Centre\nRef. no : O/CW-CC/Term_ITA/10/26\nMajor Duties :\n(a)\nTo serve as the first point of contact for IT support requests, resolving technical issues in a timely manner;\n(b)\nTo provide IT help-desk service for both staff and students including computers, network, video conferencing equipment, Microsoft 365, hardware and software installation, configuration, and troubleshooting;\n(c)\nTo provide support for Microsoft 365 services such as Outlook, Teams, OneDrive; and\n(d)\nTo assist with ad hoc duties / projects as assigned.\nRequirements :\n(a)\n(i)\nLevel 2 or above in 5 subjects, including English Language*, Chinese Language and Mathematics, in the Hong Kong Diploma of Secondary Education (HKDSE) Examination, or equivalent^; OR\n(ii)\nLevel 2 / Grade E or above in 5 subjects including English Language (Syllabus B)*, Chinese Language and Mathematics in the Hong Kong Certificate of Education Examination (HKCEE); OR\n(iii)\nDiploma of Applied Education + Maths Plus / Diploma Yi Jin + Maths Plus / Project Yi Jin; OR\n(iv)\nA recognised Certificate / Diploma / Foundation Diploma / Foundation Certificate / Diploma of Foundation Studies, preferably in Information Technology discipline; OR\n(v)\nA recognised Associate Degree / Higher Diploma or above, preferably in Information Technology discipline.\n*\nCompletion of Hong Kong Vocational English Programme (HKVEP) at Level 2 / Passing 5 specific VTC’s Vocational English Module Certificates is considered an alternative qualification.\n^\n“Attained” in Applied Learning subjects (subject to a maximum of two Applied Learning subjects), and Grade E in Other Language subjects in HKDSE Examination are accepted as equivalent to Level 2 in the New Senior Secondary subjects.\n(b)\nProficiency in the use of computer software application, including MS Word, Excel, PowerPoint and Chinese word processing;\n(c)\nWith experience in operating and maintaining computer systems and/or services on Windows platforms would be an advantage;\n(d)\nStrong command of written and spoken in both English and Chinese, fluent in Mandarin;\n(e)\nProactive, helpful and patient with strong interpersonal and communication skills; and\n(f)\nFresh graduates will be considered.\nNotes :\n(1)\nThe post is at the rank of Executive Assistant II.\n(2)\nThe appointee(s) may be required to perform duties outside normal office hours and work on shift.",
+        "before": "Hong Kong Institute of Vocational Education (Chai Wan)\nDepartment / Section : Computer Centre\nRef. no : O/CW-CC/Term_ITA/10/26\nMajor Duties :\n(a)\nTo serve as the first point of contact for IT support requests, resolving technical issues in a timely manner;\n(b)\nTo provide IT help-desk service for both staff and students including computers, network, video conferencing equipment, Microsoft 365, hardware and software installation, configuration, and troubleshooting;\n(c)\nTo provide support for Microsoft 365 services such as Outlook, Teams, OneDrive; and\n(d)\nTo assist with ad hoc duties / projects as assigned.\nRequirements :\n(a)\n(i)\nLevel 2 or above in 5 subjects, including English Language*, Chinese Language and Mathematics, in the Hong Kong Diploma of Secondary Education (HKDSE) Examination, or equivalent^; OR\n(ii)\nLevel 2 / Grade E or above in 5 subjects including English Language (Syllabus B)*, Chinese Language and Mathematics in the Hong Kong Certificate of Education Examination (HKCEE); OR\n(iii)\nDiploma of Applied Education + Maths Plus / Diploma Yi Jin + Maths Plus / Project Yi Jin; OR\n(iv)\nA recognised Certificate / Diploma / Foundation Diploma / Foundation Certificate / Diploma of Foundation Studies; OR\n(v)\nA recognised Associate Degree / Higher Diploma or above.\n*\nCompletion of Hong Kong Vocational English Programme (HKVEP) at Level 2 / Passing 5 specific VTC’s Vocational English Module Certificates is considered an alternative qualification.\n^\n“Attained” in Applied Learning subjects (subject to a maximum of two Applied Learning subjects), and Grade E in Other Language subjects in HKDSE Examination are accepted as equivalent to Level 2 in the New Senior Secondary subjects.\n(b)\nProficiency in the use of computer software application, including MS Word, Excel, PowerPoint and Chinese word processing;\n(c)\nWith experience in operating and maintaining computer systems and/or services on Windows platforms would be an advantage;\n(d)\nStrong command of written and spoken in both English and Chinese, fluent in Mandarin;\n(e)\nProactive, helpful and patient with strong interpersonal and communication skills; and\n(f)\nFresh graduates will be considered.\nNotes :\n(1)\nThe post is at the rank of Executive Assistant II.\n(2)\nThe appointee(s) may be required to perform duties outside normal office hours and work on shift."
+      }
+    },
+    "job_id": "35d64a66325758fe49a82b3a",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "Term IT Assistant"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "5f918562b0984196301827db",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "ded4965d056d661ca7a20277",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "兼職(日間)助理講師"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "2b2c50427ea3e6d9be559993",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime / Evening) Lecturer"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "164de79f24deb817f06ebf75",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "定期教導員（基礎西式小點及甜品製作）"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "839ca89b0f674875f55fd90d",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Lecturer (Digital Media for Advertising and Marketing)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "fd19860a4d2c025b9b4a2a19",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Assistant Systems Manager (Infrastructure Management)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "0d26bbc079209fe8649f9d4b",
+    "kind": "new",
+    "source_id": "thei",
+    "title": "Part-time Lecturer (Culinary Arts and Management)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "9c1db95ea43cc2b7882e032b",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturers [SPR-26] (S&T)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "b52556dca3acc865be97e1ea",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturers [SPR-26] (S&T)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "1f0e7c6bbc5be1f5ae79c221",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturers [SPR-26] (S&T)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "036a5e20631bc7be94122c11",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturers (2027 Spring) (S&T)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "e283f212f0a23b2879dcacd8",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Assistant(s) (2027 Spring Term) (S&T) "
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "bdd7cd60a74cddd3b2bc9fd6",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Temporary Research Assistant II (R7505) (S&T)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "f813b150a8ac94d75fae6356",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant II (N&HS)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "01e3a989a2145602b0631393",
+    "kind": "status",
+    "source_id": "yccece",
+    "title": "Research Officer (JCBS)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "107be563722ca043c03568c0",
+    "kind": "status",
+    "source_id": "yccece",
+    "title": "Project Manager (JC CoolPlay 2.0)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "7565eb628446355071652fdf",
+    "kind": "status",
+    "source_id": "yccece",
+    "title": "研究助理《宗族源流與弘揚：陳氏乾泰隆、黌利、元行與香港、東南亞米業及多元化企業、文化教育發展》"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "8d45a1aa6a5ddf5bffcf5111",
+    "kind": "status",
+    "source_id": "yccece",
+    "title": "Administrative Officer (Student Development)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "94a8d739aa5b2fc5e89fee59",
+    "kind": "status",
+    "source_id": "yccece",
+    "title": "Senior Project Officer (JC CoolThink Junior)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "dcf6baf5d01c68f9fa90fc94",
+    "kind": "status",
+    "source_id": "yccece",
+    "title": "School Development Officer (JCCP)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "eff7edb52eacae0c00a39660",
+    "kind": "status",
+    "source_id": "yccece",
+    "title": "Research Assistant (JCBS)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "job_id": "a360e286adb8d0216a2d1cda",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Assistant Executive Officer (Research Postgraduate Team), School of Graduate Studies"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-10-30",
+        "before": "2026-10-19"
+      }
+    },
+    "job_id": "ab07fda560bca8a41c595457",
+    "kind": "updated",
+    "source_id": "lingnan",
+    "title": "Administrative Officer (TPg Programme Team), School of Graduate Studies"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "description": {
+        "after": "Institutional Research and\nBranding Manager\nInstitutional Research and\nBranding Office\n(Post Ref.: 26/258)\nResponsibilities\n• Manage and enhance the University's website, ensuring timely updates, user engagement, and consistency with the University's branding strategy\n• Formulate and implement online and offline marketing initiatives to enhance the university's visibility and strengthen its brand\n• Organise the university's participation in and sponsorship of key global events\n• Oversee the production of communication materials, including videos\n• Provide secretarial and administrative support to committees and working groups\n• Assist in ad hoc requests and projects\n• Perform any other duties as assigned by supervisor(s)\nRequirements\n• A Bachelor’s degree in communication, marketing or related fields\n• At least 15 years of post-qualification experience, preferably in tertiary education institutions\n• Strong interpersonal, communication, coordination and problem-solving skills, with the ability to work collaboratively across departments and foster effective teamwork\n• Detail-oriented, highly organised and capable of working independently under pressure and tight deadlines\n• Excellent command of written and spoken English and Chinese (including Putonghua)\n• Occasional travelling and\nsite visits may be required\nCandidates with less/more experience will be\nconsidered for appointment at a relevant rank.\nSalary and Fringe Benefits\nThe rank and commencing salary will be commensurate with qualifications and\nexperience. Fringe benefits, where applicable, include annual leave, medical\nand dental benefits, mandatory provident fund and gratuity.\nApplication Procedure (online application only)\nPlease click “ Apply Now ” to submit your application. Personal data collected will be used for\nrecruitment purposes only.\nWe are an equal opportunities employer . Review of applications will continue until the post is filled. Qualified candidates are advised to submit their applications early for consideration.\nThe University reserves the right not to make an appointment for the post advertised, or to fill the post by invitation or by search. We regret that only shortlisted candidates will be notified .",
+        "before": "Institutional Research and\nBranding Manager\nInstitutional Research and\nBranding Office\n(Post Ref.: 26/258)\nResponsibilities\n• Manage and enhance the University's website, ensuring timely updates, user engagement, and consistency with the University's branding strategy\n• Formulate and implement online and offline marketing initiatives to enhance the university's visibility and strengthen its brand\n• Organise the university's participation in and sponsorship of key global events\n• Oversee the production of communication materials, including videos\n• Provide secretarial and administrative support to committees and working groups\n• Assist in ad hoc requests and projects\n• Perform any other duties as assigned by supervisor(s)\nRequirements\n• A Bachelor’s degree in Statistics, Information Systems, Mathematics, Social Sciences, or relevant disciplines\n• At least 15 years of post-qualification experience, preferably in tertiary education institutions\n• Strong interpersonal, communication, coordination and problem-solving skills, with the ability to work collaboratively across departments and foster effective teamwork\n• Detail-oriented, highly organised and capable of working independently under pressure and tight deadlines\n• Excellent command of written and spoken English and Chinese (including Putonghua)\n• Occasional travelling and\nsite visits may be required\nCandidates with less/more experience will be\nconsidered for appointment at a relevant rank.\nSalary and Fringe Benefits\nThe rank and commencing salary will be commensurate with qualifications and\nexperience. Fringe benefits, where applicable, include annual leave, medical\nand dental benefits, mandatory provident fund and gratuity.\nApplication Procedure (online application only)\nPlease click “ Apply Now ” to submit your application. Personal data collected will be used for\nrecruitment purposes only.\nWe are an equal opportunities employer . Review of applications will continue until the post is filled. Qualified candidates are advised to submit their applications early for consideration.\nThe University reserves the right not to make an appointment for the post advertised, or to fill the post by invitation or by search. We regret that only shortlisted candidates will be notified ."
+      }
+    },
+    "job_id": "3c1ca559ab12e4056e62c99b",
+    "kind": "updated",
+    "source_id": "lingnan",
+    "title": "Institutional Research and Branding Manager, Institutional Research and Branding Office"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "c84cbaf14be35c674f3f7eeb",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Administrative Officer, Department of Economics"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "4ebe87fadfbbe4f9944f45f7",
+    "kind": "status",
+    "source_id": "hpshcc",
+    "title": "Assistant Manager (Ref: RS/ft/26-03)"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "62bcfc5742ed5335179fbc6d",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Research Assistant II in the Faculty of Arts"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "697f7a2a0aa566e74c8e5e50",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Full-time/Part-time Research Assistant I/II in the Division of Community Medicine and Public Health Practice"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "b9131c56e17c7362fb646ce8",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Part-time Student Research Assistant (several posts) in the Division of Community Medicine and Public Health Practice"
+  },
+  {
+    "at": "2026-10-30T05:56:17+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "f0db0fdf308c4073e25121e3",
+    "kind": "status",
+    "source_id": "thei",
+    "title": "Part-time Lecturer (Aircraft Engineering)"
   }
 ]
