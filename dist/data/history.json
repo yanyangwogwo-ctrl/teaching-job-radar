@@ -20368,5 +20368,200 @@
     "kind": "status",
     "source_id": "hku",
     "title": "Part-time Research Assistant I / Senior Research Assistant"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "5f3b1e8713c057b0701b4143",
+    "kind": "status",
+    "source_id": "hkuspace",
+    "title": "Part-time Teacher in Different Languages in the College of Humanities and Law"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "0d5cf6f5206ef0c64957b730",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Department of Art and Design - Part-time Lecturer(s)"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "255684720ed16d43db46f304",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Executive Officer (Creative Hub)"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "7843205dbdda1b17daec7d5c",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Professor / Associate Professor / Assistant Professor (Social Work)"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "963ff9713655e6b6dfde8ee2",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Lecturer in Psychology and/or Education"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "5937fa2386d1c47fe37c7808",
+    "kind": "status",
+    "source_id": "cpce",
+    "title": "Principal Lecturer in Bilingual Studies and Communication / Chinese / English"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "9344b025b4bc0489a7694609",
+    "kind": "status",
+    "source_id": "twc",
+    "title": "Part-time Research Assistant"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "ac4f1a456f8b481880adcf72",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "35f3d6bd50f7bf0a8b573830",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Temporary Research Assistant II (N&HS) "
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "10bec3c6da9bdc2760006c78",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Senior Administrative Officer (QA & E of TPg), School of Graduate Studies"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "83f336dfd80d336577fcc27a",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Professor of Teaching, Wu Jieh Yee School of Interdisciplinary Studies (Post Ref.: 26/199)"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "9c3cba67d508f7279725bc39",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Executive Officer / Administrative Officer (RPg Team), School of Graduate Studies"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "303c51922fd1fa46521af642",
+    "kind": "status",
+    "source_id": "cuhk",
+    "title": "Associate Professor(s)/ Assistant Professor(s)"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "5b974cf82639431f23d1b579",
+    "kind": "status",
+    "source_id": "cuhk",
+    "title": "Associate/ Assistant Professor in English Literary Studies"
+  },
+  {
+    "at": "2026-11-01T06:17:02+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "8d00342fdef96831df7743c6",
+    "kind": "status",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professor"
   }
 ]
