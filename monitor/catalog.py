@@ -86,7 +86,15 @@ def parse_catalog_page(source, html, url=None):
         else:
             apply_deadline(job, 'Closing date: ' + closing)
         jobs.append(job)
-    empty = bool(not rows and selectors.get('empty') and soup.select_one(selectors['empty']))
+    empty = False
+    if not rows and selectors.get('empty'):
+        notices = soup.select(selectors['empty'])
+        expected = source.get('empty_text')
+        empty = any(clean_text(notice.get_text(' ', strip=True)) == expected for notice in notices) if expected else bool(notices)
+        # A retained no-vacancy notice must not hide job links after a layout
+        # change has stopped the row selector from finding the advertisements.
+        if empty and selectors.get('empty_conflicts') and soup.select_one(selectors['empty_conflicts']):
+            empty = False
     if not jobs and not empty:
         raise CrawlError('未找到預期職位列或明確的零職位標示；可能需要調整讀取規則。')
     pages = [urljoin(url, a['href']) for a in soup.select(selectors['next']) if a.get('href')] if selectors.get('next') else []
@@ -246,3 +254,4 @@ def collect_inline(source, client):
     if not result.jobs:
         raise CrawlError('官方頁面缺少預期同頁招聘廣告，未當作零職位。')
     return result
+

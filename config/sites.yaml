@@ -202,7 +202,7 @@ sources:
   enabled: true
   allowed_hosts:
   - www.hkas.edu.hk
-  notes: 學院招聘頁的 robots.txt 目前回傳 403。母機構另有官方招聘頁 https://hkac.org.hk/en/about_join/ 可供補充查看，但未確認涵蓋全部學院空缺。
+  notes: 官方招聘頁在部分環境可讀；雲端曾回傳 403 或非規則的驗證內容，按每日實際結果顯示狀態。母機構另有官方招聘頁 https://hkac.org.hk/en/about_join/ 可供補充查看，但未確認涵蓋全部學院空缺。
   selectors:
     row: .post_content a[href*="/job-vacancy/"]
     title: :self
@@ -280,7 +280,7 @@ sources:
   enabled: true
   allowed_hosts:
   - www.hkapa.edu
-  notes: 官方招聘頁含完整廣告；英文頁要求參閱中文時按同一職位編號合併中文內文。
+  notes: 完整讀取官方招聘清單分頁並核對總數；英文頁要求參閱中文時，讀取中文分頁並按同一職位編號合併內文。
 - id: eduhk
   institution: 香港教育大學
   name: The Education University of Hong Kong
@@ -412,9 +412,13 @@ sources:
   allowed_hosts:
   - hkuspace-plk.hku.hk
   notes: 獨立官方招聘頁；HKU SPACE 主清單只有學院連結，因此另行收集，避免漏掉職位。
+  empty_text: There is no job vacancy at the moment.
   selectors:
     row: .fluid-block:has(a[href^="/jobs/detail/"])
     title: .heading a[href^="/jobs/detail/"]
     link: .heading a[href^="/jobs/detail/"]
     deadline: .date
     detail_body: section.inner-content > .container
+    empty: section.inner-content > .container > p
+    empty_conflicts: a[href*="jobs/detail/"]
+

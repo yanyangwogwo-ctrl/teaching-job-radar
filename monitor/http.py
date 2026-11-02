@@ -180,6 +180,8 @@ class PublicClient:
             elif response.status_code == 200 and not response.text.lstrip('\ufeff \r\n\t').startswith(('<', '{', '[')) and not (response.headers.get('cf-mitigated') or response.headers.get('x-amzn-waf-action')):
                 parser = RobotsPolicy(response.text)
             else:
+                if response.status_code == 200:
+                    raise CrawlError('robots.txt 回傳網頁、驗證頁或其他非規則內容（HTTP 200），未能確認自動讀取規則；已保留舊資料。', stop_source=True)
                 raise CrawlError(f'未能確認 robots.txt（HTTP {response.status_code}），已保留舊資料。', stop_source=True)
             delay = parser.delay
             if delay > 30:
@@ -201,6 +203,8 @@ class PublicClient:
         if response.status_code != 200 or challenge:
             raise CrawlError(f'網站未提供可讀頁面（HTTP {response.status_code}）。', stop_source=bool(challenge) or response.status_code in (401, 403, 429))
         text = response.text
+        if '_incapsula_resource' in text.lower() and re.search(r'<body\b[^>]*>\s*</body>', text, re.I):
+            raise CrawlError('網站回傳存取驗證頁（HTTP 200），未提供職位正文；已停止該來源並保留舊資料。', stop_source=True)
         if any(token in text.lower() for token in ('<title>just a moment', '<title>access denied', 'cf-chl-', 'awswaf-captcha', 'incapsula incident id')):
             raise CrawlError('網站要求驗證，已停止該來源並保留舊資料。', stop_source=True)
         return response
@@ -213,3 +217,4 @@ class PublicClient:
 
     def search_json(self, url, data, headers=None):
         return self.response(url, data=data, headers=headers).json()
+

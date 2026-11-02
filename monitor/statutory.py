@@ -1,5 +1,6 @@
 """Draft helpers to integrate into monitor; validated against saved live HTML fixtures."""
 import ast
+import json
 import re
 from urllib.parse import urljoin, parse_qs, urlsplit, unquote, urlencode
 from monitor.adapters import Batch, soup_of, body_text, apply_deadline
@@ -77,7 +78,46 @@ def parse_vtc_detail(job,html):
     job['employment_type']=employment_of(job['title'],body=text);apply_deadline(job,text);return job
 
 
-def parse_hkapa(source,html):
+def _hkapa_pagination(soup, jobs, page_url):
+    count = re.search(r'Showing\s+(\d+)\s*[-–]\s*(\d+)\s+of\s+(\d+)\s+job openings', soup.get_text(' ', strip=True), re.I)
+    app = soup.select_one('#app[data-page]')
+    if app is None:
+        if count and tuple(map(int, count.groups())) != (1, len(jobs), len(jobs)):
+            raise CrawlError('HKAPA 列表總數與詳情區塊數目不符。')
+        return {'total': len(jobs), 'next': ''}
+    try:
+        state = json.loads(app['data-page'])
+        if state['component'] != 'job-listing':
+            raise ValueError('component')
+        items = state['props']['pageData']['items']
+        total, size, page, last = (items[key] for key in ('total', 'per_page', 'current_page', 'last_page'))
+        if any(type(value) is not int for value in (total, size, page, last)):
+            raise ValueError('pagination types')
+        requested = parse_qs(urlsplit(page_url).query).get('page', ['1'])
+        if len(requested) != 1 or page != int(requested[0]):
+            raise ValueError('current page')
+        if total < 1 or size < 1 or not 1 <= page <= last <= 30 or last != (total + size - 1) // size:
+            raise ValueError('pagination bounds')
+        start, end = (page - 1) * size + 1, min(page * size, total)
+        if len(jobs) != end - start + 1 or (count and tuple(map(int, count.groups())) != (start, end, total)):
+            raise ValueError('page count')
+        next_url = items['next_page_url']
+        if next_url is None:
+            next_url = ''
+        if not isinstance(next_url, str) or bool(next_url) != (page < last):
+            raise ValueError('next page')
+        if next_url:
+            next_url = urljoin(page_url, next_url)
+            current, following = urlsplit(page_url), urlsplit(next_url)
+            if ((following.scheme, following.netloc, following.path) != (current.scheme, current.netloc, current.path)
+                    or following.fragment or parse_qs(following.query) != {'page': [str(page + 1)]}):
+                raise ValueError('next page location')
+        return {'total': total, 'next': next_url}
+    except (KeyError, TypeError, ValueError):
+        raise CrawlError('HKAPA 分頁資料、頁碼或職位數目未能互相核對。') from None
+
+
+def _parse_hkapa_page(source, html, page_url):
     soup=soup_of(html);jobs=[]
     for panel in soup.select('.job-detail__inner'):
         title=panel.select_one('.job-detail__title');link=panel.select_one('a.job-detail__btnlink[href]');ref=panel.select_one('.job-detail__ref strong');body=panel.select_one('.job-content');kind=panel.select_one('.job-detail__type')
@@ -86,25 +126,63 @@ def parse_hkapa(source,html):
         job=record(source,title.get_text(' ',strip=True),urljoin(source['url'],link['href']),ref.get_text(' ',strip=True),description=text if complete else '',match_text=text if complete else '',detail_complete=complete)
         job['employment_type']=employment_of(job['title'],kind.get_text(' ',strip=True) if kind else '',text)
         job['posted_date']=posted_from(text);deadline=panel.select_one('.job-detail__dl');apply_deadline(job,(deadline.get_text(' ',strip=True)+'\n' if deadline else '')+text);jobs.append(job)
-    count=re.search(r'Showing\s+\d+\s*[-–]\s*\d+\s+of\s+(\d+)\s+job openings',soup.get_text(' ',strip=True),re.I)
     if not jobs:raise CrawlError('HKAPA 未找到可確認職位，未當作零職位。')
-    # Chinese page labels differ; caller compares counterpart refs/count.
-    if count and int(count.group(1))!=len(jobs):raise CrawlError('HKAPA 列表總數與詳情區塊數目不符。')
-    return Batch(jobs=jobs,pages=1,complete=all(j['detail_complete'] for j in jobs))
+    references = [j['reference'] for j in jobs]
+    if any(not ref for ref in references) or len(set(references)) != len(references):
+        raise CrawlError('HKAPA 職位編號缺少或重複。')
+    return Batch(jobs=jobs, pages=1), _hkapa_pagination(soup, jobs, page_url)
+
+
+def parse_hkapa(source, html):
+    result, pagination = _parse_hkapa_page(source, html, source['url'])
+    result.complete = not pagination['next'] and all(j['detail_complete'] for j in result.jobs)
+    return result
+
+
+def _collect_hkapa_pages(source, client, start_url):
+    result, url, expected, seen, visited = Batch(), start_url, None, set(), set()
+    try:
+        while url:
+            if url in visited or len(visited) >= 30:
+                raise CrawlError('HKAPA 分頁重複或超過安全上限。')
+            visited.add(url)
+            batch, pagination = _parse_hkapa_page(source, client.get(url), url)
+            references = {job['reference'] for job in batch.jobs}
+            if (expected is not None and pagination['total'] != expected) or seen.intersection(references):
+                raise CrawlError('HKAPA 分頁總數改變或出現重複職位，暫不判定職位消失。')
+            expected = pagination['total']
+            seen.update(references)
+            result.jobs.extend(batch.jobs)
+            result.pages += 1
+            url = pagination['next']
+        if len(seen) != expected:
+            raise CrawlError('HKAPA 已讀完分頁但職位總數不符，暫不判定職位消失。')
+    except CrawlError as error:
+        result.complete = False
+        result.errors.append(str(error))
+        return result, error.stop_source
+    return result, False
 
 
 def collect_hkapa(source,client):
-    result=parse_hkapa(source,client.get(source['url']))
+    result, stopped = _collect_hkapa_pages(source, client, source['url'])
+    if stopped:
+        return result
     if any(not j['detail_complete'] for j in result.jobs):
-        try:
-            other=parse_hkapa(source,client.get('https://www.hkapa.edu/tch/job-opportunity'));result.pages+=1;by_ref={j['reference']:j for j in other.jobs}
-            for job in result.jobs:
-                alternative=by_ref.get(job['reference'])
-                if not job['detail_complete'] and alternative and alternative['detail_complete']:
-                    for key in ('description','match_text','detail_complete','posted_date','deadline','deadline_type','deadline_raw'):job[key]=alternative[key]
-            result.complete=all(j['detail_complete'] for j in result.jobs)
-            if not result.complete:result.errors.append('HKAPA 部分職位未提供完整中英文正文。')
-        except CrawlError as e:result.complete=False;result.errors.append(str(e))
+        # Language editions have different ordering; match refs across all pages.
+        other, _ = _collect_hkapa_pages(source, client, 'https://www.hkapa.edu/tch/job-opportunity')
+        result.pages += other.pages
+        result.complete = result.complete and other.complete
+        result.errors.extend(other.errors)
+        by_ref = {j['reference']: j for j in other.jobs}
+        for job in result.jobs:
+            alternative = by_ref.get(job['reference'])
+            if not job['detail_complete'] and alternative and alternative['detail_complete']:
+                for key in ('description','match_text','detail_complete','posted_date','deadline','deadline_type','deadline_raw'):
+                    job[key] = alternative[key]
+    if any(not j['detail_complete'] for j in result.jobs):
+        result.complete = False
+        result.errors.append('HKAPA 部分職位未提供完整中英文正文。')
     return result
 
 
@@ -123,7 +201,7 @@ def parse_thei_list(source,html):
 def parse_thei_detail(job,html):
     soup=soup_of(html);body=soup.select_one('.elementor-widget-theme-post-content');title=soup.select_one('.elementor-widget-theme-post-title')
     if not body or not title:raise CrawlError('THEi 詳情正文格式有變。')
-    text=body_text(body);ref=re.search(r'Ref\.?\s*No\.?\s*:\s*([^\n]+)',text,re.I)
+    text=body_text(body);ref=re.search(r'(?:Ref\.?\s*No\.?|參考編號)\s*[:：]\s*([^\n]+)',text,re.I)
     if not ref or len(text)<200:raise CrawlError('THEi 詳情缺少編號或足夠正文。')
     # Keep canonical URL identity from listing: reference enrichment should not regenerate ID.
     job.update(reference=clean_text(ref.group(1)),title=title.get_text(' ',strip=True),description=text,match_text=text,detail_complete=True)
@@ -209,12 +287,17 @@ def parse_eduhk_list(source,html,page_url=None):
                 if len(matching)==1:block=ancestor
                 break
         if block is None:raise CrawlError('EdUHK 職位 PDF 缺少可確認的日期及編號區塊。')
-        txt=block.get_text('\n',strip=True);ref=re.search(r'\bRef\s*:\s*(\d+)\b',txt,re.I);posted=re.search(r'Ad\s+Date\s*:\s*([^\n]+)',txt,re.I);close=re.search(r'Close\s+Date\s*:\s*([^\n]+)',txt,re.I)
+        txt=block.get_text('\n',strip=True);ref=re.search(r'\bRef\s*:\s*(.*?)\s*Ad\s+Date\s*:',txt,re.I|re.S);posted=re.search(r'Ad\s+Date\s*:\s*([^\n]+)',txt,re.I);close=re.search(r'Close\s+Date\s*:\s*([^\n]+)',txt,re.I)
         if not ref or not posted or not close:raise CrawlError('EdUHK 職位欄位有變。')
+        # Some official rows explicitly leave Ref blank; their PDF URL is the
+        # stable identity. Do not substitute an unrelated number or the ad date.
+        reference=clean_text(ref.group(1))
+        if reference and not re.fullmatch(r'\d+',reference):raise CrawlError('EdUHK 職位編號格式未能確認。')
         title=clean_text(link.get_text(' ',strip=True));before=txt[:ref.start()].strip();department=clean_text(before[len(title):]) if before.startswith(title) else ''
-        job=record(source,title,url,ref.group(1),department=department,posted_date=parse_date(posted.group(1)),detail_complete=False)
+        job=record(source,title,url,reference,department=department,posted_date=parse_date(posted.group(1)),detail_complete=False)
         if not job['posted_date']:raise CrawlError('EdUHK 刊登日期格式未能確認。')
         job['employment_type']=employment_of(title);apply_deadline(job,'Closing date: '+close.group(1));jobs.append(job)
     if not jobs:raise CrawlError('EdUHK 未找到可確認職位，未當作零職位。')
     pages=sorted({urljoin(page_url,a['href']) for a in soup.select('a[href]') if re.search(r'/en/current-openings/page\d+(?:[?#]|$)',urljoin(page_url,a['href']))})
     return Batch(jobs=jobs,pages=1),pages
+
