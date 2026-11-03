@@ -20979,5 +20979,278 @@
     "kind": "new",
     "source_id": "hkapa",
     "title": "SENIOR LECTURER (BALLET)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "job_id": "c4de352ba144ef380db64663",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time Research Assistant I/II in the School of Public Health"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {},
+    "job_id": "720d36b518177d10b2f9db37",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Full-time/Part-time Research Assistant I/II in the Division of Community Medicine and Public Health Practice"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-02",
+        "before": "2026-10-04"
+      }
+    },
+    "job_id": "1bd56dbea74e510df7972ef4",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Temporary Human Resources Officer"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-02",
+        "before": "2026-10-04"
+      }
+    },
+    "job_id": "484882b0dff5b0d895cc0773",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Executive Officer"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "e77fced406ee668b9c7fe468",
+    "kind": "status",
+    "source_id": "twc",
+    "title": "Assistant Registry Manager"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "job_id": "4ec2e3f9d63fe2d184a1c20f",
+    "kind": "new",
+    "source_id": "hkct",
+    "title": "Half-Time Lecturer (Social Work - Fieldwork Coordination)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "job_id": "dd756e816f663fe5fb821506",
+    "kind": "new",
+    "source_id": "hkapa",
+    "title": "EXECUTIVE OFFICER (STUDENT AFFAIRS)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-11",
+        "before": "2026-11-04"
+      }
+    },
+    "job_id": "81fdbd4234942253098f1b30",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "定期教導員 (汽車業)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-10",
+        "before": "2026-11-03"
+      }
+    },
+    "job_id": "ece56cbccd79c691cd5d9f37",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "定期教導員(綜合服務)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-12-04",
+        "before": "2026-11-04"
+      }
+    },
+    "job_id": "648c88b5fe6fe625dbf844b5",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "維修技工"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-20",
+        "before": "2026-11-06"
+      }
+    },
+    "job_id": "f2138503e8e0652a05bd42df",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "Part-time (Day-time) Assistant Lecturer (Beauty Care)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "job_id": "cd4633416492b020055e2dc6",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "日間兼職教導員（屋宇裝備工程）"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "job_id": "caff5fe1e2ccaf38e40a41cd",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "日間兼職教導員（升降機及自動梯工程）"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "3051575793b5de03ca100d25",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "定期 / 臨時助理講師(中文及普通話)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "500ae632a378c409fbe0e27d",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term / Temporary Assistant Lecturer (English and Communication)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "8d88ccd4efc265f21ec2382f",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Evening) Lecturer (English and Communication)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "99ed5b7dff30b20cd11e0f7c",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "夜間兼職講師(中文及普通話)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "af834b4139e95c8d23a194cf",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Lecturer (Occupational Safety)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "e51e4494be919c76f337e1d8",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "日間兼職講師(中文及普通話)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "e53ad1f3314ff7dca255f4bf",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Lecturer (English and Communication)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "job_id": "72e34b5e209344db53aa811d",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant II (N&HS)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "job_id": "8174bca9d3abd1a4254afb53",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Temporary Research Associate / Research Assistant I/II/ Technical Assistant (Project no: R6A28) (B&A)"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "job_id": "6c84cf95d0b3a7bc802deac0",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Manager (Technology Transfer and Entrepreneurship), ORKT"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "job_id": "6336db9e904cdace87d27a4b",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Assistant Professor, Division of Industrial Data Science"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "job_id": "47f8b37f4218d8cf5cd46042",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Professor/Associate Professor, Division of Industrial Data Science"
+  },
+  {
+    "at": "2026-11-03T06:55:12+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "96c294aca358aabd350d7d2e",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Part-Time Research Nurse"
   }
 ]
