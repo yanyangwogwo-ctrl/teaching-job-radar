@@ -23099,5 +23099,57 @@
     "kind": "status",
     "source_id": "hkmu",
     "title": "Temporary Research Associate / Research Assistant I/II/ Technical Assistant (Project no: R6A28) (B&A)"
+  },
+  {
+    "at": "2026-11-08T06:12:35+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "f608cf8585c523ee0890a43f",
+    "kind": "status",
+    "source_id": "hkuspace",
+    "title": "Part-Time Teachers for Short Seminars – Insurance Industry"
+  },
+  {
+    "at": "2026-11-08T06:12:35+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "2236ba37082f860d58b1a46e",
+    "kind": "status",
+    "source_id": "hkapa",
+    "title": "POST (1) - SENIOR TECHNICIAN (FILM/TV) / POST (2) - TECHNICIAN (FILM/TV)"
+  },
+  {
+    "at": "2026-11-08T06:12:35+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "64907178979fb8b00b05faa1",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time Lecturer (Digital Services)"
+  },
+  {
+    "at": "2026-11-08T06:12:35+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "8f4e010e23fdae327eb6f236",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Full-time/Part-time Receptionist (at the rank of Clerk II) in the Institute for Advanced Dentistry Multi-Specialty Clinic (IAD-MSC) (several posts)"
   }
 ]
