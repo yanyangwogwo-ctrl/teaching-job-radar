@@ -23151,5 +23151,187 @@
     "kind": "status",
     "source_id": "hku",
     "title": "Full-time/Part-time Receptionist (at the rank of Clerk II) in the Institute for Advanced Dentistry Multi-Specialty Clinic (IAD-MSC) (several posts)"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "5db3ea877b3a2f3c7a9b0c29",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Teaching Fellow (Temporary Appointment) (three posts)"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "f776c6bd2de8d11f81702031",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Teaching Fellow in Shipping, Maritime and Transport Studies"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "1ba96899ebf10e2df8309fec",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Project Assistant (Part-Time) – School of Transdisciplinary Studies"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "b552f84e55d156cf5effb5f2",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Department of Mathematics, Statistics and Insurance – Assistant Manager"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-09",
+        "before": "2026-09-23"
+      }
+    },
+    "job_id": "9f466f0ccf7afe6dd0883859",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Systems Analyst (Artificial Intelligence)"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-09",
+        "before": "2026-09-07"
+      }
+    },
+    "job_id": "57442d75b12d2d8b5d934a6d",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Academic Services Officer (Academic and Student Affairs Section), SCE"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "job_id": "7586c9b076f612235f55b754",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Innovation Learning Officer"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "changes": {
+      "description": {
+        "after": "職位詳情\nHalf-Time Lecturer (Counselling - Practicum Coordination)\nDepartment of Applied Social Sciences\n職責\nCoordinate and supervise students in field practicums of Counselling Programme\nOrganize and conduct workshops and activities\nPerform teaching and student supervision of the respective discipline\nCarry out academic and students activities and duties for quality assurance\nUndertake any other duties and responsibilities as assigned by the supervisor\n資歷要求\nCandidates should have a Master Degree or above in the relevant disciplines\nApplicants should have minimum of 5 years’ relevant post-degree qualification working experiences\nTeaching experience in the related discipline in tertiary education sector is preferred\nPreference will be given to those with strong academic / professional experience and professional qualifications\nAppointees should also possess good communication and interpersonal skills\n申請方法\nInterested parties please submit a cover letter, together with a full resume indicating your availability, present and expected salary (insufficient information may not be considered). Please quote the position title that you will apply for, and send the application by email to hronline@hkct.edu.hk or by mail to the Human Resources Department, HKCT Jockey Club Ma On Shan Campus, 2 Hang Hong Street, Yiu On Estate, Ma On Shan.\nThe personal data provided will be treated in strict confidence and used for recruitment purposes only. Candidates not invited for an interview within 6 weeks may consider their application unsuccessful.",
+        "before": "職位詳情\nHalf-Time Lecturer (Social Work - Fieldwork Coordination)\nDepartment of Applied Social Sciences\n職責\nCoordinate and supervise students in field practicums of Social Work Programme\nOrganize and conduct pre-placement workshops and activities\nPerform teaching and student supervision of the respective discipline\nCarry out academic and students activities and duties for quality assurance\nUndertake any other duties and responsibilities as assigned by the supervisor\n資歷要求\nCandidates should have a Master Degree or above in the relevant disciplines\nApplicants should be a Registered Social Worker and have minimum of 5 years’ Social Work relevant post-degree qualification working experiences\nTeaching experience in the related discipline in tertiary education sector is preferred\nPreference will be given to those with strong academic / professional experience and professional qualifications\nAppointees should also possess good communication and interpersonal skills\n申請方法\nInterested parties please submit a cover letter, together with a full resume indicating your availability, present and expected salary (insufficient information may not be considered). Please quote the position title that you will apply for, and send the application by email to hronline@hkct.edu.hk or by mail to the Human Resources Department, HKCT Jockey Club Ma On Shan Campus, 2 Hang Hong Street, Yiu On Estate, Ma On Shan.\nThe personal data provided will be treated in strict confidence and used for recruitment purposes only. Candidates not invited for an interview within 6 weeks may consider their application unsuccessful."
+      },
+      "title": {
+        "after": "Half-Time Lecturer (Counselling - Practicum Coordination)",
+        "before": "Half-Time Lecturer (Social Work - Fieldwork Coordination)"
+      }
+    },
+    "job_id": "4ec2e3f9d63fe2d184a1c20f",
+    "kind": "updated",
+    "source_id": "hkct",
+    "title": "Half-Time Lecturer (Counselling - Practicum Coordination)"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "changes": {
+      "description": {
+        "after": "Tung Wah College\nTung Wah College (TWC) is a self-financing tertiary institution incorporated in 2010 by the Tung Wah Group of Hospitals (TWGHs). Drawing on TWGHs’ recognised strengths and expertise in medical and health services, education, and social services, TWC aspires to become a leading University of Applied Sciences in the Asia-Pacific region. By integrating education, research and industry partnerships, TWC nurtures compassionate, innovative leaders who are ready for a changing world. TWC is an approved post-secondary college registered under the Post Secondary Colleges Ordinance (Cap 320). All TWC programmes are accredited by the Hong Kong Council for Accreditation of Academic and Vocational Qualifications (HKCAAVQ).\nTWC currently offers postgraduate, degree, sub-degree, and certificate programmes through four Schools: the School of Nursing, the School of Medical and Health Sciences, the School of Management, and the School of Arts and Humanities. The College has a student population of over 6,100. Its programmes cover nursing, gerontology, health information and services management, biomedical science, forensic biomedical science, medical laboratory science, occupational therapy, physiotherapy, radiation therapy, medical imaging, management in social and business sustainability, applied psychology, early childhood education, and other disciplines.\nAs TWC continues to develop, we plan to introduce new programmes, enhance our teaching and learning facilities and quality, and strengthen our research capabilities in the coming years. We warmly invite suitably qualified candidates to join us on this journey and contribute to the College’s next chapter of development through the following position:\nDuties and Responsibilities\nThe appointee will be required but not limited to:\nsupport all aspects of academic activities through teaching, research, and consultancy;\ncontribute to the planning, formulation and implementation of the College and School’s strategic initiatives and development;\nparticipate in programme development and validation exercises;\ntake up responsibilities in academic and departmental administration and clinical teaching;\nguide / facilitate the College in enhancing its visibility and strengthening its local and international connections;\ntake the initiative in promoting good teaching and collaborative research;\nliaise with external bodies for job placements and professional development;\nengage in research and have publication output, in accordance to the workload requirements of the College;\nperform scholarly activities;\nincrease the publication output and raise the level of consultancies in respective discipline(s);\noversee / perform academic activities including academic advising, examination and assessment, student recruitment, committee works, whole person development activities of students;\nundertake professional service to external professional body / organization and provide public services to the community; and\nperform other duties as assigned.\nQualifications and Experience Required\nThe appointee should have:\na PhD degree or equivalent professional Doctorate in a relevant discipline (obstetric nursing background is preferred) with a valid Registered Nurse practicing certificate (General and/or Mental Health) issued by the Nursing Council of Hong Kong;\nsufficient years of relevant experience in teaching in the tertiary education sector, programme development and programme leadership;and\npublications in journals (desirably with international reputation) and with high impact in the relevant discipline; and demonstration as an active researcher.\nApplication\nSalary will be competitive and commensurate with qualifications and experience.\nTo apply, please submit your application via system. The College reserves the right to fill or not to fill the post. Applicants who are not contacted by the College 6 months after the application deadline may consider their applications unsuccessful. For enquiries, please phone or send WhatsApp to 9172-8618.\nApplication Deadline: Until the position(s) is/are filled\nAll information and personal data collected will be used solely for recruitment related purposes. For more information about the College, please visit our website: https://www.twc.edu.hk .\nTung Wah College is an equal opportunities employer. We embrace the values of equality, diversity and inclusion and are dedicated to fostering an environment that respects and supports people with diverse perspectives, abilities, cultures and experiences.",
+        "before": "Tung Wah College\nEstablished by Tung Wah Group of Hospitals (“TWGHs”) in 2010, Tung Wah College (TWC) is a self-financing institution registered under the Post Secondary Colleges Ordinance (Cap.320). Following the educational ideals of TWGHs and leveraging on its renowned strengths and expertise, TWC aims to provide high quality tertiary education to nurture competent, socially responsible and caring professionals for the benefits of society.\nWith the staunch support of TWGHs, TWC has been developing rapidly and built up a niche in healthcare education. It is the first self-financing tertiary institution offering six professionally accredited degrees to train nurses and allied health professionals such as medical laboratory technologists, occupational therapists, diagnostic radiographer, therapeutic radiographer and physiotherapists. Besides, the College is also the first institution registered under Cap. 320 offering early childhood education degree and higher diploma programmes to train qualified kindergarten teachers and childcare professionals.\nCurrently, TWC has 4 schools (namely School of Arts and Humanities, School of Management, School of Medical and Health Sciences, and School of Nursing) running a total of 24 postgraduate, degree, sub-degree, diploma and certificate programmes in various disciplines. It has a student population of over 6,100 and nurtured more than 8,100 graduates since its inception in 2010.\nBeing a young and vibrant institution, TWC aspires to become a leading University of Applied Sciences in Asia-Pacific region. It is planning to launch a number of new programmes, strengthen teaching and learning facilities and quality, and enhance research capability etc. in coming years. To cope with its continuous development, we are now inviting highly qualified candidates to fill the following post:\nDuties and Responsibilities\nThe appointee will be required but not limited to:\nsupport all aspects of academic activities through teaching, research, and consultancy;\ncontribute to the planning, formulation and implementation of the College and School’s strategic initiatives and development;\nparticipate in programme development and validation exercises;\ntake up responsibilities in academic and departmental administration and clinical teaching;\nguide / facilitate the College in enhancing its visibility and strengthening its local and international connections;\ntake the initiative in promoting good teaching and collaborative research;\nliaise with external bodies for job placements and professional development;\nengage in research and have publication output, in accordance to the workload requirements of the College;\nperform scholarly activities;\nincrease the publication output and raise the level of consultancies in respective discipline(s);\noversee / perform academic activities including academic advising, examination and assessment, student recruitment, committee works, whole person development activities of students;\nundertake professional service to external professional body / organization and provide public services to the community; and\nperform other duties as assigned.\nQualifications and Experience Required\nThe appointee should have:\na PhD degree or equivalent professional Doctorate in a relevant discipline (obstetric nursing background is preferred) with a valid Registered Nurse practicing certificate (General and/or Mental Health) issued by the Nursing Council of Hong Kong;\nsufficient years of relevant experience in teaching in the tertiary education sector, programme development and programme leadership;and\npublications in journals (desirably with international reputation) and with high impact in the relevant discipline; and demonstration as an active researcher.\nApplication\nSalary will be competitive and commensurate with qualifications and experience.\nTo apply, please submit your application via system. The College reserves the right to fill or not to fill the post. Applicants who are not contacted by the College 6 months after the application deadline may consider their applications unsuccessful. For enquiries, please phone or send WhatsApp to 9172-8618.\nApplication Deadline: Until the position(s) is/are filled\nAll information and personal data collected will be used solely for recruitment related purposes. For more information about the College, please visit our website: https://www.twc.edu.hk .\nTung Wah College is an equal opportunities employer. We embrace the values of equality, diversity and inclusion and are dedicated to fostering an environment that respects and supports people with diverse perspectives, abilities, cultures and experiences."
+      }
+    },
+    "job_id": "c1564c167d3d06219e9f52af",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Associate Professor (Research Track) / Assistant Professor (Research Track)"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "changes": {},
+    "job_id": "1bd56dbea74e510df7972ef4",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Temporary Human Resources Officer"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "job_id": "2b758d58024201e85437eb0e",
+    "kind": "new",
+    "source_id": "hkapa",
+    "title": "PART-TIME ASSISTANT EXECUTIVE OFFICER (STUDENT AFFAIRS)"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-23",
+        "before": "2026-11-09"
+      }
+    },
+    "job_id": "2b3c0fd39fc6362616b84365",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "二級機械工"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "0588bcf9b8c00ec0c2706ccb",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Deputy Director"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "3c178daa7aebcae9988730c5",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "定期二級雜務員"
+  },
+  {
+    "at": "2026-11-09T06:45:52+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "797264a43c84a7bd7120dfcf",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant(s) I/II (Project reference no.: R7068) (A&SS)"
   }
 ]
