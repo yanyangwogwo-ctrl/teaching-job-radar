@@ -23809,5 +23809,416 @@
     "kind": "status",
     "source_id": "cuhk",
     "title": "Assistant Lecturer / Lecturer "
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "31a84045a11ff1844b6446fc",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree And Undergraduate Degree Programmes"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "7c20292ddc9e5c81c2da1aeb",
+    "kind": "new",
+    "source_id": "hkust",
+    "title": "Head of the Division of Humanities"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "24c2c3fec6dbd5f24b5b6171",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Clinical Lecturer(s)"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "deadline_type": {
+        "after": "review",
+        "before": "until-filled"
+      },
+      "description": {
+        "after": "RESEARCH OFFICE\nManager (Research Impact and Assessment) (26270164)\nThe Research Office (RO) delivers central administrative services across a broad spectrum of research support, including grants and funding schemes, research ethics, integrity and policy, research committees, research culture and infrastructure, and institution-level partnerships and collaborations.\nWe are seeking a dynamic, meticulous and data-literate professional to join our team as Manager. Reporting to senior management, the appointee will lead the University’s work on Research Assessment Exercises (RAEs) and research impact.\nResponsibilities:\nLead RAE-related work, including internal reviews of research outputs, impact and research environment, submission planning and preparation, data validation and analysis, training, and stakeholder liaison;\nLead regular internal RAE in collaboration with Faculties/ Schools;\nServe as the secretary of RAE-related working groups/ task forces;\nDevelop and operate the University’s database for research outputs, impact and related information across RAE cycles — covering data requirements, workflows, validation, quality assurance, reporting and dashboards;\nFacilitate the identification, development and dissemination of research impact case studies;\nPartially support the administration of research grants and funding schemes, and assist in developing related policies, systems and processes; and\nCarry out ad hoc tasks as assigned.\nRequirements:\nA good bachelor’s degree or above, preferably with postgraduate qualifications;\nMinimum of 5 years of relevant work experience, preferably in the higher education sector; direct experience supporting an RAE, REF or comparable research assessment exercise would be an advantage;\nExperience managing datasets or databases and a high level of IT literacy;\nExcellent command of written and spoken English and Chinese, including Putonghua);\nGood project management, analytical and writing skills; and\nStrong sense of responsibility, meticulous, detailed-minded and able to multitask with the help of AI tools.\nThe initial appointment will be offered on a fixed-term contract of two years. Re-appointment thereafter will be subject to mutual agreement and availability of funding.\nSalary will be commensurate with qualifications and experience.\nApplication Procedure:\nApplicants are invited to submit their applications at the HKBU e-Recruitment System. Those who are not invited for interview 8 weeks after submission of application may consider their applications unsuccessful. Details of the University's Personal Information Collection Statement can be found at https://hro.hkbu.edu.hk/en/worklife-at-hkbu/employee-favourable-environment.html#privacy-policy.\nThe University reserves the right not to make an appointment for the post advertised, and the appointment will be made according to the terms and conditions applicable at the time of offer.\nReview of applications is ongoing until the position is filled.",
+        "before": "RESEARCH OFFICE\nManager (Research Impact and Assessment) (26270164)\nThe Research Office (RO) delivers central administrative services across a broad spectrum of research support, including grants and funding schemes, research ethics, integrity and policy, research committees, research culture and infrastructure, and institution-level partnerships and collaborations.\nWe are seeking a dynamic, meticulous and data-literate professional to join our team as Manager. Reporting to senior management, the appointee will lead the University’s work on Research Assessment Exercises (RAEs) and research impact.\nResponsibilities:\nLead RAE-related work, including internal reviews of research outputs, impact and research environment, submission planning and preparation, data validation and analysis, training, and stakeholder liaison;\nLead regular internal RAE in collaboration with Faculties/ Schools;\nServe as the secretary of RAE-related working groups/ task forces;\nDevelop and operate the University’s database for research outputs, impact and related information across RAE cycles — covering data requirements, workflows, validation, quality assurance, reporting and dashboards;\nFacilitate the identification, development and dissemination of research impact case studies;\nPartially support the administration of research grants and funding schemes, and assist in developing related policies, systems and processes; and\nCarry out ad hoc tasks as assigned.\nRequirements:\nA good bachelor’s degree or above, preferably with postgraduate qualifications;\nMinimum of 5 years of relevant work experience, preferably in the higher education sector; direct experience supporting an RAE, REF or comparable research assessment exercise would be an advantage;\nExperience managing datasets or databases and a high level of IT literacy;\nExcellent command of written and spoken English and Chinese, including Putonghua);\nGood project management, analytical and writing skills; and\nStrong sense of responsibility, meticulous, detailed-minded and able to multitask with the help of AI tools.\nThe initial appointment will be offered on a fixed-term contract of two years. Re-appointment thereafter will be subject to mutual agreement and availability of funding.\nSalary will be commensurate with qualifications and experience.\nApplication Procedure:\nApplicants are invited to submit their applications at the HKBU e-Recruitment System. Those who are not invited for interview 8 weeks after submission of application may consider their applications unsuccessful. Details of the University's Personal Information Collection Statement can be found at https://hro.hkbu.edu.hk/en/worklife-at-hkbu/employee-favourable-environment.html#privacy-policy.\nThe University reserves the right not to make an appointment for the post advertised, and the appointment will be made according to the terms and conditions applicable at the time of offer.\nApplications will be reviewed from 21 October until the position is filled."
+      },
+      "posted_date": {
+        "after": "2026-11-11",
+        "before": "2026-10-14"
+      }
+    },
+    "job_id": "7f0cb4c89c39f8b33c8bffe4",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Manager (Research Impact and Assessment), Research Office"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "description": {
+        "after": "SCHOOL OF CHINESE MEDICINE\nCENTRE FOR CHINESE HERBAL MEDICINE DRUG DEVELOPMENT\nSenior Scientist (Clinical research) (26270169)\nThe applicant is expected to manage clinical study in the areas of Chinese medicine, biomedical sciences or related disciplines.\nResponsibilities:\nResponsible for planning and leading the delivery of all components of a clinical study operation to time, cost, and quality from study start-up through closeout activities and clinical study report;\nResponsible for the clinical operation activities including but not limited to clinical study subject recruitment, clinical monitoring, data verification, drug supply management and vendor management;\nOversee study centres’ compliance with study protocols, Good Clinical Practice (GCP) and other research ethics and regulatory requirements, and write monitoring reports;\nOversee onsite clinical data management activities to ensure data integrity and quality;\nFacilitate study audits and inspections when needed;\nSupport the project leaders’ management in multi-functional clinical project teams by collaborating effectively with internal stakeholders including the leadership team, clinical team, regulatory affairs, preclinical team, etc.;\nBeing the primary point of contact for the assigned project for clinical study centres and investigators; and\nUndertake any other duties assigned.\nRequirements:\nA bachelor’s degree or above in Health, Biological/Life Sciences, Medical, Pharmacy, Nursing or related disciplines;\nAt least 5 years of clinical monitoring, including at least 2 years recent clinical research experience in the capacity of project manager/equivalent (clinical study team lead, clinical study manager, etc.);\nProven experience leading and managing all stages of clinical studies (feasibility, start-up, execution, close-out);\nExperience managing phase 2 or phase 3 randomised controlled trials in therapeutic research for Gastrointestinal diseases and neurological diseases is preferred;\nDeep knowledge of GCP guidelines in pharmaceutical product development is required;\nShould have a good command of written and spoken English and Chinese, as well as good interpersonal and organisational skills;\nShould be responsible, attentive to details and able to work independently; and\nInnovative, self-motivated with good planning and organisational skills are essential.\nThe initial appointment will be offered on a fixed-term contract of 2 year. Re-appointment thereafter will be subject to performance and availability of funding.\nSalary will be commensurate with qualifications and experience.\nApplication Procedure:\nApplicants are invited to submit their applications at the HKBU e-Recruitment System. Those who are not invited for interview 8 weeks after submission of application may consider their applications unsuccessful. Details of the University's Personal Information Collection Statement can be found at https://hro.hkbu.edu.hk/en/worklife-at-hkbu/employee-favourable-environment.html#privacy-policy.\nThe University reserves the right not to make an appointment for the post advertised, and the appointment will be made according to the terms and conditions applicable at the time of offer.\nReview of applications is ongoing until the positions are filled.",
+        "before": "SCHOOL OF CHINESE MEDICINE\nCENTRE FOR CHINESE HERBAL MEDICINE DRUG DEVELOPMENT\nSenior Scientist (Clinical research) (26270169)\nThe applicant is expected to manage clinical study in the areas of Chinese medicine, biomedical sciences or related disciplines.\nResponsibilities:\nResponsible for planning and leading the delivery of all components of a clinical study operation to time, cost, and quality from study start-up through closeout activities and clinical study report;\nResponsible for the clinical operation activities including but not limited to clinical study subject recruitment, clinical monitoring, data verification, drug supply management and vendor management;\nOversee study centres’ compliance with study protocols, Good Clinical Practice (GCP) and other research ethics and regulatory requirements, and write monitoring reports; Oversee onsite clinical data management activities to ensure data integrity and quality; Facilitate study audits and inspections when needed;\nSupport the project leaders’ management in multi-functional clinical project teams by collaborating effectively with internal stakeholders including the leadership team, clinical team, regulatory affairs, preclinical team, etc.;\nBeing the primary point of contact for the assigned project for clinical study centres and investigators; and\nUndertake any other duties assigned.\nRequirements:\nA bachelor’s degree or above in Health, Biological/Life Sciences, Medical, Pharmacy, Nursing or related disciplines;\nAt least 5 years of clinical monitoring, including at least 2 years recent clinical research experience in the capacity of project manager/equivalent (clinical study team lead, clinical study manager, etc.);\nProven experience leading and managing all stages of clinical studies (feasibility, start-up, execution, close-out); Experience managing phase 2 or phase 3 randomised controlled trials in therapeutic research for Gastrointestinal diseases and neurological diseases is preferred;\nDeep knowledge of GCP guidelines in pharmaceutical product development is required;\nShould have a good command of written and spoken English and Chinese, as well as good interpersonal and organisational skills;\nShould be responsible, attentive to details and able to work independently; and\nInnovative, self-motivated with good planning and organisational skills are essential.\nThe initial appointment will be offered on a fixed-term contract of 2 year. Re-appointment thereafter will be subject to performance and availability of funding.\nSalary will be commensurate with qualifications and experience.\nApplication Procedure:\nApplicants are invited to submit their applications at the HKBU e-Recruitment System. Those who are not invited for interview 8 weeks after submission of application may consider their applications unsuccessful. Details of the University's Personal Information Collection Statement can be found at https://hro.hkbu.edu.hk/en/worklife-at-hkbu/employee-favourable-environment.html#privacy-policy.\nThe University reserves the right not to make an appointment for the post advertised, and the appointment will be made according to the terms and conditions applicable at the time of offer.\nReview of applications is ongoing until the positions are filled."
+      },
+      "posted_date": {
+        "after": "2026-11-11",
+        "before": "2026-09-14"
+      },
+      "title": {
+        "after": "Senior Scientist (Clinical Research), School of Chinese Medicine",
+        "before": "Senior Scientist (Clinical Research)"
+      }
+    },
+    "job_id": "3190f400f124253a5130ba3e",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Scientist (Clinical Research), School of Chinese Medicine"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-11",
+        "before": "2026-09-30"
+      }
+    },
+    "job_id": "e5e334fac410f818514612d8",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Research Assistant Professor,Centre for Chinese Herbal Medicine Drug Development"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "description": {
+        "after": "ESTATES OFFICE\nBUILDING SERVICES AND SYSTEMS SECTION\nAssistant Engineer (Electrical Discipline) (26270220)\nThe appointee will be a member of the Building Services and Systems in Estates Office and responsible for leading a team of frontline staff and managing contractors to perform the operation and maintenance of building services and fitting-out projects on all campuses of the University.\nResponsibilities:\nTake part in the day-to-day electrical and mechanical (E&M) plant operations including routine maintenance, emergency repair and resume the failure part in case of system breakdown;\nPerform technical tasks, either independently or under the direction of a qualified engineer, contributory to design, installation, operation, maintenance and repair of building services systems and equipment;\nPrepare for E&M routine and preventive maintenance plans and perform regular site supervision;\nManage system breakdown to minimise the downtime and impact on operations;\nSite inspection for the building services repair works, fitting-out works, upgrade and improvement works for enhancing the existing system performance, efficiency and sustainability;\nLiaise with end users and contractors in connection with building services installation works, fitting out projects and maintenance contracts;\nMonitor the system performance as well as the plant efficiency;\nEnsure the equipment, system and facilities are serviced and maintained in good conditions;\nPerform shift/emergency duties; and\nAssist in ad hoc tasks and undertake other duties as assigned by seniors.\nRequirements:\nCompleted secondary education or specialised vocational training or above with a minimum of eight years’ relevant post-qualification experience in building services or a higher diploma with substantial years of relevant experience will also be considered;\nFamiliar with statutory requirements and Codes of Practice;\nPossession of a valid Registered Electrical Worker Grade A or above;\nKnowledge of building services engineering and associated work experience in design, installation, operation and maintenance;\nHands-on experience in operation and maintenance of building services and systems;\nPrevious experience in electrical repair and maintenance is highly preferred;\nGood communication, interpersonal and presentation to ensure the user requirements are properly captured; and\nGood command of both spoken and written English and Chinese.\nThe initial appointment will be made on a fixed-term contract of two years. Re-appointment thereafter is subject to performance review, mutual agreement and availability of funding.\nSalary will be commensurate with qualifications and experience.\nApplication Procedure:\nApplicants are invited to submit their applications at the HKBU e-Recruitment System. Those who are not invited for interview 8 weeks after submission of application may consider their applications unsuccessful. Details of the University’s Personal Information Collection Statement can be found at https://hro.hkbu.edu.hk/en/worklife-at-hkbu/employee-favourable-environment.html#privacy-policy.\nThe University reserves the right not to make an appointment for the post advertised, and the appointment will be made according to the terms and conditions applicable at the time of offer.\nReview of applications is on-going until the positions are filled.",
+        "before": "ESTATES OFFICE\nBUILDING SERVICES AND SYSTEMS SECTION\nAssistant Engineer (Operation Maintenance Services) (26270220)\nThe appointee will be a member of the Building Services and Systems in Estates Office and responsible for leading a team of frontline staff and managing contractors to perform the operation and maintenance of building services and fitting-out projects on all campuses of the University.\nResponsibilities:\nTake part in the day-to-day electrical and mechanical (E&M) plant operations including routine maintenance, emergency repair and resume the failure part in case of system breakdown;\nPerform technical tasks, either independently or under the direction of a qualified engineer, contributory to design, installation, operation, maintenance and repair of building services systems and equipment;\nPrepare for E&M routine and preventive maintenance plans and perform regular site supervision;\nManage system breakdown to minimise the downtime and impact on operations;\nSite inspection for the building services repair works, fitting-out works, upgrade and improvement works for enhancing the existing system performance, efficiency and sustainability;\nLiaise with end users and contractors in connection with building services installation works, fitting out projects and maintenance contracts;\nMonitor the system performance as well as the plant efficiency;\nEnsure the equipment, system and facilities are serviced and maintained in good conditions;\nPerform shift/emergency duties; and\nAssist in ad hoc tasks and undertake other duties as assigned by seniors.\nRequirements:\nCompleted secondary education or specialised vocational training or above with a minimum of eight years’ relevant post-qualification experience in building services or a higher diploma with substantial years of relevant experience will also be considered;\nFamiliar with statutory requirements and Codes of Practice;\nPossession of a valid Registered Electrical Worker Grade A or above;\nKnowledge of building services engineering and associated work experience in design, installation, operation and maintenance;\nHands-on experience in operation and maintenance of building services and systems;\nPrevious experience in electrical repair and maintenance is highly preferred;\nGood communication, interpersonal and presentation to ensure the user requirements are properly captured; and\nGood command of both spoken and written English and Chinese.\nThe initial appointment will be made on a fixed-term contract of two years. Re-appointment thereafter is subject to performance review, mutual agreement and availability of funding.\nSalary will be commensurate with qualifications and experience.\nApplication Procedure:\nApplicants are invited to submit their applications at the HKBU e-Recruitment System. Those who are not invited for interview 8 weeks after submission of application may consider their applications unsuccessful. Details of the University’s Personal Information Collection Statement can be found at https://hro.hkbu.edu.hk/en/worklife-at-hkbu/employee-favourable-environment.html#privacy-policy.\nThe University reserves the right not to make an appointment for the post advertised, and the appointment will be made according to the terms and conditions applicable at the time of offer.\nReview of applications is on-going until the positions are filled."
+      },
+      "posted_date": {
+        "after": "2026-11-11",
+        "before": "2026-09-30"
+      },
+      "title": {
+        "after": "Assistant Engineer (Electrical Discipline), Estate Office",
+        "before": "Assistant Engineer (Electrical Discipline)"
+      }
+    },
+    "job_id": "847a78b47af52b4bdfd299d2",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Assistant Engineer (Electrical Discipline), Estate Office"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "9975f81a7f5d0bf4e1b3414e",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Associate Professor / Assistant Professor, School of Chinese Medicine"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "bf45a55c9d0ca4d9db9dfc72",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "高級中藥配藥員 / 中藥配藥員 Chinese Medicine Dispenser"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "1346ac39dbe01767806fb592",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Executive Officer, School of Chinese Medicine"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "917f6cd033903bb32796abb7",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Engineer (Electrical Discipline), Estates Office"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "b36b1e5b310840a7a2b7b992",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Research Associate / Senior Research Assistant, CLAP-TECH Centre"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "c7640d3a862cba9c602a37ac",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Executive Officer, Institute for Innovation and Translation"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "124cc1a1f500c2f1d9ee6738",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "高級技術員 (維修及保養)，物業處"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "a61faf0946757ccf2cfa3885",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Part-time Lecturer (Cognitive Behavioral Therapy)"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "3f812bd38c5677f57c76e22f",
+    "kind": "new",
+    "source_id": "twc",
+    "title": "Professor /Associate Professor (Research Track)"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-25",
+        "before": "2026-10-16"
+      },
+      "description": {
+        "after": "Tung Wah College\nTung Wah College (TWC) is a self-financing tertiary institution incorporated in 2010 by the Tung Wah Group of Hospitals (TWGHs). Drawing on TWGHs’ recognised strengths and expertise in medical and health services, education, and social services, TWC aspires to become a leading University of Applied Sciences in the Asia-Pacific region. By integrating education, research and industry partnerships, TWC nurtures compassionate, innovative leaders who are ready for a changing world. TWC is an approved post-secondary college registered under the Post Secondary Colleges Ordinance (Cap 320). All TWC programmes are accredited by the Hong Kong Council for Accreditation of Academic and Vocational Qualifications (HKCAAVQ).\nTWC currently offers postgraduate, degree, sub-degree, and certificate programmes through four Schools: the School of Nursing, the School of Medical and Health Sciences, the School of Management, and the School of Arts and Humanities. The College has a student population of over 6,100. Its programmes cover nursing, gerontology, health information and services management, biomedical science, forensic biomedical science, medical laboratory science, occupational therapy, physiotherapy, radiation therapy, medical imaging, management in social and business sustainability, applied psychology, early childhood education, and other disciplines.\nAs TWC continues to develop, we plan to introduce new programmes, enhance our teaching and learning facilities and quality, and strengthen our research capabilities in the coming years. We warmly invite suitably qualified candidates to join us on this journey and contribute to the College’s next chapter of development through the following position:\nDuties and Responsibilities\nThe appointee will be responsible for, but not limited to:\nassist the Head in conducting review on internal quality assurance (QA) system;\nassist the Head in developing new policies and guidelines related to QA to meet the changing needs and development;\nassist the Head in developing, implementing and reviewing programmes and programme areas in compliance with the internal and external QA related policies, standards, procedures and requirements;\nassist the Head in managing external academic and professional accreditation, and assessment on programme changes;\nassist the Head in promoting enhancement of learning and teaching by planning and organising related activities;\nprovide secretarial support to committee(s);\nprovide advice on QA and accreditation related matters to Schools;\nliaise with external parties (e.g. Education Bureau, HKCAAVQ and professional bodies); and\nperform any other duties as assigned by Head of QAO and/or his delegates.\nQualifications and Experience Required\nThe appointee should:\npossess a recognised bachelor’s degree or above with at least 8 years of relevant working experience in the education and training sector;\nbe familiar with the Hong Kong Qualifications Framework (QF) and the associated QA mechanism;\nhave solid experience in QA related activities in the education and training sector;\npreferably have experience in committee work;\nhave excellent command of both written and spoken English and Chinese;\nbe proficient in computer applications, including MS Office; and\nhave excellent communication, interpersonal and organisation skills.\nApplication\nSalary will be competitive and commensurate with qualifications and experience.\nTo apply, please submit your application via system. The College reserves the right to fill or not to fill the post. Applicants who are not contacted by the College 6 months after the application deadline may consider their applications unsuccessful. For enquiries, please phone or send WhatsApp to 9172-8618.\nApplication Deadline: 25 November 2026 (Wednesday)\nAll information and personal data collected will be used solely for recruitment related purposes. For more information about the College, please visit our website: https://www.twc.edu.hk .\nTung Wah College is an equal opportunities employer. We embrace the values of equality, diversity and inclusion and are dedicated to fostering an environment that respects and supports people with diverse perspectives, abilities, cultures and experiences.",
+        "before": "Tung Wah College\nEstablished by Tung Wah Group of Hospitals (“TWGHs”) in 2010, Tung Wah College (TWC) is a self-financing degree-granting institution registered under the Post Secondary Colleges Ordinance (Cap.320). Following the educational ideals of TWGHs and leveraging on its renowned strengths and expertise, TWC aims to provide high quality tertiary education to nurture competent, socially responsible and caring professionals for the benefits of society.\nWith the staunch support of TWGHs, TWC has been developing rapidly and built up a niche in healthcare education. It is the first self-financing tertiary institution offering six professionally accredited degrees to train nurses and allied health professionals such as medical laboratory technologists, occupational therapists, diagnostic radiographer, therapeutic radiographer and physiotherapists. Besides, the College is also the first institution registered under Cap. 320 offering early childhood education degree and higher diploma programmes to train qualified kindergarten teachers and childcare professionals.\nCurrently, TWC has 4 schools (namely School of Arts and Humanities, School of Management, School of Medical and Health Sciences, and School of Nursing) running a total of 20 doctoral degree, bachelor degree, sub-degree, diploma and certificate programmes in various disciplines. It has a student population of around 5,000 in 2025/2026 and nurtured more than 7,200 graduates since its inception in 2010.\nBeing a young and vibrant institution, TWC aspires to become a leading private university in the long term. It is planning to launch a number of new programmes, strengthen teaching and learning facilities and quality, and enhance research capability etc. in coming years. To cope with its continuous development, we are now inviting highly qualified candidates to fill the following post:\nDuties and Responsibilities\nThe appointee will be responsible for, but not limited to:\nassist the Head in conducting review on internal quality assurance (QA) system;\nassist the Head in developing new policies and guidelines related to QA to meet the changing needs and development;\nassist the Head in developing, implementing and reviewing programmes and programme areas in compliance with the internal and external QA related policies, standards, procedures and requirements;\nassist the Head in managing external academic and professional accreditation, and assessment on programme changes;\nassist the Head in promoting enhancement of learning and teaching by planning and organising related activities;\nprovide secretarial support to committee(s);\nprovide advice on QA and accreditation related matters to Schools;\nliaise with external parties (e.g. Education Bureau, HKCAAVQ and professional bodies); and\nperform any other duties as assigned by Head of QAO and/or his delegates.\nQualifications and Experience Required\nThe appointee should:\npossess a recognised bachelor’s degree or above with at least 8 years of relevant working experience in the education and training sector (for Quality Assurance Manager) or 5 years of relevant working experience in the education and training sector (for Assistant Quality Assurance Manager);\nbe familiar with the Hong Kong Qualifications Framework (QF) and the associated QA mechanism;\nhave solid experience in QA related activities in the education and training sector;\npreferably have experience in committee work;\nhave excellent command of both written and spoken English and Chinese;\nbe proficient in computer applications, including MS Office; and\nhave excellent communication, interpersonal and organisation skills.\nApplication\nSalary will be competitive and commensurate with qualifications and experience.\nTo apply, please submit your application via system. The College reserves the right to fill or not to fill the post. Applicants who are not contacted by the College 6 months after the application deadline may consider their applications unsuccessful. For enquiries, please phone or send WhatsApp to 9172-8618.\nApplication Deadline: 16 October 2026 (Friday)\nAll information and personal data collected will be used solely for recruitment related purposes. For more information about the College, please visit our website: https://www.twc.edu.hk .\nTung Wah College is an equal opportunities employer. We embrace the values of equality, diversity and inclusion and are dedicated to fostering an environment that respects and supports people with diverse perspectives, abilities, cultures and experiences."
+      },
+      "posted_date": {
+        "after": "2026-11-10",
+        "before": "2026-09-30"
+      },
+      "status": {
+        "after": "open",
+        "before": "closed"
+      },
+      "title": {
+        "after": "Quality Assurance Manager",
+        "before": "Quality Assurance Manager / Assistant Quality Assurance Manager"
+      }
+    },
+    "job_id": "8165429ab450505a42882ad6",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Quality Assurance Manager"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-10",
+        "before": "2026-10-12"
+      }
+    },
+    "job_id": "f8bd353b61f7b0a0855555d7",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Assistant Professor (Research Track) in Psychology and Social Sciences"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {},
+    "job_id": "25fa6ba11e204ec270535ec2",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Professor (Research Track)"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-25",
+        "before": "2026-10-16"
+      },
+      "description": {
+        "after": "Tung Wah College\nTung Wah College (TWC) is a self-financing tertiary institution incorporated in 2010 by the Tung Wah Group of Hospitals (TWGHs). Drawing on TWGHs’ recognised strengths and expertise in medical and health services, education, and social services, TWC aspires to become a leading University of Applied Sciences in the Asia-Pacific region. By integrating education, research and industry partnerships, TWC nurtures compassionate, innovative leaders who are ready for a changing world. TWC is an approved post-secondary college registered under the Post Secondary Colleges Ordinance (Cap 320). All TWC programmes are accredited by the Hong Kong Council for Accreditation of Academic and Vocational Qualifications (HKCAAVQ).\nTWC currently offers postgraduate, degree, sub-degree, and certificate programmes through four Schools: the School of Nursing, the School of Medical and Health Sciences, the School of Management, and the School of Arts and Humanities. The College has a student population of over 6,100. Its programmes cover nursing, gerontology, health information and services management, biomedical science, forensic biomedical science, medical laboratory science, occupational therapy, physiotherapy, radiation therapy, medical imaging, management in social and business sustainability, applied psychology, early childhood education, and other disciplines.\nAs TWC continues to develop, we plan to introduce new programmes, enhance our teaching and learning facilities and quality, and strengthen our research capabilities in the coming years. We warmly invite suitably qualified candidates to join us on this journey and contribute to the College’s next chapter of development through the following position:\nDuties and Responsibilities\nProvide clerical and administrative support to student development programmes and activities to enrich campus life and students’ total learning experience;\nProvide administrative services for Student Programmes, such as Global Ambassador Programme, Student Orientation and Welcoming Day, Outstanding Student Awards, Student Development Event to support for student development and special needs;\nResponsible for the execution of TWC Got Global Talent;\nProvide administrative supports and communications with student societies and student groups, such as venue bookings, funding application, etc.\nAssist Supervisor to conduct student surveys and prepare reports;\nProvide logistic support to student activities including seminar, workshop, training, study tour, meeting, and other events; and\nPerform any other duties as assigned by his/her Supervisor.\nQualifications and Experience Required\nPossess a recognized bachelor’s degree or equivalent;\nHave at least 3 years relevant experiences in administration and office management, preferably gained in tertiary education sector;\nHave literacy in computer applications;\nHave proficiency in both English and Chinese (including Putonghua);\nHave good organizational and communication skills;\nBe self-motivated, proactive and multi-tasking; and\nHave capability and passion to work with students.\nApplication\nSalary will be competitive and commensurate with qualifications and experience.\nTo apply, please submit your application via system. The College reserves the right to fill or not to fill the post. Applicants who are not contacted by the College 6 months after the application deadline may consider their applications unsuccessful. For enquiries, please phone or send WhatsApp to 9172-8618.\nApplication Deadline: 25 November 2026 (Wednesday)\nAll information and personal data collected will be used solely for recruitment related purposes. For more information about the College, please visit our website: https://www.twc.edu.hk .\nTung Wah College is an equal opportunities employer. We embrace the values of equality, diversity and inclusion and are dedicated to fostering an environment that respects and supports people with diverse perspectives, abilities, cultures and experiences.",
+        "before": "Tung Wah College\nEstablished by Tung Wah Group of Hospitals (“TWGHs”) in 2010, Tung Wah College (TWC) is a self-financing degree-granting institution registered under the Post Secondary Colleges Ordinance (Cap.320). Following the educational ideals of TWGHs and leveraging on its renowned strengths and expertise, TWC aims to provide high quality tertiary education to nurture competent, socially responsible and caring professionals for the benefits of society.\nWith the staunch support of TWGHs, TWC has been developing rapidly and built up a niche in healthcare education. It is the first self-financing tertiary institution offering six professionally accredited degrees to train nurses and allied health professionals such as medical laboratory technologists, occupational therapists, diagnostic radiographer, therapeutic radiographer and physiotherapists. Besides, the College is also the first institution registered under Cap. 320 offering early childhood education degree and higher diploma programmes to train qualified kindergarten teachers and childcare professionals.\nCurrently, TWC has 4 schools (namely School of Arts and Humanities, School of Management, School of Medical and Health Sciences, and School of Nursing) running a total of 20 doctoral degree, bachelor degree, sub-degree, diploma and certificate programmes in various disciplines. It has a student population of around 5,000 in 2025/2026 and nurtured more than 7,200 graduates since its inception in 2010.\nBeing a young and vibrant institution, TWC aspires to become a leading private university in the long term. It is planning to launch a number of new programmes, strengthen teaching and learning facilities and quality, and enhance research capability etc. in coming years. To cope with its continuous development, we are now inviting highly qualified candidates to fill the following post:\nDuties and Responsibilities\nProvide clerical and administrative support to student development programmes and activities to enrich campus life and students’ total learning experience;\nProvide administrative services for Student Programmes, such as Global Ambassador Programme, Student Orientation and Welcoming Day, Outstanding Student Awards, Student Development Event to support for student development and special needs;\nResponsible for the execution of TWC Got Global Talent;\nProvide administrative supports and communications with student societies and student groups, such as venue bookings, funding application, etc.\nAssist Supervisor to conduct student surveys and prepare reports;\nProvide logistic support to student activities including seminar, workshop, training, study tour, meeting, and other events; and\nPerform any other duties as assigned by his/her Supervisor.\nQualifications and Experience Required\nPossess a recognized bachelor’s degree or equivalent;\nHave at least 3 years relevant experiences in administration and office management, preferably gained in tertiary education sector;\nHave literacy in computer applications;\nHave proficiency in both English and Chinese (including Putonghua);\nHave good organizational and communication skills;\nBe self-motivated, proactive and multi-tasking; and\nHave capability and passion to work with students.\nApplication\nSalary will be competitive and commensurate with qualifications and experience.\nTo apply, please submit your application via system. The College reserves the right to fill or not to fill the post. Applicants who are not contacted by the College 6 months after the application deadline may consider their applications unsuccessful. For enquiries, please phone or send WhatsApp to 9172-8618.\nApplication Deadline: 16 October 2026 (Friday)\nAll information and personal data collected will be used solely for recruitment related purposes. For more information about the College, please visit our website: https://www.twc.edu.hk .\nTung Wah College is an equal opportunities employer. We embrace the values of equality, diversity and inclusion and are dedicated to fostering an environment that respects and supports people with diverse perspectives, abilities, cultures and experiences."
+      },
+      "status": {
+        "after": "open",
+        "before": "closed"
+      }
+    },
+    "job_id": "3f6c63ea8e8e5b5b9da558ac",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Assistant Executive Officer, Student Development"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "f44fd0e33fe7462f8c099502",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Assistant Lecturer"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-18",
+        "before": "2026-11-11"
+      }
+    },
+    "job_id": "fb5c1032d966143c89f43a29",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "助理舍監"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "82289ba2fd7ffc3b2fae8031",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "一級機械工"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-17",
+        "before": "2026-11-06"
+      },
+      "status": {
+        "after": "open",
+        "before": "closed"
+      }
+    },
+    "job_id": "3247baf387af3e7bc50253b3",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "Term Technician"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "ca9b4ee689fd36becc5485ad",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Part-time Assistant Lecturer (English and Communication)"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "122be5bd5b63b6cb1f03cc34",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "兼職維修技工"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "164de79f24deb817f06ebf75",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "定期教導員（基礎西式小點及甜品製作）"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "65c77750863e417447ffd5ad",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Lecturer"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "d057c5282c72c11e9ecc56d8",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II (Library Service)"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "aa813fb3b58c034aaa17987b",
+    "kind": "status",
+    "source_id": "hkapa",
+    "title": "SENIOR INFORMATION TECHNOLOGY OFFICER"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2027-01-10",
+        "before": "2026-11-06"
+      },
+      "status": {
+        "after": "open",
+        "before": "closed"
+      }
+    },
+    "job_id": "8174bca9d3abd1a4254afb53",
+    "kind": "updated",
+    "source_id": "hkmu",
+    "title": "Temporary Research Associate / Research Assistant I/II/ Technical Assistant (Project no: R6A28) (B&A)"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "36ffdcbb35fa73d5a4a3ebda",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Instructor (LiPACE)"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "2d7f4feb5f7fc8d8ce9836ff",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant I/II (SOL)"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "job_id": "8331af2f2c636abcc29f3595",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Simulated Patient (Freelance) (N&HS)"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "83b98888a5cb4f7bea5c436f",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant II (Project No. R6938) (N&HS)"
+  },
+  {
+    "at": "2026-11-11T06:36:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "c6653973cdc09a7daaa586db",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Technical Assistant (N&HS)"
   }
 ]
