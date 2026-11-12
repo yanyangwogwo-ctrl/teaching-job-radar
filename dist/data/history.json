@@ -24220,5 +24220,410 @@
     "kind": "status",
     "source_id": "hkmu",
     "title": "Part-time Technical Assistant (N&HS)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "0f2d7d2b8025f7807f9f4df3",
+    "kind": "new",
+    "source_id": "hkuspace",
+    "title": "Part-time (Day-time) Teachers - Division of Economics and Business"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "a759bd8c4654f9024277a791",
+    "kind": "new",
+    "source_id": "hkuspace",
+    "title": "Part-time (Day-time) Teachers - Division of Social Sciences"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-15",
+        "before": "2026-11-13"
+      }
+    },
+    "job_id": "96bcb5a589e9b888ba9acfa4",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "Full-time Research Assistant I and Part-time Student Research Assistant (several posts) in the Teaching and Learning Innovation Centre (TALIC) for seven months"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "deadline_type": {
+        "after": "until-filled",
+        "before": "review"
+      }
+    },
+    "job_id": "198cc08c019d842e65590db3",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Systems Analyst (Infrastructure Engineer)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "deadline_type": {
+        "after": "until-filled",
+        "before": "review"
+      }
+    },
+    "job_id": "21e07d233f129a14c3aa8112",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Assistant Project Manager / Senior Executive Officer"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "deadline_type": {
+        "after": "until-filled",
+        "before": "review"
+      }
+    },
+    "job_id": "f66c7415bdcd929f7064be29",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Senior Executive Officer / Executive Officer"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "deadline_type": {
+        "after": "until-filled",
+        "before": "review"
+      }
+    },
+    "job_id": "70b512fdaf6f1709c73dd0f4",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Lecturer I / Lecturer II / Assistant Lecturer (Accounting)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "deadline_type": {
+        "after": "until-filled",
+        "before": "review"
+      }
+    },
+    "job_id": "5c2637c30f472bc5743da012",
+    "kind": "updated",
+    "source_id": "hkbu-sce",
+    "title": "Senior Accounting Officer"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "89ec7d3358311e2b69305cfe",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Visiting Lecturer (Part-time) in Building Environment"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "b041de8c371744cf1cbda8a1",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Global Search for Chair Professor / Professor / Associate Professor / Assistant Professor in Architecture"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "0a6b4cb5cd499f10d01c1775",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Senior Executive Officer, Academic Registry"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "86c9aa92b756f9d8fadbc615",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Senior Manager (Entrepreneurship and Funding), Knowledge Transfer Office"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "b83989afe24a1b7d54c760de",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Finance Officer (Accounting and Budgeting Section)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "dd3f61db9e8ac87d01328ef1",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Assistant Guidance Services Manager, Counselling and Development Section"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-11",
+        "before": "2026-10-02"
+      }
+    },
+    "job_id": "3f6c63ea8e8e5b5b9da558ac",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Assistant Executive Officer, Student Development"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-11",
+        "before": "2026-10-13"
+      }
+    },
+    "job_id": "e77b8dc0fa8c79535a705372",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Part-time Research Assistant"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "e35cdce4e518a46a709c75dc",
+    "kind": "new",
+    "source_id": "twc",
+    "title": "Information Technology Manager / Senior Information Technology Manager"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "2e4a283bf8bb576092181dd6",
+    "kind": "new",
+    "source_id": "twc",
+    "title": "Lecturer"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-27",
+        "before": "2026-11-13"
+      }
+    },
+    "job_id": "29daa770c2fce76d1f38c70f",
+    "kind": "updated",
+    "source_id": "vtc",
+    "title": "Term / Part-time Instructor"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "5c8a00319ae19230ff199b0e",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Project Officer"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "6576d0c878d7eee3eaf851fe",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "二級機械工"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "81fdbd4234942253098f1b30",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "定期教導員 (汽車業)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "8d2c9fef81b56a330f27ab51",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "定期教導員"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "bb90fda63562e4ecf669b1c0",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Senior Apprenticeship Officer"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "ebc1978a6eb9277b7b8534f2",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "福利工作員"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "5eab44126703e097a8a1f748",
+    "kind": "new",
+    "source_id": "hkapa",
+    "title": "PART-TIME HR OFFICER/ASSISTANT HR OFFICER/HR ASSISTANT"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "1f3f5bd46c880668582fedf9",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant (II) (Project code: R1069) (A&SS)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "3c233fb6b54873cba6ef47b1",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Assistant (Marker) (2027 Spring Term) [UG] (A&SS)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "091f9c5f7bca250356b1a8bb",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Assistant (2027 Spring Term) [UG] (A&SS)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "962d351f6863c35e5192b92a",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturer (2027 Spring Term) [UG] (A&SS)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "86722e4ad92c8241ef2631ef",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturer (2027 Spring Term) [PG] (A&SS)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "ffadbb77d0c07b12239b0326",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Temporary Research Assistant II (R6880) (A&SS)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "7c299a14f80c0d338906280f",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant I/II (N&HS) (Project No. R6994)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "967d9dc5885fde1567a32f23",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Technical Assistants (E&L)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "f32a2669a75974a093ddc39f",
+    "kind": "new",
+    "source_id": "cice",
+    "title": "Lecturer (Full-time)"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "eb18edd7b3e83588ca1925ba",
+    "kind": "status",
+    "source_id": "cice",
+    "title": "行政助理"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "daad302a888457de15c9c10d",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Assistant Administrative Officer (TPg Programme Team), School of Graduate Studies"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "159d221d5ccab908aec6d8a8",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Senior Accounting Officer, Finance Office"
+  },
+  {
+    "at": "2026-11-12T07:19:54+00:00",
+    "job_id": "ac9da276e5ff9da3f31e7201",
+    "kind": "new",
+    "source_id": "lingnan",
+    "title": "Accounting Officer / Assistant Accounting Officer, Finance Office"
   }
 ]
