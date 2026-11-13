@@ -24625,5 +24625,383 @@
     "kind": "new",
     "source_id": "lingnan",
     "title": "Accounting Officer / Assistant Accounting Officer, Finance Office"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-13",
+        "before": "2026-10-13"
+      }
+    },
+    "job_id": "db5a14ac6323c1101d3ca751",
+    "kind": "updated",
+    "source_id": "lingnan",
+    "title": "Senior Manager/Manager (Administrative Support and Institutional Risk), OCCBGA"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "e20cc293c3363eaddf672aad",
+    "kind": "new",
+    "source_id": "hkuspace",
+    "title": "Part-time Teacher (Core Subjects – Diploma of Applied Education Programme) in College of Business and Finance"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "b74cbdbaea8a4c543e306fe8",
+    "kind": "new",
+    "source_id": "hkuspace",
+    "title": "Part-time Teacher (Complementary Subjects – Diploma of Applied Education Programme) in College of Business and Finance"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "5b66e9f13f5cf716f104dffd",
+    "kind": "new",
+    "source_id": "hkuspace",
+    "title": "兼職教師（應用教育文憑課程 - 選修科目: 領隊及導遊實務）"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "e06d4a85ca6b4478bb06724d",
+    "kind": "new",
+    "source_id": "hku",
+    "title": "Part-time Laboratory Assistant"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "3f955a43aaaf56f32b55a962",
+    "kind": "new",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree And Undergraduate Degree Programmes"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "36a3b5bce1033f9962f40cda",
+    "kind": "new",
+    "source_id": "hkbu-sce",
+    "title": "Part-Time Lecturers For Full-Time Sub-degree And Undergraduate Degree Programmes"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "description": {
+        "after": "Department of Economics and Finance - Associate Professor / Assistant Professor\n(Ref: AssoP/AsstP (EAF) 2026-10-30)\nResponsibilities\np lan, develop, coordinate, and deliver modules in areas such as Finance, Economics, Real Estate Development, Investment, International Finance, Financial Institutions/Markets, FinTech, and ESG ;\nc ontribute actively to programme development, management, and validation ;\ne ngage in high-quality research and scholarly activities ; and\np articipate in student development and administrative duties.\nApplicants Should\npossess a PhD in Finance, Economics, or a closely related discipline ;\nhave solid teaching and research experience in relevant fields ;\nhave a strong record of tertiary teaching at Bachelor’s and Master’s levels , and international exposure is preferred ;\nhave a d emonstrable research output and publications ;\npossess a h igh level of subject knowledge and competence in the disciplin e; and\nhave an e xcellent command of written and spoken English .\n..................................................................................................................................................................\nPotential applicants are welcome to contact Professor Roman Matousek, Head of the Department of Economics and Finance (rmatousek@hsu.edu.hk), for informal inquiries regarding the position.\nThe appointee is expected to assume duty in August 2027 . Salary will be commensurate with qualifications and experience. Interested applicant should visit this link https://recruit.hsu.edu.hk/ and apply . The University reserves the right not to fill the position in this exercise.\nApplicants who are not invited to an interview within three months may consider their applications unsuccessful. All information received will be treated in strict confidence, and the data collected will be used for recruitment purpose s only . The Personal Information Collection Statement will be provided upon request.\nThe Hang Seng University of Hong Kong, incorporated in Hong Kong with limited liability by guarantee, is an equal opportunity employer.\nApply Now!",
+        "before": "Department of Economics and Finance - Associate Professor/Assistant Professor\n(Ref: AssoP/AsstP (EAF) 2026-10-30)\nResponsibilities\np lan, develop, coordinate, and deliver modules in areas such as Finance, Economics, Real Estate Development, Investment, International Finance, Financial Institutions/Markets, FinTech, and ESG ;\nc ontribute actively to programme development, management, and validation ;\ne ngage in high-quality research and scholarly activities ; and\np articipate in student development and administrative duties.\nApplicants Should\npossess a PhD in Finance, Economics, or a closely related discipline ;\nhave solid teaching and research experience in relevant fields ;\nhave a strong record of tertiary teaching at Bachelor’s and Master’s levels , and international exposure is preferred ;\nhave a d emonstrable research output and publications ;\npossess a h igh level of subject knowledge and competence in the disciplin e; and\nhave an e xcellent command of written and spoken English .\n..................................................................................................................................................................\nPotential applicants are welcome to contact Professor Roman Matousek, Head of the Department of Economics and Finance (rmatousek@hsu.edu.hk), for informal inquiries regarding the position.\nThe appointee is expected to assume duty in August 2027 . Salary will be commensurate with qualifications and experience. Interested applicant should visit this link https://recruit.hsu.edu.hk/ and apply . The University reserves the right not to fill the position in this exercise.\nApplicants who are not invited to an interview within three months may consider their applications unsuccessful. All information received will be treated in strict confidence, and the data collected will be used for recruitment purpose s only . The Personal Information Collection Statement will be provided upon request.\nThe Hang Seng University of Hong Kong, incorporated in Hong Kong with limited liability by guarantee, is an equal opportunity employer.\nApply Now!"
+      },
+      "title": {
+        "after": "Department of Economics and Finance - Associate Professor / Assistant Professor",
+        "before": "Department of Economics and Finance - Associate Professor/Assistant Professor"
+      }
+    },
+    "job_id": "b2b3d7a41da5fe58c91bc9c0",
+    "kind": "updated",
+    "source_id": "hsu",
+    "title": "Department of Economics and Finance - Associate Professor / Assistant Professor"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "e2c5ddf16aae8ec728b9a9e7",
+    "kind": "new",
+    "source_id": "hsu",
+    "title": "Department of English - Lecturer(s)"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "8eeff7c876fcf1d71b5a4771",
+    "kind": "new",
+    "source_id": "hsu",
+    "title": "Campus Development and Management Office - Project Officer"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "d70c21e8d34f88079d3efc46",
+    "kind": "new",
+    "source_id": "hsu",
+    "title": "Children’s and Young Adult Book Adaptations and Retellings in the 21st Century”, funded by the Research Grants Council:\nPart-time Research Assistant – Department of English"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "46d7e2a9e0b9ca38252046a0",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Professors/ Associate Professors/ Assistant Professors"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "23ba7f4cb81aff317ec38b2a",
+    "kind": "new",
+    "source_id": "cuhk",
+    "title": "Research Assistant Professors"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-13",
+        "before": "2026-10-30"
+      }
+    },
+    "job_id": "749e839afd432ba84a63fb92",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Finance Manager / Finance Manager (Accounting and Budgeting)"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-13",
+        "before": "2026-10-30"
+      }
+    },
+    "job_id": "87da819b947a949e4130e815",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Senior Finance Manager / Finance Manager (Special Projects)"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-13",
+        "before": "2026-10-30"
+      }
+    },
+    "job_id": "005cdbc43360fae303377a6e",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Assistant Purchasing Manager, Finance Office"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-13",
+        "before": "2026-10-30"
+      }
+    },
+    "job_id": "5d09d315e07f6d767858f839",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Purchasing Officer / Assistant Purchasing Officer, Finance Office"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "4c55f2d79630990ad0312214",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior PR and Communication Officer, School of Continuing Education"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "6cc76ffdd2256a5e28f9c3b4",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Assistant Programme Officer, Office of Student Affairs"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "bbf3a44b7262ebe850cafbf4",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Deputy Hospital Chief Executive (Western Medicine), Chinese Medicine Hospital"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "title": {
+        "after": "Assistant Engineer (Electrical Discipline), Estates Office",
+        "before": "Assistant Engineer (Electrical Discipline), Estate Office"
+      }
+    },
+    "job_id": "847a78b47af52b4bdfd299d2",
+    "kind": "updated",
+    "source_id": "hkbu",
+    "title": "Assistant Engineer (Electrical Discipline), Estates Office"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "3c2197391f2b6dcc6561a6d4",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Systems Analyst (Infrastructure Engineer), School of Continuing Education"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "eb3e7ec31051e46ab8367cdd",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Part-time Lecturer (various positions), Academy of Visual Arts"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "b40f2065d781918348e754fa",
+    "kind": "new",
+    "source_id": "hkapa",
+    "title": "TEMPORARY PROJECT MANAGER (STUDENT RECRUITMENT AND COMMUNITY ENGAGEMENT)"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "0c7493d763088911cd3beb3d",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term / Part-time (Daytime) Assistant Lecturer (Physical Education)"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "dab24690748eed2821f414e5",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Temporary / Part-time Executive Assistant II"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "4dbb78eee67f86ffd0491d39",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "9b89f91532c4dde7797100c5",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "Term Legal Assistant"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "job_id": "6f0ca9ba6f7a83dded9d8b5c",
+    "kind": "new",
+    "source_id": "vtc",
+    "title": "二級機械工"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "15e9b3ccc68b6d3cca1520fc",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Lecturer"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "35d64a66325758fe49a82b3a",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term IT Assistant"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "4663e4402e852feb662976bf",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Lecturer (Airport Operations Management)"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "559bad7a970c7a0729e580c3",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Assistant Lecturer (Image Design)"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "5f918562b0984196301827db",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "bab166821b76cc1ea5f72ce7",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time Lecturer (Power Engineering)"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "ce4d8be9d2aa86ee0ff1ca9c",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Day-time) Lecturer/Assistant Lecturer"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "dceff41060bdb7b2e3ed0f26",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Assistant Lecturer (Image Design)"
+  },
+  {
+    "at": "2026-11-13T06:52:56+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "f813b150a8ac94d75fae6356",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Research Assistant II (N&HS)"
   }
 ]
