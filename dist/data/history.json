@@ -25003,5 +25003,223 @@
     "kind": "status",
     "source_id": "hkmu",
     "title": "Part-time Research Assistant II (N&HS)"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {},
+    "job_id": "456849e2ff7f34df3d9cd51f",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "半職運動中心設施服務員"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "job_id": "63d3a5aba032dfe8737f76a6",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (Chinese Literature)"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "job_id": "ad20c4009481bfed96de94b2",
+    "kind": "new",
+    "source_id": "cityu",
+    "title": "Professor/Associate Professor/Assistant Professor (History and Cultural Heritage)"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-11-22",
+        "before": "2026-11-13"
+      }
+    },
+    "job_id": "bf094eb03b5d5b2d62baab04",
+    "kind": "updated",
+    "source_id": "hkust",
+    "title": "Assistant, Associate, or Full Professor"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "11c9b34381e330c1eec0c07d",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Research Assistant, Academy of Geography, Sociology and International Studies"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "3c3d13012bcc770aa4184be4",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Library Officer"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "8957b56a3b6e03a6291f549a",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Manager, Academic Registry"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "fb218c66ae7d96fae2936147",
+    "kind": "status",
+    "source_id": "hkbu",
+    "title": "Executive Officer / Assistant Executive Officer"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "3e5df8d611d84decfe0f717c",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Student Affairs Officer (Student Wellness & Inclusion)"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "e80bfd4164d18578646975db",
+    "kind": "status",
+    "source_id": "twc",
+    "title": "Student Affairs Officer (Alumni & Student Services)"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "c08cce76feb04ea9ee68fc39",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "定期 / 臨時助理講師"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "c61b25685f4ec0cf4ed26274",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Project Officer (Workplace Learning and Assessment Project Team - Engineering Programmes)"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "ded4965d056d661ca7a20277",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "兼職(日間)助理講師"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "e91ed2458dc6fb1cd82afd86",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Term Executive Assistant II"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "job_id": "6c0c05953922dc920e679b5b",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturer (AI, Sustainability and Entrepreneurial Leadership) [2027 Spring Term] (B&A)"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "job_id": "ec78f7f581dc8c51700bfd23",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturer (Co-creating with AI: Communication and Teamwork for the Future) [2027 Spring Term] (B&A)"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "03ce4a9396d1d4980ab4c4bb",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Practice Supervisors of EDU 4400EEF (2026 Autumn Term) (E&L)"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "270618403a0e981bb2bf8c8e",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Part-time Student Affairs Assistant I"
+  },
+  {
+    "at": "2026-11-14T06:35:50+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "c697092d4706d063b1788c64",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Part-time Student Research Assistant"
   }
 ]
