@@ -25221,5 +25221,187 @@
     "kind": "status",
     "source_id": "hku",
     "title": "Part-time Student Research Assistant"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "198cc08c019d842e65590db3",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Systems Analyst (Infrastructure Engineer)"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "21e07d233f129a14c3aa8112",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Assistant Project Manager / Senior Executive Officer"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "5c2637c30f472bc5743da012",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Senior Accounting Officer"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "70b512fdaf6f1709c73dd0f4",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Lecturer I / Lecturer II / Assistant Lecturer (Accounting)"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "f66c7415bdcd929f7064be29",
+    "kind": "status",
+    "source_id": "hkbu-sce",
+    "title": "Senior Executive Officer / Executive Officer"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "08d8de8786c10f32d3db68a7",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Visiting Lecturer (Part-time)"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "5a23fdfceef1a2600200f9fb",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Visiting Lecturer (Part-time)"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "a5033a72efa904130a66ca50",
+    "kind": "status",
+    "source_id": "polyu",
+    "title": "Visiting Lecturer (Part-time)"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-14",
+        "before": "2026-10-16"
+      }
+    },
+    "job_id": "9cfca06662d75cbe68a6de10",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Facilities Officer"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "posted_date": {
+        "after": "2026-11-14",
+        "before": "2026-10-16"
+      }
+    },
+    "job_id": "43e63f1dc75b2e3f91c67995",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Professor / Associate Professor (Research Track) in Division of Science"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "9d4f02a7af34d8ac667d5984",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time (Daytime) Lecturer"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "status": {
+        "after": "missing",
+        "before": "open"
+      }
+    },
+    "job_id": "94bf6081a9abd88accb87f3f",
+    "kind": "status",
+    "source_id": "lingnan",
+    "title": "Assistant Administrative Officer (TPg Programme Team), School of Graduate Studies"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "25b1ceabd33fc029c4e013f8",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Part-time Teaching Assistant"
+  },
+  {
+    "at": "2026-11-15T06:43:28+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "68a13ac18a460974886e1822",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Part-time Teaching Assistant"
   }
 ]
