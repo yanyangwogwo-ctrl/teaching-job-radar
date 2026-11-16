@@ -25403,5 +25403,253 @@
     "kind": "status",
     "source_id": "hku",
     "title": "Part-time Teaching Assistant"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {},
+    "job_id": "456849e2ff7f34df3d9cd51f",
+    "kind": "updated",
+    "source_id": "hku",
+    "title": "半職運動中心設施服務員"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "29850b0be52d0da1b2d86293",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Office of Vice-President (Organisational Development) - Senior Manager (Governance and Compliance)"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "31986ff78e837398efa05723",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Centre for Teaching and Learning - Executive Officer"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "43b61aed992fea11ba5467fc",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Institute of International and Professional Education - Director of Institute of International and Professional Education"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "817b862885e1386ccc300b33",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Information Technology Services Centre - Technician (Part-time)"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "cb5ae439b0c914c41aee984a",
+    "kind": "status",
+    "source_id": "hsu",
+    "title": "Information Technology Services Centre - Technical Officer"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "deadline": {
+        "after": "2026-12-04",
+        "before": null
+      },
+      "deadline_type": {
+        "after": "closing",
+        "before": "until-filled"
+      },
+      "description": {
+        "after": "Department/Unit: Department of Ophthalmology and Visual Sciences\nClosing Date: December 4, 2026\nThe Department of Ophthalmology and Visual Sciences, always “in search of excellence”, is working with more than 200 ophthalmologists and visual scientists in Hong Kong and Chinese Mainland. We are committed to advancing clinical services, research, training, and education, to the highest standard in all major areas of Ophthalmology and Visual Sciences. We are also dedicated to worthwhile community programmes and public education.\nWe are committed to supporting career development of all staff members and are looking for candidates with (i) effective, intelligent, energetic, resourceful, and forward-looking work attitude; (ii) personal integrity, sincerity, and teamwork. Local and overseas applications are both welcome.\nApplicants should have (i) a medical qualification (approved for registration with The Medical Council of Hong Kong); (ii) clinical competence; (iii) enthusiasm for teaching advancement; and (iv) ability to provide effective clinical teaching and mentorship to undergraduate medical students. Those with outstanding academic potential, as well as a proven track record in research and publications, are welcome to apply. The appointee(s) will (a) participate in clinical services, under supervision and with training, and undertake ophthalmic on-call duties; (b) participate in clinical research projects and community projects at the CUHK Eye Centre; and (c) participate in training and educational programmes, including teaching medical students; and (d) undertake other related duties as assigned by the Department . Duties may be performed on weekday evenings or weekends. Appointment(s) will be made on a fixed-term contract basis for one year.\nApplication Procedure\nThe University only accepts and considers applications submitted online for the post above via the CUHK career site. For more information and to apply online, please visit http://career.cuhk.edu.hk .",
+        "before": "Department/Unit: Department of Ophthalmology and Visual Sciences\nClosing Date: until the post is filled\nThe Department of Ophthalmology and Visual Sciences, always “in search of excellence”, is working with more than 200 ophthalmologists and visual scientists in Hong Kong and Chinese Mainland. We are committed to advancing clinical services, research, training, and education, to the highest standard in all major areas of Ophthalmology and Visual Sciences. We are also dedicated to worthwhile community programmes and public education.\nWe are committed to supporting career development of all staff members and are looking for candidates with (i) effective, intelligent, energetic, resourceful, and forward-looking work attitude; (ii) personal integrity, sincerity, and teamwork. Local and overseas applications are both welcome.\nApplicants should have (i) a medical qualification (approved for registration with The Medical Council of Hong Kong); (ii) clinical competence; (iii) enthusiasm for teaching advancement; and (iv) ability to provide effective clinical teaching and mentorship to undergraduate medical students. Those with outstanding academic potential, as well as a proven track record in research and publications, are welcome to apply. The appointee(s) will (a) participate in clinical services, under supervision and with training, and undertake ophthalmic on-call duties; (b) participate in clinical research projects and community projects at the CUHK Eye Centre; and (c) participate in training and educational programmes, including teaching medical students; and (d) undertake other related duties as assigned by the Department . Duties may be performed on weekday evenings or weekends. Appointment(s) will be made on a fixed-term contract basis for one year.\nApplication Procedure\nThe University only accepts and considers applications submitted online for the post above via the CUHK career site. For more information and to apply online, please visit http://career.cuhk.edu.hk ."
+      }
+    },
+    "job_id": "24c2c3fec6dbd5f24b5b6171",
+    "kind": "updated",
+    "source_id": "cuhk",
+    "title": "Clinical Lecturer(s)"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "job_id": "4a86bd043f142e9812e18813",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Information Technology Officer (AI Infrastructure)"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "job_id": "3f124f58373b9776202671b4",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Accounting Officer, School of Continuing Education"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "job_id": "777a371266c5ba25c7b30920",
+    "kind": "new",
+    "source_id": "hkbu",
+    "title": "Senior Executive Officer, Department of Chemistry"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "job_id": "5a7f49341fc1df52fc783ded",
+    "kind": "baseline",
+    "source_id": "hkas",
+    "title": "School Facilities Assistant (Part-time)"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {},
+    "job_id": "43e63f1dc75b2e3f91c67995",
+    "kind": "updated",
+    "source_id": "twc",
+    "title": "Professor / Associate Professor (Research Track) in Division of Science"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "9949b3cc32c5d1b852bf1527",
+    "kind": "status",
+    "source_id": "vtc",
+    "title": "Part-time Lecturer"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "job_id": "0ae94e68791674d49ed3416a",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Technical Assistant (N&HS) (Project No. R6A30)"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "job_id": "dad475cde5e94cd8834ea76a",
+    "kind": "new",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Practice Supervisors of EDU 4302ECF (2027 Spring Term) (E&L)"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "036a5e20631bc7be94122c11",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturers (2027 Spring) (S&T)"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "1f0e7c6bbc5be1f5ae79c221",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturers [SPR-27] (S&T)"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "4234002d5c6e7d04d91dc0e8",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Temporary Research Assistant II (R6834) (S&T)"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "9c1db95ea43cc2b7882e032b",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturers [SPR-27] (S&T)"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "b52556dca3acc865be97e1ea",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Lecturers [SPR-27] (S&T)"
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "e283f212f0a23b2879dcacd8",
+    "kind": "status",
+    "source_id": "hkmu",
+    "title": "Part-time Teaching Assistant(s) (2027 Spring Term) (S&T) "
+  },
+  {
+    "at": "2026-11-16T06:41:55+00:00",
+    "changes": {
+      "status": {
+        "after": "closed",
+        "before": "open"
+      }
+    },
+    "job_id": "96bcb5a589e9b888ba9acfa4",
+    "kind": "status",
+    "source_id": "hku",
+    "title": "Full-time Research Assistant I and Part-time Student Research Assistant (several posts) in the Teaching and Learning Innovation Centre (TALIC) for seven months"
   }
 ]
