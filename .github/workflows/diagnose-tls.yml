@@ -1,0 +1,107 @@
+name: Diagnose public recruitment TLS
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/diagnose-tls.yml']
+
+# No checkout, repository writes, application secrets or job-page requests.
+permissions:
+  contents: read
+
+jobs:
+  certificates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Verify the public TLS certificate chains from GitHub's runner
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+          import subprocess
+
+          CERTIFICATE = re.compile(
+              r'-----BEGIN CERTIFICATE-----\s+.*?-----END CERTIFICATE-----', re.S
+          )
+
+          def verification_status(output, returncode, chain):
+              text = output.lower()
+              reasons = (
+                  ('unsafe legacy renegotiation disabled', 'legacy_renegotiation_required'),
+                  ('unable to get local issuer certificate', 'issuer_chain_untrusted'),
+                  ('unable to verify the first certificate', 'certificate_chain_incomplete_or_untrusted'),
+                  ('certificate has expired', 'certificate_expired'),
+                  ('hostname mismatch', 'hostname_mismatch'),
+                  ('self-signed certificate', 'self_signed_certificate_untrusted'),
+                  ('certificate verify failed', 'certificate_verification_failed'),
+                  ('connection refused', 'connection_refused'),
+                  ('name or service not known', 'dns_failed'),
+                  ('temporary failure in name resolution', 'dns_failed'),
+                  ('no peer certificate available', 'handshake_no_peer_certificate'),
+              )
+              for marker, label in reasons:
+                  if marker in text:
+                      return label
+              if returncode == 0 and chain:
+                  return 'verified'
+              return 'tls_connection_failed'
+
+          def public_certificate_fields(pem):
+              # Parse public certificate metadata only. Do not emit raw PEM,
+              # raw TLS transcripts, environment variables or arbitrary errors.
+              try:
+                  result = subprocess.run(
+                      ['openssl', 'x509', '-noout', '-subject', '-issuer',
+                       '-dates', '-ext', 'authorityInfoAccess'],
+                      input=pem, text=True, capture_output=True, timeout=2,
+                  )
+              except (subprocess.TimeoutExpired, OSError):
+                  return {'metadata_status': 'unavailable'}
+              if result.returncode:
+                  return {'metadata_status': 'unavailable'}
+              fields = {'authority_information_access': []}
+              for raw in result.stdout.splitlines():
+                  line = raw.strip()
+                  for prefix, key in [('subject=', 'subject'), ('issuer=', 'issuer'),
+                                      ('notBefore=', 'valid_from'), ('notAfter=', 'expires_at')]:
+                      if line.startswith(prefix):
+                          fields[key] = line[len(prefix):][:1000]
+                  if line.startswith(('CA Issuers - URI:', 'OCSP - URI:')):
+                      fields['authority_information_access'].append(line[:1000])
+              return fields
+
+          def diagnose(host, legacy=False):
+              mode = 'host_scoped_legacy_comparison' if legacy else 'standard'
+              command = [
+                  'openssl', 's_client', '-connect', host + ':443',
+                  '-servername', host, '-verify_hostname', host,
+                  '-verify_return_error', '-showcerts', '-CApath', '/etc/ssl/certs',
+              ]
+              if legacy:
+                  # This diagnostic compares the explicitly approved EdUHK
+                  # compatibility option. Certificate/hostname checks stay on.
+                  command.append('-legacy_server_connect')
+              try:
+                  result = subprocess.run(command, input='', text=True,
+                                          capture_output=True, timeout=20)
+                  output = result.stdout + '\n' + result.stderr
+                  chain = CERTIFICATE.findall(output)
+                  status = verification_status(output, result.returncode, chain)
+              except subprocess.TimeoutExpired:
+                  chain, status = [], 'connection_timeout'
+              except OSError:
+                  chain, status = [], 'diagnostic_tool_unavailable'
+              record = {'host': host, 'mode': mode, 'verification_status': status,
+                        'chain_count': len(chain),
+                        'certificates': [public_certificate_fields(pem) for pem in chain[:6]]}
+              # JSON escapes untrusted certificate text and control characters.
+              print(json.dumps(record, ensure_ascii=True, sort_keys=True), flush=True)
+
+          # Hardcoded public hosts; no user-provided URLs, tokens or credentials.
+          diagnose('hkuspace-plk.hku.hk')
+          diagnose('www.eduhk.hk')
+          diagnose('www.eduhk.hk', legacy=True)
+          PY
