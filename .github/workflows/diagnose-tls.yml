@@ -13,8 +13,13 @@ permissions:
 jobs:
   certificates:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 3
     steps:
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Match the monitor's requests version
+        run: python -m pip install requests==2.34.2
       - name: Verify the public TLS certificate chains from GitHub's runner
         shell: bash
         run: |
@@ -37,6 +42,7 @@ jobs:
                   ('hostname mismatch', 'hostname_mismatch'),
                   ('self-signed certificate', 'self_signed_certificate_untrusted'),
                   ('certificate verify failed', 'certificate_verification_failed'),
+                  ('certificate_verify_failed', 'certificate_verification_failed'),
                   ('connection refused', 'connection_refused'),
                   ('name or service not known', 'dns_failed'),
                   ('temporary failure in name resolution', 'dns_failed'),
@@ -104,4 +110,57 @@ jobs:
           diagnose('hkuspace-plk.hku.hk')
           diagnose('www.eduhk.hk')
           diagnose('www.eduhk.hk', legacy=True)
+          PY
+      - name: Compare verified Python trust stores for HPSHCC robots only
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import platform
+          import ssl
+          from importlib.metadata import version
+          from pathlib import Path
+
+          import requests
+
+          def tls_reason(error):
+              # Inspect exception text locally; never print it or a response body.
+              text = str(error).lower()
+              reasons = (
+                  ('unsafe legacy renegotiation disabled', 'legacy_renegotiation_required'),
+                  ('unable to get local issuer certificate', 'issuer_chain_untrusted'),
+                  ('unable to verify the first certificate', 'certificate_chain_incomplete_or_untrusted'),
+                  ('certificate has expired', 'certificate_expired'),
+                  ('hostname mismatch', 'hostname_mismatch'),
+                  ('self-signed certificate', 'self_signed_certificate_untrusted'),
+                  ('certificate verify failed', 'certificate_verification_failed'),
+                  ('certificate_verify_failed', 'certificate_verification_failed'),
+              )
+              return next((label for marker, label in reasons if marker in text), 'tls_failed')
+
+          print(json.dumps({'python': platform.python_version(), 'openssl': ssl.OPENSSL_VERSION,
+                            'requests': requests.__version__, 'certifi': version('certifi'),
+                            'urllib3': version('urllib3')}, sort_keys=True), flush=True)
+          url = 'https://hkuspace-plk.hku.hk/robots.txt'
+          for label, trust_store in [('requests_default_certifi', True),
+                                    ('ubuntu_system_ca_bundle', '/etc/ssl/certs/ca-certificates.crt')]:
+              result = {'host': 'hkuspace-plk.hku.hk', 'path': '/robots.txt',
+                        'trust_store': label, 'http_status': None}
+              if isinstance(trust_store, str) and not Path(trust_store).is_file():
+                  result['verification_status'] = 'trust_store_unavailable'
+              else:
+                  try:
+                      # Normal verified HTTPS only. No redirects, credentials,
+                      # job advertisements or response-body reads.
+                      with requests.get(url, verify=trust_store, stream=True,
+                                        allow_redirects=False, timeout=(10, 15),
+                                        headers={'User-Agent': 'TeachingJobRadar-TLS-Diagnostic/1.0'}) as reply:
+                          result.update(verification_status='verified', http_status=reply.status_code)
+                  except requests.exceptions.SSLError as error:
+                      result['verification_status'] = tls_reason(error)
+                  except requests.exceptions.Timeout:
+                      result['verification_status'] = 'connection_timeout'
+                  except requests.exceptions.RequestException:
+                      result['verification_status'] = 'connection_failed'
+              print(json.dumps(result, sort_keys=True), flush=True)
           PY
