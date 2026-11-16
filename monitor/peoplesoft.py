@@ -2,7 +2,7 @@
 from urllib.parse import urljoin, urlsplit, parse_qs
 
 from .adapters import Batch, soup_of, body_text, apply_deadline
-from .http import CrawlError
+from .http import CrawlError, mark_detail_success, mark_detail_failure
 from .model import clean_text, posted_from, record
 from .rules import employment_of
 
@@ -54,6 +54,7 @@ def collect_known_hkust(source, client, cached_jobs, listing_error):
     there are no new vacancies, and this batch can never mark other jobs missing.
     """
     result = Batch(complete=False, errors=[listing_error])
+    result.listing_complete = False
     failures = 0
     for previous in cached_jobs:
         if previous.get('source_id') != source['id'] or previous.get('status') == 'missing' or urlsplit(previous['url']).hostname != HOST:
@@ -62,9 +63,11 @@ def collect_known_hkust(source, client, cached_jobs, listing_error):
         job = record(source, previous['title'], previous['url'], previous['reference'], detail_complete=False, **fields)
         try:
             fetch_hkust_detail(job, client)
+            mark_detail_success(client, job)
             result.jobs.append(job)
             failures = 0
         except (CrawlError, KeyError, ValueError) as error:
+            mark_detail_failure(client, job)
             result.errors.append(str(error) if isinstance(error, CrawlError) else 'HKUST 舊廣告格式有變。')
             failures += 1
             if getattr(error, 'stop_source', False) or failures >= 3:

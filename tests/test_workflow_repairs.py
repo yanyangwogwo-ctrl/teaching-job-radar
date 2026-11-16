@@ -70,3 +70,17 @@ class PersistenceTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertEqual(self.git(self.remote, 'show', 'main:data/store.json'), '{"owner_update":true}')
         self.assertEqual((self.bot/'data/store.json').read_text(), '{"new_jobs":15}\n')
+
+    def test_full_archive_is_persisted_with_default_feed(self):
+        (self.bot/'dist/data/jobs-archive.json').write_text('{"jobs":[15,16]}\n')
+        result = self.persist()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(self.git(self.remote, 'show', 'main:dist/data/jobs-archive.json'), '{"jobs":[15,16]}')
+        self.assertEqual(self.git(self.remote, 'show', 'main:dist/data/jobs.json'), '{"jobs":[15]}')
+
+    def test_concurrent_archive_update_is_not_overwritten(self):
+        (self.bot/'dist/data/jobs-archive.json').write_text('{"jobs":[15,16]}\n')
+        self.concurrent_change('dist/data/jobs-archive.json', '{"jobs":[99]}\n')
+        result = self.persist()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(self.git(self.remote, 'show', 'main:dist/data/jobs-archive.json'), '{"jobs":[99]}')

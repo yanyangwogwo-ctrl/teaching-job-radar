@@ -5,7 +5,7 @@ import re
 from urllib.parse import urljoin
 
 from .adapters import Batch, apply_deadline, body_text, soup_of
-from .http import CrawlError
+from .http import CrawlError, detail_jobs, mark_detail_success, mark_detail_failure
 from .model import clean_text, parse_date, posted_from, record
 from .rules import employment_of
 
@@ -62,10 +62,13 @@ def parse_cpce_detail(job, html):
 
 def collect_cpce(source, client):
     result = Batch(jobs=parse_cpce_list(source, client.get(source['url'])), pages=1)
-    for job in result.jobs:
+    result.listing_complete = True
+    for job in detail_jobs(client, result.jobs):
         try:
             parse_cpce_detail(job, client.get(job['url']))
+            mark_detail_success(client, job)
         except CrawlError as exc:
+            mark_detail_failure(client, job)
             result.complete = False
             result.errors.append(str(exc))
             if exc.stop_source:

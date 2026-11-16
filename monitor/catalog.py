@@ -13,7 +13,7 @@ from zoneinfo import ZoneInfo
 from urllib.parse import urljoin, urlsplit, parse_qs
 
 from .adapters import Batch, soup_of, body_text, apply_deadline
-from .http import CrawlError
+from .http import CrawlError, detail_jobs, mark_detail_success, mark_detail_failure
 from .model import clean_text, record, parse_date, posted_from
 from .rules import employment_of
 
@@ -152,8 +152,12 @@ def parse_catalog_detail(source, job, html):
 
 
 def read_details(source, client, result, detail=None):
+    # The caller has finished enumerating the list. A later failed attachment
+    # changes detail coverage, not whether that enumeration was complete.
+    if getattr(result, 'listing_complete', None) is None:
+        result.listing_complete = result.complete
     failures = 0
-    for job in result.jobs:
+    for job in detail_jobs(client, result.jobs):
         if job['detail_complete']:
             continue
         try:
@@ -192,8 +196,10 @@ def read_details(source, client, result, detail=None):
                         job['description'] = job['title'] + '\n' + text[start.start():]
             else:
                 parse_catalog_detail(source, job, client.get(job['url']))
+            mark_detail_success(client, job)
             failures = 0
         except (CrawlError, ValueError, KeyError, IndexError) as error:
+            mark_detail_failure(client, job)
             result.complete = False
             reason = str(error) if isinstance(error, CrawlError) else '職位詳情格式改變，保留清單及舊記錄。'
             label = (job.get('reference') or job['title'])[:100]
@@ -254,4 +260,3 @@ def collect_inline(source, client):
     if not result.jobs:
         raise CrawlError('官方頁面缺少預期同頁招聘廣告，未當作零職位。')
     return result
-

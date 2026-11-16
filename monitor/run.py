@@ -13,7 +13,7 @@ import yaml
 from .adapters import Batch, collect
 from .http import PublicClient, CrawlError
 from .notify import deliver
-from .store import load_store, atomic_json, reconcile, export, expire_jobs
+from .store import load_store, atomic_json, reconcile, export, expire_jobs, schedule_execution
 from .rules import evaluate
 
 
@@ -31,18 +31,34 @@ def read_config(root: Path):
     return sources, prefs
 
 
-def fetch_source(source: dict, cached_jobs=()) -> Batch:
+def fetch_source(source: dict, cached_jobs=(), now=None) -> Batch:
     client = PublicClient(source)
+    client.set_previous_jobs(cached_jobs, now)
     try:
-        return collect(source, client)
+        batch = collect(source, client)
     except CrawlError as error:
         if source['adapter'] == 'hkust' and not error.stop_source and cached_jobs:
             from .peoplesoft import collect_known_hkust
-            return collect_known_hkust(source, client, cached_jobs, str(error))
-        return Batch(complete=False, errors=[str(error)])
+            try:
+                batch = collect_known_hkust(source, client, cached_jobs, str(error))
+            except Exception as fallback_error:
+                batch = Batch(complete=False, listing_complete=False, severity='error',
+                              errors=[str(error), f'已知職位補充讀取未完成（{type(fallback_error).__name__}）。'])
+        else:
+            capability = source.get('capability', 'pending' if source['adapter'] == 'availability_check' else 'full')
+            # An intentionally manual/unimplemented source is a visible known
+            # limitation. Actual failures of implemented listings stay errors.
+            severity = 'warning' if capability in ('manual', 'pending') else 'error'
+            batch = Batch(complete=False, listing_complete=False, capability=capability,
+                          severity=severity, errors=[str(error)])
     except Exception as error:
         # Parser failure is explicitly visible; never convert it to success/zero.
-        return Batch(complete=False, errors=[f'讀取模組未完成（{type(error).__name__}），需要檢查。'])
+        batch = Batch(complete=False, listing_complete=False, severity='error',
+                      errors=[f'讀取模組未完成（{type(error).__name__}），需要檢查。'])
+    batch.metrics.update(request_count=client.count,
+                         detail_cache_hits=client.detail_cache_hits,
+                         detail_fetches=client.detail_fetches)
+    return batch
 
 
 def main():
@@ -65,19 +81,23 @@ def main():
         if not selected:
             parser.error('沒有啟用的來源，未執行檢索。')
         summaries = []
-        cached_hkust = copy.deepcopy([job for job in state['jobs'].values() if job['source_id'] == 'hkust'])
+        cached_by_source = {s['id']: copy.deepcopy([job for job in state['jobs'].values() if job['source_id'] == s['id']]) for s in selected}
+        warnings = False
         # Sources run in parallel; each site's requests remain paced/serial.
         with ThreadPoolExecutor(max_workers=3) as pool:
-            future_map = {pool.submit(fetch_source, s, cached_hkust if s['adapter'] == 'hkust' else ()): s for s in selected}
+            future_map = {pool.submit(fetch_source, s, cached_by_source[s['id']], now): s for s in selected}
             for future in as_completed(future_map):
                 source = future_map[future]
                 batch = future.result()
                 summary = reconcile(state, source, batch, now, prefs)
                 summaries.append(summary)
-                problems |= summary['status'] != 'ok'
+                problems |= summary['severity'] == 'error'
+                warnings |= summary['severity'] == 'warning'
                 atomic_json(path, state)
                 print(json.dumps(summary, ensure_ascii=False), flush=True)
-        state['runs'].append({'started_at': now, 'finished_at': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'sources': summaries, 'status': 'partial' if problems else 'ok'})
+        state['runs'].append({'started_at': now, 'finished_at': datetime.now(timezone.utc).isoformat(timespec='seconds'),
+                              'sources': summaries, 'status': 'partial' if problems else ('degraded' if warnings else 'ok'),
+                              'schedule_execution': schedule_execution()})
         atomic_json(path, state)
     for job in state['jobs'].values():
         job.update(evaluate(job, prefs))

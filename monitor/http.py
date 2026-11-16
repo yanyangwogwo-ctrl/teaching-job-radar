@@ -3,9 +3,17 @@ from __future__ import annotations
 
 import time
 import re
+import json
+import hashlib
+import random
+from datetime import datetime, timezone, timedelta
+from email.utils import parsedate_to_datetime
+from zoneinfo import ZoneInfo
 from urllib.parse import urljoin, urlsplit, quote
 
 import requests
+
+from .tls import configure_host_tls
 
 
 class CrawlError(RuntimeError):
@@ -20,6 +28,10 @@ def tls_failure_reason(error):
     message = str(error).upper()
     reasons = (
         ('UNSAFE_LEGACY_RENEGOTIATION_DISABLED', '網站使用不相容的舊式 TLS 重新協商'),
+        ('UNABLE TO GET LOCAL ISSUER CERTIFICATE', '憑證鏈未能連至本機信任的簽發者（需核對中繼憑證及信任庫）'),
+        ('CERTIFICATE HAS EXPIRED', '網站憑證已過期'),
+        ('HOSTNAME MISMATCH', '網站憑證的主機名稱不符'),
+        ('SELF-SIGNED CERTIFICATE', '網站憑證鏈含未受信任的自簽憑證'),
         ('CERTIFICATE_VERIFY_FAILED', '網站憑證驗證失敗'),
         ('TLSV1_ALERT_PROTOCOL_VERSION', '網站 TLS 協議版本不相容'),
         ('SSLV3_ALERT_HANDSHAKE_FAILURE', '網站 TLS 握手失敗'),
@@ -86,11 +98,100 @@ class PublicClient:
     def __init__(self, source: dict):
         self.source = source
         self.session = requests.Session()
+        configure_host_tls(self.session, source)
         self.session.headers.update({'User-Agent': self.agent, 'Accept': 'text/html,application/json;q=0.9,*/*;q=0.5'})
         self.robots = {}
         self.last_request = {}
         self.delays = {}
         self.count = 0
+        self.previous_jobs = {}
+        self.cache_now = datetime.now(timezone.utc)
+        self.detail_cache_hits = 0
+        self.detail_fetches = 0
+        self.detail_refresh_candidates = 0
+
+    def set_previous_jobs(self, jobs, now=None):
+        """Use verified parsed details, never cached lists, to reduce requests."""
+        values = jobs.values() if isinstance(jobs, dict) else jobs
+        self.previous_jobs = {job['id']: job for job in values
+                              if job.get('source_id') == self.source['id']}
+        if now:
+            self.cache_now = datetime.fromisoformat(now) if isinstance(now, str) else now
+            if self.cache_now.tzinfo is None:
+                self.cache_now = self.cache_now.replace(tzinfo=timezone.utc)
+
+    def reuse_detail(self, job):
+        # Fingerprint the LISTING before a detail parser expands its title,
+        # department or dates. A change in any listed field forces a refresh.
+        fields = ('url', 'reference', 'title', 'department', 'posted_date',
+                  'deadline', 'deadline_type', 'deadline_raw', 'employment_type')
+        fingerprint = hashlib.sha256(json.dumps({key: job.get(key) for key in fields},
+                                      sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+        job['listing_fingerprint'] = fingerprint
+        old = self.previous_jobs.get(job['id'], {})
+        reusable = bool(old.get('detail_complete') and old.get('description')
+                        and not old.get('detail_refresh_failed') and not old.get('source_closed')
+                        and old.get('status') not in ('missing', 'closed')
+                        and old.get('listing_fingerprint') == fingerprint)
+        try:
+            verified = datetime.fromisoformat(old.get('detail_verified_at', ''))
+            if verified.tzinfo is None:
+                verified = verified.replace(tzinfo=timezone.utc)
+            age = self.cache_now - verified
+            # Config may shorten but cannot silently extend the weekly refresh.
+            ttl = max(1, min(7, int(self.source.get('detail_cache_days', 7))))
+            reusable = reusable and timedelta(0) <= age < timedelta(days=ttl)
+        except (ValueError, TypeError):
+            reusable = False
+        if old.get('deadline_type') == 'closing' and old.get('deadline'):
+            try:
+                closing = datetime.fromisoformat(old['deadline']).date()
+                today = self.cache_now.astimezone(ZoneInfo('Asia/Hong_Kong')).date()
+                if closing <= today + timedelta(days=3):
+                    reusable = False
+            except (ValueError, TypeError):
+                reusable = False
+        if not reusable:
+            self.detail_refresh_candidates += 1
+            return False
+        for key in ('title', 'department', 'description', 'match_text', 'employment_type',
+                    'posted_date', 'deadline', 'deadline_type', 'deadline_raw',
+                    'detail_verified_at'):
+            if key in old:
+                job[key] = old[key]
+        job.update(detail_complete=True, detail_refresh_failed=False, detail_from_cache=True)
+        self.detail_cache_hits += 1
+        return True
+
+    def mark_detail_success(self, job):
+        self.detail_fetches += 1
+        if job.get('detail_complete') or job.get('source_closed'):
+            job.update(detail_verified_at=self.cache_now.isoformat(),
+                       detail_refresh_failed=False, detail_from_cache=False)
+
+    def mark_detail_failure(self, job):
+        self.detail_fetches += 1
+        job.update(detail_complete=False, detail_refresh_failed=True, detail_from_cache=False)
+
+    def _retry_delay(self, response, attempt):
+        """Honor short Retry-After values; don't retry early after long ones."""
+        delay = min(8.0, 2.0 ** attempt) + random.uniform(0, 0.25)
+        raw = response.headers.get('Retry-After')
+        if raw:
+            try:
+                requested = float(raw)
+            except (ValueError, TypeError):
+                try:
+                    stamp = parsedate_to_datetime(raw)
+                    if stamp.tzinfo is None:
+                        stamp = stamp.replace(tzinfo=timezone.utc)
+                    requested = (stamp - datetime.now(timezone.utc)).total_seconds()
+                except (ValueError, TypeError, OverflowError):
+                    requested = 0
+            if requested > 30:
+                return None
+            delay = max(delay, requested)
+        return delay
 
     def validate(self, url: str):
         bits = urlsplit(url)
@@ -101,6 +202,7 @@ class PublicClient:
     def _request(self, url: str, *, robots=False, method='GET', data=None, headers=None) -> requests.Response:
         initial_host = urlsplit(url).hostname
         timeout_retries = 0
+        server_retries = 0
         for _ in range(5):
             self.validate(url)
             host = urlsplit(url).hostname
@@ -138,6 +240,17 @@ class PublicClient:
                 response._content_consumed = True
                 response.close()
                 response.encoding = response.encoding if response.encoding and response.encoding.lower() != 'iso-8859-1' else 'utf-8'
+                challenge_body = any(token in response._content.lower() for token in
+                    (b'captcha', b'cf-chl-', b'just a moment', b'incapsula', b'awswaf'))
+                if (method == 'GET' and response.status_code in (502, 503, 504)
+                        and server_retries < 2 and not challenge_body
+                        and not response.headers.get('x-amzn-waf-action')
+                        and not response.headers.get('cf-mitigated')):
+                    delay = self._retry_delay(response, server_retries + 1)
+                    if delay is not None:
+                        server_retries += 1
+                        time.sleep(delay)
+                        continue
                 return response
             except requests.Timeout as error:
                 if response is not None:
@@ -154,7 +267,7 @@ class PublicClient:
                     response.close()
                 if isinstance(error, requests.exceptions.SSLError):
                     phase = 'robots.txt' if robots else '網頁'
-                    raise CrawlError(f'{host} {phase}：{tls_failure_reason(error)}；未降低連線安全設定。', stop_source=True) from None
+                    raise CrawlError(f'{host} {phase}：{tls_failure_reason(error)}；保留憑證與主機名稱驗證。', stop_source=True) from None
                 # One bounded retry for a dropped GET connection before headers.
                 # Certificate/proxy errors, robots and POST requests stay failures.
                 if (isinstance(error, requests.ConnectionError)
@@ -175,7 +288,13 @@ class PublicClient:
             # as permission for the following detail request.
             self.robots[origin] = False
             response = self._request(origin + '/robots.txt', robots=True)
-            if response.status_code in (404, 410):
+            unavailable_exception = (response.status_code == 403
+                and bits.hostname in self.source.get('robots_unavailable_hosts', [])
+                and not response.headers.get('x-amzn-waf-action')
+                and not response.headers.get('cf-mitigated')
+                and not any(token in response.text.lower() for token in
+                    ('captcha', 'cf-chl-', 'just a moment', 'incapsula', 'awswaf')))
+            if response.status_code in (404, 410) or unavailable_exception:
                 parser = RobotsPolicy('User-agent: *\nAllow: /')
             elif response.status_code == 200 and not response.text.lstrip('\ufeff \r\n\t').startswith(('<', '{', '[')) and not (response.headers.get('cf-mitigated') or response.headers.get('x-amzn-waf-action')):
                 parser = RobotsPolicy(response.text)
@@ -218,3 +337,38 @@ class PublicClient:
     def search_json(self, url, data, headers=None):
         return self.response(url, data=data, headers=headers).json()
 
+
+def reuse_detail(client, job):
+    # Fixture clients and read-only parser tests intentionally need no cache API.
+    return client.reuse_detail(job) if isinstance(client, PublicClient) else False
+
+
+def detail_jobs(client, jobs):
+    """Fill every valid cache first, then spend requests on changed/new ads.
+
+    A challenge on the first network read must not invalidate unrelated valid
+    cached details later in the list. Cached bodies retain their old timestamp.
+    """
+    if not isinstance(client, PublicClient):
+        return jobs
+    pending = [job for job in jobs if not job.get('detail_complete') and not client.reuse_detail(job)]
+    def priority(job):
+        old = client.previous_jobs.get(job['id'], {})
+        if not old:
+            return (0, '')
+        if old.get('listing_fingerprint') != job.get('listing_fingerprint'):
+            return (1, '')
+        if old.get('detail_refresh_failed') or not old.get('detail_complete'):
+            return (2, '')
+        return (3, old.get('detail_verified_at') or '')
+    return sorted(pending, key=priority)
+
+
+def mark_detail_success(client, job):
+    if isinstance(client, PublicClient):
+        client.mark_detail_success(job)
+
+
+def mark_detail_failure(client, job):
+    if isinstance(client, PublicClient):
+        client.mark_detail_failure(job)

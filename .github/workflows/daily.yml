@@ -36,8 +36,11 @@ jobs:
           cache: pip
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
-      - name: Verify monitor logic before crawling
-        run: python -m unittest discover -s tests
+      - name: Verify monitor and dashboard logic before crawling
+        run: |
+          python -m unittest discover -s tests
+          node --test tests/*.test.mjs
+          node --check dist/app.js
       - name: Scrape public sources
         id: crawl
         continue-on-error: true
@@ -76,8 +79,8 @@ jobs:
         env:
           HEARTBEAT_URL: ${{ secrets.HEARTBEAT_URL }}
         run: python -m monitor.heartbeat
-      - name: Keep failed sources visible in Actions
+      - name: Fail on source errors or notification failures
         if: always() && (steps.crawl.outcome == 'failure' || steps.notify.outcome == 'failure')
         run: |
-          echo 'Some sources or notifications were incomplete. Committed public data and source warnings remain available to the dashboard.'
+          echo 'A source encountered an unexpected error or notification delivery failed. Known list-only/manual limitations remain visible as dashboard warnings without failing this step. Successfully committed data and checkpoints remain available.'
           exit 1

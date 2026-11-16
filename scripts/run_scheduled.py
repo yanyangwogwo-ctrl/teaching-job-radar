@@ -5,6 +5,10 @@ import re
 import subprocess
 import sys
 from pathlib import Path
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
+
+import yaml
 
 
 def selected_sources(event_name, event, manual=''):
@@ -24,6 +28,51 @@ def selected_sources(event_name, event, manual=''):
     return list(dict.fromkeys(re.split(r'[ ,]+', text)))
 
 
+def schedule_timing(event_name, root, now):
+    """Measure time since the latest configured daily slot, not GitHub queue time.
+
+    GitHub does not include the intended firing timestamp in schedule events.
+    A delay longer than one day cannot be reconstructed from the cron alone.
+    Manual runs deliberately have no scheduled-time estimate.
+    """
+    if event_name != 'schedule':
+        return {}
+    try:
+        workflow = yaml.safe_load((root / '.github/workflows/daily.yml').read_text())
+        events = workflow.get('on', workflow.get(True, {}))
+        schedules = events['schedule']
+        if len(schedules) != 1:
+            return {}
+        item = schedules[0]
+        match = re.fullmatch(r'(\d{1,2}) (\d{1,2}) \* \* \*', item['cron'])
+        zone = item.get('timezone', 'UTC')
+        if not match or zone not in ('UTC', 'Asia/Hong_Kong'):
+            return {}
+        minute, hour = map(int, match.groups())
+        if not 0 <= minute < 60 or not 0 <= hour < 24 or now.tzinfo is None:
+            return {}
+        local_now = now.astimezone(ZoneInfo(zone))
+        expected = local_now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+        if expected > local_now:
+            expected -= timedelta(days=1)
+        return {
+            'expected_at': expected.astimezone(timezone.utc).isoformat(timespec='seconds'),
+            'started_at': now.astimezone(timezone.utc).isoformat(timespec='seconds'),
+            'delay_seconds': max(0, int((local_now - expected).total_seconds())),
+            'timing_basis': 'latest-daily-slot-before-monitor-start',
+        }
+    except (OSError, KeyError, TypeError, ValueError, AttributeError, yaml.YAMLError):
+        return {}
+
+
+def execution_environment(event_name, root, now, environ):
+    # Discard inherited timing from an earlier invocation before setting this run.
+    result = {key: value for key, value in environ.items() if not key.startswith('RADAR_SCHEDULE_')}
+    for key, value in schedule_timing(event_name, root, now).items():
+        result['RADAR_SCHEDULE_' + key.upper()] = str(value)
+    return result
+
+
 if __name__ == '__main__':
     event_path = os.environ.get('GITHUB_EVENT_PATH')
     event = json.loads(Path(event_path).read_text()) if event_path else {}
@@ -32,4 +81,5 @@ if __name__ == '__main__':
     command = [sys.executable, '-m', 'monitor.run']
     if selected:
         command += ['--sources', *selected]
-    raise SystemExit(subprocess.run(command, check=False).returncode)
+    environment = execution_environment(os.environ.get('GITHUB_EVENT_NAME'), Path(__file__).resolve().parents[1], datetime.now(timezone.utc), os.environ)
+    raise SystemExit(subprocess.run(command, check=False, env=environment).returncode)

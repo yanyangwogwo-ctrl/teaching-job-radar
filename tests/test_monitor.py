@@ -112,7 +112,9 @@ class LifecycleTests(unittest.TestCase):
     @patch.dict('os.environ', {'DISCORD_WEBHOOK_URL': 'https://discord.com/api/webhooks/123/test_token'})
     @patch('monitor.notify.time.sleep')
     @patch('monitor.notify.requests.post')
-    def test_pending_alert_survives_partial_details_then_sends_once(self, post, sleep):
+    @patch('monitor.notify.prepare_health_summary', return_value=False)
+    def test_pending_alert_survives_partial_details_then_sends_once(self, summary, post, sleep):
+        # Isolate vacancy delivery; daily health digests have separate coverage.
         reconcile(self.state, SOURCE, Batch(jobs=[vacancy('B')]), DAY, PREFS)
         key = vacancy('B')['id']
         reconcile(self.state, SOURCE, Batch(jobs=[vacancy('B', detail_complete=False)], complete=False, errors=['timeout']), DAY, PREFS)

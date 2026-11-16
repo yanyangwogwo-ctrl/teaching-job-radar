@@ -6,11 +6,10 @@ cache, browser localStorage, or expiring Actions artifact is a database.
 from __future__ import annotations
 
 import csv
-import hashlib
 import json
 import os
 import tempfile
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -18,6 +17,7 @@ from .adapters import Batch
 from .model import content_hash
 from .rules import evaluate
 from .schedule import schedule_description
+from .notify import queue_health_event
 
 
 def fresh_store() -> dict:
@@ -34,12 +34,13 @@ def load_store(path: Path) -> dict:
     return state
 
 
-def atomic_json(path: Path, value):
+def atomic_json(path: Path, value, *, compact=False):
     path.parent.mkdir(parents=True, exist_ok=True)
     descriptor, name = tempfile.mkstemp(prefix=path.name + '.', dir=path.parent)
     try:
         with os.fdopen(descriptor, 'w', encoding='utf-8') as handle:
-            json.dump(value, handle, ensure_ascii=False, indent=2, sort_keys=True)
+            json.dump(value, handle, ensure_ascii=False, indent=None if compact else 2,
+                      separators=(',', ':') if compact else None, sort_keys=True)
             handle.write('\n')
             handle.flush()
             os.fsync(handle.fileno())
@@ -59,14 +60,27 @@ def add_history(state: dict, job: dict, kind: str, now: str, before: dict | None
 
 def reconcile(state: dict, source: dict, batch: Batch, now: str, prefs: dict) -> dict:
     previous = state['sources'].get(source['id'], {})
-    last_count = previous.get('last_complete_count', 0)
+    last_count = previous.get('last_listing_count', previous.get('last_complete_count', 0))
+    listing_complete = batch.complete if batch.listing_complete is None else batch.listing_complete
+    capability = batch.capability or source.get('capability', 'pending' if source.get('adapter') == 'availability_check' else 'full')
+    guarded_listing = False
     unique = {job['id']: job for job in batch.jobs}
     if not unique and not batch.explicit_empty:
         batch.complete = False
-        batch.errors.append('未能確認零職位結果。')
+        listing_complete = False
+        if capability not in ('manual', 'pending'):
+            guarded_listing = True
+            batch.errors.append('未能確認零職位結果。')
     if last_count >= 5 and len(unique) < last_count * (1 - prefs['suspicious_drop_ratio']) and not batch.explicit_empty:
         batch.complete = False
+        listing_complete = False
+        guarded_listing = True
         batch.errors.append('職位數量大幅減少，暫不判定舊職位消失。')
+    # Completeness can never be promoted by a configured capability or by the
+    # presence of cached bodies. It describes this round's listing evidence.
+    if not listing_complete:
+        batch.complete = False
+    batch.listing_complete = bool(listing_complete)
     today = datetime.fromisoformat(now).astimezone(ZoneInfo(prefs['timezone'])).date().isoformat()
     existing_source_jobs = any(job['source_id'] == source['id'] for job in state['jobs'].values())
     baseline = not (previous.get('baseline_started') or previous.get('baseline_completed') or existing_source_jobs)
@@ -86,6 +100,12 @@ def reconcile(state: dict, source: dict, batch: Batch, now: str, prefs: dict) ->
             if job.get('deadline_type') in ('unknown', 'screening-or-closing'):
                 for field in ('deadline', 'deadline_type', 'deadline_raw'):
                     job[field] = old.get(field)
+            for field in ('detail_verified_at', 'listing_fingerprint'):
+                if not job.get(field) and old.get(field):
+                    job[field] = old[field]
+            # Preserve successful verification age while making an attempted
+            # failed refresh retryable; an old body is not a fresh success.
+            job['detail_refresh_failed'] = bool(job.get('detail_refresh_failed') or old.get('detail_refresh_failed'))
         job.update(evaluate(job, prefs))
         if not incoming.get('detail_complete') and not old:
             job['matches'] = False
@@ -107,7 +127,7 @@ def reconcile(state: dict, source: dict, batch: Batch, now: str, prefs: dict) ->
         event_id = 'new:' + key
         if job['eligible_new_notification'] and job['matches'] and job['detail_complete'] and job['status'] == 'open' and state['outbox'].get(event_id, {}).get('state') not in ('pending', 'sent'):
             state['outbox'][event_id] = {'id': event_id, 'kind': 'new', 'job_id': key, 'created_at': now, 'state': 'pending'}
-    if batch.complete:
+    if listing_complete:
         for key, old in list(state['jobs'].items()):
             if old['source_id'] != source['id'] or key in unique:
                 continue
@@ -120,17 +140,40 @@ def reconcile(state: dict, source: dict, batch: Batch, now: str, prefs: dict) ->
             if old['status'] != before['status']:
                 old['changed_at'] = now
                 add_history(state, old, 'status', now, before)
-    health = {**previous, 'id': source['id'], 'last_attempt': now, 'status': 'ok' if batch.complete else ('partial' if unique else 'error'),
+    detail_count = sum(bool(job.get('detail_complete')) for job in unique.values())
+    if guarded_listing or (not listing_complete and capability not in ('manual', 'pending')):
+        severity = 'error'
+    elif batch.severity in ('ok', 'warning', 'error'):
+        severity = batch.severity
+    elif batch.complete:
+        severity = 'ok'
+    elif capability in ('manual', 'pending') or (listing_complete and capability in ('list_only', 'partial')):
+        severity = 'warning'
+    else:
+        severity = 'error'
+    if severity == 'ok' and not batch.complete:
+        severity = 'warning' if listing_complete else 'error'
+    status = 'ok' if batch.complete else ('partial' if unique or listing_complete else 'error')
+    if severity == 'warning' and capability in ('manual', 'pending'):
+        status = capability
+    health = {**previous, 'id': source['id'], 'last_attempt': now, 'status': status,
               'count': len(unique), 'pages': batch.pages, 'errors': list(dict.fromkeys(batch.errors))[:8],
+              'listing_complete': bool(listing_complete), 'capability': capability, 'severity': severity,
+              'detail_complete_count': detail_count, 'detail_total_count': len(unique),
+              'detail_coverage': round(detail_count / len(unique), 4) if unique else (1.0 if batch.explicit_empty and batch.complete else None),
+              'metrics': dict(batch.metrics),
               'baseline_started': bool(unique) or existing_source_jobs or previous.get('baseline_started', False)}
+    if listing_complete:
+        health.update(last_listing_success=now, last_listing_count=len(unique))
     if batch.complete:
         health.update(last_success=now, last_complete_count=len(unique), baseline_completed=True)
     state['sources'][source['id']] = health
-    if not batch.complete:
-        fingerprint = hashlib.sha256('|'.join(health['errors']).encode()).hexdigest()[:10]
-        event_id = f"health:{source['id']}:{today}:{fingerprint}"
-        state['outbox'].setdefault(event_id, {'id': event_id, 'kind': 'health', 'source_id': source['id'], 'created_at': now, 'state': 'pending', 'errors': health['errors']})
-    return {'source_id': source['id'], 'status': health['status'], 'count': len(unique), 'new_records': new_count, 'baseline': baseline}
+    queue_health_event(state, source, health, previous, now, timezone=prefs['timezone'])
+    return {'source_id': source['id'], 'status': health['status'], 'severity': severity,
+            'capability': capability, 'listing_complete': bool(listing_complete),
+            'detail_complete_count': detail_count, 'detail_total_count': len(unique),
+            'detail_coverage': health['detail_coverage'], 'metrics': dict(batch.metrics),
+            'count': len(unique), 'new_records': new_count, 'baseline': baseline}
 
 
 def expire_jobs(state, now, prefs):
@@ -145,6 +188,35 @@ def expire_jobs(state, now, prefs):
 
 CSV_FIELDS = ['institution', 'title', 'department', 'employment_type', 'posted_date', 'deadline', 'deadline_type', 'deadline_raw',
               'url', 'reference', 'subjects', 'score', 'matches', 'first_seen', 'last_seen', 'status', 'description']
+
+PUBLIC_FEED_DAYS = 30
+
+
+def public_job_date(job: dict, timezone: str):
+    """Mirror the UI's advertised-date-first policy, never a refresh timestamp."""
+    posted = job.get('posted_date')
+    if posted:
+        try:
+            return datetime.fromisoformat(posted).date()
+        except (TypeError, ValueError):
+            return None
+    try:
+        return datetime.fromisoformat(job['first_seen']).astimezone(ZoneInfo(timezone)).date()
+    except (KeyError, TypeError, ValueError):
+        return None
+
+
+def schedule_execution():
+    started = os.environ.get('RADAR_SCHEDULE_STARTED_AT')
+    expected = os.environ.get('RADAR_SCHEDULE_EXPECTED_AT')
+    if not started or not expected:
+        return None
+    try:
+        delay = max(0, int(float(os.environ['RADAR_SCHEDULE_DELAY_SECONDS'])))
+    except (KeyError, TypeError, ValueError):
+        return None
+    return {'expected_at': expected, 'started_at': started, 'delay_seconds': delay,
+            'timing_basis': os.environ.get('RADAR_SCHEDULE_TIMING_BASIS', 'unknown')}
 
 
 def safe_cell(value) -> str:
@@ -161,6 +233,11 @@ def export(state: dict, sources: list[dict], prefs: dict, root: Path, now: str):
     for source in sources:
         entry = {k: source[k] for k in ('id', 'institution', 'name', 'url', 'enabled', 'notes')}
         entry.update(state['sources'].get(source['id'], {'status': 'pending' if not source['enabled'] else 'unverified', 'count': 0, 'errors': []}))
+        entry.setdefault('capability', source.get('capability', 'pending' if source.get('adapter') == 'availability_check' else 'full'))
+        # Older snapshots have no independent listing proof. Do not infer it
+        # from a nonzero result count or from the configured source capability.
+        entry.setdefault('listing_complete', entry['status'] == 'ok')
+        entry.setdefault('severity', 'ok' if entry['status'] == 'ok' else ('warning' if entry['capability'] in ('manual', 'pending') else 'error'))
         if not source['enabled']:
             entry['status'] = 'pending'
         health.append(entry)
@@ -174,11 +251,26 @@ def export(state: dict, sources: list[dict], prefs: dict, root: Path, now: str):
         'stale_after_hours': prefs['stale_after_hours'],
         'notification_rule': prefs['notifications'], 'subjects': prefs['subjects'],
         'last_run': state['runs'][-1] if state['runs'] else None,
+        'schedule_execution': schedule_execution() or (state['runs'][-1].get('schedule_execution') if state['runs'] else None),
+        'total_jobs': len(jobs),
     }
     # Internal hashes/outbox delivery data are not needed by the public UI.
-    public_jobs = [{k: v for k, v in job.items() if k not in ('content_hash', 'match_text', 'eligible_new_notification')} for job in jobs]
-    atomic_json(data_dir / 'jobs.json', {'meta': metadata, 'sources': health, 'jobs': public_jobs})
-    atomic_json(data_dir / 'history.json', state['history'])
+    private_fields = ('content_hash', 'match_text', 'eligible_new_notification', 'listing_fingerprint')
+    public_jobs = [{k: v for k, v in job.items() if k not in private_fields} for job in jobs]
+    today = datetime.fromisoformat(now).astimezone(ZoneInfo(prefs['timezone'])).date()
+    cutoff = today - timedelta(days=PUBLIC_FEED_DAYS - 1)
+    recent_jobs = [job for job in public_jobs if (public_job_date(job, prefs['timezone']) or cutoff) >= cutoff]
+    archive = {'url': 'jobs-archive.json', 'count': len(public_jobs), 'generation_id': now, 'generated_at': now}
+    # Publish the archive first. A reader that crosses publication generations
+    # checks generated_at and retries instead of silently mixing snapshots.
+    atomic_json(data_dir / 'jobs-archive.json', {
+        'meta': {**metadata, 'feed_scope': 'full', 'generation_id': now},
+        'sources': health, 'jobs': public_jobs}, compact=True)
+    atomic_json(data_dir / 'jobs.json', {
+        'meta': {**metadata, 'feed_scope': 'recent', 'feed_days': PUBLIC_FEED_DAYS,
+                 'generation_id': now, 'archive': archive},
+        'sources': health, 'jobs': recent_jobs}, compact=True)
+    atomic_json(data_dir / 'history.json', state['history'], compact=True)
     csv_path = data_dir / 'jobs.csv'
     descriptor, name = tempfile.mkstemp(prefix='jobs.', dir=data_dir)
     try:

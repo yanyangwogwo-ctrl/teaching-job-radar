@@ -4,7 +4,7 @@ import json
 import re
 from urllib.parse import urljoin, parse_qs, urlsplit, unquote, urlencode
 from monitor.adapters import Batch, soup_of, body_text, apply_deadline
-from monitor.http import CrawlError
+from monitor.http import CrawlError, detail_jobs, mark_detail_success, mark_detail_failure
 from monitor.model import record, clean_text, posted_from, parse_date
 from monitor.rules import employment_of
 
@@ -24,7 +24,7 @@ def collect_statutory(source, client):
 
 
 def collect_eduhk(source, client):
-    result, queue, visited, indexed = Batch(), [source['url']], set(), {}
+    result, queue, visited, indexed = Batch(listing_complete=False), [source['url']], set(), {}
     try:
         while queue:
             url = queue.pop(0)
@@ -37,6 +37,7 @@ def collect_eduhk(source, client):
             indexed.update({job['id']: job for job in batch.jobs})
             result.pages += 1
             queue.extend(p for p in pages if p not in visited and p not in queue)
+        result.listing_complete = True
     except CrawlError as error:
         result.complete = False
         result.errors.append(str(error))
@@ -135,12 +136,13 @@ def _parse_hkapa_page(source, html, page_url):
 
 def parse_hkapa(source, html):
     result, pagination = _parse_hkapa_page(source, html, source['url'])
+    result.listing_complete = not pagination['next']
     result.complete = not pagination['next'] and all(j['detail_complete'] for j in result.jobs)
     return result
 
 
 def _collect_hkapa_pages(source, client, start_url):
-    result, url, expected, seen, visited = Batch(), start_url, None, set(), set()
+    result, url, expected, seen, visited = Batch(listing_complete=False), start_url, None, set(), set()
     try:
         while url:
             if url in visited or len(visited) >= 30:
@@ -157,6 +159,7 @@ def _collect_hkapa_pages(source, client, start_url):
             url = pagination['next']
         if len(seen) != expected:
             raise CrawlError('HKAPA 已讀完分頁但職位總數不符，暫不判定職位消失。')
+        result.listing_complete = True
     except CrawlError as error:
         result.complete = False
         result.errors.append(str(error))
@@ -236,7 +239,7 @@ def parse_hkmu_detail(job,html):
 
 
 def collect_hkmu(source,client):
-    result=Batch();indexed={}
+    result=Batch(listing_complete=False);indexed={}
     for listing in source.get('list_urls',[source['url']]):
         try:
             landing=client.get(listing)
@@ -264,10 +267,14 @@ def collect_hkmu(source,client):
             result.complete=False;result.errors.append(str(e) if isinstance(e,CrawlError) else 'HKMU 公開搜尋資料格式有變。')
             if getattr(e,'stop_source',False):result.jobs=list(indexed.values());return result
     result.jobs=list(indexed.values());result.explicit_empty=result.complete and not result.jobs
+    result.listing_complete=result.complete
     failures=0
-    for job in result.jobs:
-        try:parse_hkmu_detail(job,client.get(job['url']));failures=0
+    for job in detail_jobs(client, result.jobs):
+        try:
+            parse_hkmu_detail(job,client.get(job['url']));failures=0
+            mark_detail_success(client, job)
         except CrawlError as e:
+            mark_detail_failure(client, job)
             result.complete=False;result.errors.append(str(e));failures+=1
             if e.stop_source or failures>=3:break
     return result
@@ -300,4 +307,3 @@ def parse_eduhk_list(source,html,page_url=None):
     if not jobs:raise CrawlError('EdUHK 未找到可確認職位，未當作零職位。')
     pages=sorted({urljoin(page_url,a['href']) for a in soup.select('a[href]') if re.search(r'/en/current-openings/page\d+(?:[?#]|$)',urljoin(page_url,a['href']))})
     return Batch(jobs=jobs,pages=1),pages
-

@@ -6,7 +6,7 @@ from urllib.parse import urljoin, urlsplit, parse_qs
 
 from bs4 import BeautifulSoup
 
-from .http import CrawlError
+from .http import CrawlError, detail_jobs, mark_detail_success, mark_detail_failure
 from .model import clean_text, record, parse_date, posted_from, deadline_from
 from .rules import employment_of
 
@@ -18,6 +18,13 @@ class Batch:
     errors: list[str] = field(default_factory=list)
     pages: int = 0
     explicit_empty: bool = False
+    # None keeps older collectors conservative: only a completely successful
+    # batch proves its listing. Collectors that separate listing and details
+    # explicitly set this before the detail phase.
+    listing_complete: bool | None = None
+    capability: str | None = None
+    severity: str | None = None
+    metrics: dict = field(default_factory=dict)
 
 
 def soup_of(html: str):
@@ -184,6 +191,9 @@ def collect(source: dict, client) -> Batch:
         from .yccece import collect_yccece
         return collect_yccece(source, client)
     if adapter == 'availability_check':
+        if source.get('capability') == 'manual':
+            return Batch(complete=False, listing_complete=False, capability='manual', severity='warning',
+                         errors=['此來源已標示為手動查看：職位資料平台明確禁止自動讀取，本輪沒有發送網頁或 robots.txt 請求。請開啟官方招聘頁查看最新職位。'])
         pending = '職位讀取尚未接入，目前只檢查招聘入口連線。'
         try:
             client.get(source['url'])
@@ -228,10 +238,13 @@ def collect(source: dict, client) -> Batch:
         return collect_generic(source, client)
     else:
         raise CrawlError('此來源的讀取模組尚未接通。')
-    for job in result.jobs:
+    result.listing_complete = result.complete
+    for job in detail_jobs(client, result.jobs):
         try:
             parse_detail(job, client.get(job['url']))
+            mark_detail_success(client, job)
         except CrawlError as error:
+            mark_detail_failure(client, job)
             result.complete = False
             result.errors.append(str(error))
             # Stop on explicit denials/challenges, not retry against the same site.
@@ -269,18 +282,34 @@ def collect_generic(source: dict, client) -> Batch:
             if not anchor or not anchor.get('href') or not field('title'):
                 raise CrawlError('職位列缺少標題或連結。')
             job = record(source, field('title'), urljoin(url, anchor['href']), field('reference'),
-                         department=field('department'), posted_date=parse_date(field('posted_date')))
+                         department=field('department'), posted_date=parse_date(field('posted_date')),
+                         detail_complete=False)
             if job['id'] in ids:
                 continue
             ids.add(job['id'])
-            detail = soup_of(client.get(job['url'])).select_one(selectors['detail_body'])
-            if not detail:
-                raise CrawlError('詳情頁沒有指定內容區塊。')
-            job['description'] = job['match_text'] = body_text(detail)
-            job['employment_type'] = employment_of(job['title'], field('employment_type'), job['description'])
-            apply_deadline(job, 'Closing date: ' + field('deadline') + '\n' + job['description'])
+            job['employment_type'] = employment_of(job['title'], field('employment_type'))
+            apply_deadline(job, 'Closing date: ' + field('deadline'))
             result.jobs.append(job)
         result.pages += 1
         next_link = soup.select_one(selectors['next']) if selectors.get('next') else None
         url = urljoin(url, next_link['href']) if next_link and next_link.get('href') else None
+    result.listing_complete = True
+    for job in detail_jobs(client, result.jobs):
+        try:
+            detail = soup_of(client.get(job['url'])).select_one(selectors['detail_body'])
+            if not detail:
+                raise CrawlError('詳情頁沒有指定內容區塊。')
+            job['description'] = job['match_text'] = body_text(detail)
+            if not job['description']:
+                raise CrawlError('詳情頁沒有可讀職位內文。')
+            job['employment_type'] = employment_of(job['title'], job['employment_type'], job['description'])
+            apply_deadline(job, job['description'])
+            job['detail_complete'] = True
+            mark_detail_success(client, job)
+        except CrawlError as error:
+            mark_detail_failure(client, job)
+            result.complete = False
+            result.errors.append(str(error))
+            if error.stop_source:
+                break
     return result

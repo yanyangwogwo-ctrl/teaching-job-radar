@@ -149,23 +149,56 @@ test('merged saved presets split into groups with original input retained for re
   assert.equal(splitWins.subjectKeywords,'ethics');
   assert.equal(splitWins.roleKeywords,'');
 });
-test('two calendar months handles month ends and leap years',()=>{
-  assert.equal(recentCutoff('2026-09-05'),'2026-07-05');
-  assert.equal(recentCutoff('2026-04-30'),'2026-02-28');
-  assert.equal(recentCutoff('2024-04-30'),'2024-02-29');
-  assert.equal(recentCutoff('2026-01-31'),'2025-11-30');
+test('recent date ranges include today and cross month, leap year and year boundaries',()=>{
+  assert.equal(recentCutoff('2026-09-05'),'2026-08-30');
+  assert.equal(recentCutoff('2026-09-05','3'),'2026-09-03');
+  assert.equal(recentCutoff('2024-03-02','3'),'2024-02-29');
+  assert.equal(recentCutoff('2026-01-02','7'),'2025-12-27');
+  assert.equal(recentCutoff('2026-09-05','14'),'2026-08-23');
+  assert.equal(recentCutoff('2026-09-05','30'),'2026-08-07');
+  assert.equal(recentCutoff('2026-09-05','all'),'');
 });
-test('old posted dates stay hidden despite recent first-seen or future deadlines',()=>{
+test('old posted dates stay hidden within range, and all dates removes the old hard limit',()=>{
   const adverts=[
-    {...jobs[0],id:'boundary',posted_date:'2026-07-05'},
-    {...jobs[0],id:'old',posted_date:'2026-07-04'},
+    {...jobs[0],id:'boundary',posted_date:'2026-08-30'},
+    {...jobs[0],id:'old',posted_date:'2026-08-29'},
     {...jobs[0],id:'future',posted_date:'2026-09-06'},
     {...jobs[1],id:'first-seen'},
-    {...jobs[1],id:'old-first-seen',first_seen:'2026-07-04T15:59:59Z'},
-    {...jobs[1],id:'hk-boundary',first_seen:'2026-07-04T16:00:00Z'}
+    {...jobs[1],id:'old-first-seen',first_seen:'2026-08-29T15:59:59Z'},
+    {...jobs[1],id:'hk-boundary',first_seen:'2026-08-29T16:00:00Z'}
   ];
   const result=filterJobs(adverts,{...defaults,dateBasis:'deadline',sort:'newest'},'2026-09-05');
   assert.deepEqual(result.map(j=>j.id).sort(),['boundary','first-seen','hk-boundary']);
+  assert.equal(filterJobs(adverts,{...defaults,recentDays:'all'},'2026-09-05').length,6);
+  const oldOngoing={...jobs[0],posted_date:'2026-01-01',deadline_type:'until-filled',deadline:null};
+  assert.equal(filterJobs([oldOngoing],{...defaults,recentDays:'all',status:'open'},'2026-09-05').length,1);
+  assert.equal(filterJobs([oldOngoing],{...defaults,recentDays:'all',from:'2026-08-01'},'2026-09-05').length,0);
+});
+test('saved searches adopt seven days, preserve chosen ranges and retain explicit historical dates',()=>{
+  const data={meta:{subjects:[]},sources:[{id:'a'},{id:'b'}]};
+  assert.equal(defaultCriteria(data).recentDays,'7');
+  assert.equal(restoreCriteria(defaults,data).recentDays,'7');
+  assert.equal(restoreCriteria({...defaults,recentDays:'all'},data).recentDays,'all');
+  assert.equal(restoreCriteria({...defaults,recentDays:'14'},data).recentDays,'14');
+  assert.equal(restoreCriteria({...defaults,recentDays:'invalid'},data).recentDays,'7');
+  assert.equal(restoreCriteria({...defaults,from:'2026-01-01'},data).recentDays,'all');
+});
+test('adjunct teaching titles enter defaults without replacing customised saved role words',()=>{
+  const data={meta:{subjects:[{terms:['ethics']}]},sources:[{id:'a'}]};
+  const criteria=defaultCriteria(data);
+  const advert={...jobs[0],title:'Adjunct Faculty',description:'Teach ethics.',detail_complete:false};
+  assert.equal(filterJobs([advert],criteria,'2026-09-05').length,1);
+  assert.equal(filterJobs([{...advert,title:'Adjunct Teaching Faculty'}],criteria,'2026-09-05').length,1);
+  assert.equal(filterJobs([{...advert,title:'Adjunct Research Associate'}],criteria,'2026-09-05').length,0);
+  const oldRoles='lecturer, tutor, instructor, teacher, teaching fellow, 講師, 導師, 教師';
+  assert.ok(restoreCriteria({...defaults,roleKeywords:oldRoles},data).roleKeywords.includes('adjunct faculty'));
+  assert.equal(restoreCriteria({...defaults,roleKeywords:'tutor'},data).roleKeywords,'tutor');
+  assert.equal(restoreCriteria({...defaults,roleKeywords:''},data).roleKeywords,'');
+});
+test('incomplete jobs can still match title and department without a notification match',()=>{
+  const advert={...jobs[0],title:'Part-time Lecturer',department:'Philosophy',description:'',detail_complete:false,matches:false};
+  const criteria={...defaults,presetEnabled:true,subjectKeywords:'philosophy',roleKeywords:'lecturer'};
+  assert.equal(filterJobs([advert],criteria,'2026-09-05').length,1);
 });
 test('subject matching excludes irrelevant philosophy and generic skills boilerplate',()=>{
   const advert={...jobs[0],title:'Part-time Lecturer in Accounting',department:'Business',description:'Applicants should have a Doctor of Philosophy degree.'};

@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 from pypdf import PdfReader
 
 from .adapters import Batch, soup_of, body_text, apply_deadline
-from .http import CrawlError
+from .http import CrawlError, detail_jobs, mark_detail_success, mark_detail_failure
 from .model import clean_text, record, parse_date, posted_from
 from .rules import employment_of
 
@@ -167,6 +167,8 @@ def parse_pdf_detail(job, data):
 
 def parse_hkust_list(source, html):
     soup, jobs = soup_of(html), []
+    if soup.select('.view-id-job_listing.view-display-id-block_2 .pager a[href], .view-id-job_listing.view-display-id-block_2 a[rel="next"]'):
+        raise CrawlError('HKUST 官方清單出現未接入的分頁，暫不判定舊職位消失。')
     for card in soup.select('.view-id-job_listing.view-display-id-block_2 .job-card'):
         link = card.select_one('h3 a[href]')
         reference = re.search(r'Job ID\s*:\s*(\d+)', card.get_text(' ', strip=True))
@@ -190,6 +192,8 @@ def parse_hkust_list(source, html):
 
 def parse_cityu_list(source, html):
     soup, jobs = soup_of(html), []
+    if soup.select('#MainContent_gvJobAcad a[href*="Page$"], #MainContent_gvJobAcad a[rel="next"]'):
+        raise CrawlError('CityU 官方清單出現未接入的分頁，暫不判定舊職位消失。')
     for row in soup.select('#MainContent_gvJobAcad tr'):
         link = row.select_one('a[id*="_hlJob_"][href]')
         if not link:
@@ -269,7 +273,7 @@ def parse_cuhk_detail(job, html):
 
 
 def collect_cuhk(source, client):
-    result, indexed, page, expected = Batch(), {}, 1, None
+    result, indexed, page, expected = Batch(listing_complete=False), {}, 1, None
     page_sizes, rows_read = [], 0
     endpoint = urljoin(source['url'], '/careersection/rest/jobboard/searchjobs?lang=en&portal=10115020119')
     try:
@@ -305,6 +309,8 @@ def collect_cuhk(source, client):
             result.complete = False
             sizes = '、'.join(map(str, page_sizes))
             result.errors.append(f'官方回報 {expected} 個職位；已讀取 {result.pages} 頁（每頁 {sizes} 列），合共 {rows_read} 列、{len(indexed)} 個不重複職位。數量仍未核對一致，暫不判定舊職位消失。')
+        else:
+            result.listing_complete = True
     except (CrawlError, KeyError, ValueError, IndexError) as error:
         result.complete = False
         result.errors.append(str(error) if isinstance(error, CrawlError) else 'CUHK 公開搜尋格式有變。')
@@ -313,11 +319,13 @@ def collect_cuhk(source, client):
             return result
     result.jobs = list(indexed.values())
     consecutive = 0
-    for job in result.jobs:
+    for job in detail_jobs(client, result.jobs):
         try:
             parse_cuhk_detail(job, client.get(job['url']))
+            mark_detail_success(client, job)
             consecutive = 0
         except CrawlError as error:
+            mark_detail_failure(client, job)
             result.complete = False
             result.errors.append(str(error))
             consecutive += 1
@@ -335,7 +343,7 @@ def collect_official(source, client):
         return collect_cuhk(source, client)
     if adapter == 'sfu':
         return parse_sfu(source, client.get(source['url']))
-    result = Batch()
+    result = Batch(listing_complete=False)
     if adapter == 'hkbu_oracle':
         origin = 'https://' + urlsplit(source['url']).hostname
         api = origin + '/hcmRestApi/resources/latest/'
@@ -360,6 +368,7 @@ def collect_official(source, client):
                     break
             if len(indexed) != total:
                 raise CrawlError('HKBU 職位數目與系統總數不一致。')
+            result.listing_complete = True
         except (CrawlError, KeyError, ValueError, IndexError) as error:
             result.complete = False
             result.errors.append(str(error) if isinstance(error, CrawlError) else 'HKBU 公開資料格式有變。')
@@ -378,6 +387,7 @@ def collect_official(source, client):
                 jobs, url = parse_hku_list(source, client.get(url))
                 indexed.update({j['id']: j for j in jobs})
                 result.pages += 1
+            result.listing_complete = True
         except CrawlError as error:
             result.complete = False
             result.errors.append(str(error))
@@ -391,10 +401,13 @@ def collect_official(source, client):
         parsers = {'polyu': parse_polyu_list, 'hksyu': parse_hksyu_list, 'hkust': parse_hkust_list, 'cityu': parse_cityu_list, 'hsu': parse_hsu_list}
         result.jobs = parsers[adapter](source, client.get(source['url']))
         result.pages = 1
+        result.listing_complete = True
         if adapter == 'cityu':
             # Listing is useful, but challenged details are not a full-text feed.
             # No access retry against those detail hosts after the audit denial.
             result.complete = False
+            result.capability = 'list_only'
+            result.severity = 'warning'
             result.errors = ['官方清單已更新；詳情讀取因先前的存取驗證限制暫停，本輪未重新嘗試。職位內文及相關度未能完整核對。']
             return result
         if adapter == 'hkust':
@@ -402,21 +415,25 @@ def collect_official(source, client):
             restricted = [job for job in result.jobs if urlsplit(job['url']).hostname != HOST]
             if restricted:
                 result.complete = False
+                result.capability = 'partial'
+                result.severity = 'warning'
                 interfolio_count = sum(urlsplit(job['url']).hostname == 'apply.interfolio.com' for job in restricted)
                 other_count = len(restricted) - interfolio_count
                 if interfolio_count:
                     result.errors.append(f'{interfolio_count} 則職位的 Interfolio 詳情讀取尚未接入；本輪只取得清單資料，未重新嘗試該平台。')
                 if other_count:
+                    result.severity = 'error'
                     result.errors.append(f'{other_count} 則職位使用尚未接入的其他詳情平台；本輪只取得清單資料，需核對公開讀取方式。')
             failures = 0
-            for job in result.jobs:
-                if urlsplit(job['url']).hostname != HOST:
-                    continue
+            for job in detail_jobs(client, [job for job in result.jobs if urlsplit(job['url']).hostname == HOST]):
                 try:
                     fetch_hkust_detail(job, client)
+                    mark_detail_success(client, job)
                     failures = 0
                 except (CrawlError, KeyError, ValueError) as error:
+                    mark_detail_failure(client, job)
                     result.complete = False
+                    result.severity = 'error'
                     result.errors.append(str(error) if isinstance(error, CrawlError) else 'HKUST 舊招聘平台格式有變。')
                     failures += 1
                     if getattr(error, 'stop_source', False) or failures >= 3:
@@ -429,11 +446,13 @@ def collect_official(source, client):
         else:
             detail = lambda job: parse_polyu_detail(job, client.get(job['url']))
     consecutive_errors = 0
-    for job in result.jobs:
+    for job in detail_jobs(client, result.jobs):
         try:
             detail(job)
+            mark_detail_success(client, job)
             consecutive_errors = 0
         except (CrawlError, KeyError, ValueError) as error:
+            mark_detail_failure(client, job)
             result.complete = False
             result.errors.append(str(error) if isinstance(error, CrawlError) else '詳情資料格式有變，保留舊版本。')
             consecutive_errors += 1

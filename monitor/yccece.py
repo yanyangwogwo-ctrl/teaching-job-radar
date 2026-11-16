@@ -4,7 +4,7 @@ import re
 from urllib.parse import urljoin, parse_qs
 from bs4 import BeautifulSoup
 from monitor.adapters import Batch, soup_of, body_text, apply_deadline
-from monitor.http import CrawlError
+from monitor.http import CrawlError, detail_jobs, mark_detail_success, mark_detail_failure
 from monitor.model import record, clean_text, posted_from
 from monitor.rules import employment_of
 
@@ -71,7 +71,8 @@ def parse_yccece_detail(job, payload):
 
 def collect_yccece(source, client):
     result = Batch(jobs=parse_yccece_list(source, client.get(source['url'])), pages=1)
-    for job in result.jobs:
+    result.listing_complete = True
+    for job in detail_jobs(client, result.jobs):
         try:
             api = ('https://db.ycyw-edu.com/api/component/production/'
                    'static-detail-category/job/static-details/' + job['reference'])
@@ -79,7 +80,9 @@ def collect_yccece(source, client):
             data = client.response(api, headers={'website': 'yccece-en',
                                                 'api-key': 'api-key'}).json()
             parse_yccece_detail(job, data)
+            mark_detail_success(client, job)
         except (CrawlError, ValueError, KeyError, TypeError) as error:
+            mark_detail_failure(client, job)
             result.complete = False
             result.errors.append(str(error) if isinstance(error, CrawlError)
                                  else '耀中詳情資料格式未能確認。')

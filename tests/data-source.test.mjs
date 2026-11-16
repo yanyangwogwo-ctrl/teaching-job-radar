@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {loadDataset, lastCrawlAt} from '../dist/data-source.mjs';
+import {loadDataset, loadArchive, needsArchive, lastCrawlAt} from '../dist/data-source.mjs';
 
 const snapshot = {meta:{schema_version:1,generated_at:'2026-09-06T00:00:00Z',last_run:{finished_at:'2026-09-05T00:00:00Z'}},jobs:[],sources:[]};
 const live = {...snapshot,meta:{...snapshot.meta,last_run:{finished_at:'2026-09-06T00:00:00Z'}}};
@@ -65,4 +65,41 @@ test('unapproved data host is not fetched',async()=>{
   const result=await loadDataset(fetcher);
   assert.equal(result.mode,'snapshot');
   assert.equal(calls.some(url=>url.startsWith('https://example.test')),false);
+});
+
+const recent = {...snapshot,meta:{...snapshot.meta,feed_scope:'recent',feed_days:30,total_jobs:2,archive:{url:'jobs-archive.json',count:2,generation_id:snapshot.meta.generated_at}},jobs:[{id:'new'}]};
+const archive = {...snapshot,meta:{...snapshot.meta,feed_scope:'full'},jobs:[{id:'new'},{id:'old'}]};
+test('all dates loads complete history from the same cloud repository without credentials',async()=>{
+  assert.equal(needsArchive(recent,{recentDays:'7'}),false);
+  assert.equal(needsArchive(recent,{recentDays:'all'}),true);
+  const result=await loadArchive(recent,feed.url,async (url,options)=>{
+    assert.equal(url,feed.url.replace('jobs.json','jobs-archive.json'));
+    assert.equal(options.credentials,'omit');
+    return response(archive);
+  });
+  assert.deepEqual(result.jobs.map(job=>job.id),['new','old']);
+  assert.equal(needsArchive(result,{recentDays:'all'}),false);
+});
+test('snapshot history remains on the same Site session and legacy complete feeds need no archive',async()=>{
+  await loadArchive(recent,'./data/jobs.json',async(url,options)=>{
+    assert.equal(url,'./data/jobs-archive.json');
+    assert.equal(options.credentials,'same-origin');
+    return response(archive);
+  });
+  assert.equal(await loadArchive(snapshot,'./data/jobs.json',()=>assert.fail('unneeded fetch')),snapshot);
+});
+test('archive failures and inconsistent generations stay visible instead of replacing current jobs',async()=>{
+  await assert.rejects(()=>loadArchive(recent,feed.url,async()=>{throw new Error('offline');}));
+  for (const invalid of [
+    {...archive,meta:{...archive.meta,generated_at:'different'}},
+    {...archive,jobs:[{id:'old'}]},
+    {...archive,jobs:[{id:'old'},{id:'old'}]},
+    {...archive,jobs:[{id:'unrelated'},{id:'old'}]}
+  ]) await assert.rejects(()=>loadArchive(recent,feed.url,async()=>response(invalid)));
+  assert.deepEqual(recent.jobs,[{id:'new'}]);
+});
+test('archive location cannot redirect outside the approved feed directory',async()=>{
+  for (const url of ['https://example.com/jobs-archive.json','../jobs-archive.json','//raw.githubusercontent.com/other/repo/main/jobs-archive.json']) {
+    await assert.rejects(()=>loadArchive({...recent,meta:{...recent.meta,archive:{...recent.meta.archive,url}}},feed.url,()=>assert.fail('unsafe fetch')));
+  }
 });

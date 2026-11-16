@@ -28,6 +28,10 @@ def contains(text: str, term: str) -> bool:
 
 def role_of(title: str) -> str:
     value = normalize(title)
+    # Adjunct Faculty is an explicit teaching appointment; do not treat every
+    # adjunct research / advisory title as a lecturer.
+    if re.search(r'\badjunct (?:teaching )?faculty\b', value):
+        return 'lecturer'
     for role, pattern in [('lecturer', r'\b(lecturers?|teachers?|teaching fellows?)\b|講師|教師'),
                           ('tutor', r'\btutors?\b|導師'),
                           ('instructor', r'\binstructors?\b|導師')]:

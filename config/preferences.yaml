@@ -10,6 +10,7 @@ notifications:
   baseline: silent
   min_score: 60
   require_part_time: true
+  # Adjunct Faculty / Adjunct Lecturer are recognised as lecturer roles.
   roles: [lecturer, tutor, instructor]
   # 空白即所有已接通院校；此為正式通知條件，與瀏覽器儲存的搜尋分開。
   institutions: []

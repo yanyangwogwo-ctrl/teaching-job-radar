@@ -51,17 +51,23 @@ export function dateFor(job, basis) {
   return job.posted_date || dayKey(job.first_seen);
 }
 
-export function recentCutoff(today = dayKey(new Date().toISOString())) {
-  const [year, month, day] = today.split('-').map(Number);
-  const target = new Date(Date.UTC(year, month - 3, 1));
-  const lastDay = new Date(Date.UTC(target.getUTCFullYear(), target.getUTCMonth() + 1, 0)).getUTCDate();
-  target.setUTCDate(Math.min(day, lastDay));
+export function validRecentDays(value) {
+  return ['3', '7', '14', '30', 'all'].includes(String(value)) ? String(value) : '7';
+}
+
+export function recentCutoff(today = dayKey(new Date().toISOString()), days = '7') {
+  const range = validRecentDays(days);
+  if (range === 'all') return '';
+  const target = new Date(today + 'T00:00:00Z');
+  // Include today: the last seven Hong Kong calendar dates start six days ago.
+  target.setUTCDate(target.getUTCDate() - Number(range) + 1);
   return target.toISOString().slice(0, 10);
 }
 
-export function isRecent(job, today = dayKey(new Date().toISOString())) {
+export function isRecent(job, today = dayKey(new Date().toISOString()), days = '7') {
+  if (validRecentDays(days) === 'all') return true;
   const date = dateFor(job, 'effective');
-  return !!date && date >= recentCutoff(today) && date <= today;
+  return !!date && date >= recentCutoff(today, days) && date <= today;
 }
 
 export function keywordTerms(value) {
@@ -74,16 +80,21 @@ export function defaultCriteria(dataset) {
     query:'', exclude:'', mode:'AND',
     presetEnabled:true,
     subjectKeywords:dataset.meta.subjects.flatMap(subject => subject.terms).join(', '),
-    roleKeywords:'lecturer, tutor, instructor, teacher, teaching fellow, 講師, 導師, 教師',
+    roleKeywords:'lecturer, tutor, instructor, teacher, teaching fellow, adjunct faculty, adjunct teaching faculty, 講師, 導師, 教師',
     presetExcludeKeywords:'',
     partTimeOnly:false, institutions:dataset.sources.map(source => source.id),
-    status:'open', dateBasis:'effective', from:'', to:'', sort:'newest'
+    status:'open', recentDays:'7', dateBasis:'effective', from:'', to:'', sort:'newest'
   };
 }
 
 export function restoreCriteria(value, dataset) {
   const defaults = defaultCriteria(dataset);
   const result = {...defaults, ...value};
+  result.recentDays = validRecentDays(value.recentDays);
+  // Keep explicit dates in old saved searches usable after the shorter default.
+  if (!Object.hasOwn(value, 'recentDays') && (value.from || value.to)) result.recentDays = 'all';
+  const oldRoles = 'lecturer, tutor, instructor, teacher, teaching fellow, 講師, 導師, 教師';
+  if (normalize(value.roleKeywords) === normalize(oldRoles)) result.roleKeywords = defaults.roleKeywords;
   const hasGroups = Object.hasOwn(value, 'subjectKeywords') || Object.hasOwn(value, 'roleKeywords');
   // Existing separate fields, including deliberately empty ones, take priority.
   // Merged custom searches have lost their original groups. Keep their exact
@@ -132,7 +143,7 @@ export function filterJobs(jobs, criteria, today = dayKey(new Date().toISOString
   const subjects = keywordTerms(criteria.subjectKeywords);
   const roles = keywordTerms(criteria.roleKeywords);
   const result = jobs.filter(job => {
-    if (!isRecent(job, today)) return false;
+    if (!isRecent(job, today, criteria.recentDays)) return false;
     if (!selected.has(job.source_id)) return false;
     if (criteria.presetEnabled) {
       if (criteria.partTimeOnly && !['part-time', 'hourly', 'mixed'].includes(job.employment_type)) return false;

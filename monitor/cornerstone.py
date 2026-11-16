@@ -6,7 +6,7 @@ import re
 from datetime import datetime
 
 from .adapters import Batch, soup_of, body_text, apply_deadline
-from .http import CrawlError
+from .http import CrawlError, detail_jobs, mark_detail_success, mark_detail_failure
 from .model import record, clean_text, parse_date
 from .rules import employment_of
 
@@ -117,13 +117,16 @@ def collect_lingnan(source, client):
             result.jobs = list(indexed.values())
             return result
     result.jobs = list(indexed.values())
+    result.listing_complete = result.complete
     failures = 0
-    for job in result.jobs:
+    for job in detail_jobs(client, result.jobs):
         try:
             url = f"{ORIGIN}/Services/API/ATS/CareerSite/4/JobRequisitions/{job['reference']}?useMobileAd=false&cultureId=1"
             parse_lingnan_detail(job, client.response(url, headers=headers).json())
+            mark_detail_success(client, job)
             failures = 0
         except (CrawlError, KeyError, ValueError, TypeError, IndexError) as error:
+            mark_detail_failure(client, job)
             result.complete = False
             result.errors.append(str(error) if isinstance(error, CrawlError) else '嶺南公開廣告格式有變。')
             failures += 1
