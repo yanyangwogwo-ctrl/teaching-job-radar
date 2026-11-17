@@ -4,12 +4,20 @@ on:
   push:
     branches: [main]
     paths: ['monitor/**', 'scripts/**', 'config/**', 'requirements.txt', '.github/workflows/daily.yml']
+  # Backup only. GitHub has been starting scheduled runs hours late; an outside
+  # timer (SETUP_zh-HK.md) calls workflow_dispatch with reason=schedule at the
+  # intended time, and whichever start comes second skips the crawl.
   schedule:
     - cron: '17 0 * * *' # 08:17 Hong Kong; GitHub may start later.
   workflow_dispatch:
     inputs:
       sources:
         description: '可留空檢查全部，或填院校 ID，例如 hsu,hkust'
+        required: false
+        default: ''
+        type: string
+      reason:
+        description: '外部定時服務填 schedule（當日預定時間後已完成完整檢索就略過）；人手執行留空'
         required: false
         default: ''
         type: string
@@ -24,7 +32,7 @@ permissions:
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v7
         with:
@@ -48,6 +56,7 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           HEARTBEAT_URL: ${{ secrets.HEARTBEAT_URL }}
           RADAR_SOURCE_IDS: ${{ inputs.sources }}
+          RADAR_TRIGGER: ${{ inputs.reason }}
         run: python scripts/run_scheduled.py
       - name: Persist jobs and pending alerts before sending
         id: persist_before

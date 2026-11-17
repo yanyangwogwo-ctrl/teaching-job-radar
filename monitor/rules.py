@@ -32,9 +32,11 @@ def role_of(title: str) -> str:
     # adjunct research / advisory title as a lecturer.
     if re.search(r'\badjunct (?:teaching )?faculty\b', value):
         return 'lecturer'
-    for role, pattern in [('lecturer', r'\b(lecturers?|teachers?|teaching fellows?)\b|講師|教師'),
-                          ('tutor', r'\btutors?\b|導師'),
-                          ('instructor', r'\binstructors?\b|導師')]:
+    # Teaching appointments only; a Teaching Assistant / Practice Supervisor is
+    # a different role. "Tutorship" is HKMU's part-time tutor title.
+    for role, pattern in [('lecturer', r'\b(lecturers?|teachers?|teaching (?:fellows?|staff|associates?|consultants?)|professors? of teaching)\b|講師|教師'),
+                          ('tutor', r'\b(tutors?|tutorships?)\b|導師'),
+                          ('instructor', r'\binstructors?\b|導師|教導員')]:
         if re.search(pattern, value):
             return role
     return 'other'
@@ -102,4 +104,8 @@ def evaluate(job: dict, prefs: dict) -> dict:
     institution_ok = not rule.get('institutions') or job['source_id'] in rule['institutions']
     matches = bool(tags and score >= rule['min_score'] and role in rule['roles'] and
                    (is_pt or not rule['require_part_time']) and not excluded and institution_ok)
-    return {'role': role, 'subjects': tags, 'score': score, 'evidence': evidence, 'matches': matches}
+    # 'title' when the site gives only a list row: the subject evidence came
+    # from the advertised title / department, not from the advertisement text.
+    basis = 'detail' if (job.get('match_text') or job.get('description')) else 'title'
+    return {'role': role, 'subjects': tags, 'score': score, 'evidence': evidence, 'matches': matches,
+            'match_basis': basis}

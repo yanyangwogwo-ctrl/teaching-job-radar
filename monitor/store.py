@@ -64,14 +64,20 @@ def reconcile(state: dict, source: dict, batch: Batch, now: str, prefs: dict) ->
     listing_complete = batch.complete if batch.listing_complete is None else batch.listing_complete
     capability = batch.capability or source.get('capability', 'pending' if source.get('adapter') == 'availability_check' else 'full')
     guarded_listing = False
+    # Every error came from the site side (challenge, refusal, timeout, request
+    # budget). Old records are kept either way; this only decides whether a
+    # person needs to change the program.
+    external = bool(getattr(batch, 'external_failure', False))
     unique = {job['id']: job for job in batch.jobs}
     if not unique and not batch.explicit_empty:
         batch.complete = False
         listing_complete = False
         if capability not in ('manual', 'pending'):
-            guarded_listing = True
+            guarded_listing = not external
             batch.errors.append('未能確認零職位結果。')
-    if last_count >= 5 and len(unique) < last_count * (1 - prefs['suspicious_drop_ratio']) and not batch.explicit_empty:
+    # A shrinking list only matters when it claims to be complete; an
+    # unfinished list already blocks retirement and explains its own size.
+    if listing_complete and last_count >= 5 and len(unique) < last_count * (1 - prefs['suspicious_drop_ratio']) and not batch.explicit_empty:
         batch.complete = False
         listing_complete = False
         guarded_listing = True
@@ -107,7 +113,7 @@ def reconcile(state: dict, source: dict, batch: Batch, now: str, prefs: dict) ->
             # failed refresh retryable; an old body is not a fresh success.
             job['detail_refresh_failed'] = bool(job.get('detail_refresh_failed') or old.get('detail_refresh_failed'))
         job.update(evaluate(job, prefs))
-        if not incoming.get('detail_complete') and not old:
+        if not incoming.get('detail_complete') and not old and not incoming.get('detail_unavailable'):
             job['matches'] = False
         job['content_hash'] = content_hash(job)
         job['first_seen'] = old['first_seen'] if old else now
@@ -125,7 +131,8 @@ def reconcile(state: dict, source: dict, batch: Batch, now: str, prefs: dict) ->
             add_history(state, job, 'updated', now, old)
         state['jobs'][key] = job
         event_id = 'new:' + key
-        if job['eligible_new_notification'] and job['matches'] and job['detail_complete'] and job['status'] == 'open' and state['outbox'].get(event_id, {}).get('state') not in ('pending', 'sent'):
+        readable = job['detail_complete'] or job.get('detail_unavailable')
+        if job['eligible_new_notification'] and job['matches'] and readable and job['status'] == 'open' and state['outbox'].get(event_id, {}).get('state') not in ('pending', 'sent'):
             state['outbox'][event_id] = {'id': event_id, 'kind': 'new', 'job_id': key, 'created_at': now, 'state': 'pending'}
     if listing_complete:
         for key, old in list(state['jobs'].items()):
@@ -141,9 +148,13 @@ def reconcile(state: dict, source: dict, batch: Batch, now: str, prefs: dict) ->
                 old['changed_at'] = now
                 add_history(state, old, 'status', now, before)
     detail_count = sum(bool(job.get('detail_complete')) for job in unique.values())
-    if guarded_listing or (not listing_complete and capability not in ('manual', 'pending')):
+    if guarded_listing or (not listing_complete and capability not in ('manual', 'pending') and not external):
         severity = 'error'
-    elif batch.severity in ('ok', 'warning', 'error'):
+    elif batch.severity == 'error':
+        severity = 'error'
+    elif external and not batch.complete:
+        severity = 'warning'
+    elif batch.severity in ('ok', 'warning'):
         severity = batch.severity
     elif batch.complete:
         severity = 'ok'
@@ -156,12 +167,18 @@ def reconcile(state: dict, source: dict, batch: Batch, now: str, prefs: dict) ->
     status = 'ok' if batch.complete else ('partial' if unique or listing_complete else 'error')
     if severity == 'warning' and capability in ('manual', 'pending'):
         status = capability
+    elif severity == 'warning' and external and not listing_complete and not unique:
+        # Nothing could be read this round because of the site; distinct from
+        # a program failure, which stays 'error'.
+        status = 'unreachable'
     health = {**previous, 'id': source['id'], 'last_attempt': now, 'status': status,
               'count': len(unique), 'pages': batch.pages, 'errors': list(dict.fromkeys(batch.errors))[:8],
               'listing_complete': bool(listing_complete), 'capability': capability, 'severity': severity,
               'detail_complete_count': detail_count, 'detail_total_count': len(unique),
               'detail_coverage': round(detail_count / len(unique), 4) if unique else (1.0 if batch.explicit_empty and batch.complete else None),
               'metrics': dict(batch.metrics),
+              'run_notes': list(dict.fromkeys(getattr(batch, 'notes', []) or []))[:4],
+              'external_failure': external,
               'baseline_started': bool(unique) or existing_source_jobs or previous.get('baseline_started', False)}
     if listing_complete:
         health.update(last_listing_success=now, last_listing_count=len(unique))
@@ -216,7 +233,8 @@ def schedule_execution():
     except (KeyError, TypeError, ValueError):
         return None
     return {'expected_at': expected, 'started_at': started, 'delay_seconds': delay,
-            'timing_basis': os.environ.get('RADAR_SCHEDULE_TIMING_BASIS', 'unknown')}
+            'timing_basis': os.environ.get('RADAR_SCHEDULE_TIMING_BASIS', 'unknown'),
+            'trigger': os.environ.get('RADAR_SCHEDULE_TRIGGER', 'github-schedule')}
 
 
 def safe_cell(value) -> str:

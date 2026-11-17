@@ -115,7 +115,8 @@ class SourceHealthReviewTests(unittest.TestCase):
         self.assertNotIn('verify',client.session.request.call_args.kwargs)
 
     def test_pending_adapter_reports_both_implementation_and_network_failure(self):
-        source = SOURCES['nangyan']
+        # Nang Yan is now a manual source; keep exercising the pending adapter.
+        source = {**SOURCES['nangyan'], 'capability': 'pending'}
         client=Mock(); client.get.side_effect=CrawlError('ConnectTimeout')
         with self.assertRaises(CrawlError) as caught:
             collect(source,client)

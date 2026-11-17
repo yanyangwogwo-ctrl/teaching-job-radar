@@ -25,6 +25,11 @@ class Batch:
     capability: str | None = None
     severity: str | None = None
     metrics: dict = field(default_factory=dict)
+    # Informational evidence for the status page (not an error).
+    notes: list[str] = field(default_factory=list)
+    # Set by run.fetch_source: every error came from the site side
+    # (blocked/network/deferred), so old data is kept and nothing needs fixing.
+    external_failure: bool = False
 
 
 def soup_of(html: str):
@@ -192,8 +197,9 @@ def collect(source: dict, client) -> Batch:
         return collect_yccece(source, client)
     if adapter == 'availability_check':
         if source.get('capability') == 'manual':
+            reason = source.get('manual_reason') or '職位資料平台明確禁止自動讀取'
             return Batch(complete=False, listing_complete=False, capability='manual', severity='warning',
-                         errors=['此來源已標示為手動查看：職位資料平台明確禁止自動讀取，本輪沒有發送網頁或 robots.txt 請求。請開啟官方招聘頁查看最新職位。'])
+                         errors=[f'此來源已標示為手動查看：{reason}，本輪沒有發送網頁或 robots.txt 請求。請開啟官方招聘頁查看最新職位。'])
         pending = '職位讀取尚未接入，目前只檢查招聘入口連線。'
         try:
             client.get(source['url'])

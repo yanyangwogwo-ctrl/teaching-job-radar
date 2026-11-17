@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 from pypdf import PdfReader
 
 from .adapters import Batch, soup_of, body_text, apply_deadline
-from .http import CrawlError, detail_jobs, mark_detail_success, mark_detail_failure
+from .http import CrawlError, EXTERNAL_KINDS, detail_jobs, mark_detail_success, mark_detail_failure
 from .model import clean_text, record, parse_date, posted_from
 from .rules import employment_of
 
@@ -212,6 +212,9 @@ def parse_cityu_list(source, html):
         if re.search(r'until.{0,55}filled', raw, re.I):
             job['deadline_type'] = 'until-filled'
         job['employment_type'] = employment_of(job['title'])
+        # The detail host challenges automated reads; title/department are
+        # the only evidence the official list provides.
+        job['detail_unavailable'] = True
         jobs.append(job)
     return require_jobs(jobs, 'CityU')
 
@@ -272,47 +275,101 @@ def parse_cuhk_detail(job, html):
     return job
 
 
+CUHK_ENDPOINT = '/careersection/rest/jobboard/searchjobs?lang=en&portal=10115020119'
+
+
+def _cuhk_listing(source, client, indexed, page_sizes, ascending=False):
+    """Read every page in one sort order into `indexed` / `page_sizes` (kept by
+    the caller, so rows read before a failure are not lost). Returns paging facts."""
+    endpoint = urljoin(source['url'], CUHK_ENDPOINT)
+    page, expected, rows_read, size = 1, None, 0, 0
+    while True:
+        if page > 30:
+            raise CrawlError('CUHK 分頁超過安全上限。', stop_source=True)
+        payload = {'multilineEnabled': True,
+                   'sortingSelection': {'sortBySelectionParam': '3', 'ascendingSortingOrder': 'true' if ascending else 'false'},
+                   'fieldData': {'fields': {'KEYWORD': '', 'JOB_TITLE': ''}, 'valid': True},
+                   'filterSelectionParam': {'searchFilterSelections': []}, 'pageNo': page}
+        data = client.search_json(endpoint, payload, {'tz': 'GMT+08:00', 'tzname': 'Asia/Hong_Kong'})
+        paging = data['pagingData']
+        total, size = int(paging['totalCount']), int(paging['pageSize'])
+        if size < 1 or int(paging['currentPageNo']) != page or (expected is not None and total != expected):
+            raise CrawlError('CUHK 分頁資訊改變，暫不判定職位消失。')
+        expected = total
+        for row in data['requisitionList']:
+            fields, reference = row['column'], row['contestNo']
+            if len(fields) != 4 or fields[1] != reference or int(row['linkedColumn']) != 0:
+                raise CrawlError('CUHK 搜尋欄位次序有變。')
+            url = urljoin(source['url'], 'jobdetail.ftl?' + urlencode({'job': reference, 'lang': 'en'}))
+            job = record(source, fields[0], url, reference, department=fields[2], detail_complete=False,
+                         unposting_raw=fields[3])
+            job['employment_type'] = employment_of(job['title'])
+            indexed[job['id']] = job
+        page_sizes.append(len(data['requisitionList']))
+        rows_read += len(data['requisitionList'])
+        if page * size >= total:
+            break
+        page += 1
+    return expected, rows_read, size
+
+
+def _cuhk_shortfall_is_structural(expected, unique, page_sizes, rows_read, size):
+    """The official total exceeds the rows that paging can return, in a shape
+    that cannot hide a skipped row: no duplicates (an unstable order would
+    produce a duplicate for every skip), every page full except the last, the
+    last page short, and a small gap (at most 5 rows and 5% of the total).
+    """
+    gap = expected - unique
+    return (0 < gap <= 5 and gap <= expected * 0.05 and rows_read == unique and page_sizes
+            and all(count == size for count in page_sizes[:-1]) and page_sizes[-1] < size)
+
+
 def collect_cuhk(source, client):
-    result, indexed, page, expected = Batch(listing_complete=False), {}, 1, None
-    page_sizes, rows_read = [], 0
-    endpoint = urljoin(source['url'], '/careersection/rest/jobboard/searchjobs?lang=en&portal=10115020119')
+    result, indexed, expected = Batch(listing_complete=False), {}, None
+    page_sizes = []
     try:
-        while True:
-            if page > 30:
-                raise CrawlError('CUHK 分頁超過安全上限。', stop_source=True)
-            payload = {'multilineEnabled': True, 'sortingSelection': {'sortBySelectionParam': '3', 'ascendingSortingOrder': 'false'},
-                       'fieldData': {'fields': {'KEYWORD': '', 'JOB_TITLE': ''}, 'valid': True},
-                       'filterSelectionParam': {'searchFilterSelections': []}, 'pageNo': page}
-            data = client.search_json(endpoint, payload, {'tz': 'GMT+08:00', 'tzname': 'Asia/Hong_Kong'})
-            paging = data['pagingData']
-            total, size = int(paging['totalCount']), int(paging['pageSize'])
-            if size < 1 or int(paging['currentPageNo']) != page or (expected is not None and total != expected):
-                raise CrawlError('CUHK 分頁資訊改變，暫不判定職位消失。')
-            expected = total
-            for row in data['requisitionList']:
-                fields, reference = row['column'], row['contestNo']
-                if len(fields) != 4 or fields[1] != reference or int(row['linkedColumn']) != 0:
-                    raise CrawlError('CUHK 搜尋欄位次序有變。')
-                url = urljoin(source['url'], 'jobdetail.ftl?' + urlencode({'job': reference, 'lang': 'en'}))
-                job = record(source, fields[0], url, reference, department=fields[2], detail_complete=False,
-                             unposting_raw=fields[3])
-                job['employment_type'] = employment_of(job['title'])
-                indexed[job['id']] = job
-            page_sizes.append(len(data['requisitionList']))
-            rows_read += len(data['requisitionList'])
-            result.pages += 1
-            if page * size >= total:
-                result.explicit_empty = total == 0
-                break
-            page += 1
-        if len(indexed) != expected:
-            result.complete = False
-            sizes = '、'.join(map(str, page_sizes))
-            result.errors.append(f'官方回報 {expected} 個職位；已讀取 {result.pages} 頁（每頁 {sizes} 列），合共 {rows_read} 列、{len(indexed)} 個不重複職位。數量仍未核對一致，暫不判定舊職位消失。')
-        else:
+        expected, rows_read, size = _cuhk_listing(source, client, indexed, page_sizes)
+        result.pages = len(page_sizes)
+        result.explicit_empty = expected == 0
+        if len(indexed) == expected:
             result.listing_complete = True
+        else:
+            sizes = '、'.join(map(str, page_sizes))
+            message = f'官方回報 {expected} 個職位；已讀取 {result.pages} 頁（每頁 {sizes} 列），合共 {rows_read} 列、{len(indexed)} 個不重複職位。'
+            check = ''
+            if _cuhk_shortfall_is_structural(expected, len(indexed), page_sizes, rows_read, size):
+                # Independent second enumeration in the opposite order. A row
+                # that paging could return would have to appear in one of them.
+                second, second_sizes = {}, []
+                try:
+                    second_total, second_rows, _ = _cuhk_listing(source, client, second, second_sizes, ascending=True)
+                except (CrawlError, KeyError, ValueError, IndexError) as error:
+                    second, second_total, second_rows = None, None, 0
+                    check = '反向排序核對未完成（' + (str(error) if isinstance(error, CrawlError) else '格式有變') + '）'
+                result.pages += len(second_sizes)
+                merged = {**(second or {}), **indexed}
+                if second is None:
+                    pass
+                elif second_total != expected or second_rows != len(second):
+                    check = '反向排序核對時總數或分頁改變'
+                elif len(merged) == expected:
+                    indexed = merged
+                    result.listing_complete = True
+                    result.notes.append(f'官方總數 {expected}；以相反排序再讀一次後，已取得全部 {expected} 個職位。')
+                elif set(second) == set(indexed):
+                    result.listing_complete = True
+                    result.notes.append(f'官方總數 {expected}，公開分頁只可讀到 {len(indexed)} 個職位；以相反排序再讀一次，'
+                                        f'兩次職位編號完全相同，餘下 {expected - len(indexed)} 個屬官方計數但未有公開顯示。'
+                                        '清單已核實完整，舊職位消失可照常判定。')
+                else:
+                    check = f'反向排序讀到 {len(second)} 個職位，與第一次不完全相同'
+            if not result.listing_complete:
+                result.complete = False
+                result.errors.append(message + (check + '；' if check else '') + '數量仍未核對一致，暫不判定舊職位消失。')
     except (CrawlError, KeyError, ValueError, IndexError) as error:
         result.complete = False
+        result.listing_complete = False
+        result.pages = max(result.pages, len(page_sizes))
         result.errors.append(str(error) if isinstance(error, CrawlError) else 'CUHK 公開搜尋格式有變。')
         if getattr(error, 'stop_source', False):
             result.jobs = list(indexed.values())
@@ -413,6 +470,8 @@ def collect_official(source, client):
         if adapter == 'hkust':
             from .peoplesoft import fetch_hkust_detail, HOST
             restricted = [job for job in result.jobs if urlsplit(job['url']).hostname != HOST]
+            for job in restricted:
+                job['detail_unavailable'] = True
             if restricted:
                 result.complete = False
                 result.capability = 'partial'
@@ -433,7 +492,10 @@ def collect_official(source, client):
                 except (CrawlError, KeyError, ValueError) as error:
                     mark_detail_failure(client, job)
                     result.complete = False
-                    result.severity = 'error'
+                    if getattr(error, 'kind', None) not in EXTERNAL_KINDS:
+                        # A timeout or block keeps the known Interfolio warning level;
+                        # a changed page format still needs a person.
+                        result.severity = 'error'
                     result.errors.append(str(error) if isinstance(error, CrawlError) else 'HKUST 舊招聘平台格式有變。')
                     failures += 1
                     if getattr(error, 'stop_source', False) or failures >= 3:

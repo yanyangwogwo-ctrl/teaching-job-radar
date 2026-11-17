@@ -6,7 +6,7 @@ export function mountScheduleEditor(container, onCurrentTime = () => {}) {
       <div class="criteria-heading"><h3 id="schedule-title">每日更新時間</h3><span>香港時間</span></div>
       <p id="schedule-current" role="status">正在核對 GitHub 已儲存時間…</p>
       <div class="schedule-controls"><label for="daily-time">選擇新時間<input type="time" id="daily-time" required disabled></label><button class="button" type="button" id="schedule-prepare" disabled>複製新設定</button><button class="button button-outline" type="button" id="schedule-check">檢查是否已儲存</button></div>
-      <p class="field-help">你可以喺此選時間；共同排程由你嘅 GitHub 帳戶確認儲存，瀏覽網站毋須登入。實際執行可能稍為延遲。</p>
+      <p class="field-help">你可以喺此選時間；共同排程由你嘅 GitHub 帳戶確認儲存，瀏覽網站毋須登入。GitHub 內建排程可能遲幾個鐘；如已設定外部準時觸發，請喺該服務（例如 cron-job.org）改成同一時間，GitHub 呢個時間就係後備。</p>
       <p id="schedule-message" class="field-help" role="status"></p>
       <div id="schedule-next" class="schedule-next" hidden><p><strong>新時間尚未儲存。</strong> 按下方連結，在 GitHub 編輯框內按 Ctrl+A 全選、Ctrl+V 貼上，再按「Commit changes」確認。之後返呢頁檢查。</p><a class="button" id="schedule-github" target="_blank" rel="noopener noreferrer">開啟 GitHub 確認儲存 ↗</a><details id="schedule-copy-help"><summary>手動複製設定</summary><label class="field-label" for="schedule-text">全選以下設定並複製</label><textarea id="schedule-text" rows="8" readonly spellcheck="false"></textarea></details></div>
     </section>`;

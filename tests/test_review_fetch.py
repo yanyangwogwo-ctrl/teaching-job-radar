@@ -139,11 +139,18 @@ class DetailCacheReviewTests(unittest.TestCase):
         client.set_previous_jobs([old], NOW)
         self.assertFalse(client.reuse_detail(listing(deadline='2026-11-20', deadline_type='closing')))
 
-    def test_cache_can_shorten_but_not_extend_weekly_refresh(self):
+    def test_cache_extension_is_explicit_and_capped_at_thirty_days(self):
+        # Weekly by default; a rate-limited source may opt in to a longer
+        # reuse period in sites.yaml, but never beyond thirty days.
         old = self.verified()
-        client = PublicClient({**SOURCE, 'detail_cache_days': 100})
-        client.set_previous_jobs([old], '2026-11-23T00:00:00+00:00')
-        self.assertFalse(client.reuse_detail(listing()))
+        for config, now, reusable in [({}, '2026-11-23T00:00:00+00:00', False),
+                                      ({'detail_cache_days': 100}, '2026-11-23T00:00:00+00:00', True),
+                                      ({'detail_cache_days': 100}, '2026-12-17T00:00:00+00:00', False),
+                                      ({'detail_cache_days': 3}, '2026-11-20T00:00:00+00:00', False)]:
+            with self.subTest(config=config, now=now):
+                client = PublicClient({**SOURCE, **config})
+                client.set_previous_jobs([old], now)
+                self.assertEqual(client.reuse_detail(listing()), reusable)
 
     def test_catalog_failure_does_not_unfinish_list_and_marks_refresh_failed(self):
         client = PublicClient(SOURCE)
