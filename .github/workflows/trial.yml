@@ -1,0 +1,65 @@
+name: Trial run (test branch only)
+
+# Runs the revised code against the real sites once, on a test branch.
+# Read-only token: nothing is pushed or committed. No secrets: no Discord,
+# no heartbeat. Results are attached to the run as an artifact for 7 days.
+on:
+  push:
+    branches: ['claude/trial-**']
+
+concurrency:
+  group: vacancy-trial
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Tests
+        run: |
+          python -m unittest discover -s tests
+          node --test tests/*.test.mjs
+          node --check dist/app.js
+      - name: Crawl every source (no notifications, nothing committed)
+        id: crawl
+        continue-on-error: true
+        run: python -m monitor.run
+      - name: Write source summary
+        if: always()
+        run: |
+          python - >> "$GITHUB_STEP_SUMMARY" <<'PY'
+          import json
+          state = json.load(open('data/store.json', encoding='utf-8'))
+          run = state['runs'][-1]
+          print(f"## Trial run {run['started_at']} → {run['finished_at']} · {run['status']}\n")
+          print('| source | status | severity | listing | details | requests | first message | note |')
+          print('|---|---|---|---|---|---|---|---|')
+          for item in sorted(run['sources'], key=lambda s: (s['severity'] != 'error', s['severity'] != 'warning', s['source_id'])):
+              health = state['sources'][item['source_id']]
+              cell = lambda text: str(text or '').replace('|', '/').replace('\n', ' ')[:160]
+              print(f"| {item['source_id']} | {item['status']} | {item['severity']} | {'complete' if item['listing_complete'] else 'not proven'} "
+                    f"| {item['detail_complete_count']}/{item['detail_total_count']} | {item['metrics'].get('request_count', '')} "
+                    f"| {cell((health.get('errors') or [''])[0])} | {cell((health.get('run_notes') or [''])[0])} |")
+          PY
+      - name: Keep results
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: trial-results-${{ github.run_id }}
+          path: |
+            data/store.json
+            dist/data
+          retention-days: 7
