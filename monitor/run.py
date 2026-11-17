@@ -11,7 +11,7 @@ from pathlib import Path
 import yaml
 
 from .adapters import Batch, collect
-from .http import PublicClient, CrawlError
+from .http import PublicClient, CrawlError, EXTERNAL_KINDS
 from .notify import deliver
 from .store import load_store, atomic_json, reconcile, export, expire_jobs, schedule_execution
 from .rules import evaluate
@@ -31,6 +31,29 @@ def read_config(root: Path):
     return sources, prefs
 
 
+def external_only(errors, failures) -> bool:
+    """True when every error traces back to a site-side failure of this client.
+
+    Adapters often catch a CrawlError and keep only its text, so the client's
+    own record of (message, kind) is the evidence. Any message that cannot be
+    traced (a parser or layout error, an adapter's own diagnosis) keeps the
+    conservative default: it needs a person to look at it.
+    """
+    if not errors:
+        return False
+    known = [(message, kind) for message, kind in failures if message]
+    for error in errors:
+        kinds = {kind for message, kind in known if message == error or message in error}
+        if not kinds or not kinds <= set(EXTERNAL_KINDS):
+            return False
+    return True
+
+
+def client_failures(client) -> list:
+    failures = getattr(client, 'failures', [])
+    return list(failures) if isinstance(failures, list) else []
+
+
 def fetch_source(source: dict, cached_jobs=(), now=None) -> Batch:
     client = PublicClient(source)
     client.set_previous_jobs(cached_jobs, now)
@@ -47,17 +70,31 @@ def fetch_source(source: dict, cached_jobs=(), now=None) -> Batch:
         else:
             capability = source.get('capability', 'pending' if source['adapter'] == 'availability_check' else 'full')
             # An intentionally manual/unimplemented source is a visible known
-            # limitation. Actual failures of implemented listings stay errors.
-            severity = 'warning' if capability in ('manual', 'pending') else 'error'
+            # limitation, and so is a site that blocked or dropped this round.
+            # Failures of implemented parsing stay errors.
+            outside = getattr(error, 'kind', None) in EXTERNAL_KINDS or external_only([str(error)], client_failures(client))
+            severity = 'warning' if capability in ('manual', 'pending') or outside else 'error'
             batch = Batch(complete=False, listing_complete=False, capability=capability,
                           severity=severity, errors=[str(error)])
     except Exception as error:
         # Parser failure is explicitly visible; never convert it to success/zero.
         batch = Batch(complete=False, listing_complete=False, severity='error',
                       errors=[f'讀取模組未完成（{type(error).__name__}），需要檢查。'])
+    deferred = getattr(client, 'detail_deferred', 0)
+    deferred = deferred if isinstance(deferred, int) else 0
+    failures = client_failures(client)
+    if deferred:
+        message = (f'詳情分批更新：網站限制讀取頻率，本輪最多讀取 {client.detail_budget} 則詳情，'
+                   f'另有 {deferred} 則保留上次內容，留待下一輪更新。')
+        failures.append((message, 'deferred'))
+        batch.errors.append(message)
+        batch.complete = False
+    batch.external_failure = external_only(batch.errors, failures)
     batch.metrics.update(request_count=client.count,
                          detail_cache_hits=client.detail_cache_hits,
                          detail_fetches=client.detail_fetches)
+    if deferred:
+        batch.metrics['detail_deferred'] = deferred
     return batch
 
 
@@ -101,7 +138,9 @@ def main():
         atomic_json(path, state)
     for job in state['jobs'].values():
         job.update(evaluate(job, prefs))
-        if not job.get('detail_complete') and not job.get('description'):
+        # Wait for a body that is only temporarily missing. A source that never
+        # publishes one (CityU, HKUST Interfolio) is judged on its list row.
+        if not job.get('detail_complete') and not job.get('description') and not job.get('detail_unavailable'):
             job['matches'] = False
     expire_jobs(state, now, prefs)
     atomic_json(path, state)

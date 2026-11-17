@@ -16,10 +16,25 @@ import requests
 from .tls import configure_host_tls
 
 
+# Failure kinds outside this program's control. They are reported as visible
+# warnings (old data kept) instead of failing the daily workflow; anything else
+# (format changes, unexpected status codes, configuration limits) stays an error.
+#   blocked  - the site refused or challenged automated access this round
+#   network  - timeout, connection, TLS or temporary 5xx failure
+#   deferred - details intentionally left for a later round (request budget)
+EXTERNAL_KINDS = ('blocked', 'network', 'deferred')
+
+
 class CrawlError(RuntimeError):
-    def __init__(self, message, *, stop_source=False):
+    def __init__(self, message, *, stop_source=False, kind=None):
         super().__init__(message)
         self.stop_source = stop_source
+        self.kind = kind
+
+
+def cloudflare_response(response) -> bool:
+    headers = {key.lower(): str(value).lower() for key, value in response.headers.items()}
+    return bool(headers.get('cf-mitigated') or headers.get('cf-ray') or 'cloudflare' in headers.get('server', ''))
 
 
 def tls_failure_reason(error):
@@ -101,14 +116,32 @@ class PublicClient:
         configure_host_tls(self.session, source)
         self.session.headers.update({'User-Agent': self.agent, 'Accept': 'text/html,application/json;q=0.9,*/*;q=0.5'})
         self.robots = {}
+        self.robots_failure = {}
         self.last_request = {}
         self.delays = {}
+        # A per-source minimum gap keeps low-volume reading under a site's
+        # published or observed rate limit. It never shortens robots Crawl-delay.
+        self.min_interval = max(1.1, min(120.0, float(source.get('min_request_interval', 1.1))))
         self.count = 0
         self.previous_jobs = {}
         self.cache_now = datetime.now(timezone.utc)
         self.detail_cache_hits = 0
         self.detail_fetches = 0
         self.detail_refresh_candidates = 0
+        budget = source.get('max_detail_fetches')
+        self.detail_budget = max(1, int(budget)) if budget else None
+        self.detail_queued = 0
+        self.detail_deferred = 0
+        # (message, kind) for every failure raised by this client. Used to tell
+        # site-side limits from program errors after an adapter has caught them.
+        self.failures = []
+
+    def _error(self, message, *, kind=None, stop_source=False):
+        self.failures.append((message, kind))
+        return CrawlError(message, stop_source=stop_source, kind=kind)
+
+    def record_failure(self, message, kind):
+        self.failures.append((message, kind))
 
     def set_previous_jobs(self, jobs, now=None):
         """Use verified parsed details, never cached lists, to reduce requests."""
@@ -138,8 +171,10 @@ class PublicClient:
             if verified.tzinfo is None:
                 verified = verified.replace(tzinfo=timezone.utc)
             age = self.cache_now - verified
-            # Config may shorten but cannot silently extend the weekly refresh.
-            ttl = max(1, min(7, int(self.source.get('detail_cache_days', 7))))
+            # Weekly by default. A source whose site limits request volume may
+            # extend this explicitly in sites.yaml, never beyond 30 days; any
+            # change to a listed field still forces an immediate refresh.
+            ttl = max(1, min(30, int(self.source.get('detail_cache_days', 7))))
             reusable = reusable and timedelta(0) <= age < timedelta(days=ttl)
         except (ValueError, TypeError):
             reusable = False
@@ -207,8 +242,9 @@ class PublicClient:
             self.validate(url)
             host = urlsplit(url).hostname
             if self.count >= self.source.get('max_requests', 400):
-                raise CrawlError('超過每來源的安全請求上限，未完成整批檢索。', stop_source=True)
-            gap = self.delays.get(host, 1.1) - (time.monotonic() - self.last_request.get(host, 0))
+                raise self._error('超過每來源的安全請求上限，未完成整批檢索。', stop_source=True)
+            interval = max(self.delays.get(host, 1.1), self.min_interval)
+            gap = (interval - (time.monotonic() - self.last_request[host])) if host in self.last_request else 0
             if gap > 0:
                 time.sleep(gap)
             self.count += 1
@@ -220,13 +256,13 @@ class PublicClient:
                     target = urljoin(url, response.headers.get('Location', ''))
                     response.close()
                     if method != 'GET':
-                        raise CrawlError('公開搜尋介面重新導向，需確認新位置。', stop_source=True)
+                        raise self._error('公開搜尋介面重新導向，需確認新位置。', stop_source=True)
                     self.validate(target)
                     if robots:
                         if urlsplit(target).hostname != initial_host or urlsplit(target).path != '/robots.txt':
-                            raise CrawlError('robots.txt 轉往其他位置，未能確認讀取規則。', stop_source=True)
+                            raise self._error('robots.txt 轉往其他位置，未能確認讀取規則。', kind='blocked', stop_source=True)
                     elif not self.allowed(target):
-                        raise CrawlError('重新導向的路徑不允許自動讀取。', stop_source=True)
+                        raise self._error('重新導向的路徑不允許自動讀取。', kind='blocked', stop_source=True)
                     url = target
                     continue
                 chunks, length = [], 0
@@ -234,7 +270,7 @@ class PublicClient:
                     length += len(chunk)
                     if length > 6_000_000:
                         response.close()
-                        raise CrawlError('頁面超過安全大小上限。')
+                        raise self._error('頁面超過安全大小上限。')
                     chunks.append(chunk)
                 response._content = b''.join(chunks)
                 response._content_consumed = True
@@ -261,13 +297,13 @@ class PublicClient:
                 if method == 'GET' and not robots and response is None and timeout_retries == 0:
                     timeout_retries += 1
                     continue
-                raise CrawlError(f'{host} 連線未完成（{type(error).__name__}）。') from None
+                raise self._error(f'{host} 連線未完成（{type(error).__name__}）。', kind='network') from None
             except requests.RequestException as error:
                 if response is not None:
                     response.close()
                 if isinstance(error, requests.exceptions.SSLError):
                     phase = 'robots.txt' if robots else '網頁'
-                    raise CrawlError(f'{host} {phase}：{tls_failure_reason(error)}；保留憑證與主機名稱驗證。', stop_source=True) from None
+                    raise self._error(f'{host} {phase}：{tls_failure_reason(error)}；保留憑證與主機名稱驗證。', kind='network', stop_source=True) from None
                 # One bounded retry for a dropped GET connection before headers.
                 # Certificate/proxy errors, robots and POST requests stay failures.
                 if (isinstance(error, requests.ConnectionError)
@@ -276,8 +312,8 @@ class PublicClient:
                     timeout_retries += 1
                     continue
                 # Do not emit cookies, headers or request URLs in logs.
-                raise CrawlError(f'{host} 連線未完成（{type(error).__name__}）。') from None
-        raise CrawlError('來源重新導向或重試次數過多。')
+                raise self._error(f'{host} 連線未完成（{type(error).__name__}）。', kind='network') from None
+        raise self._error('來源重新導向或重試次數過多。', kind='network')
 
     def allowed(self, url: str) -> bool:
         self.validate(url)
@@ -287,45 +323,65 @@ class PublicClient:
             # Fail closed even after a transient exception; never cache failure
             # as permission for the following detail request.
             self.robots[origin] = False
-            response = self._request(origin + '/robots.txt', robots=True)
-            unavailable_exception = (response.status_code == 403
-                and bits.hostname in self.source.get('robots_unavailable_hosts', [])
-                and not response.headers.get('x-amzn-waf-action')
-                and not response.headers.get('cf-mitigated')
-                and not any(token in response.text.lower() for token in
-                    ('captcha', 'cf-chl-', 'just a moment', 'incapsula', 'awswaf')))
-            if response.status_code in (404, 410) or unavailable_exception:
-                parser = RobotsPolicy('User-agent: *\nAllow: /')
-            elif response.status_code == 200 and not response.text.lstrip('\ufeff \r\n\t').startswith(('<', '{', '[')) and not (response.headers.get('cf-mitigated') or response.headers.get('x-amzn-waf-action')):
-                parser = RobotsPolicy(response.text)
-            else:
-                if response.status_code == 200:
-                    raise CrawlError('robots.txt 回傳網頁、驗證頁或其他非規則內容（HTTP 200），未能確認自動讀取規則；已保留舊資料。', stop_source=True)
-                raise CrawlError(f'未能確認 robots.txt（HTTP {response.status_code}），已保留舊資料。', stop_source=True)
-            delay = parser.delay
-            if delay > 30:
-                raise CrawlError('網站要求較長爬取間隔，需另行安排該來源。', stop_source=True)
+            try:
+                response = self._request(origin + '/robots.txt', robots=True)
+                unavailable_exception = (response.status_code == 403
+                    and bits.hostname in self.source.get('robots_unavailable_hosts', [])
+                    and not response.headers.get('x-amzn-waf-action')
+                    and not response.headers.get('cf-mitigated')
+                    and not any(token in response.text.lower() for token in
+                        ('captcha', 'cf-chl-', 'just a moment', 'incapsula', 'awswaf')))
+                if response.status_code in (404, 410) or unavailable_exception:
+                    parser = RobotsPolicy('User-agent: *\nAllow: /')
+                elif response.status_code == 200 and not response.text.lstrip('\ufeff \r\n\t').startswith(('<', '{', '[')) and not (response.headers.get('cf-mitigated') or response.headers.get('x-amzn-waf-action')):
+                    parser = RobotsPolicy(response.text)
+                else:
+                    if response.status_code == 200:
+                        # Usually a bot-check page served to this network instead of
+                        # the rules. Name the service when it identifies itself.
+                        via = '（Cloudflare 驗證頁）' if cloudflare_response(response) else ''
+                        raise self._error(f'robots.txt 回傳網頁、驗證頁或其他非規則內容（HTTP 200）{via}，未能確認自動讀取規則；已保留舊資料。',
+                                          kind='blocked', stop_source=True)
+                    code = response.status_code
+                    kind = 'blocked' if code in (401, 403, 429) else ('network' if 500 <= code < 600 else None)
+                    raise self._error(f'未能確認 robots.txt（HTTP {code}），已保留舊資料。', kind=kind, stop_source=True)
+                delay = parser.delay
+                if delay > 30:
+                    raise self._error('網站要求較長爬取間隔，需另行安排該來源。', stop_source=True)
+            except CrawlError as error:
+                self.robots_failure[origin] = error.kind
+                raise
             self.robots[origin] = parser
             self.delays[bits.hostname] = max(1.1, delay)
         parser = self.robots[origin]
         if parser is False:
-            raise CrawlError('robots.txt 尚未成功確認，已停止該來源。', stop_source=True)
+            raise self._error('robots.txt 尚未成功確認，已停止該來源。', kind=self.robots_failure.get(origin, 'network'), stop_source=True)
         return parser.can_fetch(url)
 
     def response(self, url: str, *, data=None, headers=None):
         if not self.allowed(url):
-            raise CrawlError('此路徑的 robots.txt 不允許自動讀取，已停止該來源。', stop_source=True)
+            raise self._error('此路徑的 robots.txt 不允許自動讀取，已停止該來源。', kind='blocked', stop_source=True)
         if data is not None and urlsplit(url).path not in self.source.get('read_only_post_paths', []):
-            raise CrawlError('此來源未設定唯讀搜尋 POST 路徑。', stop_source=True)
+            raise self._error('此來源未設定唯讀搜尋 POST 路徑。', stop_source=True)
         response = self._request(url, method='POST' if data is not None else 'GET', data=data, headers=headers)
         challenge = response.headers.get('x-amzn-waf-action') or response.headers.get('cf-mitigated')
         if response.status_code != 200 or challenge:
-            raise CrawlError(f'網站未提供可讀頁面（HTTP {response.status_code}）。', stop_source=bool(challenge) or response.status_code in (401, 403, 429))
+            code = response.status_code
+            if challenge or code in (202, 401, 403, 429):
+                # 202 is how AWS WAF delivers its browser challenge. Not retried
+                # and never solved; the request budget and pacing avoid it.
+                kind = 'blocked'
+            elif 500 <= code < 600:
+                kind = 'network'
+            else:
+                kind = None  # e.g. 404/410: a moved page needs a person to check.
+            label = '網站要求瀏覽器驗證' if challenge or code == 202 else '網站未提供可讀頁面'
+            raise self._error(f'{label}（HTTP {code}）。', kind=kind, stop_source=bool(challenge) or code in (401, 403, 429))
         text = response.text
         if '_incapsula_resource' in text.lower() and re.search(r'<body\b[^>]*>\s*</body>', text, re.I):
-            raise CrawlError('網站回傳存取驗證頁（HTTP 200），未提供職位正文；已停止該來源並保留舊資料。', stop_source=True)
+            raise self._error('網站回傳存取驗證頁（HTTP 200），未提供職位正文；已停止該來源並保留舊資料。', kind='blocked', stop_source=True)
         if any(token in text.lower() for token in ('<title>just a moment', '<title>access denied', 'cf-chl-', 'awswaf-captcha', 'incapsula incident id')):
-            raise CrawlError('網站要求驗證，已停止該來源並保留舊資料。', stop_source=True)
+            raise self._error('網站要求驗證，已停止該來源並保留舊資料。', kind='blocked', stop_source=True)
         return response
 
     def get(self, url: str) -> str:
@@ -361,7 +417,17 @@ def detail_jobs(client, jobs):
         if old.get('detail_refresh_failed') or not old.get('detail_complete'):
             return (2, '')
         return (3, old.get('detail_verified_at') or '')
-    return sorted(pending, key=priority)
+    queue = sorted(pending, key=priority)
+    if client.detail_budget is not None:
+        # A site that limits request volume gets a fixed allowance per run
+        # (across every call): new and changed ads first, then the oldest
+        # verified bodies. The rest keep their saved text for the next round.
+        remaining = max(0, client.detail_budget - client.detail_queued)
+        if len(queue) > remaining:
+            client.detail_deferred += len(queue) - remaining
+            queue = queue[:remaining]
+        client.detail_queued += len(queue)
+    return queue
 
 
 def mark_detail_success(client, job):

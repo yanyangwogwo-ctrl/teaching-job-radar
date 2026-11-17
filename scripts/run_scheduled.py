@@ -1,4 +1,14 @@
-"""Daily runs cover all sources; owners can request a targeted repair run."""
+"""Daily runs cover all sources; owners can request a targeted repair run.
+
+Two things can start the daily run:
+  * GitHub's own `schedule` event (the cron line in daily.yml), and
+  * an outside timer (for example cron-job.org) calling the workflow_dispatch
+    API with input reason=schedule. GitHub's scheduler has been starting runs
+    hours late, so the outside timer gives the punctual run and the cron line
+    remains as a backup.
+Whichever arrives second sees that a full run already happened since today's
+slot and exits without crawling, so the sites are not read twice a day.
+"""
 import json
 import os
 import re
@@ -9,6 +19,12 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 import yaml
+
+# A full run this long before today's slot still counts as today's run (an
+# outside timer set a little earlier than the cron line, or a recent push).
+SLOT_TOLERANCE_HOURS = 2
+# Used only when the cron line cannot be read.
+FALLBACK_WINDOW_HOURS = 12
 
 
 def selected_sources(event_name, event, manual=''):
@@ -28,12 +44,30 @@ def selected_sources(event_name, event, manual=''):
     return list(dict.fromkeys(re.split(r'[ ,]+', text)))
 
 
+def trigger_kind(event_name, environ):
+    """'schedule' for GitHub's cron or an outside timer; otherwise the event."""
+    if event_name == 'schedule':
+        return 'schedule'
+    if event_name == 'workflow_dispatch' and environ.get('RADAR_TRIGGER', '').strip().lower() == 'schedule':
+        return 'schedule'
+    return event_name
+
+
+def trigger_label(event_name, environ):
+    if event_name == 'schedule':
+        return 'github-schedule'
+    if trigger_kind(event_name, environ) == 'schedule':
+        return 'external-schedule'
+    return event_name or 'manual'
+
+
 def schedule_timing(event_name, root, now):
     """Measure time since the latest configured daily slot, not GitHub queue time.
 
     GitHub does not include the intended firing timestamp in schedule events.
     A delay longer than one day cannot be reconstructed from the cron alone.
-    Manual runs deliberately have no scheduled-time estimate.
+    Manual runs deliberately have no scheduled-time estimate. An outside timer
+    should use the same daily time as the cron line, so the same slot applies.
     """
     if event_name != 'schedule':
         return {}
@@ -68,18 +102,62 @@ def schedule_timing(event_name, root, now):
 def execution_environment(event_name, root, now, environ):
     # Discard inherited timing from an earlier invocation before setting this run.
     result = {key: value for key, value in environ.items() if not key.startswith('RADAR_SCHEDULE_')}
-    for key, value in schedule_timing(event_name, root, now).items():
+    timing = schedule_timing(trigger_kind(event_name, environ), root, now)
+    for key, value in timing.items():
         result['RADAR_SCHEDULE_' + key.upper()] = str(value)
+    if timing:
+        result['RADAR_SCHEDULE_TRIGGER'] = trigger_label(event_name, environ)
     return result
+
+
+def recent_full_run(root, now):
+    """A run that checked every enabled source since today's daily slot.
+
+    "Today's slot" is the latest configured daily time at or before now, less
+    a small tolerance. A run from before it (yesterday's, or an evening code
+    push) never suppresses today's scheduled run. Targeted repair runs (fewer
+    sources) never count. Any doubt returns None so the crawl goes ahead.
+    """
+    try:
+        timing = schedule_timing('schedule', root, now)
+        if timing:
+            since = datetime.fromisoformat(timing['expected_at']) - timedelta(hours=SLOT_TOLERANCE_HOURS)
+        else:
+            since = now - timedelta(hours=FALLBACK_WINDOW_HOURS)
+        sources = yaml.safe_load((root / 'config/sites.yaml').read_text(encoding='utf-8'))['sources']
+        enabled = {source['id'] for source in sources if source.get('enabled', True)}
+        state = json.loads((root / 'data/store.json').read_text(encoding='utf-8'))
+        for run in reversed(state.get('runs', [])):
+            started = datetime.fromisoformat(run['started_at'])
+            if started.tzinfo is None:
+                started = started.replace(tzinfo=timezone.utc)
+            if started < since:
+                return None
+            if started > now:
+                continue
+            covered = {summary.get('source_id') for summary in run.get('sources', [])}
+            if enabled and enabled <= covered:
+                return run
+    except (OSError, KeyError, TypeError, ValueError, AttributeError, yaml.YAMLError):
+        return None
+    return None
 
 
 if __name__ == '__main__':
     event_path = os.environ.get('GITHUB_EVENT_PATH')
     event = json.loads(Path(event_path).read_text()) if event_path else {}
-    selected = selected_sources(os.environ.get('GITHUB_EVENT_NAME'), event, os.environ.get('RADAR_SOURCE_IDS', ''))
+    event_name = os.environ.get('GITHUB_EVENT_NAME')
+    root = Path(__file__).resolve().parents[1]
+    now = datetime.now(timezone.utc)
+    selected = selected_sources(event_name, event, os.environ.get('RADAR_SOURCE_IDS', ''))
+    if trigger_kind(event_name, os.environ) == 'schedule' and not selected:
+        previous = recent_full_run(root, now)
+        if previous:
+            print(f"已於 {previous['started_at']} 完成完整檢索；此排程屬同日後備觸發，略過重複檢索。", flush=True)
+            raise SystemExit(0)
     # monitor.run validates every ID against sites.yaml. No shell interpolation.
     command = [sys.executable, '-m', 'monitor.run']
     if selected:
         command += ['--sources', *selected]
-    environment = execution_environment(os.environ.get('GITHUB_EVENT_NAME'), Path(__file__).resolve().parents[1], datetime.now(timezone.utc), os.environ)
+    environment = execution_environment(event_name, root, now, os.environ)
     raise SystemExit(subprocess.run(command, check=False, env=environment).returncode)

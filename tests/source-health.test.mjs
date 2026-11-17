@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {sourceStatus, sourceRank, detailCoverageLabel} from '../dist/source-health.mjs';
+import {sourceStatus, sourceRank, detailCoverageLabel, daysSince, healthLabels} from '../dist/source-health.mjs';
 const now=Date.parse('2026-11-17T00:00:00Z');
 const source={enabled:true,status:'partial',capability:'list_only',severity:'warning',listing_complete:true,last_listing_success:'2026-11-16T12:00:00Z'};
 test('source limitations stay visible while true faults sort first',()=>{
@@ -22,4 +22,21 @@ test('coverage distinguishes no jobs from missing measurement',()=>{
   assert.equal(detailCoverageLabel({detail_complete_count:0,detail_total_count:0,listing_complete:true}),'本輪清單沒有職位');
   assert.equal(detailCoverageLabel({detail_complete_count:0,detail_total_count:0,listing_complete:false}),'尚未取得可核實詳情');
   assert.equal(detailCoverageLabel({}),'此版本未提供');
+});
+test('a site that blocked or dropped this round is shown apart from program faults',()=>{
+  const blocked={enabled:true,status:'unreachable',capability:'full',severity:'warning',listing_complete:false,last_listing_success:'2026-11-16T06:41:00Z'};
+  assert.equal(sourceStatus(blocked,36,now),'unreachable');
+  assert.equal(healthLabels.unreachable,'暫時未能讀取');
+  // Older exports: status error but already classified as a warning.
+  assert.equal(sourceStatus({...blocked,status:'error'},36,now),'unreachable');
+  assert.equal(sourceStatus({...blocked,severity:'error'},36,now),'error');
+  const fault={...blocked,status:'error',severity:'error'};
+  assert.ok(sourceRank(fault,36,now)<sourceRank(blocked,36,now));
+  assert.ok(sourceRank(blocked,36,now)<sourceRank({...source},36,now));
+  assert.equal(sourceStatus({...blocked,capability:'manual'},36,now),'manual');
+});
+test('days since the last successful read',()=>{
+  assert.equal(daysSince('2026-11-16T00:00:00Z',now),1);
+  assert.equal(daysSince('2026-11-17T00:00:00Z',now),0);
+  assert.equal(daysSince(null,now),null);
 });

@@ -63,7 +63,12 @@ sources:
   enabled: true
   allowed_hosts:
   - jobs.hku.hk
-  notes: PageUp 兼職／時薪清單及完整分頁；遇到驗證要求即停止並保留舊資料。
+  # 網站用 AWS WAF：約 5 次以上請求／5 分鐘、冇驗證 token 就要求瀏覽器驗證（HTTP 202）。
+  # 每 80 秒一個請求、每輪最多 6 則詳情、詳情沿用 21 日；清單欄位一改即重讀。唔會解驗證。
+  min_request_interval: 80
+  max_detail_fetches: 6
+  detail_cache_days: 21
+  notes: PageUp 兼職／時薪清單及完整分頁；網站限制讀取頻率，詳情放慢並分批更新，遇到驗證要求即停止並保留舊資料。
 - id: polyu
   institution: PolyU
   name: 香港理工大學
@@ -146,7 +151,7 @@ sources:
   - cuhk.taleo.net
   read_only_post_paths:
   - /careersection/rest/jobboard/searchjobs
-  notes: Taleo 公開搜尋及詳情；總數與實際分頁數量不一致時顯示部分完成，保留所有舊記錄。
+  notes: Taleo 公開搜尋及詳情；官方總數多過可讀分頁時，以相反排序再讀一次核對，兩次一致先判定清單完整，否則顯示部分完成並保留所有舊記錄。
 - id: cpce
   institution: PolyU CPCE（HKCC／SPEED）
   name: 香港理工大學專業及持續教育學院
@@ -206,7 +211,7 @@ sources:
   enabled: true
   allowed_hosts:
   - www.hkas.edu.hk
-  notes: 已核對官方招聘正文的三個廣告連結，包括不在 job-vacancy 路徑內的戲劇評判招聘；按實際連線與詳情結果顯示狀態。
+  notes: 已核對官方招聘正文的三個廣告連結，包括不在 job-vacancy 路徑內的戲劇評判招聘。網站經 Cloudflare，雲端執行環境經常收到驗證頁；被擋時保留舊資料並標示暫時未能讀取，請手動查看。
   selectors:
     row: .post_content.entry-content .wpb_text_column p a[href]
     title: :self
@@ -340,11 +345,12 @@ sources:
   group: nangyan
   url: https://www.ny.edu.hk/home/en/job-opportunities-and-tender-notice-eng/
   adapter: availability_check
-  capability: pending
+  capability: manual
+  manual_reason: 網站由雲端連線一直逾時，亦未能取得可核對的職位頁格式，無法安全接入自動讀取
   enabled: true
   allowed_hosts:
   - www.ny.edu.hk
-  notes: 官方招聘入口已加入；目前網站連線失敗，尚未取得可驗收的職位格式。每天核對連線，仍需完成職位讀取接入。
+  notes: 官方招聘入口；GitHub 雲端連線持續逾時，職位頁格式未能核對，改列手動查看，不再每日探測。網站恢復連線並核對格式後可改回自動讀取。
 - id: hkic
   institution: 香港建造學院／CIC
   name: Hong Kong Institute of Construction

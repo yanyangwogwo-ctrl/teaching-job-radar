@@ -144,7 +144,7 @@ def payload_for(event: dict, state: dict) -> dict:
         capability_labels = {'manual': '需手動查看', 'pending': '尚未接入',
                              'list_only': '只有清單', 'partial': '部分內容未接入'}
         for row in problems:
-            label = capability_labels.get(row.get('capability'))
+            label = capability_labels.get(row.get('capability')) or ('暫時未能讀取' if row.get('status') == 'unreachable' else None)
             reason = '；'.join(row.get('errors', [])[:1]) or '尚未取得完整資料'
             rows.append(('⚠️ ' if row.get('severity') == 'error' else 'ℹ️ ') + plain(row['institution'], 45)
                         + '：' + (label + '；' if label else '') + plain(reason, 85))
@@ -167,6 +167,8 @@ def payload_for(event: dict, state: dict) -> dict:
         content += '刊登：' + (job.get('posted_date') or '網站未提供') + '｜首見：' + job['first_seen'][:10] + '\n'
         content += '科目：' + '、'.join(s['label'] for s in job['subjects']) + '\n'
         content += '截止：' + ((job.get('deadline') or '請查看原文') if job.get('deadline_type') == 'closing' else '請查看原文／持續招聘') + '\n'
+        if job.get('match_basis') == 'title':
+            content += '（院校網站只提供清單，以上按標題／部門判斷，請打開原文核實。）\n'
         content += safe_link(job['url']) + '\n相關度只反映科目及聘用類型，請自行核對學歷和經驗要求。'
     return {'content': content[:1900], 'allowed_mentions': {'parse': []}}
 
@@ -190,7 +192,7 @@ def deliver(state: dict, now: str, save) -> int:
     for event in pending:
         if event['kind'] == 'new':
             job = state['jobs'].get(event['job_id'])
-            if job and not job.get('detail_complete') and job['status'] == 'open':
+            if job and not job.get('detail_complete') and not job.get('detail_unavailable') and job['status'] == 'open':
                 continue  # Defer until details recover; never lose the alert.
             if not job or not job['matches'] or job['status'] != 'open':
                 event.update(state='suppressed', completed_at=now)

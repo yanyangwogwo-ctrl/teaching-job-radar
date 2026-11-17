@@ -1,7 +1,7 @@
-import { mountScheduleEditor } from './schedule-ui.mjs?v=20260905-time';
+import { mountScheduleEditor } from './schedule-ui.mjs?v=20261118-trigger';
 import { parseQuery, filterJobs, dayKey, effectiveStatus, csvCell, defaultCriteria, restoreCriteria, recentCutoff, isRecent } from './search.mjs?v=20261117-recency';
 import { loadDataset, loadArchive, needsArchive, lastCrawlAt } from './data-source.mjs?v=20261117-archive';
-import { sourceStatus as classifySource, sourceRank, healthLabels, capabilityLabels, detailCoverageLabel } from './source-health.mjs?v=20261117-health';
+import { sourceStatus as classifySource, sourceRank, healthLabels, capabilityLabels, detailCoverageLabel, daysSince } from './source-health.mjs?v=20261118-reliability';
 
 const app = document.querySelector('#app');
 const exportButton = document.querySelector('#export-button');
@@ -93,11 +93,11 @@ function renderShell() {
   const problems = dataset.sources.filter(s => s.enabled && sourceStatus(s) !== 'ok');
   const pending = dataset.sources.filter(s => ['manual', 'pending'].includes(sourceStatus(s))).length;
   const warning = document.querySelector('#coverage-warning');
-  const limited = problems.filter(s => ['limited','manual','pending'].includes(sourceStatus(s))).length;
+  const limited = problems.filter(s => ['limited','manual','pending','unreachable'].includes(sourceStatus(s))).length;
   const lastCrawl = lastCrawlAt(dataset);
   const crawlOverdue = !lastCrawl || Date.now() - +new Date(lastCrawl) > dataset.meta.stale_after_hours * 3600000;
   if (crawlOverdue) warning.innerHTML = '<strong>已超過 36 小時未有新一輪檢索。</strong> 目前顯示歷史資料，請檢查每日排程；這不代表沒有新職位。';
-  else if (problems.length) warning.innerHTML = `<strong>${problems.length} 個來源資料未完整${limited ? `（其中 ${limited} 個屬已知限制／待接通）` : ''}。</strong> 舊記錄仍然保留；查看「來源狀態」了解詳情。`;
+  else if (problems.length) warning.innerHTML = `<strong>${problems.length} 個來源資料未完整${limited ? `（其中 ${limited} 個屬已知限制、手動來源或今輪被網站擋）` : ''}。</strong> 舊記錄仍然保留；查看「來源狀態」了解詳情。`;
   else if (pending) warning.innerHTML = `<strong>目前已接通 ${connected} 個來源，另外 ${pending} 個待接通。</strong> 目前結果只涵蓋已接通來源。`;
   else { warning.classList.add('notice-success'); warning.textContent = '所有來源最近一次檢索均已完成。'; }
   bindControls();
@@ -216,8 +216,15 @@ function sourceExplanation(source) {
   if (!source.enabled) return '尚未啟用每日檢索，目前需要手動查看。原因見下方備註；系統唔會每日重試已停用來源。';
   if (source.capability === 'pending') return '目前每日只檢查入口連線，尚未接入職位讀取。請到官方招聘頁手動查看空缺。';
   if (sourceStatus(source) === 'stale') return '清單已超過更新期限，未能確認有冇新職位；請查看最近清單成功時間。';
-  if (sourceStatus(source) === 'ok') return '最近一次已讀完整個職位清單及可用詳情。';
   const error = (source.errors ?? []).join(' ');
+  if (sourceStatus(source) === 'unreachable') {
+    const days = daysSince(source.last_listing_success || source.last_success);
+    const since = days === null ? '仲未有成功讀取紀錄' : days === 0 ? '今日較早時間曾成功讀取' : `上次成功讀取係 ${days} 日前`;
+    if (/Cloudflare/.test(error)) return `網站經 Cloudflare 向雲端執行環境顯示驗證頁，今輪自動讀取被擋（${since}）。程式唔會繞過驗證；已保留舊資料，請到官方招聘頁手動查看。`;
+    if (/驗證|challenge|HTTP 4/i.test(error)) return `網站今輪拒絕或要求驗證自動讀取（${since}）。已保留舊資料，下一輪會再試；急需時請手動查看。`;
+    return `今輪連唔到網站（${since}）。已保留舊資料，下一輪會再試；呢類情況唔需要修改程式。`;
+  }
+  if (sourceStatus(source) === 'ok') return source.run_notes?.length ? '最近一次已讀完整個職位清單及可用詳情；核對方法見下方。' : '最近一次已讀完整個職位清單及可用詳情。';
   if (source.id === 'hkust' && /清單未能更新/.test(error)) return '招聘清單暫時未能更新，系統正按之前已確認嘅官方連結核對內文。呢部分唔代表完整清單，仍有可能漏咗新職位。';
   if (/ConnectTimeout|ReadTimeout|逾時|timeout/i.test(error)) return '上次連線逾時，唔代表網站永久封鎖。已保留舊記錄，下一輪每日檢索會再次嘗試。';
   if (/ConnectionError/.test(error)) return '今輪連線中斷，未能完整取得新資料。已保留舊記錄，下一輪檢索會再次嘗試。';
@@ -225,22 +232,25 @@ function sourceExplanation(source) {
   if (source.id === 'cityu') return '清單已接通。詳情頁有存取限制，目前每日只更新清單；內文仍需到官方網站查看。';
   if (/robots\.txt/.test(error)) return '今輪未能確認網站嘅自動讀取規則，所以暫停此來源並保留舊資料。下一輪每日檢索會再次檢查。';
   if (/404/.test(error)) return '清單已讀取，但部分職位原文或附件連結失效，令詳情未能完整收集。';
-  if (source.id === 'cuhk' && source.status === 'partial') return '已取得職位及詳情，但網站回報嘅總數同實際分頁結果不一致，可能仍有遺漏，所以標示部分完成。';
+  if (/詳情分批更新/.test(error)) return '清單已完整讀取。網站限制讀取頻率，詳情放慢並每日分批更新；未更新嘅職位暫時沿用上次內容，新職位嘅內文會喺之後幾輪補上。';
+  if (source.id === 'cuhk' && source.status === 'partial') return '已取得職位及詳情，但網站回報嘅總數同實際分頁結果不一致，而且以相反排序再讀亦未能核實，可能仍有遺漏，所以標示部分完成。';
   if (/202|驗證|challenge/i.test(error)) return '清單或部分詳情可讀，但網站要求額外驗證。已停止受影響嘅讀取，並保留取得嘅資料。';
   return '最近一次未能完整更新；已保留舊記錄，具體原因見下方。';
 }
 
 function renderSources() {
   const sources = [...dataset.sources].sort((a, b) => sourceRank(a, dataset.meta.stale_after_hours || 36) - sourceRank(b, dataset.meta.stale_after_hours || 36));
-  document.querySelector('#sources-view').innerHTML = `<div class="section-title"><h2>來源狀態及未完成原因</h2><p>實際故障及逾時排最先，其次係未完整及已知限制。清單完整性與詳情覆蓋分開顯示；只有清單／手動來源唔代表已取得完整資料。</p></div><div class="source-grid">${sources.map(source => `<article class="source-card"><div class="source-card-top"><h3>${escapeHTML(source.institution)}</h3><a class="button button-outline" href="${escapeHTML(safeURL(source.url))}" target="_blank" rel="noopener noreferrer">官方招聘 ↗<span class="sr-only">：${escapeHTML(source.institution)}</span></a></div><div class="source-health">${healthBadge(source)}</div><p>${escapeHTML(sourceExplanation(source))}</p><dl><div><dt>自動讀取能力</dt><dd>${escapeHTML(capabilityLabels[source.capability] || '此版本未提供')}</dd></div><div><dt>本輪清單</dt><dd>${source.listing_complete === true ? '完整' : source.listing_complete === false ? '未確認完整' : '此版本未提供'}</dd></div><div><dt>本輪完整詳情</dt><dd>${escapeHTML(detailCoverageLabel(source))}</dd></div><div><dt>最近清單成功</dt><dd>${Object.hasOwn(source, 'last_listing_success') ? escapeHTML(dateTime(source.last_listing_success)) : '此版本未提供'}</dd></div><div><dt>最近整個來源成功</dt><dd>${escapeHTML(dateTime(source.last_success))}</dd></div><div><dt>最近嘗試</dt><dd>${source.last_attempt ? escapeHTML(dateTime(source.last_attempt)) : '尚未執行'}</dd></div><div><dt>最近取得</dt><dd>${source.last_attempt ? source.count + ' 則' : '—'}</dd></div></dl>${source.errors?.length ? `<p class="source-error">${source.errors.map(escapeHTML).join('<br>')}</p>` : ''}<p class="source-note">${escapeHTML(source.notes)}</p></article>`).join('')}</div>`;
+  document.querySelector('#sources-view').innerHTML = `<div class="section-title"><h2>來源狀態及未完成原因</h2><p>實際故障及逾時排最先，其次係未完整及已知限制。清單完整性與詳情覆蓋分開顯示；只有清單／手動來源唔代表已取得完整資料。</p></div><div class="source-grid">${sources.map(source => `<article class="source-card"><div class="source-card-top"><h3>${escapeHTML(source.institution)}</h3><a class="button button-outline" href="${escapeHTML(safeURL(source.url))}" target="_blank" rel="noopener noreferrer">官方招聘 ↗<span class="sr-only">：${escapeHTML(source.institution)}</span></a></div><div class="source-health">${healthBadge(source)}</div><p>${escapeHTML(sourceExplanation(source))}</p><dl><div><dt>自動讀取能力</dt><dd>${escapeHTML(capabilityLabels[source.capability] || '此版本未提供')}</dd></div><div><dt>本輪清單</dt><dd>${source.listing_complete === true ? '完整' : source.listing_complete === false ? '未確認完整' : '此版本未提供'}</dd></div><div><dt>本輪完整詳情</dt><dd>${escapeHTML(detailCoverageLabel(source))}</dd></div><div><dt>最近清單成功</dt><dd>${Object.hasOwn(source, 'last_listing_success') ? escapeHTML(dateTime(source.last_listing_success)) : '此版本未提供'}</dd></div><div><dt>最近整個來源成功</dt><dd>${escapeHTML(dateTime(source.last_success))}</dd></div><div><dt>最近嘗試</dt><dd>${source.last_attempt ? escapeHTML(dateTime(source.last_attempt)) : '尚未執行'}</dd></div><div><dt>最近取得</dt><dd>${source.last_attempt ? source.count + ' 則' : '—'}</dd></div></dl>${source.errors?.length ? `<p class="source-error">${source.errors.map(escapeHTML).join('<br>')}</p>` : ''}${source.run_notes?.length ? `<p class="source-run-note">${source.run_notes.map(escapeHTML).join('<br>')}</p>` : ''}<p class="source-note">${escapeHTML(source.notes)}</p></article>`).join('')}</div>`;
 }
 
 function renderNotifications() {
   const meta = dataset.meta;
   const rule = meta.notification_rule;
   const timing = meta.schedule_execution;
-  const scheduleDelay = timing && Number.isFinite(timing.delay_seconds) ? `<p class="field-help">最近排程：預定 ${escapeHTML(dateTime(timing.expected_at))}；檢索開始 ${escapeHTML(dateTime(timing.started_at))}。較預定時間遲約 ${Math.round(timing.delay_seconds / 60)} 分鐘（包括啟動及準備時間）。</p>` : '';
-  document.querySelector('#notifications-view').innerHTML = `<div class="section-title"><h2>通知與每日檢索</h2><p>此處顯示正式通知條件。網頁上儲存嘅搜尋唔會自動改變 Discord 通知。</p></div><div id="schedule-editor"></div><div class="setup-grid"><article class="setup-card"><span class="step-number">01</span><h3>每日自動檢索</h3><span class="status-badge ${meta.automation_active ? 'status-ok' : 'status-pending'}">${meta.automation_active ? '已由雲端排程執行' : '尚未啟用'}</span><p>按上方 GitHub 已儲存時間，每日檢索一次。</p>${scheduleDelay}<p class="field-help">${meta.automation_active ? '此狀態反映資料產生時的執行環境；來源超過 36 小時未成功會標示逾時。' : '網站已設定讀取 GitHub 最新資料；首次雲端檢索完成後會顯示執行時間。每日工作流程會持續更新同一個資料來源。'}</p></article><article class="setup-card"><span class="step-number">02</span><h3>Discord 職位通知</h3><span class="status-badge ${meta.discord_configured ? 'status-ok' : 'status-pending'}">${meta.discord_configured ? '已設定' : '尚未設定'}</span><p>首次匯入建立基準；之後通知新發現而且符合條件嘅職位。</p><p class="field-help">${meta.discord_configured ? '最近確認接收：' + escapeHTML(dateTime(meta.notifications?.last_success)) : '需要你指定 Discord 頻道。Webhook 密鑰應儲存在雲端 Secrets，毋須貼在此網頁。'}</p>${meta.notifications?.error ? `<p class="source-error">${escapeHTML(meta.notifications.error)}</p>` : ''}</article><article class="setup-card"><span class="step-number">03</span><h3>漏跑警告</h3><span class="status-badge ${meta.heartbeat_configured ? 'status-ok' : 'status-pending'}">${meta.heartbeat_configured ? '已設定回報' : '獨立監察尚未設定'}</span><p>爬取失敗會留下警告；排程完全冇啟動，需要另一個服務監察。</p><p class="field-help">網頁會自行標示超過 36 小時未更新；主動發出漏跑通知則需要啟用獨立監察。</p></article></div><article class="notification-rules"><h3>正式通知條件</h3><dl><div><dt>職位</dt><dd>兼職／時薪 Lecturer、Tutor、Instructor、Adjunct Faculty（包括 Teacher 別名）</dd></div><div><dt>科目</dt><dd>${meta.subjects.map(s => escapeHTML(s.label)).join('、')}</dd></div><div><dt>院校</dt><dd>${rule.institutions.length ? rule.institutions.map(escapeHTML).join('、') : '所有已接通來源'}</dd></div><div><dt>排除關鍵字</dt><dd>${rule.exclude.length ? rule.exclude.map(escapeHTML).join('、') : '未設定'}</dd></div><div><dt>最低相關度</dt><dd>${rule.min_score} / 100（規則分數，並非獲聘機率）</dd></div></dl><p class="field-help">純技術 AI、一般市場營銷 AI 不會單憑「AI」兩字進入通知。符合科目亦仍需核對個別應徵要求。</p></article>`;
+  const triggerLabel = timing?.trigger === 'external-schedule' ? '外部準時觸發' : timing?.trigger === 'github-schedule' || timing ? 'GitHub 內建排程' : '';
+  const scheduleDelay = timing && Number.isFinite(timing.delay_seconds) ? `<p class="field-help">最近排程（${triggerLabel}）：預定 ${escapeHTML(dateTime(timing.expected_at))}；檢索開始 ${escapeHTML(dateTime(timing.started_at))}。較預定時間遲約 ${Math.round(timing.delay_seconds / 60)} 分鐘（包括啟動及準備時間）。</p>` : '';
+  const punctualHelp = timing?.trigger === 'external-schedule' ? '' : '<p class="field-help">GitHub 內建排程近月經常遲幾個鐘先開始。按 SETUP_zh-HK.md 加外部準時觸發（例如 cron-job.org）後，會準時開始；GitHub 排程自動變成後備，同日已完成就唔會重複讀取。</p>';
+  document.querySelector('#notifications-view').innerHTML = `<div class="section-title"><h2>通知與每日檢索</h2><p>此處顯示正式通知條件。網頁上儲存嘅搜尋唔會自動改變 Discord 通知。</p></div><div id="schedule-editor"></div><div class="setup-grid"><article class="setup-card"><span class="step-number">01</span><h3>每日自動檢索</h3><span class="status-badge ${meta.automation_active ? 'status-ok' : 'status-pending'}">${meta.automation_active ? '已由雲端排程執行' : '尚未啟用'}</span><p>按上方時間每日檢索一次。</p>${scheduleDelay}${punctualHelp}<p class="field-help">${meta.automation_active ? '此狀態反映資料產生時的執行環境；來源超過 36 小時未成功會標示逾時。' : '網站已設定讀取 GitHub 最新資料；首次雲端檢索完成後會顯示執行時間。每日工作流程會持續更新同一個資料來源。'}</p></article><article class="setup-card"><span class="step-number">02</span><h3>Discord 職位通知</h3><span class="status-badge ${meta.discord_configured ? 'status-ok' : 'status-pending'}">${meta.discord_configured ? '已設定' : '尚未設定'}</span><p>首次匯入建立基準；之後通知新發現而且符合條件嘅職位。</p><p class="field-help">${meta.discord_configured ? '最近確認接收：' + escapeHTML(dateTime(meta.notifications?.last_success)) : '需要你指定 Discord 頻道。Webhook 密鑰應儲存在雲端 Secrets，毋須貼在此網頁。'}</p>${meta.notifications?.error ? `<p class="source-error">${escapeHTML(meta.notifications.error)}</p>` : ''}</article><article class="setup-card"><span class="step-number">03</span><h3>漏跑警告</h3><span class="status-badge ${meta.heartbeat_configured ? 'status-ok' : 'status-pending'}">${meta.heartbeat_configured ? '已設定回報' : '獨立監察尚未設定'}</span><p>爬取失敗會留下警告；排程完全冇啟動，需要另一個服務監察。</p><p class="field-help">網頁會自行標示超過 36 小時未更新；主動發出漏跑通知則需要啟用獨立監察。</p></article></div><article class="notification-rules"><h3>正式通知條件</h3><dl><div><dt>職位</dt><dd>兼職／時薪 Lecturer、Tutor／Tutorship、Instructor／教導員、Adjunct Faculty、Teaching Associate／Consultant（包括 Teacher 別名；Teaching Assistant 不計）</dd></div><div><dt>科目</dt><dd>${meta.subjects.map(s => escapeHTML(s.label)).join('、')}</dd></div><div><dt>院校</dt><dd>${rule.institutions.length ? rule.institutions.map(escapeHTML).join('、') : '所有已接通來源'}</dd></div><div><dt>排除關鍵字</dt><dd>${rule.exclude.length ? rule.exclude.map(escapeHTML).join('、') : '未設定'}</dd></div><div><dt>最低相關度</dt><dd>${rule.min_score} / 100（規則分數，並非獲聘機率）</dd></div></dl><p class="field-help">純技術 AI、一般市場營銷 AI 不會單憑「AI」兩字進入通知。符合科目亦仍需核對個別應徵要求。</p></article>`;
   mountScheduleEditor(document.querySelector('#schedule-editor'), time => { document.querySelector('.schedule-label').textContent = '每日約 ' + time + ' · 香港時間'; });
 }
 
