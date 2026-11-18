@@ -36,15 +36,22 @@ jobs:
       - name: Crawl every source (no notifications, nothing committed)
         id: crawl
         continue-on-error: true
-        run: python -m monitor.run
+        # Diagnostic re-run: only the sources whose result changed for the worse.
+        run: python -m monitor.run --sources hkmu vtc hsu cuhk
       - name: Write source summary
         if: always()
         run: |
-          python - >> "$GITHUB_STEP_SUMMARY" <<'PY'
+          python - <<'PY' | tee -a "$GITHUB_STEP_SUMMARY"
           import json
           state = json.load(open('data/store.json', encoding='utf-8'))
           run = state['runs'][-1]
           print(f"## Trial run {run['started_at']} → {run['finished_at']} · {run['status']}\n")
+          for item in run['sources']:
+              health = state['sources'][item['source_id']]
+              for error in health.get('errors') or []:
+                  print(f"ERROR {item['source_id']}: {error}")
+              for note in health.get('run_notes') or []:
+                  print(f"NOTE {item['source_id']}: {note}")
           print('| source | status | severity | listing | details | requests | first message | note |')
           print('|---|---|---|---|---|---|---|---|')
           for item in sorted(run['sources'], key=lambda s: (s['severity'] != 'error', s['severity'] != 'warning', s['source_id'])):
