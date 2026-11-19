@@ -36,8 +36,8 @@ jobs:
       - name: Crawl every source (no notifications, nothing committed)
         id: crawl
         continue-on-error: true
-        # Every enabled source, with the end-of-round retry.
-        run: python -m monitor.run
+        # Diagnostic: HSU only, to see where it now redirects.
+        run: python -m monitor.run --sources hsu
       - name: Write source summary
         if: always()
         run: |
