@@ -128,8 +128,10 @@ sources:
   enabled: true
   allowed_hosts:
   - www.hsu.edu.hk
+  # Since 2026-11-19 the list page redirects to the HR Office's own site.
+  - hro.hsu.edu.hk
   - recruit.hsu.edu.hk
-  notes: 已接入官方英文清單及公開職位詳情；曾遇連線及 robots.txt 502，按每日實際連線結果顯示狀態，無法確認規則時停止。
+  notes: 已接入官方英文清單及公開職位詳情；2026年11月19日起清單轉往人力資源處網站 hro.hsu.edu.hk（職位詳情仍在 recruit.hsu.edu.hk）。曾遇連線及 robots.txt 502，按每日實際連線結果顯示狀態，無法確認規則時停止。
 - id: hksyu
   institution: 樹仁大學
   name: 香港樹仁大學
