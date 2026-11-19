@@ -232,6 +232,24 @@ class RedirectMessageTests(unittest.TestCase):
         client.validate('https://alpha.example.edu/jobs/1')
 
 
+class HsuMoveTests(unittest.TestCase):
+    """HSU's list moved to its HR Office site on November 19; the links did not."""
+
+    def test_the_hr_office_page_is_approved_and_its_links_still_parse(self):
+        from monitor.hsu import parse_hsu_list
+        configured = {item['id']: item for item in read_config(ROOT)[0]}['hsu']
+        self.assertIn('hro.hsu.edu.hk', configured['allowed_hosts'])
+        page = ('<h1>HSUHK Job Openings</h1><h3>Academic</h3><ul>'
+                '<li><a href="https://recruit.hsu.edu.hk/opening/content.php?id=3925">'
+                'Department of English – Lecturer(s)</a></li></ul><h3>Research</h3><ul>'
+                '<li><a href="https://recruit.hsu.edu.hk/opening/content.php?id=3927">'
+                'Part-time Research Assistant – Department of English</a></li>'
+                '<li><a href="https://hro.hsu.edu.hk/equal-opportunity-employer/">Equal opportunity</a></li></ul>')
+        jobs = parse_hsu_list(configured, page)
+        self.assertEqual(sorted(job['reference'] for job in jobs), ['3925', '3927'])
+        self.assertTrue(all(job['url'].startswith('https://recruit.hsu.edu.hk/opening/content.php?id=') for job in jobs))
+
+
 class FailureKindRecordTests(unittest.TestCase):
     def test_a_raised_block_is_recorded_on_the_batch(self):
         with patch('monitor.run.collect', side_effect=CrawlError('網站要求瀏覽器驗證（HTTP 202）', kind='blocked')):
