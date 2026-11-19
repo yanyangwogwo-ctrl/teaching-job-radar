@@ -232,7 +232,10 @@ class PublicClient:
         bits = urlsplit(url)
         ports = self.source.get('allowed_ports', {}).get(bits.hostname, [])
         if bits.scheme != 'https' or bits.hostname not in self.source['allowed_hosts'] or bits.username or bits.password or (bits.port not in (None, 443) and bits.port not in ports):
-            raise CrawlError('來源要求轉往未核准的網址，已停止。', stop_source=True)
+            # Name where it tried to send us (scheme, host and port only; no
+            # path, query or credentials) so a moved page can be checked.
+            shown = f'{bits.scheme}://{bits.hostname}' + (f':{bits.port}' if bits.port else '') if bits.hostname else '無法辨認的網址'
+            raise CrawlError(f'來源要求轉往未核准的網址（{shown}），已停止。', stop_source=True)
 
     def _request(self, url: str, *, robots=False, method='GET', data=None, headers=None) -> requests.Response:
         initial_host = urlsplit(url).hostname
