@@ -213,6 +213,25 @@ class EndOfRoundRetryTests(unittest.TestCase):
                 self.assertTrue(result.complete)
 
 
+class RedirectMessageTests(unittest.TestCase):
+    def test_a_refused_address_names_its_host_but_not_its_path_query_or_credentials(self):
+        from monitor.http import PublicClient
+        client = PublicClient(ALPHA)
+        cases = {'http://alpha.example.edu/jobs?token=secret': 'http://alpha.example.edu',
+                 'https://user:pw@moved.example.org:8443/careers/list': 'https://moved.example.org:8443',
+                 'https://elsewhere.example.net/a/b': 'https://elsewhere.example.net'}
+        for url, shown in cases.items():
+            with self.subTest(url=url):
+                with self.assertRaises(CrawlError) as caught:
+                    client.validate(url)
+                message = str(caught.exception)
+                self.assertIn(f'（{shown}）', message)
+                for hidden in ('token', 'secret', 'careers', 'user', 'pw@', '/a/b'):
+                    self.assertNotIn(hidden, message)
+                self.assertTrue(caught.exception.stop_source)
+        client.validate('https://alpha.example.edu/jobs/1')
+
+
 class FailureKindRecordTests(unittest.TestCase):
     def test_a_raised_block_is_recorded_on_the_batch(self):
         with patch('monitor.run.collect', side_effect=CrawlError('網站要求瀏覽器驗證（HTTP 202）', kind='blocked')):
