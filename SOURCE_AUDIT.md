@@ -20,7 +20,9 @@
 
 **本輪尾段自動重試（`monitor/run.py`）**：每個來源讀完先喺記錄副本預計結果（`preview`，同 `reconcile` 一樣嘅判斷，唔改正式記錄）。預計係 error，或者連線全部失敗而乜都讀唔到（只有 network 一類），就等最少 3 分鐘、喺本輪尾段再讀一次，保留讀得較多嗰次。網站要求瀏覽器驗證（blocked）或限制讀取頻率（deferred）、手動來源一律唔重試；預計重試未能喺本輪開始後 30 分鐘內完成，就唔重試並註明。第一次已完整讀取嘅詳情直接沿用，唔會再向網站要。每個來源只寫入一次記錄，所以重試成功唔會發 Discord 錯誤及翌日「已恢復」通知；來源頁會註明第一次錯誤原文。
 
-驗證：Python 169 項（新增 13 項）、前端 43 項通過；以 10 個刻意破壞嘅改動確認新測試會失敗。
+[晚上全部來源試跑](https://github.com/yanyangwogwo-ctrl/teaching-job-radar/actions/runs/44538765214)（香港時間 21:58，連自動重試，4 分鐘）：26 完整、2 部分完成（城大、科大，已知只有清單）、2 暫時未能讀取（港大 HTTP 202、香港藝術學院 Cloudflare，都唔重試）、2 手動、1 錯誤（恒生）。恒生由當日起將 `https://www.hsu.edu.hk/en/job-opportunities/` 以 302 轉往大學人力資源處網站 `https://hro.hsu.edu.hk/hsuhk-job-openings/`（同日 15:33 正式版亦因此失敗）；自動重試再讀仍被擋屬預期。新頁 17 個職位連結全部仍指向 `recruit.hsu.edu.hk/opening/content.php`，所以只需核准 `hro.hsu.edu.hk`；[修正後恒生試跑](https://github.com/yanyangwogwo-ctrl/teaching-job-radar/actions/runs/44540969508)：清單完整，詳情 17/17。被拒網址嘅錯誤訊息而家會顯示主機（唔顯示路徑、查詢字串或帳戶資料），之後網站搬頁可以即時睇到搬去邊。
+
+驗證：Python 171 項（新增 15 項）、前端 43 項通過；以 10 個刻意破壞嘅改動確認自動重試測試會失敗。
 
 ## 2026-11-18 修訂（Claude review，基於 `3c15061`）
 
