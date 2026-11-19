@@ -30,6 +30,10 @@ class Batch:
     # Set by run.fetch_source: every error came from the site side
     # (blocked/network/deferred), so old data is kept and nothing needs fixing.
     external_failure: bool = False
+    # Set by run.fetch_source: the kinds of client failure seen this attempt.
+    # 'blocked' or 'deferred' means the site asked us to back off, so the
+    # end-of-round retry leaves that source alone.
+    failure_kinds: list[str] = field(default_factory=list)
 
 
 def soup_of(html: str):

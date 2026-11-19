@@ -224,7 +224,7 @@ function sourceExplanation(source) {
     if (/驗證|challenge|HTTP 4/i.test(error)) return `網站今輪拒絕或要求驗證自動讀取（${since}）。已保留舊資料，下一輪會再試；急需時請手動查看。`;
     return `今輪連唔到網站（${since}）。已保留舊資料，下一輪會再試；呢類情況唔需要修改程式。`;
   }
-  if (sourceStatus(source) === 'ok') return source.run_notes?.length ? '最近一次已讀完整個職位清單及可用詳情；核對方法見下方。' : '最近一次已讀完整個職位清單及可用詳情。';
+  if (sourceStatus(source) === 'ok') return source.run_notes?.length ? '最近一次已讀完整個職位清單及可用詳情；補充說明見下方。' : '最近一次已讀完整個職位清單及可用詳情。';
   if (source.id === 'hkust' && /清單未能更新/.test(error)) return '招聘清單暫時未能更新，系統正按之前已確認嘅官方連結核對內文。呢部分唔代表完整清單，仍有可能漏咗新職位。';
   if (/ConnectTimeout|ReadTimeout|逾時|timeout/i.test(error)) return '上次連線逾時，唔代表網站永久封鎖。已保留舊記錄，下一輪每日檢索會再次嘗試。';
   if (/ConnectionError/.test(error)) return '今輪連線中斷，未能完整取得新資料。已保留舊記錄，下一輪檢索會再次嘗試。';
